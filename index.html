@@ -12,10 +12,10 @@
             <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-picture">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">My work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('about-me')">About me</a></li>
+                    <li><a href="#" onclick="showSection('my-work')">My work</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
                 </ul>
             </nav>
             <div class="status">
@@ -24,7 +24,7 @@
             </div>
         </aside>
         <main class="content">
-            <section class="intro">
+            <section id="home" class="section">
                 <h1>Justian Spijkerbosch <span>😊</span></h1>
                 <h2>Freelance full stack developer</h2>
                 <p>Welcome in my digital garden 👋. I am a highly motivated computer science student from the Netherlands and at this site I am sharing information about my personal road to becoming a better full stack developer and growing a tech career.</p>
@@ -44,7 +44,32 @@
                 </div>
                 <p>In my daily life, I am mainly busy with school, for which I am currently doing an internship at MrBoost. In addition, as an indie hacker / solo entrepreneur I like to build my <a href="#">own projects</a>. To finance this I am also active as a freelancer, for which you can also <a href="#">hire me</a>.</p>
             </section>
-            <section class="work">
+
+            <section id="about-me" class="section hidden">
+                <h1>Who am I <span>😊</span></h1>
+                <h2>Developer in heart, learning about UI/UX design and interaction design</h2>
+                <p>I am Justian Spijkerbosch. A full stack developer from Apeldoorn, Netherlands. I have been a hobby programmer for a number of years and since mid 2021 I have been studying computer science in Utrecht, the Netherlands. At this moment I am doing an internship at MrBoost and running my own freelancing company called justian.dev.</p>
+                <p>My daily life</p>
+                <p>I am currently doing an internship at MrBoost, completing year 2 of my degree. At MrBoost I am trying to fully focus on becoming a better UI/UX designer and interaction developer, I am doing this through learning about techniques such as GSAP and ThreeJS.</p>
+                <p>Besides wanting to become a better UI/UX designer and interaction developer, I am also always trying out (new) techniques and building cool projects with them, either for myself, or for others. For which you can also <a href="#">hire me</a>.</p>
+                <h3>My skills</h3>
+                <div class="skills">
+                    <span class="skill">TS</span>
+                    <span class="skill">JS</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Node</span>
+                    <span class="skill">Notion</span>
+                    <span class="skill">Figma</span>
+                </div>
+                <h3>Education and work experiences</h3>
+                <p>A few things that I've done to gain experiences in my field.</p>
+                <ul>
+                    <li><strong>MrBoost - Internship</strong> (2023 - Current) <br> At MrBoost I am currently following an internship focused on becoming a better UI/UX designer and interaction designer. I am trying to learn ThreeJS and GSAP here by just practical experiments.</li>
+                    <li><strong>University of Applied Sciences - Computer Science</strong> (2021 - Current) <br> At the University of Applied Sciences in Utrecht, I am doing a study called OPEN-ICT. What this basically means is that I have 4 different periods per year where I work with a fixed group on a project per period. For the rest everything is relatively free: for example, I can choose what programming language I want to use and what user stories I want to tackle.</li>
+                </ul>
+            </section>
+
+            <section id="my-work" class="section hidden">
                 <h2>My recent work</h2>
                 <p>I recently worked on <a href="#">engreux102</a>, <a href="#">my personal portfolio</a> and <a href="#">playmobilize</a>.</p>
                 <div class="project">
@@ -56,10 +81,16 @@
                     <p>Website for a Playmobil collector that allows search of his collection. <a href="#">View project</a></p>
                 </div>
             </section>
+
+            <section id="contact" class="section hidden">
+                <h2>Contact</h2>
+                <p>Feel free to reach out to me via <a href="mailto:your-email@example.com">email</a>.</p>
+            </section>
         </main>
     </div>
     <footer>
         <p>Copyright © 2022 - 2023 | CoC: 89274482 | VAT-ID: NL004712093824</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
