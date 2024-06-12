@@ -125,8 +125,22 @@ body {
 }
 
 .status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-item span {
+    margin-right: 10px;
+}
+
+.desktop-only {
     display: none;
-    text-align: center;
 }
 
 /* Media Queries for Responsive Design */
