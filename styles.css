@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto; /* Убираем верхний отступ */
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -26,7 +26,7 @@ body {
     margin-right: 20px;
     box-sizing: border-box;
     position: relative; /* Добавляем относительное позиционирование */
-    top: 50px; /* Смещаем весь sidebar вниз */
+    top: 0; /* Убираем смещение вниз */
 }
 
 .profile-picture {
@@ -37,6 +37,10 @@ body {
     margin: 0 auto 20px auto;
 }
 
+.uk-comment-title {
+    text-align: center; /* Центрируем текст */
+    font-weight: bold; /* Делаем текст жирным */
+}
 
 .sidebar nav ul {
     list-style: none;
@@ -153,11 +157,6 @@ body {
 .status-item a {
     color: #1679AB; /* Цвет ссылок такой же, как и у иконок */
     text-decoration: none; /* Убираем подчеркивание у ссылок */
-}
-
-
-.status-item span {
-    margin-right: 10px;
 }
 
 .desktop-only {
