@@ -10,8 +10,9 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -21,6 +22,8 @@ body {
     padding: 20px;
     width: 250px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-right: 20px;
 }
 
 .profile-picture {
@@ -53,8 +56,20 @@ body {
 }
 
 .content {
-    padding: 40px;
     flex: 1;
+}
+
+.section {
+    display: none;
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section.active {
+    display: block;
 }
 
 .intro h1 {
@@ -98,14 +113,6 @@ body {
     color: #555;
 }
 
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +122,7 @@ body {
 .project {
     background-color: #e9ecef;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     flex: 1;
     min-width: 300px;
     max-width: 48%;
