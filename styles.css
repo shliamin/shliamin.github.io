@@ -25,6 +25,8 @@ body {
     flex-shrink: 0;
     margin-right: 20px;
     box-sizing: border-box;
+    position: relative; /* Добавляем относительное позиционирование */
+    top: 50px; /* Смещаем весь sidebar вниз */
 }
 
 .profile-picture {
@@ -33,9 +35,8 @@ body {
     height: 150px; /* Увеличиваем размер изображения в 1.5 раза */
     display: block;
     margin: 0 auto 20px auto;
-    position: relative;
-    top: 50px; /* Поднимаем изображение на ту же высоту, что и начало section */
 }
+
 
 .sidebar nav ul {
     list-style: none;
