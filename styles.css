@@ -127,3 +127,28 @@ footer {
     color: #555;
     margin-top: 20px;
 }
+
+.hidden {
+    display: none;
+}
+
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
