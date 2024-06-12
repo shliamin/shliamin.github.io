@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto; /* Убираем верхний отступ */
+    margin: 10px auto; /* Добавляем верхний отступ в 10 пикселей */
     padding: 0 20px 20px 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -89,6 +89,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
+    margin-top: 20px; /* Добавляем отступ сверху для секций */
 }
 
 .section.active {
