@@ -133,25 +133,25 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    flex-direction: column; /* Иконка и текст будут размещены в колонке */
 }
 
 .status-item i {
     font-size: 2em; /* Увеличиваем размер иконок в два раза */
-    margin-bottom: 10px; /* Добавляем отступ снизу от иконок */
+    margin-right: 10px; /* Добавляем отступ справа от иконок */
     color: #95D2B3; /* Изменяем цвет иконок */
 }
 
 .status-item p {
     margin: 0;
-    text-align: center; /* Центрируем текст */
+    text-align: left; /* Текст будет слева */
+    color: #95D2B3; /* Цвет текста такой же, как и у иконок */
 }
 
 .status-item a {
-    display: block; /* Каждая ссылка на новой строке */
-    margin-top: 5px; /* Отступ сверху для каждой ссылки */
-    color: inherit; /* Наследуем цвет */
+    color: #95D2B3; /* Цвет ссылок такой же, как и у иконок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
 }
+
 
 
 .status-item span {
