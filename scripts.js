@@ -16,10 +16,6 @@ function showSection(sectionId) {
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
 }
 
-function toggleMenu() {
-    document.querySelector('.sidebar').classList.toggle('active');
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
 });
