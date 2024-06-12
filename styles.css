@@ -87,7 +87,7 @@ body {
 }
 
 .section.hidden {
-    display: block;
+    display: none;
 }
 
 .intro h1 {
