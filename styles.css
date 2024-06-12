@@ -29,10 +29,12 @@ body {
 
 .profile-picture {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Увеличиваем размер изображения в 1.5 раза */
+    height: 150px; /* Увеличиваем размер изображения в 1.5 раза */
     display: block;
     margin: 0 auto 20px auto;
+    position: relative;
+    top: 50px; /* Поднимаем изображение на ту же высоту, что и начало section */
 }
 
 .sidebar nav ul {
