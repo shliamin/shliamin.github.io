@@ -1,4 +1,3 @@
-/* Основные стили */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
@@ -46,16 +45,21 @@ body {
     margin-bottom: 10px;
 }
 
-.sidebar nav ul li a {
+.sidebar nav ul li button {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    display: block; /* Чтобы ссылки растягивались на всю ширину родителя */
+    display: block;
+    width: 100%; /* Чтобы кнопки растягивались на всю ширину родителя */
+    padding: 10px 0; /* Дополнительное пространство вокруг текста */
+    border: none; /* Убираем стандартную границу кнопок */
+    background-color: transparent; /* Делаем фон кнопок прозрачным */
+    cursor: pointer; /* Добавляем указатель курсора при наведении */
+    border-radius: 10px; /* Более закругленные края */
 }
 
-.sidebar .status {
-    margin-top: 20px;
-    font-size: 14px;
+.sidebar nav ul li button.active {
+    border: 2px solid #007bff; /* Контур активной кнопки */
 }
 
 .content {
@@ -220,9 +224,9 @@ body {
         margin-right: 0; /* Убираем горизонтальный отступ */
     }
 
-    .sidebar nav ul li a {
+    .sidebar nav ul li button {
         text-align: center; /* Центрирование текста */
         padding: 10px 0; /* Дополнительное пространство вокруг текста */
-        border-radius: 5px; /* Слегка закругленные края */
+        border-radius: 10px; /* Более закругленные края */
     }
 }
