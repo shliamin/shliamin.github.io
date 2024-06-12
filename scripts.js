@@ -12,13 +12,16 @@ function showSection(sectionId) {
 
     document.getElementById(sectionId).classList.add('active');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
-}
 
+    // Убедитесь, что ширина контейнера остается фиксированной
+    const container = document.querySelector('.container');
+    const containerWidth = container.offsetWidth;
+    container.style.width = containerWidth + 'px';
+}
 
 function toggleMenu() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
