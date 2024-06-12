@@ -234,8 +234,7 @@ body {
     }
 
     .sidebar nav ul li button {
-        text-align: center; /* Центрирование текста */
-        padding: 10px 0; /* Дополнительное пространство вокруг текста */
-        border-radius: 10px; /* Более закругленные края */
+        padding: 5px 0; /* Уменьшаем padding в 2 раза */
+        font-size: 9px; /* Уменьшаем размер шрифта в 2 раза */
     }
 }
