@@ -235,6 +235,6 @@ body {
 
     .sidebar nav ul li button {
         padding: 5px 0; /* Уменьшаем padding в 2 раза */
-        font-size: 9px; /* Уменьшаем размер шрифта в 2 раза */
+        font-size: 12px; /* Уменьшаем размер шрифта в 2 раза */
     }
 }
