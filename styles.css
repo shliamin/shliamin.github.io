@@ -8,13 +8,13 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .sidebar {
@@ -24,6 +24,7 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .profile-picture {
@@ -91,6 +92,7 @@ body {
 
 .stats {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -100,6 +102,8 @@ body {
     margin-right: 10px;
     border-radius: 5px;
     text-align: center;
+    margin-bottom: 10px;
+    flex: 1 1 100px;
 }
 
 .stat strong {
@@ -168,4 +172,34 @@ footer {
     font-size: 14px;
     color: #555;
     margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: 0 0 20px 0;
+        box-shadow: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .stat {
+        margin-right: 0;
+    }
+
+    .project {
+        min-width: 100%;
+    }
 }
