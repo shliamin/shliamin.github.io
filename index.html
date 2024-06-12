@@ -15,19 +15,18 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-picture">
-            <ul class="uk-comment-list">
-                <li>
-                    <article class="uk-comment" role="comment">
-                        <header class="uk-comment-header">
-                            <h4 class="uk-comment-title">Efim Shliamin</h4>
-                        </header>
-                        <div class="uk-comment-body">
-                            <p>Computer Scientist, B.Sc., with expertise in Software Engineering & Data Science, adept in solving complex software problems. I speak 🇬🇧🇩🇪🇷🇺.</p>
-                        </div>
-                    </article>
-                </li>
-            </ul>
+            <div class="uk-inline">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom-center uk-light uk-hidden-hover">
+                    <p class="uk-margin-remove">Click to see more</p>
+                </div>
+                <div uk-drop="pos: bottom-center; animation: uk-animation-slide-top-small; duration: 300">
+                    <div class="uk-card uk-card-body uk-card-default">
+                        <h4 class="uk-comment-title">Computer Scientist, B.Sc.</h4>
+                        <p>With expertise in Software Engineering & Data Science, adept in solving complex software problems. I speak 🇬🇧, 🇩🇪, 🇷🇺</p>
+                    </div>
+                </div>
+            </div>
             <nav>
                 <ul>
                     <li><button class="uk-button uk-button-default" onclick="showSection('about-me')">About me</button></li>
@@ -50,7 +49,6 @@
                     <p>Check out my projects on <a href="https://github.com/shliamin">GitHub</a></p>
                 </div>
             </div>
-
         </aside>
 
         <main class="content">
