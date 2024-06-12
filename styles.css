@@ -223,7 +223,6 @@ body {
     .sidebar nav ul li a {
         text-align: center; /* Центрирование текста */
         padding: 10px 0; /* Дополнительное пространство вокруг текста */
-        background-color: #e9ecef; /* Фон для удобства отображения */
         border-radius: 5px; /* Слегка закругленные края */
     }
 }
