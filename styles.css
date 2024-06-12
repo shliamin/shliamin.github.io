@@ -42,6 +42,10 @@ body {
     font-weight: bold; /* Делаем текст жирным */
 }
 
+.uk-comment-body {
+    text-align: center; /* Центрируем текст */
+}
+
 .sidebar nav ul {
     list-style: none;
     padding: 0;
