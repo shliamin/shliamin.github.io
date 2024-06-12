@@ -9,7 +9,7 @@ body {
 .container {
     display: flex;
     flex-direction: column; /* Изменено для мобильных устройств */
-    max-width: 1200px;
+    width: 1200px; /* Фиксированная ширина */
     margin: 20px auto;
     padding: 20px;
     background-color: #fff; /* Устанавливаем белый фон для контейнера */
@@ -69,7 +69,6 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 290px); /* Фиксируем ширину с учетом ширины sidebar и отступов */
     min-height: 400px; /* Фиксированная высота для предотвращения смещения */
 }
 
@@ -182,6 +181,8 @@ body {
 @media (min-width: 769px) {
     .container {
         flex-direction: row; /* Изменено для десктопных устройств */
+        min-width: 1200px;
+        max-width: 1200px;
     }
 
     .sidebar {
@@ -207,6 +208,8 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        min-width: 1200px;
+        max-width: 1200px;
         padding: 10px;
     }
 
