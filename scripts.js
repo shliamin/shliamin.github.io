@@ -15,7 +15,7 @@ function toggleMenu() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
 
-// Показать домашнюю секцию по умолчанию
+
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
 });
