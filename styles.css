@@ -20,7 +20,7 @@ body {
 .sidebar {
     background-color: #fff;
     padding: 20px;
-    width: 250px
+    width: 250px;
     border-radius: 20px 0 0 20px;
     flex-shrink: 0;
     margin-right: 20px;
@@ -39,14 +39,10 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Для горизонтального расположения элементов */
-    flex-wrap: wrap; /* Для переноса элементов на новую строку */
 }
 
 .sidebar nav ul li {
     margin-bottom: 10px;
-    flex: 1 1 auto; /* Для растягивания элементов на всю ширину */
-    margin-right: 10px; /* Для горизонтального отступа между элементами */
 }
 
 .sidebar nav ul li a {
@@ -196,5 +192,37 @@ body {
 
     .sidebar nav ul li {
         margin-right: 0; /* Убираем горизонтальный отступ */
+    }
+}
+
+/* Media Queries for Mobile Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .sidebar nav ul {
+        display: flex; /* Горизонтальное расположение элементов */
+        flex-wrap: wrap; /* Перенос элементов на новую строку */
+        justify-content: space-between;
+    }
+
+    .sidebar nav ul li {
+        flex: 1 1 100%; /* Растягивание элементов на всю ширину */
+        margin-right: 0; /* Убираем горизонтальный отступ */
+    }
+
+    .sidebar nav ul li a {
+        text-align: center; /* Центрирование текста */
+        padding: 10px 0; /* Дополнительное пространство вокруг текста */
+        background-color: #e9ecef; /* Фон для удобства отображения */
+        border-radius: 5px; /* Слегка закругленные края */
     }
 }
