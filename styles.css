@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -18,11 +18,10 @@ body {
 }
 
 .sidebar {
-    background-color: #f8f9fa;
+    background-color: #fff;
     padding: 20px;
     width: 250px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     margin-right: 20px;
     flex-shrink: 0;
 }
@@ -58,6 +57,8 @@ body {
 
 .content {
     flex: 1;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
 }
 
 .section {
@@ -184,11 +185,12 @@ footer {
     .sidebar {
         width: 100%;
         margin: 0 0 20px 0;
-        box-shadow: none;
     }
 
     .content {
         width: 100%;
+        padding: 20px;
+        border-radius: 20px;
     }
 
     .section {
