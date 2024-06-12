@@ -133,12 +133,26 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-direction: column; /* Иконка и текст будут размещены в колонке */
 }
 
 .status-item i {
     font-size: 2em; /* Увеличиваем размер иконок в два раза */
-    margin-right: 10px; /* Добавляем отступ справа от иконок */
+    margin-bottom: 10px; /* Добавляем отступ снизу от иконок */
+    color: #95D2B3; /* Изменяем цвет иконок */
 }
+
+.status-item p {
+    margin: 0;
+    text-align: center; /* Центрируем текст */
+}
+
+.status-item a {
+    display: block; /* Каждая ссылка на новой строке */
+    margin-top: 5px; /* Отступ сверху для каждой ссылки */
+    color: inherit; /* Наследуем цвет */
+}
+
 
 .status-item span {
     margin-right: 10px;
