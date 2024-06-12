@@ -3,9 +3,8 @@ function showSection(sectionId) {
     sections.forEach(section => {
         section.classList.remove('active');
     });
-    document.getElementById(sectionId).classList.add('active');
-    
-    // Закрываем меню на мобильных устройствах после выбора секции
+    document.getElementById(sectionId).classList.add('active'); 
+
     if (window.innerWidth <= 768) {
         document.querySelector('.sidebar').classList.remove('active');
     }
