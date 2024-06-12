@@ -86,7 +86,7 @@ body {
     display: block;
 }
 
-.section.active {
+.section.hidden {
     display: block;
 }
 
