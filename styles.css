@@ -86,6 +86,10 @@ body {
     display: block;
 }
 
+.section.active {
+    display: block;
+}
+
 .intro h1 {
     font-size: 32px;
     margin-bottom: 10px;
