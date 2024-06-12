@@ -10,8 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 10px auto; /* Добавляем верхний отступ в 10 пикселей */
-    padding: 0 20px 20px 20px;
+    margin: 0 auto; /* Убираем верхний отступ */
+    padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     box-sizing: border-box;
@@ -41,11 +41,11 @@ body {
 .uk-comment-title {
     text-align: center; /* Центрируем текст */
     font-weight: bold; /* Делаем текст жирным */
-    margin-top: 10px;
 }
 
 .uk-comment-body {
     text-align: center; /* Центрируем текст */
+    color: #1679AB;
 }
 
 .sidebar nav ul {
@@ -84,7 +84,6 @@ body {
     flex-direction: column;
     width: calc(100% - 290px);
     min-height: 400px;
-    margin-top: -130px; /* Поднимаем контент на уровень с изображением профиля */
 }
 
 .section {
@@ -95,7 +94,6 @@ body {
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
-    margin-top: 20px; /* Добавляем отступ сверху для секций */
 }
 
 .section.active {
