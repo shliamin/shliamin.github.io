@@ -5,7 +5,6 @@ function showSection(sectionId) {
     });
     document.getElementById(sectionId).classList.add('active');
     
-    // Закрываем меню на мобильных устройствах после выбора секции
     if (window.innerWidth <= 768) {
         document.querySelector('.sidebar').classList.remove('active');
     }
