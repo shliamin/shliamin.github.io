@@ -8,13 +8,14 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     box-sizing: border-box;
+    align-items: stretch; /* Добавлено чтобы section и sidebar были на одной высоте */
 }
 
 .sidebar {
@@ -24,6 +25,7 @@ body {
     border-radius: 20px 0 0 20px;
     flex-shrink: 0;
     margin-right: 20px;
+    box-sizing: border-box; /* Добавлено чтобы padding учитывался в размере */
 }
 
 .profile-picture {
@@ -59,6 +61,9 @@ body {
     flex: 1;
     padding: 0 20px;
     border-radius: 0 20px 20px 0;
+    box-sizing: border-box; /* Добавлено чтобы padding учитывался в размере */
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
@@ -67,9 +72,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     width: 100%;
-    max-width: 490px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Добавлено чтобы padding учитывался в размере */
 }
 
 .section.active {
@@ -175,4 +178,14 @@ body {
         padding: 10px;
     }
 
-  
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .content {
+        padding: 0;
+        border-radius: 0 0 20px 20px;
+    }
+}
