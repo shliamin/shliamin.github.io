@@ -64,11 +64,13 @@ body {
 
 .content {
     flex: 1;
-    padding: 0 20px;
+    padding: 20px; /* Устанавливаем фиксированные отступы */
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    width: calc(100% - 290px); /* Фиксируем ширину с учетом ширины sidebar и отступов */
+    min-height: 400px; /* Фиксированная высота для предотвращения смещения */
 }
 
 .section {
@@ -189,6 +191,7 @@ body {
     .content {
         border-radius: 0 20px 20px 0;
         padding: 20px;
+        width: calc(100% - 290px); /* Фиксируем ширину с учетом ширины sidebar и отступов */
     }
 
     .sidebar nav ul {
@@ -211,6 +214,12 @@ body {
         width: 100%;
         margin-right: 0;
         border-radius: 20px 20px 0 0;
+    }
+
+    .content {
+        width: 100%; /* На мобильных устройствах ширина контента будет 100% */
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
     }
 
     .sidebar nav ul {
