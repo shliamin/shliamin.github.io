@@ -4,6 +4,7 @@ function showSection(sectionId) {
 
     sections.forEach(section => {
         section.classList.remove('active');
+        section.classList.add('hidden');
     });
 
     buttons.forEach(button => {
@@ -11,14 +12,13 @@ function showSection(sectionId) {
     });
 
     document.getElementById(sectionId).classList.add('active');
+    document.getElementById(sectionId).classList.remove('hidden');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
 }
-
 
 function toggleMenu() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
