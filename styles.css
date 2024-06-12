@@ -65,6 +65,8 @@ body {
     background-color: #fff;
     padding: 40px;
     border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section.active {
@@ -174,6 +176,11 @@ body {
         width: 100%;
         margin: 0 0 20px 0;
         border-radius: 20px;
+        display: none;
+    }
+
+    .sidebar.active {
+        display: block;
     }
 
     .content {
@@ -185,6 +192,8 @@ body {
     .section {
         padding: 20px;
         border-radius: 20px;
+        display: block;
+        max-width: 100%;
     }
 
     .stat {
@@ -193,5 +202,16 @@ body {
 
     .project {
         min-width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-bottom: 20px;
     }
 }
