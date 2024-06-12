@@ -1,9 +1,11 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff; /* Устанавливаем белый фон для всего сайта */
+    background-color: #fff;
     margin: 0;
     padding: 0;
     color: #333;
+    width: 1200px; /* Устанавливаем фиксированную ширину */
+    margin: 0 auto; /* Центрируем body */
 }
 
 .container {
