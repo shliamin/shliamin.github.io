@@ -20,7 +20,7 @@ body {
 .sidebar {
     background-color: #fff;
     padding: 20px;
-    width: 250px;
+    width: 250px
     border-radius: 20px 0 0 20px;
     flex-shrink: 0;
     margin-right: 20px;
@@ -39,16 +39,21 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Для горизонтального расположения элементов */
+    flex-wrap: wrap; /* Для переноса элементов на новую строку */
 }
 
 .sidebar nav ul li {
     margin-bottom: 10px;
+    flex: 1 1 auto; /* Для растягивания элементов на всю ширину */
+    margin-right: 10px; /* Для горизонтального отступа между элементами */
 }
 
 .sidebar nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+    display: block; /* Чтобы ссылки растягивались на всю ширину родителя */
 }
 
 .sidebar .status {
@@ -183,5 +188,13 @@ body {
     .content {
         border-radius: 0 20px 20px 0;
         padding: 20px;
+    }
+
+    .sidebar nav ul {
+        display: block; /* Вертикальное расположение элементов для десктопных устройств */
+    }
+
+    .sidebar nav ul li {
+        margin-right: 0; /* Убираем горизонтальный отступ */
     }
 }
