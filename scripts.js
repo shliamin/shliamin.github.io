@@ -17,5 +17,5 @@ function showSection(sectionId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSection('about me');
+    showSection('home');
 });
