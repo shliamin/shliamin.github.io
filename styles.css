@@ -44,6 +44,7 @@ body {
 
 .uk-comment-body {
     text-align: center; /* Центрируем текст */
+    color: #1679AB;
 }
 
 .sidebar nav ul {
