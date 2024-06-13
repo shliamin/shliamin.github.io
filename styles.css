@@ -94,7 +94,7 @@ body {
 
 .section {
     display: none;
-    background-color: #fff;
+    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентная заливка для секций */
     padding: 40px;
     border-radius: 20px;
     width: 100%;
