@@ -56,11 +56,13 @@ body {
 .note-text {
     white-space: nowrap;
     text-overflow: ellipsis;
+    max-width: 30ch; /* Ограничиваем длину текста до 30 символов в свернутом виде */
 }
 
 .note.expanded .note-text {
     white-space: normal;
     text-overflow: clip;
+    max-width: none; /* Убираем ограничение длины текста при развертывании */
 }
 
 .note-tail {
