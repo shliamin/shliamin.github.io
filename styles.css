@@ -172,6 +172,13 @@ body {
     text-decoration: none; /* Убираем подчеркивание у ссылок */
 }
 
+.status-icon {
+    width: 24px; /* Размер иконок */
+    height: 24px; /* Размер иконок */
+    margin-right: 10px; /* Отступ справа, как у других иконок */
+    fill: #003366; /* Цвет иконок */
+}
+
 .desktop-only {
     display: none;
 }
