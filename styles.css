@@ -50,8 +50,15 @@ body {
 
 .uk-comment-body {
     text-align: center; /* Центрируем текст */
-    color: #003366;
     margin-top: 5px; /* Уменьшаем верхний отступ */
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #676d75, #EFF1F3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .sidebar nav ul {
