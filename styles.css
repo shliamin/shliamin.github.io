@@ -42,7 +42,7 @@ body {
 .note {
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 10px;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
@@ -50,15 +50,34 @@ body {
     font-size: 14px;
     cursor: pointer;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     max-width: 200px;
 }
 
-.note.expanded {
-    white-space: normal;
-    max-width: none;
+.note-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
+.note.expanded .note-text {
+    white-space: normal;
+    text-overflow: clip;
+}
+
+.note-tail {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+.note.expanded .note-tail {
+    display: none;
+}
+
 
 
 .profile-container {
