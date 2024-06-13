@@ -289,8 +289,8 @@ body {
     }
 
     .note {
-        top: 0;
-        right: 100px;
+        top: 20px;
+        left: 100px;
         transform: translate(-50%, 0); /* для корректного выравнивания */
     }
 
