@@ -289,10 +289,9 @@ body {
     }
 
     .note {
-        top: 35px;
-        right: 10px;
-        transform: translate(0, -65%); /* для корректного выравнивания */
-        max-width: 150px; /* Уменьшите ширину заметки для мобильной версии *
+        top: 40px;
+        right: 0px;
+        transform: translate(0, -85%); /* для корректного выравнивания */
     }
 
     .sidebar {
