@@ -10,7 +10,7 @@ function showSection(sectionId) {
     buttons.forEach(button => {
         button.classList.remove('active');
     });
-
+    
     document.getElementById(sectionId).classList.add('active');
     document.getElementById(sectionId).classList.remove('hidden');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
