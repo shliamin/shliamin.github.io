@@ -140,9 +140,7 @@ body {
 
 /* Стили для разделителя */
 .divider {
-    border-top: 3px solid transparent; /* Толщина линии */
-    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентная заливка */
-    height: 0; /* Убираем высоту, чтобы линия была тонкой */
+    border-top: 1px solid #ccc; /* Исходный цвет линии */
     margin: 20px 0;
 }
 
