@@ -289,9 +289,9 @@ body {
     }
 
     .note {
-        top: 20px;
-        right: 20px;
-        transform: translate(0, -50%); /* для корректного выравнивания */
+        top: 35px;
+        right: 10px;
+        transform: translate(0, -65%); /* для корректного выравнивания */
     }
 
     .sidebar {
