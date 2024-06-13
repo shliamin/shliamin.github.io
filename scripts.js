@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const note = document.getElementById("note");
     const originalText = note.innerText;
-    const halfLength = Math.floor(originalText.length / 6);
+    const halfLength = Math.floor(originalText.length / 3);
     const truncatedText = originalText.substring(0, halfLength) + '...';
 
     note.innerText = truncatedText;
