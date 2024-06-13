@@ -155,28 +155,27 @@ body {
     margin-bottom: 10px;
 }
 
-.status-item i {
-    font-size: 1.5em; /* Увеличиваем размер иконок в два раза */
+.status-item i,
+.status-item img {
+    font-size: 2em; /* Увеличиваем размер иконок в два раза */
     margin-right: 10px; /* Добавляем отступ справа от иконок */
     color: #003366; /* Изменяем цвет иконок */
-}
-
-.status-item img.status-icon {
     width: 24px; /* Размер иконок */
     height: 24px; /* Размер иконок */
-    margin-right: 10px; /* Отступ справа, как у других иконок */
     fill: #003366; /* Цвет иконок */
+}
+
+.status-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: inherit; /* Цвет текста наследуется от родителя */
 }
 
 .status-item p {
     margin: 0;
     text-align: left; /* Текст будет слева */
     color: inherit; /* Цвет текста наследуется от родителя */
-}
-
-.status-item a {
-    color: #003366; /* Цвет ссылок такой же, как и у иконок */
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
 }
 
 .desktop-only {
