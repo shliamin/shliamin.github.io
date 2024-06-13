@@ -38,6 +38,17 @@ body {
     margin: 0 auto 10px auto;
 }
 
+.note {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size: 12px;
+}
+
 .profile-container {
     margin-bottom: 20px;
 }
