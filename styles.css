@@ -357,20 +357,19 @@ body {
 }
 
 .contact-item .contact-icon {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     margin-right: 10px;
 }
 
 .contact-detail {
-    font-weight: bold;
     margin: 0;
 }
 
 .contact-label {
     color: #888;
     margin: 0;
-    margin-top: 2px; /* Расстояние между detail и label */
+    margin-top: 1px; /* Расстояние между detail и label */
 }
 
 @media (max-width: 768px) {
