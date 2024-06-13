@@ -35,7 +35,11 @@ body {
     width: 150px; /* Увеличиваем размер изображения в 1.5 раза */
     height: 150px; /* Увеличиваем размер изображения в 1.5 раза */
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto; /* Уменьшаем нижний отступ */
+}
+
+.profile-container {
+    margin-bottom: 20px; /* Добавляем отступ снизу между профилем и кнопками */
 }
 
 .uk-comment-title {
