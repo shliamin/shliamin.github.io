@@ -38,16 +38,28 @@ body {
     margin: 0 auto 10px auto;
 }
 
+/* Стили для заметки */
 .note {
     position: absolute;
     top: 20px;
     right: 10px;
     background-color: white;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    font-size: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
 }
+
+.note.expanded {
+    white-space: normal;
+    max-width: none;
+}
+
 
 .profile-container {
     margin-bottom: 20px;
