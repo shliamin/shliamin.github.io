@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентный фон для всего сайта */
+    background-color: #fff;
     margin: 0;
     padding: 0;
     color: #333;
@@ -18,7 +18,7 @@ body {
 }
 
 .sidebar {
-    background-color: #fff;
+    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентный фон для sidebar */
     padding: 20px;
     width: 250px;
     border-radius: 20px 0 0 20px;
@@ -72,7 +72,7 @@ body {
     width: 100%;
     padding: 10px 0;
     border: none;
-    background-color: transparent;
+    background-color: #fff; /* Белый фон для кнопок */
     cursor: pointer;
     border-radius: 10px;
 }
@@ -90,6 +90,7 @@ body {
     flex-direction: column;
     width: calc(100% - 290px);
     min-height: 400px;
+    background-color: #fff; /* Белый фон для контента */
 }
 
 .section {
