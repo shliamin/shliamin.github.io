@@ -19,3 +19,12 @@ function showSection(sectionId) {
 document.addEventListener('DOMContentLoaded', () => {
     showSection('about-me');
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const note = document.getElementById("note");
+
+    note.addEventListener("click", function() {
+        note.classList.toggle("expanded");
+    });
+});
+
