@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto; /* Убираем верхний отступ */
+    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -25,33 +25,33 @@ body {
     flex-shrink: 0;
     margin-right: 20px;
     box-sizing: border-box;
-    position: relative; /* Добавляем относительное позиционирование */
-    top: 0; /* Убираем смещение вниз */
-    text-align: center; /* Центрируем содержимое */
+    position: relative;
+    top: 0;
+    text-align: center;
 }
 
 .profile-picture {
     border-radius: 50%;
-    width: 150px; /* Увеличиваем размер изображения в 1.5 раза */
-    height: 150px; /* Увеличиваем размер изображения в 1.5 раза */
+    width: 150px;
+    height: 150px;
     display: block;
-    margin: 0 auto 10px auto; /* Уменьшаем нижний отступ */
+    margin: 0 auto 10px auto;
 }
 
 .profile-container {
-    margin-bottom: 20px; /* Добавляем отступ снизу между профилем и кнопками */
+    margin-bottom: 20px;
 }
 
 .uk-comment-title {
-    text-align: center; /* Центрируем текст */
-    font-weight: bold; /* Делаем текст жирным */
-    margin-bottom: 5px; /* Уменьшаем нижний отступ */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .uk-comment-body {
-    text-align: center; /* Центрируем текст */
+    text-align: center;
     color: #003366;
-    margin-top: 5px; /* Уменьшаем верхний отступ */
+    margin-top: 5px;
 }
 
 .sidebar nav ul {
@@ -90,12 +90,12 @@ body {
     flex-direction: column;
     width: calc(100% - 290px);
     min-height: 400px;
-    background-color: #fff; /* Белый фон для контента */
+    background-color: #fff;
 }
 
 .section {
     display: none;
-    background-color: #fff; /* Белый фон для секций */
+    background-color: #fff;
     padding: 40px;
     border-radius: 20px;
     width: 100%;
@@ -140,7 +140,7 @@ body {
 
 /* Стили для разделителя */
 .divider {
-    border-top: 1px solid #ccc; /* Возвращаем исходный цвет линии */
+    border-top: 1px solid #ccc;
     margin: 20px 0;
 }
 
@@ -157,29 +157,48 @@ body {
 
 .status-item i,
 .status-item img {
-    font-size: 2em; /* Увеличиваем размер иконок в два раза */
-    margin-right: 10px; /* Добавляем отступ справа от иконок */
-    color: #003366; /* Изменяем цвет иконок */
-    width: 24px; /* Размер иконок */
-    height: 24px; /* Размер иконок */
-    fill: #003366; /* Цвет иконок */
+    font-size: 2em;
+    margin-right: 10px;
+    color: #003366;
+    width: 24px;
+    height: 24px;
+    fill: #003366;
 }
 
 .status-item a {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
-    color: inherit; /* Цвет текста наследуется от родителя */
+    text-decoration: none;
+    color: inherit;
 }
 
 .status-item p {
     margin: 0;
-    text-align: left; /* Текст будет слева */
-    color: inherit; /* Цвет текста наследуется от родителя */
+    text-align: left;
+    color: inherit;
 }
 
 .desktop-only {
     display: none;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.resume-row {
+    text-align: center;
+}
+
+.status-icon-mobile {
+    width: 48px;
+    height: 48px;
 }
 
 /* Media Queries for Responsive Design */
@@ -244,5 +263,13 @@ body {
     .sidebar nav ul li button {
         padding: 5px 0;
         font-size: 12px;
+    }
+
+    .mobile-icons {
+        display: block;
+    }
+
+    .status {
+        display: none;
     }
 }
