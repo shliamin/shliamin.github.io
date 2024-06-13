@@ -198,7 +198,7 @@ body {
 .icon-row {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .resume-row {
@@ -206,9 +206,11 @@ body {
 }
 
 .status-icon-mobile {
-    width: 48px;
-    height: 48px;
+    width: 36px; /* Размер иконки */
+    height: 36px; /* Размер иконки */
+    margin: 0 5px; /* Отступы между иконками */
 }
+
 
 /* Media Queries for Responsive Design */
 @media (min-width: 769px) {
@@ -275,10 +277,11 @@ body {
     }
 
     .mobile-icons {
-        display: block;
+        display: flex; /* Отображаем контейнер на мобильных */
+        justify-content: center;
     }
 
     .status {
-        display: none;
+        display: none; /* Скрываем основной блок статусов на мобильных */
     }
 }
