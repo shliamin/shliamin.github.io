@@ -288,12 +288,6 @@ body {
         padding: 10px;
     }
 
-    .note {
-        top: 40px;
-        right: 0px;
-        transform: translate(0, -85%); /* для корректного выравнивания */
-    }
-
     .sidebar {
         width: 100%;
         margin-right: 0;
@@ -337,5 +331,37 @@ body {
 
     .divider {
         display: none; /* Скрываем разделители в мобильной версии */
+    }
+}
+
+/* Стили для секции Contact */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    flex: 1 1 calc(33.333% - 10px);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex: 1 1 100%;
     }
 }
