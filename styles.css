@@ -161,6 +161,13 @@ body {
     color: #003366; /* Изменяем цвет иконок */
 }
 
+.status-item img.status-icon {
+    width: 24px; /* Размер иконок */
+    height: 24px; /* Размер иконок */
+    margin-right: 10px; /* Отступ справа, как у других иконок */
+    fill: #003366; /* Цвет иконок */
+}
+
 .status-item p {
     margin: 0;
     text-align: left; /* Текст будет слева */
@@ -170,13 +177,6 @@ body {
 .status-item a {
     color: #003366; /* Цвет ссылок такой же, как и у иконок */
     text-decoration: none; /* Убираем подчеркивание у ссылок */
-}
-
-.status-icon {
-    width: 24px; /* Размер иконок */
-    height: 24px; /* Размер иконок */
-    margin-right: 10px; /* Отступ справа, как у других иконок */
-    fill: #003366; /* Цвет иконок */
 }
 
 .desktop-only {
