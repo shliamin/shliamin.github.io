@@ -14,12 +14,12 @@ My professional expertise is distinguished by my ability to lead and contribute 
 
 ## Certificates
 
-- [**Bachelor of Science Degree Certificate**](https://github.com/shliamin/My-Professional-Portfolio/blob/master/B.Sc.%20Degree%20Certificate%20-%20HTW%20Berlin.pdf)
+- [**Bachelor of Science Degree Certificate**](https://github.com/shliamin/shliamin.github.io/blob/master/B.Sc.%20Degree%20Certificate%20-%20HTW%20Berlin.pdf)
 
-- [**Mercedes-Benz Innovation Challenge Certificate**](https://github.com/shliamin/My-Professional-Portfolio/blob/master/Mercedes-Benz%20Certificate.jpeg)
-- [**Internship Certificate - HTW-Berlin**](https://github.com/shliamin/My-Professional-Portfolio/blob/master/Praktikumszeugnis%20HTW%20Berlin.pdf)
-- [**Internship Certificate - Rhenus Logistics**](https://github.com/shliamin/My-Professional-Portfolio/blob/master/Internship%20Reference%20Rhenus%20Logistics.pdf)
-- [**Fullstack Coding Certificate - Le Wagon**](https://github.com/shliamin/My-Professional-Portfolio/blob/master/Le%20Wagon%20Certificate.pdf)
+- [**Mercedes-Benz Innovation Challenge Certificate**](https://github.com/shliamin/shliamin.github.io/blob/master/Mercedes-Benz%20Certificate.jpeg)
+- [**Internship Certificate - HTW-Berlin**](https://github.com/shliamin/shliamin.github.io/blob/master/Praktikumszeugnis%20HTW%20Berlin.pdf)
+- [**Internship Certificate - Rhenus Logistics**](https://github.com/shliamin/shliamin.github.io/blob/master/Internship%20Reference%20Rhenus%20Logistics.pdf)
+- [**Fullstack Coding Certificate - Le Wagon**](https://github.com/shliamin/shliamin.github.io/blob/master/Le%20Wagon%20Certificate.pdf)
 - [**The MERN Fullstack Certificate - Udemy**](https://www.udemy.com/certificate/UC-55a7cf9f-c36a-41ba-92c8-60b10d15424e/)
 - [**Spring Cloud Certificate - Udemy**](https://www.udemy.com/certificate/UC-e388eb03-dbd9-4d0f-8a5f-fae8fe159697/)
 
