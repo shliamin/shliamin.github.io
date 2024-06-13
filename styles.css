@@ -18,7 +18,7 @@ body {
 }
 
 .sidebar {
-    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентный фон для sidebar */
+    background-color: #fff;
     padding: 20px;
     width: 250px;
     border-radius: 20px 0 0 20px;
@@ -72,7 +72,7 @@ body {
     width: 100%;
     padding: 10px 0;
     border: none;
-    background-color: #fff; /* Белый фон для кнопок */
+    background-color: transparent;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -138,9 +138,11 @@ body {
     color: #555;
 }
 
-/* Стили для разделителя и статуса */
+/* Стили для разделителя */
 .divider {
-    border-top: 1px solid #ccc;
+    border-top: 3px solid transparent; /* Толщина линии */
+    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентная заливка */
+    height: 0; /* Убираем высоту, чтобы линия была тонкой */
     margin: 20px 0;
 }
 
