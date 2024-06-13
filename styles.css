@@ -240,10 +240,6 @@ body {
     .status {
         display: block;
     }
-
-    .mobile-divider {
-        display: none;
-    }
 }
 
 @media (max-width: 768px) {
@@ -293,8 +289,7 @@ body {
         margin-bottom: 20px; /* Установите нужный вам отступ */
     }
 
-    .mobile-divider {
-        display: block;
-        margin-bottom: 10px; /* Установите нужный вам отступ */
+    .divider {
+        display: none; /* Скрываем разделитель в мобильной версии */
     }
 }
