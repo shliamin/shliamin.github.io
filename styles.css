@@ -50,7 +50,7 @@ body {
 
 .uk-comment-body {
     text-align: center; /* Центрируем текст */
-    color: #1679AB;
+    color: #003366;
     margin-top: 5px; /* Уменьшаем верхний отступ */
 }
 
@@ -157,7 +157,7 @@ body {
 .status-item i {
     font-size: 2em; /* Увеличиваем размер иконок в два раза */
     margin-right: 10px; /* Добавляем отступ справа от иконок */
-    color: #1679AB; /* Изменяем цвет иконок */
+    color: #003366; /* Изменяем цвет иконок */
 }
 
 .status-item p {
