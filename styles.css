@@ -140,7 +140,7 @@ body {
 
 /* Стили для разделителя */
 .divider {
-    border-top: 1px solid #ccc; /* Исходный цвет линии */
+    border-top: 1px solid #ccc; /* Возвращаем исходный цвет линии */
     margin: 20px 0;
 }
 
