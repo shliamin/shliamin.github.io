@@ -305,6 +305,11 @@ body {
     .status {
         display: block;
     }
+    
+    .contact-info {
+        margin-top: 40px; /* Увеличение отступа сверху */
+        margin-bottom: 40px; /* Увеличение отступа снизу */
+    }
 }
 
 @media (max-width: 768px) {
