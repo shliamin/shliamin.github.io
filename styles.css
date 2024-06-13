@@ -290,7 +290,7 @@ body {
 
     .note {
         top: 20px;
-        right: 100px;
+        right: 250px;
         transform: translate(-50%, 0); /* для корректного выравнивания */
     }
 
