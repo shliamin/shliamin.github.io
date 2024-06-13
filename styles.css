@@ -45,11 +45,13 @@ body {
 .uk-comment-title {
     text-align: center; /* Центрируем текст */
     font-weight: bold; /* Делаем текст жирным */
+    margin-bottom: 5px; /* Уменьшаем нижний отступ */
 }
 
 .uk-comment-body {
     text-align: center; /* Центрируем текст */
     color: #1679AB;
+    margin-top: 5px; /* Уменьшаем верхний отступ */
 }
 
 .sidebar nav ul {
