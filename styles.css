@@ -211,6 +211,12 @@ body {
     margin: 0 5px; /* Отступы между иконками */
 }
 
+.status-icon-mobile-resume {
+    width: 33px; /* Размер иконки */
+    height: 36px; /* Размер иконки */
+    margin: 0 5px; /* Отступы между иконками */
+}
+
 
 /* Media Queries for Responsive Design */
 @media (min-width: 769px) {
