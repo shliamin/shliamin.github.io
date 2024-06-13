@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #fff;
+    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентный фон для всего сайта */
     margin: 0;
     padding: 0;
     color: #333;
@@ -94,7 +94,7 @@ body {
 
 .section {
     display: none;
-    background: linear-gradient(135deg, #676d75, #EFF1F3); /* Градиентная заливка для секций */
+    background-color: #fff; /* Белый фон для секций */
     padding: 40px;
     border-radius: 20px;
     width: 100%;
