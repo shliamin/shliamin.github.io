@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     showSection('about-me');
 
     const note = document.getElementById("note");
+    const originalText = note.innerText;
+    const halfLength = Math.floor(originalText.length / 2);
+    const truncatedText = originalText.substring(0, halfLength) + '...';
+
+    note.innerText = truncatedText;
 
     note.addEventListener("click", function() {
+        if (note.classList.contains("expanded")) {
+            note.innerText = truncatedText;
+        } else {
+            note.innerText = originalText;
+        }
         note.classList.toggle("expanded");
     });
 });
