@@ -347,7 +347,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .contact-item .contact-icon {
@@ -358,11 +358,13 @@ body {
 
 .contact-detail {
     font-weight: bold;
+    margin: 0;
 }
 
 .contact-label {
     color: #888;
     margin: 0;
+    margin-top: 2px; /* Расстояние между detail и label */
 }
 
 @media (max-width: 768px) {
@@ -372,5 +374,6 @@ body {
 
     .contact-item {
         flex: 1 1 100%;
+        margin-bottom: 10px;
     }
 }
