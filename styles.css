@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     color: #333;
@@ -8,23 +8,26 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .sidebar {
-    background-color: #f0f0f0;
+    background-color: #fff;
     padding: 20px;
     width: 250px;
     border-radius: 20px 0 0 20px;
-    text-align: center;
+    flex-shrink: 0;
     margin-right: 20px;
     box-sizing: border-box;
+    position: relative;
+    top: 0;
+    text-align: center;
 }
 
 .profile-picture {
@@ -32,10 +35,14 @@ body {
     width: 150px;
     height: 150px;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
 }
 
+/* Стили для заметки */
 .note {
+    position: absolute;
+    top: 20px;
+    left: 140px;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
@@ -44,7 +51,6 @@ body {
     cursor: pointer;
     overflow: hidden;
     max-width: 200px;
-    margin: 0 auto 20px auto;
 }
 
 .note-text {
@@ -58,7 +64,22 @@ body {
 }
 
 .note-tail {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+.note.expanded .note-tail {
     display: none;
+}
+
+.profile-container {
+    margin-bottom: 20px;
 }
 
 .uk-comment-title {
@@ -98,7 +119,6 @@ body {
 
 .sidebar nav ul li button.active {
     border: 1px solid #ccc;
-    color: #007BFF;
 }
 
 .content {
@@ -108,13 +128,15 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    width: calc(100% - 290px);
+    min-height: 400px;
     background-color: #fff;
 }
 
 .section {
     display: none;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -125,51 +147,151 @@ body {
     display: block;
 }
 
-.contact-info {
+.section.hidden {
+    display: none;
+}
+
+.stats {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-.contact-item {
-    flex: 1 1 200px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.contact-item i {
-    font-size: 24px;
+.stat {
+    background-color: #e9ecef;
+    padding: 10px 20px;
     margin-right: 10px;
-    color: #007BFF;
-}
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.socials a {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #007BFF;
-    text-decoration: none;
-    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
     margin-bottom: 10px;
+    flex: 1 1 100px;
 }
 
-.socials a i {
-    margin-right: 5px;
+.stat strong {
+    display: block;
     font-size: 20px;
+    margin-bottom: 5px;
 }
+
+.stat span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Стили для разделителя */
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: inherit; /* Цвет текста наследуется от родителя */
+}
+
+.status-item i,
+.status-item img {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #003366;
+    width: 24px;
+    height: 24px;
+    fill: #003366;
+}
+
+.status-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.status-item p {
+    margin: 0;
+    text-align: left;
+    color: inherit;
+}
+
+.status-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px; /* Размер иконки */
+    margin-right: 10px; /* Отступ справа */
+    fill: #003366; /* Цвет иконки */
+}
+
+.desktop-only {
+    display: none;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.resume-row {
+    text-align: center;
+}
+
+.status-icon-mobile {
+    width: 36px; /* Размер иконки */
+    height: 36px; /* Размер иконки */
+    margin: 0 5px; /* Отступы между иконками */
+}
+
 
 /* Media Queries for Responsive Design */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        border-radius: 20px 0 0 20px;
+    }
+
+    .content {
+        border-radius: 0 20px 20px 0;
+        padding: 20px;
+        width: calc(100% - 290px);
+    }
+
+    .sidebar nav ul {
+        display: block;
+    }
+
+    .sidebar nav ul li {
+        margin-right: 0;
+    }
+
+    /* Показываем статус на десктопной версии */
+    .status {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 10px;
+    }
+
+    .note {
+        top: 40px;
+        right: 0px;
+        transform: translate(0, -85%); /* для корректного выравнивания */
     }
 
     .sidebar {
@@ -201,19 +323,19 @@ body {
     }
 
     .mobile-icons {
-        display: flex;
+        display: flex; /* Отображаем контейнер на мобильных */
         justify-content: center;
     }
 
     .status {
-        display: none;
+        display: none; /* Скрываем основной блок статусов на мобильных */
     }
 
     .uk-comment-body {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Установите нужный вам отступ */
     }
 
     .divider {
-        display: none;
+        display: none; /* Скрываем разделители в мобильной версии */
     }
 }
