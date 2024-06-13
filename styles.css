@@ -251,6 +251,12 @@ body {
     margin: 0 5px; /* Отступы между иконками */
 }
 
+.contact-item .contact-icon {
+    width: 48px; /* Увеличиваем ширину иконки в два раза */
+    height: 48px; /* Увеличиваем высоту иконки в два раза */
+    margin-right: 10px;
+}
+
 
 /* Media Queries for Responsive Design */
 @media (min-width: 769px) {
