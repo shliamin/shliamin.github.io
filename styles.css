@@ -429,4 +429,8 @@ body {
    .filters .uk-select {
         font-size: 13px;
     }
+
+    .section {
+        width: 100%;
+    }
 }
