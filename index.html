@@ -117,15 +117,30 @@
 
             <section id="my-work" class="section">
                 <p>Welcome to my personal showcase! Here, you'll find a collection of my IT projects and contributions that highlight my passion for technology and innovation. Each project represents a step towards solving real-world problems and pushing the boundaries of what's possible.</p>
+                <div class="filters">
+                    <select id="tech-fields" class="uk-select" onchange="updateTechStack()">
+                        <option value="">Select Tech Field</option>
+                        <option value="full-stack">Full Stack</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="bioinformatics">Bioinformatics</option>
+                    </select>
+                    <select id="tech-stack" class="uk-select" disabled onchange="filterProjects()">
+                        <option value="">Select Tech Stack</option>
+                    </select>
+                </div>
                 <h3>GitHub Projects</h3>
-                <div class="projects-grid">
-                    <div class="project">
+                <div class="projects-grid" id="projects-grid">
+                    <div class="project" data-tech-field="full-stack" data-tech-stack="react">
                         <h4>Project One</h4>
                         <p>This is a brief description of Project One. <a href="#" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one');" uk-toggle="target: #project-modal">View project</a></p>
                     </div>
-                    <div class="project">
+                    <div class="project" data-tech-field="data-science" data-tech-stack="python">
                         <h4>Project Two</h4>
                         <p>This is a brief description of Project Two. <a href="#" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two');" uk-toggle="target: #project-modal">View project</a></p>
+                    </div>
+                    <div class="project" data-tech-field="bioinformatics" data-tech-stack="r">
+                        <h4>Project Three</h4>
+                        <p>This is a brief description of Project Three. <a href="#" onclick="loadProjectDetails('Project Three', 'Detailed description of Project Three.', 'https://github.com/shliamin/project-three');" uk-toggle="target: #project-modal">View project</a></p>
                     </div>
                 </div>
             </section>
