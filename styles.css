@@ -17,19 +17,6 @@ body {
     box-sizing: border-box;
 }
 
-p{
-    max-width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
-    box-sizing: border-box; 
-}
-
-#p-title{
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .sidebar {
     background-color: #fff;
     padding: 20px;
