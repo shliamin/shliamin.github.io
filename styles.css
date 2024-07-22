@@ -452,13 +452,15 @@ body {
     margin-top: 1px;
 }
 
-.note-text {
-    max-width: 100%;
-    white-space: nowrap;
+.note {
+    top: -5px; 
+    right: -5px; 
 }
 
-.note-text.expanded {
-    white-space: normal;
+.note-tail {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
