@@ -52,15 +52,14 @@ body {
 }
 
 .note-text {
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 30ch;
 }
 
-.note.expanded .note-text {
+.note-text.expanded {
     white-space: normal;
-    text-overflow: clip;
-    max-width: none;
+    overflow: visible;
 }
 
 .note-tail {
@@ -354,7 +353,7 @@ body {
     }
     
     .sidebar-image {
-        margin-top: 80px;
+        margin-top: 100px;
         display: flex;
     }
 }
@@ -451,6 +450,15 @@ body {
     color: #888;
     margin: 0;
     margin-top: 1px;
+}
+
+.note-text {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.note-text.expanded {
+    white-space: normal;
 }
 
 @media (max-width: 768px) {
