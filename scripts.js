@@ -34,4 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         note.classList.toggle("expanded");
     });
+
+    fetch('project.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('project-modal-placeholder').innerHTML = data;
+        });
 });
+
+function loadProjectDetails(title, description, link) {
+    document.getElementById('project-title').innerText = title;
+    document.getElementById('project-description').innerText = description;
+    document.getElementById('project-link').href = link;
+}
