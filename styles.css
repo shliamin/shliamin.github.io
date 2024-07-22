@@ -283,6 +283,12 @@ body {
     color: inherit;
 }
 
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 @media (min-width: 769px) {
     .container {
         flex-direction: row;
