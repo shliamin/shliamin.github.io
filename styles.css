@@ -133,7 +133,7 @@ body {
 
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
     display: flex;
@@ -146,9 +146,9 @@ body {
 .section {
     display: none;
     background-color: #fff;
-    padding: 40px;
+    padding: 40px 0;
     border-radius: 20px;
-    width: 100%;
+    width: 1000px;
     box-sizing: border-box;
     min-height: 400px;
 }
