@@ -343,6 +343,23 @@ body {
     }
 }
 
+.sidebar-image {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.additional-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .sidebar-image {
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
