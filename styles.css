@@ -102,7 +102,7 @@ body {
 
 .sidebar nav ul li button:hover {
     background-color: #f0f0f0;
-    transform: translateY(-2px);
+    
 }
 
 .sidebar nav ul li button:active {
