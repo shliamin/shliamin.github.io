@@ -159,6 +159,11 @@ body {
     box-sizing: border-box;
 }
 
+.section p#p-title {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .section.active {
     display: block;
 }
