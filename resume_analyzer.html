@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="file"], textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        #results h3 {
+            color: #333;
+        }
+        #results p {
+            color: #555;
+        }
+        .contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analyzer</h1>
+        <form id="resume-form">
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.txt" required><br>
+            <label for="job_description">Job Description:</label>
+            <textarea id="job_description" name="job_description" rows="5" required></textarea><br>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="results"></div>
+        <div class="contact">
+            <p>Visit my website: <a href="https://shliamin.github.io" target="_blank">shliamin.github.io</a></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
+    <script>
+        const stopWords = new Set(["a", "an", "the", "and", "or", "but", "if", "to", "of", "in", "for", "on", "with", "as", "by", "at"]);
+
+        function extractTextFromPDF(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const typedarray = new Uint8Array(this.result);
+                    pdfjsLib.getDocument(typedarray).promise.then(pdf => {
+                        let text = '';
+                        let countPromises = [];
+                        for (let i = 1; i <= pdf.numPages; i++) {
+                            countPromises.push(pdf.getPage(i).then(page => {
+                                return page.getTextContent().then(textContent => {
+                                    textContent.items.forEach(item => {
+                                        text += item.str + ' ';
+                                    });
+                                });
+                            }));
+                        }
+                        Promise.all(countPromises).then(() => resolve(text));
+                    }).catch(reject);
+                };
+                reader.readAsArrayBuffer(file);
+            });
+        }
+
+        function preprocessText(text) {
+            return text.toLowerCase().split(/\W+/).filter(word => word && !stopWords.has(word));
+        }
+
+        function analyzeResume(resumeText, jobDescription) {
+            const resumeKeywords = preprocessText(resumeText);
+            const jobKeywords = preprocessText(jobDescription);
+            const matchingKeywords = resumeKeywords.filter(keyword => jobKeywords.includes(keyword));
+            const matchingSet = new Set(matchingKeywords);
+            const matchingCount = matchingSet.size;
+            const matchingPercentage = (matchingCount / jobKeywords.length) * 100;
+
+            return {
+                matchingKeywords: Array.from(matchingSet),
+                resumeKeywordsCount: resumeKeywords.length,
+                jobKeywordsCount: jobKeywords.length,
+                matchingCount: matchingCount,
+                matchingPercentage: matchingPercentage.toFixed(2)
+            };
+        }
+
+        document.getElementById('resume-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const resumeFile = document.getElementById('resume').files[0];
+            const jobDescription = document.getElementById('job_description').value;
+
+            if (resumeFile.type === 'application/pdf') {
+                extractTextFromPDF(resumeFile).then(resumeText => {
+                    const analysis = analyzeResume(resumeText, jobDescription);
+                    displayResults(analysis);
+                }).catch(err => console.error(err));
+            } else if (resumeFile.type === 'text/plain') {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const resumeText = reader.result;
+                    const analysis = analyzeResume(resumeText, jobDescription);
+                    displayResults(analysis);
+                };
+                reader.readAsText(resumeFile);
+            } else {
+                alert('Unsupported file type. Please upload a PDF or TXT file.');
+            }
+        });
+
+        function displayResults(data) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <h3>Analysis Results:</h3>
+                <p><strong>Matching Keywords:</strong> ${data.matchingKeywords.join(', ')}</p>
+                <p><strong>Resume Keywords Count:</strong> ${data.resumeKeywordsCount}</p>
+                <p><strong>Job Description Keywords Count:</strong> ${data.jobKeywordsCount}</p>
+                <p><strong>Matching Count:</strong> ${data.matchingCount}</p>
+                <p><strong>Matching Percentage:</strong> ${data.matchingPercentage}%</p>
+            `;
+        }
+    </script>
+</body>
+</html>
