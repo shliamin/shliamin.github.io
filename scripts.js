@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('about-me');
+
+    const note = document.getElementById("note");
+    const noteText = document.getElementById("note-text");
+    const originalText = "👋...I speak 🇬🇧🇩🇪🇷🇺 fluently. Feel free to contact me. To download my resume, click the file below my photo.";
+    const truncatedText = "👋...";
+
+    noteText.innerText = truncatedText;
+
+    note.addEventListener("click", function() {
+        if (noteText.classList.contains("expanded")) {
+            noteText.innerText = truncatedText;
+        } else {
+            noteText.innerText = originalText;
+        }
+        noteText.classList.toggle("expanded");
+    });
+
+    fetch('project.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('project-modal-placeholder').innerHTML = data;
+        });
+});
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
     const buttons = document.querySelectorAll('.sidebar nav ul li button');
@@ -15,33 +41,6 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.remove('hidden');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSection('about-me');
-
-    const note = document.getElementById("note");
-    const originalText = note.innerText;
-    const halfLength = Math.floor(originalText.length / 3);
-    const truncatedText = originalText.substring(0, halfLength) + '...';
-
-    note.innerText = truncatedText;
-
-    note.addEventListener("click", function() {
-        if (note.classList.contains("expanded")) {
-            note.innerText = truncatedText;
-        } else {
-            note.innerText = originalText;
-        }
-        note.classList.toggle("expanded");
-    });
-
-    // Загрузка шаблона попапа
-    fetch('project.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('project-modal-placeholder').innerHTML = data;
-        });
-});
 
 function loadProjectDetails(title, description, link) {
     document.getElementById('project-title').innerText = title;
