@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const note = document.getElementById("note");
     const noteText = document.getElementById("note-text");
-    const originalText = "👋...I speak 🇬🇧🇩🇪🇷🇺 fluently. Feel free to contact me. To download my resume, click the file below my photo.";
+    const originalText = "👋... I speak 🇬🇧🇩🇪🇷🇺 fluently. Feel free to contact me. To download my resume, click the file icon below my photo.";
     const truncatedText = "👋...";
 
     noteText.innerText = truncatedText;
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         noteText.classList.toggle("expanded");
     });
 
+    
     fetch('project.html')
         .then(response => response.text())
         .then(data => {
