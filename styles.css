@@ -146,7 +146,7 @@ body {
 .section {
     display: none;
     background-color: #fff;
-    padding: 40px;
+    padding: 0 40px;
     border-radius: 20px;
     width: 100%;
     box-sizing: border-box;
