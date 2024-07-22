@@ -291,6 +291,14 @@ body {
 
 #contact {
     height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.calendly-inline-widget {
+    flex-grow: 1;
+    height: 100%;
 }
 
 @media (min-width: 769px) {
