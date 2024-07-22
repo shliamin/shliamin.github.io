@@ -274,6 +274,12 @@ body {
     margin: 0 5px;
 }
 
+.contact-info {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .contact-item .contact-icon {
     width: 48px;
     height: 48px;
