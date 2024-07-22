@@ -20,6 +20,11 @@ body {
 p{
     max-width: 80%;
 }
+
+#p-title{
+    max-width: 100%;
+}
+
 .sidebar {
     background-color: #fff;
     padding: 20px;
