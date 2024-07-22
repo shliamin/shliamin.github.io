@@ -116,36 +116,18 @@
             </section>
 
             <section id="my-work" class="section">
-                <h1>Lorem Ipsum <span>👨‍💻</span></h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Nullam consectetur, nunc in sollicitudin hendrerit, eros lorem molestie nunc, eget consequat massa arcu eget libero.</p>
-                <h3>Lorem Ipsum</h3>
+                <h1>My Work <span>👨‍💻</span></h1>
+                <h2>Projects and Contributions on GitHub</h2>
+                <p>Below is a list of my projects hosted on GitHub. Click on any project to learn more about it.</p>
+                <h3>GitHub Projects</h3>
                 <div class="projects-grid">
                     <div class="project">
-                        <h4>Lorem Ipsum</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. <a href="#">View project</a></p>
+                        <h4>Project One</h4>
+                        <p>This is a brief description of Project One. <a href="#" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one');" uk-toggle="target: #project-modal">View project</a></p>
                     </div>
                     <div class="project">
-                        <h4>Lorem Ipsum</h4>
-                        <п>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. <a href="#">View project</a></п>
-                    </div>
-                </div>
-                <h3>Lorem Ipsum</h3>
-                <div class="projects-grid">
-                    <div class="project">
-                        <h4>Lorem Ipsum</h4>
-                        <п>Lorem ipsum dolor sit amet, consectetur adipiscing элит. Quisque sit amet accumsan arcu. <a href="#">View GitHub</a></п>
-                    </div>
-                </div>
-                <h3>Lorem Ipsum</h3>
-                <div class="projects-grid">
-                    <div class="project">
-                        <h4>Lorem Ipsum</h4>
-                        <п>Lorem ipsum dolor sit amet, consectetur adipiscing элит. Quisque sit amet accumsan arcu. <a href="#">View project</a></п>
-                    </div>
-                    <div class="project">
-                        <h4>Lorem Ipsum</h4>
-                        <п>Lorem ipsum dolor sit amet, consectetur adipiscing элит. Quisque sit amet accumsан аrcu. <a href="#">View project</a></п>
+                        <h4>Project Two</h4>
+                        <p>This is a brief description of Project Two. <a href="#" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two');" uk-toggle="target: #project-modal">View project</a></p>
                     </div>
                 </div>
             </section>
@@ -187,6 +169,21 @@
             </section>
         </main>
     </div>
-    <script src="scripts.js"></script>
+    <!-- Project file -->
+    <div id="project-modal-placeholder"></div>
+    <script>
+        function loadProjectDetails(title, description, link) {
+            document.getElementById('project-title').innerText = title;
+            document.getElementById('project-description').innerText = description;
+            document.getElementById('project-link').href = link;
+        }
+
+        // loading project
+        fetch('project.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('project-modal-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
