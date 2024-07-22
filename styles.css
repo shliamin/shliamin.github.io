@@ -289,29 +289,6 @@ body {
     margin-bottom: 20px;
 }
 
-#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh; 
-    justify-content: center;
-  }
-
-.calendly-container {
-    width: 100%;
-    max-width: 800px; 
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.calendly-inline-widget {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 @media (min-width: 769px) {
     .container {
         flex-direction: row;
