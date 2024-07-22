@@ -345,6 +345,11 @@ body {
     margin-top: 1px;
 }
 
+.desktop-only,
+.desktop-only-p {
+    display: none;
+}
+
 @media (min-width: 1181px) {
     .desktop-only {
         display: block;
