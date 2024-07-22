@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         note.classList.toggle("expanded");
     });
 
+    // Загрузка шаблона попапа
     fetch('project.html')
         .then(response => response.text())
         .then(data => {
@@ -46,4 +47,58 @@ function loadProjectDetails(title, description, link) {
     document.getElementById('project-title').innerText = title;
     document.getElementById('project-description').innerText = description;
     document.getElementById('project-link').href = link;
+}
+
+function updateTechStack() {
+    const techFields = document.getElementById('tech-fields').value;
+    const techStack = document.getElementById('tech-stack');
+    techStack.innerHTML = '<option value="">Select Tech Stack</option>';
+
+    if (techFields) {
+        techStack.disabled = false;
+        let options = [];
+        if (techFields === 'full-stack') {
+            options = ['React', 'Node.js', 'Angular'];
+        } else if (techFields === 'data-science') {
+            options = ['Python', 'R', 'TensorFlow'];
+        } else if (techFields === 'bioinformatics') {
+            options = ['Python', 'R', 'Bioconductor'];
+        }
+        options.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option.toLowerCase();
+            opt.innerText = option;
+            techStack.appendChild(opt);
+        });
+    } else {
+        techStack.disabled = true;
+    }
+
+    filterProjects();
+}
+
+function filterProjects() {
+    const techFields = document.getElementById('tech-fields').value;
+    const techStack = document.getElementById('tech-stack').value;
+    const projects = document.querySelectorAll('.projects-grid .project');
+
+    projects.forEach(project => {
+        const projectTechField = project.getAttribute('data-tech-field');
+        const projectTechStack = project.getAttribute('data-tech-stack');
+        let show = true;
+
+        if (techFields && projectTechField !== techFields) {
+            show = false;
+        }
+
+        if (techStack && projectTechStack !== techStack) {
+            show = false;
+        }
+
+        if (show) {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    });
 }
