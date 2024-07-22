@@ -345,11 +345,6 @@ body {
     margin-top: 1px;
 }
 
-.desktop-only,
-.desktop-only-p {
-    display: none;
-}
-
 @media (min-width: 1181px) {
     .desktop-only {
         display: block;
@@ -461,21 +456,6 @@ body {
 
     .contact-info {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contact-item {
-        justify-content: flex-start;
-        max-width: none;
-    }
-
-    .contact-detail,
-    .contact-label {
-        text-align: left;
-    }
-
-    .contact-detail-container {
-        width: auto;
     }
     
    .filters .uk-select {
@@ -513,5 +493,9 @@ body {
         background-color: #002244;
         text-decoration: none;
         color: #ffffff;
+    }
+
+    .desktop-only-p {
+        display: none;
     }
 }
