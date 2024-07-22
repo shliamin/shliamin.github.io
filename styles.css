@@ -439,4 +439,9 @@ body {
     .section {
         width: 100%;
     }
+    
+    .section p {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
