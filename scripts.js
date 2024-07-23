@@ -191,7 +191,8 @@ function updateTechStack() {
 function filterProjects() {
     const techFields = document.getElementById('tech-fields').value;
     const techStack = document.getElementById('tech-stack').value;
-    const projects = document.querySelectorAll('.projects-grid .project');
+    const projectsGrid = document.querySelector('.projects-grid');
+    const projects = Array.from(projectsGrid.querySelectorAll('.project'));
     let hasVisibleProjects = false;
 
     projects.forEach(project => {
@@ -207,18 +208,14 @@ function filterProjects() {
             show = false;
         }
 
-        if (show) {
-            project.style.display = 'block';
-            hasVisibleProjects = true;
-        } else {
-            project.style.display = 'none';
-        }
+        project.style.display = show ? 'block' : 'none';
+        hasVisibleProjects = hasVisibleProjects || show;
     });
 
     const noResultsMessage = document.getElementById('no-results-message');
-    if (!hasVisibleProjects) {
-        noResultsMessage.style.display = 'block';
-    } else {
-        noResultsMessage.style.display = 'none';
-    }
+    noResultsMessage.style.display = hasVisibleProjects ? 'none' : 'block';
+
+
+    const visibleProjects = projects.filter(project => project.style.display === 'block');
+    visibleProjects.forEach(project => projectsGrid.appendChild(project));
 }

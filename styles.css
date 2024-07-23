@@ -263,11 +263,7 @@ body {
     margin: 0 5px;
 }
 
-.contact-info {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .contact-item .contact-icon {
     width: 48px;
@@ -505,7 +501,13 @@ body {
 
 @media (min-width: 1181px) {
 
-   
+    .contact-info {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .desktop-only {
         display: block;
@@ -535,11 +537,6 @@ body {
 
     .status {
         display: block;
-    }
-    
-    .contact-info {
-        margin-top: 40px;
-        margin-bottom: 40px;
     }
     
     .sidebar-image {
@@ -573,6 +570,10 @@ body {
 }
 
 @media (max-width: 1180px) {
+
+    .contact-info {
+        margin-left: 20%;
+    }
 
     .mobile-only {
         display: block;
