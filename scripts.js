@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('github-stats').innerHTML = `<p>Error fetching GitHub stats</p>`;
         }
     }
-    
 
     const noResultsMessage = document.createElement('p');
     noResultsMessage.id = 'no-results-message';
@@ -106,6 +105,32 @@ document.addEventListener('DOMContentLoaded', () => {
     noResultsMessage.innerText = "Nothing found here (yet), maybe try another option or enjoy a coffee break! ☕";
     noResultsMessage.style.paddingBottom = '40px';
     document.querySelector('.projects-grid').appendChild(noResultsMessage);
+
+    // Pop-up functionality
+    const popupContainer = document.getElementById('popup-container');
+    const popupDocument = document.getElementById('popup-document');
+    const popupClose = document.getElementById('popup-close');
+
+    document.querySelectorAll('.popup-word').forEach(word => {
+        word.addEventListener('click', function() {
+            const documentSrc = this.getAttribute('data-document');
+            popupDocument.setAttribute('src', documentSrc);
+            popupContainer.style.display = 'block';
+        });
+    });
+
+    popupClose.addEventListener('click', function() {
+        popupContainer.style.display = 'none';
+        popupDocument.setAttribute('src', '');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == popupContainer) {
+            popupContainer.style.display = 'none';
+            popupDocument.setAttribute('src', '');
+        }
+    });
+
 });
 
 function highlightResume() {
@@ -214,7 +239,6 @@ function filterProjects() {
 
     const noResultsMessage = document.getElementById('no-results-message');
     noResultsMessage.style.display = hasVisibleProjects ? 'none' : 'block';
-
 
     const visibleProjects = projects.filter(project => project.style.display === 'block');
     visibleProjects.forEach(project => projectsGrid.appendChild(project));

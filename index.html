@@ -99,7 +99,7 @@
 
         <main class="content">
             <section id="about-me" class="section">
-                <p><strong>I am a Computer Scientist</strong> with a Bachelor of Science in Computer Science from the University of Applied Sciences Berlin. From 2015 to 2019, I also studied Electrical Engineering and IT Security at Ruhr University Bochum. Since 2019, I have been engaged in full stack development and data science, but my interests are not limited to these fields. I have completed three internships at IT companies and have received recommendation letters from organizations such as Rhenus Logistics, the University of Applied Sciences Berlin, and Mercedes-Benz. Additionally, I have been freelancing for several years. Examples of my work can be found in the My Work section. I also author articles on technology and innovation in IT, which you can read on Medium.</p>
+                <p><strong>I am a Computer Scientist</strong> with a <span class="popup-word" data-document="B.Sc. Degree Certificate - HTW Berlin.pdf">Bachelor of Science</span> in Computer Science from the University of Applied Sciences Berlin. From 2015 to 2019, I also studied Electrical Engineering and IT Security at Ruhr University Bochum. Since 2019, I have been engaged in full stack development and data science, but my interests are not limited to these fields. I have completed three internships at IT companies and have received recommendation letters from organizations such as Rhenus Logistics, the University of Applied Sciences Berlin, and Mercedes-Benz. Additionally, I have been freelancing for several years. Examples of my work can be found in the My Work section. I also author articles on technology and innovation in IT, which you can read on Medium.</p>
                 <p><strong>What matters to me is</strong> solving business, scientific, and social problems through technological solutions. I believe this is the foundation for the development of individuals, companies, and society as a whole.</p>
                 <p><strong>To align with my values</strong>, I create software that helps achieve these goals. In addition to developing software, I write about my processes and frequently share open source code. Examples of my work can be found in the My Work section.</p>
                 <p><strong>My goal is</strong> to create IT solutions that directly impact the future development of individuals, companies, and society. By making our lives more automated and efficient, maintaining competitive advantages, and understanding and leveraging data effectively, we can make high-quality insights and decisions. This belief drives my work.</p>
@@ -115,13 +115,13 @@
                 </ul>
                 <p><strong>I am currently interested in</strong> long-term full-time collaborations.</p>
                 <p><strong>I am committed to being useful to you</strong>, so regardless of whether we work together, let me share a small useful software tool that will ease your resume analysis process. Go to the Contact section and click the link at the bottom of the page to test the web application.</p>
-                <p><strong>I would love to hear from you</strong> about the challenges you face in software development or data analysis in your organization. What questions can I answer to help you make the best decision? I will explain how these challenges can be overcome, and you might find something useful for yourself.</p>
+                <p style="margin-bottom: 40px;"><strong>I would love to hear from you</strong> about the challenges you face in software development or data analysis in your organization. What questions can I answer to help you make the best decision? I will explain how these challenges can be overcome, and you might find something useful for yourself.</p>
             </section>
 
             <section id="my-work" class="section">
                 <p id="github-stats-text">GitHub statistics:</p>
                 <div id="github-stats" class="github-stats-info"></div>
-                <p>Welcome to my personal showcase! Here, you'll find a collection of my IT projects and contributions that highlight my passion for technology and innovation. Each project represents a step towards solving real-world problems and pushing the boundaries of what's possible.</p>
+                <p><strong>Welcome to my personal showcase!</strong> Here, you'll find a collection of my IT projects and contributions that highlight my passion for technology and innovation. Each project represents a step towards solving real-world problems and pushing the boundaries of what's possible.</p>
                 <div class="filters">
                     <select id="tech-fields" class="uk-select" onchange="updateTechStack()">
                         <option value="">Select Tech Field</option>
@@ -171,7 +171,7 @@
             
 
             <section id="contact" class="section">
-                <p>I am always open to new opportunities and collaborations. Whether you have a question, need my expertise, or just want to connect, feel free to reach out through any of the following methods:</p>
+                <p><strong>I am always open to new </strong>opportunities and collaborations. Whether you have a question, need my expertise, or just want to connect, feel free to reach out through any of the following methods:</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <a href="https://wa.me/4917645278124" target="_blank">
@@ -205,14 +205,14 @@
                 <div id="calendly-link" class="mobile-only">
                     <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/efimshliamin/video-conference-with-efim?primary_color=003366'});return false;" class="calendly-button">Schedule a Video Conference</a>
                 </div>
-                <p>I currently live in Berlin and enjoy working here, but I am flexible and open to relocating if needed. I am also ready for business trips. If you want to get to know me better, you can visit my Medium or LinkedIn account by clicking on the respective icons below my photo.</p>
-                <p class="desktop-only-p">If you would like to schedule a video conference with me, please use the Calendly widget below. It allows you to book a time that suits you, and you'll receive a confirmation email with all the details:</p>
+                <p><strong>I currently live in Berlin and enjoy working here</strong>, but I am flexible and open to relocating if needed. I am also ready for business trips. If you want to get to know me better, you can visit my Medium or LinkedIn account by clicking on the respective icons below my photo.</p>
+                <p class="desktop-only-p"><strong>If you would like to schedule a video conference with me</strong>, please use the Calendly widget below. It allows you to book a time that suits you, and you'll receive a confirmation email with all the details:</p>
                 <!-- Calendly inline widget for desktop -->
                 <div id="calendly-widget" class="calendly-container desktop-only">
                     <div class="calendly-inline-widget" data-url="https://calendly.com/efimshliamin/video-conference-with-efim?primary_color=003366" style="min-width:320px;height:700px;"></div>
                 </div>
 
-                <p style="margin-bottom: 40px;" >🎁 I made a tool for you: <a href="resume_analyzer.html" target="_blank">click here</a> to easily analyze any resume and find the perfect match!</p>
+                <p style="margin-bottom: 40px;" >🎁 <strong>I made a tool for you:</strong> <a href="resume_analyzer.html" target="_blank">click here</a> to easily analyze any resume and find the perfect match!</p>
                 
             </section>
 
@@ -223,5 +223,12 @@
     </div>
     <div id="project-modal-placeholder"></div>
     <script src="scripts.js"></script>
+    
+    <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+            <span id="popup-close" class="popup-close">&times;</span>
+            <iframe id="popup-document" src="" frameborder="0"></iframe>
+        </div>
+    </div>
 </body>
 </html>
