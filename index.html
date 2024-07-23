@@ -122,9 +122,7 @@
 
             <section id="my-work" class="section">
                 <p id="github-stats-text">GitHub statistics:</p>
-                <div id="github-stats" class="github-stats-info">
-                    
-                </div>
+                <div id="github-stats" class="github-stats-info"></div>
                 <p>Welcome to my personal showcase! Here, you'll find a collection of my IT projects and contributions that highlight my passion for technology and innovation. Each project represents a step towards solving real-world problems and pushing the boundaries of what's possible.</p>
                 <div class="filters">
                     <select id="tech-fields" class="uk-select" onchange="updateTechStack()">
@@ -141,26 +139,32 @@
                 </div>
                 <div class="row projects-grid" id="projects-grid">
                     <div class="col-md-6 col-12 mb-4">
-                        <div class="card project" data-tech-field="full-stack" data-tech-stack="react" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one', 'https://project-one.com', 'Completed', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
-                            <div class="card-body">
-                                <h4 class="card-title">Project One</h4>
-                                <p class="card-text">This is a brief description of Project One.</p>
+                        <div class="card project" data-tech-field="full-stack" data-tech-stack="react" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one', 'https://project-one.com', 'Completed', 'https://via.placeholder.com/300x200');" uk-toggle="target: #project-modal">
+                            <div class="card-img-top" style="background-image: url('https://via.placeholder.com/300x200');">
+                                <div class="card-body-overlay">
+                                    <h4 class="card-title">Project One</h4>
+                                    <p class="card-text">This is a brief description of Project One.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-12 mb-4">
-                        <div class="card project" data-tech-field="data-science" data-tech-stack="python" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two', 'https://project-two.com', 'In Development', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
-                            <div class="card-body">
-                                <h4 class="card-title">Project Two</h4>
-                                <p class="card-text">This is a brief description of Project Two.</p>
+                        <div class="card project" data-tech-field="data-science" data-tech-stack="python" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two', 'https://project-two.com', 'In Development', 'https://via.placeholder.com/300x200');" uk-toggle="target: #project-modal">
+                            <div class="card-img-top" style="background-image: url('https://via.placeholder.com/300x200');">
+                                <div class="card-body-overlay">
+                                    <h4 class="card-title">Project Two</h4>
+                                    <p class="card-text">This is a brief description of Project Two.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-12 mb-4">
-                        <div class="card project" data-tech-field="bioinformatics" data-tech-stack="r" onclick="loadProjectDetails('Project Three', 'Detailed description of Project Three.', 'https://github.com/shliamin/project-three', 'https://project-three.com', 'Completed', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
-                            <div class="card-body">
-                                <h4 class="card-title">Project Three</h4>
-                                <p class="card-text">This is a brief description of Project Three.</p>
+                        <div class="card project" data-tech-field="bioinformatics" data-tech-stack="r" onclick="loadProjectDetails('Project Three', 'Detailed description of Project Three.', 'https://github.com/shliamin/project-three', 'https://project-three.com', 'Completed', 'https://via.placeholder.com/300x200');" uk-toggle="target: #project-modal">
+                            <div class="card-img-top" style="background-image: url('https://via.placeholder.com/300x200');">
+                                <div class="card-body-overlay">
+                                    <h4 class="card-title">Project Three</h4>
+                                    <p class="card-text">This is a brief description of Project Three.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
