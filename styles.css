@@ -557,6 +557,12 @@ iframe {
     cursor: pointer;
 }
 
+.click-work{
+    color: #003366; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media (min-width: 1181px) {
 
     .contact-info {

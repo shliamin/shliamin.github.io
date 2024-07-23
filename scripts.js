@@ -131,6 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Handler for clicking on "My Work" text
+    document.querySelectorAll('.click-work').forEach(word => {
+        word.addEventListener('click', function() {
+            const myWorkButton = document.querySelector('.uk-button.uk-button-default[onclick="showSection(\'my-work\')"]');
+            if (myWorkButton) {
+                myWorkButton.click();
+            }
+        });
+    });
+
 });
 
 function highlightResume() {
