@@ -9,21 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
     noteText.innerText = truncatedText;
 
     note.addEventListener("click", function() {
-        if (noteText.classList.contains("expanded")) {
-            noteText.innerText = truncatedText;
-        } else {
+        if (!noteText.classList.contains("expanded")) {
             noteText.innerText = originalText;
+            noteText.classList.add("expanded");
+            highlightResume();
+        } else {
+            noteText.innerText = truncatedText;
+            noteText.classList.remove("expanded");
         }
-        noteText.classList.toggle("expanded");
     });
 
-    
     fetch('project.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('project-modal-placeholder').innerHTML = data;
         });
 });
+
+function highlightResume() {
+    const resumeIconMobile = document.querySelector(".icon-row a[href='path/to/your/resume.pdf']");
+    const resumeIconDesktop = document.querySelector(".status-item a[href='path/to/your/resume.pdf']");
+    const resumeElement = window.innerWidth <= 768 ? resumeIconMobile : resumeIconDesktop;
+
+    resumeElement.classList.add('highlight');
+
+    setTimeout(() => {
+        resumeElement.classList.remove('highlight');
+    }, 4000);
+}
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
@@ -37,7 +50,7 @@ function showSection(sectionId) {
     buttons.forEach(button => {
         button.classList.remove('active');
     });
-    
+
     document.getElementById(sectionId).classList.add('active');
     document.getElementById(sectionId).classList.remove('hidden');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
