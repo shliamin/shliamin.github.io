@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     noResultsMessage.id = 'no-results-message';
     noResultsMessage.style.display = 'none';
     noResultsMessage.innerText = "Nothing found here (yet), maybe try another option or enjoy a coffee break! ☕";
+    noResultsMessage.style.paddingBottom = '40px';
     document.querySelector('.projects-grid').appendChild(noResultsMessage);
 });
 
