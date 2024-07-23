@@ -83,11 +83,15 @@ function updateTechStack() {
         techStack.disabled = false;
         let options = [];
         if (techFields === 'full-stack') {
-            options = ['React', 'Node.js', 'Angular'];
+            options = ['MERN', 'Ruby on Rails', 'Python WebDev', 'JAM Stack', '.NET Stack', 'Microservices Java Stack' ];
         } else if (techFields === 'data-science') {
-            options = ['Python', 'R', 'TensorFlow'];
+            options = ['Python', 'OpenCV', 'NumPy', 'Nextflow', 'Fastp', 'Pandas', 'Matplotlib', 'Statistical Analysis'];
         } else if (techFields === 'bioinformatics') {
-            options = ['Python', 'R', 'Bioconductor'];
+            options = ['Image Processing', 'Morphological Operations', 'Analysis and Visualization', 'SPAdes', 'QUAST', 'Bioinformatics Workflow', 'Genome Assembly', 'Data Analysis of Medical Records', 'DICOM Procesing', '3D Visualization', 'Segmentation Algorithms' ];
+        } else if (techFields === 'machine-learning') {
+            options = ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Recommendation System'];
+        } else if (techFields === 'quantum-computing') {
+            options = ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Error Correction'];
         }
         options.forEach(option => {
             const opt = document.createElement('option');
@@ -106,6 +110,7 @@ function filterProjects() {
     const techFields = document.getElementById('tech-fields').value;
     const techStack = document.getElementById('tech-stack').value;
     const projects = document.querySelectorAll('.projects-grid .project');
+    let hasVisibleProjects = false;
 
     projects.forEach(project => {
         const projectTechField = project.getAttribute('data-tech-field');
@@ -122,8 +127,25 @@ function filterProjects() {
 
         if (show) {
             project.style.display = 'block';
+            hasVisibleProjects = true;
         } else {
             project.style.display = 'none';
         }
     });
+
+    const noResultsMessage = document.getElementById('no-results-message');
+    if (!hasVisibleProjects) {
+        noResultsMessage.style.display = 'block';
+    } else {
+        noResultsMessage.style.display = 'none';
+    }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const noResultsMessage = document.createElement('p');
+    noResultsMessage.id = 'no-results-message';
+    noResultsMessage.style.display = 'none';
+    noResultsMessage.innerText = "Oops! Nothing found here (yet), maybe try another option or enjoy a coffee break! ☕";
+    document.querySelector('.projects-grid').appendChild(noResultsMessage);
+});
+
