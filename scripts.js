@@ -141,6 +141,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handler for clicking on "Contact" text
+    document.querySelectorAll('.click-contact').forEach(word => {
+        word.addEventListener('click', function() {
+            const myWorkButton = document.querySelector('.uk-button.uk-button-default[onclick="showSection(\'contact\')"]');
+            if (myWorkButton) {
+                myWorkButton.click();
+            }
+        });
+    });
+
 });
 
 function highlightResume() {
@@ -156,6 +166,8 @@ function highlightResume() {
 }
 
 function showSection(sectionId) {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Прокрутка страницы наверх
+
     const sections = document.querySelectorAll('.section');
     const buttons = document.querySelectorAll('.sidebar nav ul li button');
 

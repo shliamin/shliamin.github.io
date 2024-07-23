@@ -563,6 +563,12 @@ iframe {
     cursor: pointer;
 }
 
+.click-contact{
+    color: #003366; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media (min-width: 1181px) {
 
     .contact-info {
@@ -604,7 +610,7 @@ iframe {
     }
     
     .sidebar-image {
-        margin-top: 127px;
+        margin-top: 115px;
         display: flex;
     }
 
