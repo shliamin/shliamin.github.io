@@ -348,9 +348,8 @@ body {
 .highlight {
     position: relative;
     z-index: 1000;
-    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.7);
     border: 3px solid red;
-    animation: highlightAnimation 4s ease-out;
+    animation: highlightAnimation 7s ease-out;
 }
 
 @keyframes highlightAnimation {
