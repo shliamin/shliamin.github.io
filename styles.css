@@ -7,6 +7,7 @@ body {
 }
 
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 1200px;
@@ -294,7 +295,7 @@ body {
 .filters {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .sidebar-image {
@@ -362,9 +363,34 @@ body {
 }
 
 
+.uk-modal-dialog {
+    border-radius: 10px;
+    top: 100px; 
+}
+
+.uk-modal-close {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 10px;
+    font-size: 16px; 
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0; 
+}
+
+.uk-modal-close:hover {
+    background-color: #002244; 
+}
+
+
 
 
 @media (min-width: 1181px) {
+
+   
+
     .desktop-only {
         display: block;
     }
@@ -403,6 +429,18 @@ body {
     .sidebar-image {
         margin-top: 127px;
         display: flex;
+    }
+
+    .filters {
+        padding-left: 10%;
+        padding-right: 10%;
+        box-sizing: border-box;
+    }
+
+    .section h4 {
+        padding-left: 10%;
+        padding-right: 10%;
+        box-sizing: border-box;
     }
 }
 
