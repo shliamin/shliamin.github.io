@@ -56,10 +56,22 @@ function showSection(sectionId) {
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
 }
 
-function loadProjectDetails(title, description, link) {
+function loadProjectDetails(title, description, githubLink, websiteLink, status, imageUrl) {
     document.getElementById('project-title').innerText = title;
     document.getElementById('project-description').innerText = description;
-    document.getElementById('project-link').href = link;
+    document.getElementById('project-link').href = githubLink;
+    document.getElementById('project-website').href = websiteLink;
+    document.getElementById('project-image').src = imageUrl;
+
+    const statusElement = document.getElementById('project-status');
+    statusElement.textContent = status;
+    if (status === 'Completed') {
+        statusElement.className = 'badge badge-success';
+    } else if (status === 'In Development') {
+        statusElement.className = 'badge badge-warning';
+    } else {
+        statusElement.className = 'badge badge-secondary';
+    }
 }
 
 function updateTechStack() {

@@ -133,21 +133,34 @@
                         <option value="">Select Tech Stack</option>
                     </select>
                 </div>
-                <div class="projects-grid" id="projects-grid">
-                    <div class="project" data-tech-field="full-stack" data-tech-stack="react">
-                        <h4>Project One</h4>
-                        <p>This is a brief description of Project One. <a href="#" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one');" uk-toggle="target: #project-modal">View project</a></p>
+                <div class="row projects-grid" id="projects-grid">
+                    <div class="col-md-6 col-12 mb-4">
+                        <div class="card project" data-tech-field="full-stack" data-tech-stack="react" onclick="loadProjectDetails('Project One', 'Detailed description of Project One.', 'https://github.com/shliamin/project-one', 'https://project-one.com', 'Completed', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
+                            <div class="card-body">
+                                <h4 class="card-title">Project One</h4>
+                                <p class="card-text">This is a brief description of Project One.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project" data-tech-field="data-science" data-tech-stack="python">
-                        <h4>Project Two</h4>
-                        <p>This is a brief description of Project Two. <a href="#" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two');" uk-toggle="target: #project-modal">View project</a></p>
+                    <div class="col-md-6 col-12 mb-4">
+                        <div class="card project" data-tech-field="data-science" data-tech-stack="python" onclick="loadProjectDetails('Project Two', 'Detailed description of Project Two.', 'https://github.com/shliamin/project-two', 'https://project-two.com', 'In Development', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
+                            <div class="card-body">
+                                <h4 class="card-title">Project Two</h4>
+                                <p class="card-text">This is a brief description of Project Two.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project" data-tech-field="bioinformatics" data-tech-stack="r">
-                        <h4>Project Three</h4>
-                        <p>This is a brief description of Project Three. <a href="#" onclick="loadProjectDetails('Project Three', 'Detailed description of Project Three.', 'https://github.com/shliamin/project-three');" uk-toggle="target: #project-modal">View project</a></p>
+                    <div class="col-md-6 col-12 mb-4">
+                        <div class="card project" data-tech-field="bioinformatics" data-tech-stack="r" onclick="loadProjectDetails('Project Three', 'Detailed description of Project Three.', 'https://github.com/shliamin/project-three', 'https://project-three.com', 'Completed', 'https://via.placeholder.com/150');" uk-toggle="target: #project-modal">
+                            <div class="card-body">
+                                <h4 class="card-title">Project Three</h4>
+                                <p class="card-text">This is a brief description of Project Three.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+            
 
             <section id="contact" class="section">
                 <p>I am always open to new opportunities and collaborations. Whether you have a question, need my expertise, or just want to connect, feel free to reach out through any of the following methods:</p>
