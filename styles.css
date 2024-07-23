@@ -644,4 +644,27 @@ body {
     .desktop-only-p {
         display: none;
     }
+
+    .github-stats-info {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .github-stats-item {
+        flex: 1 1 30%;
+        margin-bottom: 10px;
+    }
+
+    .github-stats-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .github-stats-detail {
+        font-size: 16px;
+    }
+
+    .github-stats-label {
+        font-size: 12px;
+    }
 }
