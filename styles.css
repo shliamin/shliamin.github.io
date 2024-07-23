@@ -459,7 +459,12 @@ body {
     margin-top: 1px;
 }
 
-
+#github-stats-text {
+    display: none; 
+    color: #888; 
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 @media (min-width: 1181px) {
 
@@ -666,5 +671,9 @@ body {
     .github-stats-label {
         display: none;
         font-size: 12px;
+    }
+
+    #github-stats-text {
+        display: block;
     }
 }
