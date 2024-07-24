@@ -110,26 +110,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupContainer = document.getElementById('popup-container');
     const popupDocument = document.getElementById('popup-document');
     const popupClose = document.getElementById('popup-close');
+    var languageSwitcher = document.querySelector('.language-switcher');
 
     document.querySelectorAll('.popup-word').forEach(word => {
         word.addEventListener('click', function() {
             const documentSrc = this.getAttribute('data-document');
             popupDocument.setAttribute('src', documentSrc);
             popupContainer.style.display = 'block';
+    
+            
+            if (window.innerWidth <= 768) {
+                languageSwitcher.classList.add('hidden');
+            }
         });
     });
-
+    
     popupClose.addEventListener('click', function() {
         popupContainer.style.display = 'none';
         popupDocument.setAttribute('src', '');
+    
+       
+        languageSwitcher.classList.remove('hidden');
     });
-
+    
     window.addEventListener('click', function(event) {
         if (event.target == popupContainer) {
             popupContainer.style.display = 'none';
             popupDocument.setAttribute('src', '');
+    
+            
+            languageSwitcher.classList.remove('hidden');
         }
     });
+    
+    
 
     // Handler for clicking on "My Work" text
     document.querySelectorAll('.click-work').forEach(word => {
