@@ -662,12 +662,12 @@ iframe {
 }
 
 .btn.active#btn-en {
-    background: linear-gradient(90deg, #676d75, #EFF1F3);
+    background: #999999;
     color: white;
 }
 
 .btn.active#btn-de {
-    background: linear-gradient(270deg, #676d75, #EFF1F3);
+    background: #999999;
     color: white;
 }
 
@@ -866,8 +866,8 @@ iframe {
     .language-switcher {
         position: fixed !important;
         top: 20px;
-        right: 10px; /* Перемещает кнопки вправо */
-        left: auto; /* Сбросьте левый отступ */
+        right: 10px; 
+        left: auto; 
         justify-content: flex-end;
     }
 
