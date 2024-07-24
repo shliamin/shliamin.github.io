@@ -331,3 +331,14 @@ function switchLanguage(lang) {
             'text-9': '<strong>Ich würde gerne mehr über die Herausforderungen erfahren</strong>, denen Sie sich in der Softwareentwicklung oder Datenanalyse in Ihrer Organisation stellen. Welche Fragen kann ich beantworten, um Ihnen bei der besten Entscheidung zu helfen? Ich werde erklären, wie diese Herausforderungen überwunden werden können, und Sie könnten etwas Nützliches finden.'
         }
     };
+
+
+
+    window.addEventListener('scroll', function() {
+        var languageSwitcher = document.querySelector('.language-switcher');
+        if (window.scrollY > 0) {
+            languageSwitcher.classList.add('hidden');
+        } else {
+            languageSwitcher.classList.remove('hidden');
+        }
+    });

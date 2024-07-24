@@ -871,6 +871,11 @@ iframe {
         justify-content: flex-end;
     }
 
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .calendly-button {
         background-color: #003366;
         color: #ffffff;
