@@ -647,7 +647,7 @@ iframe {
 
 .btn {
     border: 1px solid #cccccc !important;
-    padding: 10px 20px;
+    padding: 3px 10px !important;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -674,7 +674,7 @@ iframe {
 .btn:not(.active) {
     background-color: transparent;
     color: #888888;
-    font-weight: bold;
+    
 }
 
 .btn:hover:not(.active) {
