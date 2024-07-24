@@ -939,6 +939,14 @@ iframe {
     #github-stats-text {
         display: block;
     }
+
+    #schedule-meeting-en{
+        padding-bottom: 25px;
+    }
+
+    #schedule-meeting-de{
+        padding-bottom: 25px;
+    }
 }
 
 @media (max-width: 370px) {
