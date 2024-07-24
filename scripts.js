@@ -273,3 +273,17 @@ function filterProjects() {
     const visibleProjects = projects.filter(project => project.style.display === 'block');
     visibleProjects.forEach(project => projectsGrid.appendChild(project));
 }
+
+
+function switchLanguage(lang) {
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-de').classList.remove('active');
+    
+    if (lang === 'en') {
+        document.getElementById('btn-en').classList.add('active');
+        window.location.href = '/en';
+    } else if (lang === 'de') {
+        document.getElementById('btn-de').classList.add('active');
+        window.location.href = '/de';
+    }
+}
