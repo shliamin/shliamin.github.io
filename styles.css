@@ -756,6 +756,19 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0px auto 0 auto; 
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    
+
     .contact-info {
         margin-left: 20%;
     }
@@ -850,6 +863,14 @@ iframe {
         margin-right: 50%;
     }
 
+    .language-switcher {
+        position: fixed !important;
+        top: 20px;
+        right: 10px; /* Перемещает кнопки вправо */
+        left: auto; /* Сбросьте левый отступ */
+        justify-content: flex-end;
+    }
+
     .calendly-button {
         background-color: #003366;
         color: #ffffff;
@@ -899,5 +920,18 @@ iframe {
 
     #github-stats-text {
         display: block;
+    }
+}
+
+@media (max-width: 370px) {
+    .language-switcher {
+        flex-direction: column; 
+        top: 10px;
+        right: 10px;
+        left: auto;
+    }
+
+    .btn {
+        margin-bottom: 2px; 
     }
 }
