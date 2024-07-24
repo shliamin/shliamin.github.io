@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const note = document.getElementById("note");
     const noteText = document.getElementById("note-text");
-    const originalText = "👋... Hello! To download my resume, click the file icon below my photo.";
-    const truncatedText = "👋...";
+    const originalText = "👋 Hello! To download my resume, click the file icon below my photo.";
+    const truncatedText = "👋";
 
     noteText.innerText = truncatedText;
 
