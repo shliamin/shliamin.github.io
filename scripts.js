@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const note = document.getElementById("note");
     const noteText = document.getElementById("note-text");
-    const originalText = "👋... I speak 🇬🇧🇩🇪🇷🇺 fluently. Feel free to contact me. To download my resume, click the file icon below my photo.";
+    const originalText = "👋... I speak 🇬🇧🇩🇪🇷🇺. Feel free to contact me. To download my resume, click the file icon below my photo.";
     const truncatedText = "👋...";
 
     noteText.innerText = truncatedText;
@@ -166,7 +166,7 @@ function highlightResume() {
 }
 
 function showSection(sectionId) {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Прокрутка страницы наверх
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
 
     const sections = document.querySelectorAll('.section');
     const buttons = document.querySelectorAll('.sidebar nav ul li button');
