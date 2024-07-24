@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: -30px auto 0 auto; /* Добавлено margin-top для размещения ниже кнопки */
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -641,17 +641,46 @@ iframe {
     top: 10px;
     left: 10px;
     z-index: 1000;
+    display: flex;
+    gap: 5px;
 }
 
-.btn.active {
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn.active#btn-en {
     background: linear-gradient(90deg, #676d75, #EFF1F3);
     color: white;
 }
 
+.btn.active#btn-de {
+    background: linear-gradient(270deg, #676d75, #EFF1F3);
+    color: white;
+}
+
 .btn:not(.active) {
-    background-color: white;
+    background-color: transparent;
     color: black;
 }
+
+.btn:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+
+
 
 @media (min-width: 1181px) {
 
