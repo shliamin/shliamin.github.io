@@ -466,14 +466,13 @@ body {
     z-index: -1; 
 }
 
-.svg-overlay {
+.python-icon {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto; 
-    height: 60%; 
-    fill: white;
+    bottom: 10px;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
 }
 
 .card-title {
