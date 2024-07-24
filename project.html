@@ -7,16 +7,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <style>
+        .link-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .link-icon img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <div id="project-modal" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
             <h4 class="uk-modal-title" id="project-title" style="font-size: large;">Project Title</h4>
             <img id="project-image" src="#" alt="Project Image" class="img-fluid mb-3">
-            <p id="project-status">Status: <span id="status-text" class="badge"></span></p>
-            <p id="project-tech-stack">Tech Stack: <span id="tech-stack-text"></span></p>
-            <p><a href="#" id="project-website" target="_blank">View Project Website</a></p>
-            <p><a href="#" id="project-link" target="_blank">View on GitHub</a></p>
+            <p id="project-status"><strong>Status: </strong><span id="status-text" class="badge"></span></p>
+            <p id="project-tech-stack"><strong>Tech Stack: </strong><span id="tech-stack-text"></span></p>
+            <div id="project-website-container" class="link-icon">
+                <img src="images/web-svgrepo-com.svg" alt="Website Icon">
+                <a href="#" id="project-website" target="_blank"></a>
+            </div>
+            <div id="project-link-container" class="link-icon">
+                <img src="images/code-solid.svg" alt="GitHub Icon">
+                <a href="#" id="project-link" target="_blank"></a>
+            </div>
             <p id="project-description">Project description goes here...</p>
             <button class="uk-modal-close close-button" type="button">
                 <img src="images/xmark-solid.svg" alt="Close">

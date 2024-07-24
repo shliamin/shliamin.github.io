@@ -189,12 +189,17 @@ function loadProjectDetails(title, description, githubLink, websiteLink, status,
     document.getElementById('project-title').innerText = title;
     document.getElementById('project-description').innerText = description;
     document.getElementById('project-link').href = githubLink;
+    document.getElementById('project-link').innerText = githubLink;
     document.getElementById('project-website').href = websiteLink;
+    document.getElementById('project-website').innerText = websiteLink;
     document.getElementById('project-image').src = imageUrl;
-
+    
     const statusElement = document.getElementById('status-text');
     statusElement.textContent = status;
-    
+
+    const techStackElement = document.getElementById('tech-stack-text');
+    techStackElement.textContent = techStack;
+
     if (status === 'Completed') {
         statusElement.className = 'badge badge-success';
     } else if (status === 'In Development') {
@@ -202,10 +207,8 @@ function loadProjectDetails(title, description, githubLink, websiteLink, status,
     } else {
         statusElement.className = 'badge badge-secondary';
     }
-
-    const techStackElement = document.getElementById('tech-stack-text');
-    techStackElement.textContent = techStack;
 }
+
 
 
 function updateTechStack() {
