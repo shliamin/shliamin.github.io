@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: -30px auto 0 auto; /* Добавлено margin-top для размещения ниже кнопки */
+    margin: -30px auto 0 auto; 
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -646,13 +646,14 @@ iframe {
 }
 
 .btn {
-    border: none;
+    border: 1px solid #cccccc !important;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease, color 0.3s ease;
     outline: none;
     box-shadow: none;
+    font-weight: bold;
 }
 
 .btn:focus, .btn:active {
@@ -672,7 +673,8 @@ iframe {
 
 .btn:not(.active) {
     background-color: transparent;
-    color: black;
+    color: #888888;
+    font-weight: bold;
 }
 
 .btn:hover:not(.active) {
