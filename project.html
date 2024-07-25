@@ -18,28 +18,66 @@
             height: 20px;
             margin-right: 10px;
         }
+        .uk-modal-body {
+            padding: 20px;
+            position: relative;
+        }
+        .modal-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <div id="project-modal" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-            <h4 class="uk-modal-title" id="project-title" style="font-size: large;">Project Title</h4>
-            <img id="project-image" src="#" alt="Project Image" class="img-fluid mb-3">
-            <p id="project-status"><strong>Status: </strong><span id="status-text" class="badge"></span></p>
-            <p id="project-tech-stack"><strong>Tech Stack: </strong><span id="tech-stack-text"></span></p>
-            <div id="project-website-container" class="link-icon">
-                <img src="images/web-svgrepo-com.svg" alt="Website Icon">
-                <a href="#" id="project-website" target="_blank"></a>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-body">
+                <h4 class="uk-modal-title" id="project-title" style="font-size: large;">Project Title</h4>
+                <img id="project-image" src="#" alt="Project Image" class="modal-image">
+                <p id="project-status"><strong>Status: </strong><span id="status-text" class="badge"></span></p>
+                <p id="project-tech-stack"><strong>Tech Stack: </strong><span id="tech-stack-text"></span></p>
+                <div id="project-website-container" class="link-icon">
+                    <img src="images/web-svgrepo-com.svg" alt="Website Icon">
+                    <a href="#" id="project-website" target="_blank"></a>
+                </div>
+                <div id="project-link-container" class="link-icon">
+                    <img src="images/code-solid.svg" alt="GitHub Icon">
+                    <a href="#" id="project-link" target="_blank"></a>
+                </div>
+                <p id="project-description">Project description goes here...</p>
             </div>
-            <div id="project-link-container" class="link-icon">
-                <img src="images/code-solid.svg" alt="GitHub Icon">
-                <a href="#" id="project-link" target="_blank"></a>
-            </div>
-            <p id="project-description">Project description goes here...</p>
-            <button class="uk-modal-close close-button" type="button">
-                <img src="images/xmark-solid.svg" alt="Close">
-            </button>
         </div>
     </div>
+
+    <script>
+        // Function to open modal and set content
+        function openProjectModal(title, imageSrc, status, techStack, website, github, description) {
+            document.getElementById('project-title').textContent = title;
+            document.getElementById('project-image').src = imageSrc;
+            document.getElementById('status-text').textContent = status;
+            document.getElementById('tech-stack-text').textContent = techStack;
+            document.getElementById('project-website').href = website;
+            document.getElementById('project-website').textContent = website;
+            document.getElementById('project-link').href = github;
+            document.getElementById('project-link').textContent = github;
+            document.getElementById('project-description').textContent = description;
+
+            UIkit.modal('#project-modal').show();
+        }
+
+        
+        openProjectModal(
+            'Python-DICOM-Processing-And-Segmentation',
+            'path/to/output.gif',
+            'Completed',
+            'Python, SciPy, Pandas, Matplotlib',
+            'https://shliamin.github.io/Python-DICOM-Processing-And-Segmentation/',
+            'https://github.com/shliamin/Python-DICOM-Processing-And-Segmentation',
+            'Python tools for processing and segmenting DICOM files, with a focus on 3D visualization techniques to aid in medical imaging analysis.'
+        );
+    </script>
 </body>
 </html>
