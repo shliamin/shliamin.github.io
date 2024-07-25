@@ -468,16 +468,22 @@ body {
 
 .icons-row {
     position: absolute;
-    bottom: 10px; 
-    left: 5%; 
+    bottom: 0px; 
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;; 
     align-items: center;
+    background-color: white; 
+    padding: 10px 0; 
+    z-index: 1;
 }
 
-.python-icon {
-    margin-right: 10px; 
+.technology-icon {
     width: 40px;
     height: 40px;
+    margin: 0 5px;
+    z-index: 2; 
 }
 
 .card-title {
