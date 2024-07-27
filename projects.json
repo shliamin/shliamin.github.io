@@ -1,0 +1,491 @@
+[
+    {
+        "name": "Python-Genome-Assembler",
+        "description": "It is a Python-based genome assembler designed to perform k-mer spectrum-based error correction and generate SAM files for visualizing genome mappings. It supports genomic data analysis with a focus on identifying mutations relevant to antibiotic resistance.",
+        "github": "https://github.com/shliamin/Python-Genome-Assembler",
+        "demo": "https://shliamin.github.io/Python-Genome-Assembler/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Python-Genome-Assembler.png",
+            "description": "images/Python-Genome-Assembler.png"
+        },
+        "technologies": "Python, FASTA and SAM",
+        "techField": "full-stack",
+        "techStack": "mern",
+        "icons": [
+            "images/python-brands-solid.svg",
+            "images/pytest.svg",
+            "images/Biopython_logo.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 2
+    },
+    {
+        "name": "Python-Medical-Data-Analysis",
+        "description": "This project analyzes the mental health data of students and visualizes the results using Python. The analysis includes data on anxiety, depression, and panic attacks, along with their relation to age and years of study.",
+        "github": "https://github.com/shliamin/Python-Medical-Data-Analysis",
+        "demo": "https://shliamin.github.io/Python-Medical-Data-Analysis/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Python-Medical-Data-Analysis.png",
+            "description": "images/Python-Medical-Data-Analysis.png"
+        },
+        "technologies": "Python, SciPy, Pandas, Matplotlib",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/python-brands-solid.svg",
+            "images/Matplotlib_icon.svg",
+            "images/SCIPY_2.svg",
+            "images/pandas-svgrepo-com.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 3
+    },
+    {
+        "name": "Python-DICOM-Processing-And-Segmentation",
+        "description": "Python tools for processing and segmenting DICOM files, with a focus on 3D visualization techniques to aid in medical imaging analysis. In this project, machine learning is used for clustering pixel intensities in DICOM images with K-Means from scikit-learn, and image processing is enhanced using scikit-image and scipy.ndimage for various morphological operations. The Marching Cubes algorithm from scikit-image is also employed to generate 3D meshes for detailed visualization of medical imaging data.",
+        "github": "https://github.com/shliamin/Python-DICOM-Processing-And-Segmentation",
+        "demo": "https://shliamin.github.io/Python-DICOM-Processing-And-Segmentation/",
+        "status": "Completed",
+        "images": {
+            "card": "images/DICOM.gif",
+            "description": "images/DICOM.gif"
+        },
+        "technologies": "Python, Pydicom, SciPy, NumPy, Matplotlib, Scikit-image, Sklearn (KMeans), Plotly, Jupyter Notebook",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/python-brands-solid.svg",
+            "images/NumPy.svg",
+            "images/Ploty.svg",
+            "images/Scikit_learn_logo_small.svg",
+            "images/Jupyter.svg",
+            "images/Matplotlib_icon.svg",
+            "images/SCIPY_2.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "OpenCV-Mitosis-Detection",
+        "description": "A Python application using OpenCV for detecting mitosis in images. Aimed at researchers and biologists, it provides tools to automate the counting and identification of mitotic figures in microscopic images, supporting studies in cellular biology and medical diagnostics.",
+        "github": "https://github.com/shliamin/OpenCV-Mitosis-Detection",
+        "demo": "https://shliamin.github.io/OpenCV-Mitosis-Detection/",
+        "status": "Completed",
+        "images": {
+            "card": "images/opencvsmall.png",
+            "description": "images/opencv.png"
+        },
+        "technologies": "Python, OpenCV, NumPy, Matplotlib, imutils, Jupyter Notebook",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/python-brands-solid.svg",
+            "images/OpenCV.svg",
+            "images/NumPy.svg",
+            "images/Jupyter.svg",
+            "images/Matplotlib_icon.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "Finance",
+        "description": "Currently, the application is still under development, but in the future, it is planned to use the listed technologies.",
+        "github": "https://github.com/shliamin/Finance",
+        "demo": "does not exist",
+        "status": "In Development",
+        "images": {
+            "card": "images/financesmall.png",
+            "description": "images/Finance.png"
+        },
+        "technologies": "C#, .NET Core, ASP.NET, Xamarin, NuGet, Microsoft SQL Server, Visual Studio",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/CSharp.svg",
+            "images/NET core.svg",
+            "images/NuGet.svg",
+            "images/Xamarin.svg",
+            "images/Microsoft SQL Server.svg",
+            "images/Visual Studio.svg"
+        ],
+        "priority": 3
+    },
+    {
+        "name": "MERN-Musical-Events",
+        "description": "A full-stack application built with the MERN stack. The application is designed for managing musical event data using geocoding. Users can log in or register and then create their own unique music event with a real address.",
+        "github": "https://github.com/shliamin/MERN-Musical-Events",
+        "demo": "https://shliamin.github.io/MERN-Musical-Events/",
+        "status": "Completed",
+        "images": {
+            "card": "images/MERN.gif",
+            "description": "images/MERN.gif"
+        },
+        "technologies": "React.js, Express.js, Node.js, MongoDB (Atlas), Leaflet.js, JWT (JSON Web Tokens), Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/React.svg",
+            "images/Node.js.svg",
+            "images/Express.svg",
+            "images/MongoDB.svg",
+            "images/icons8-json-web-token-144.svg",
+            "images/leafletjs_logo_icon_170303.svg",
+            "images/Heroku.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "Microservices-Spring-Cloud",
+        "description": "A complex microservices architecture using Java. It includes various services like authentication, and currency conversion, designed to work together to form a comprehensive system. The project showcases integration techniques using Eureka, Spring Cloud, and Docker.",
+        "github": "https://github.com/shliamin/Microservices-Spring-Cloud-SongsMS?tab=readme-ov-file",
+        "demo": "does not exist",
+        "status": "In Development",
+        "images": {
+            "card": "images/Microservices.png",
+            "description": "images/Microservices.png"
+        },
+        "technologies": "Java 11, Spring Boot, Spring Cloud, Netflix Eureka, Spring Cloud Gateway, Spring Security, MongoDB, Docker, Kubernetes, Swagger, Zipkin",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Java.svg",
+            "images/Spring.svg",
+            "images/MongoDB.svg",
+            "images/Docker.svg",
+            "images/Kubernetes.svg",
+            "images/Swagger.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 3
+    },
+    {
+        "name": "API-for-Mercedes-Benz.io",
+        "description": "A web application that allows users to search for museums around a specified address within a given radius. The application uses a backend API to fetch museum data and displays the results on an interactive map.",
+        "github": "https://github.com/shliamin/API-For-Mercedes-Benz.io",
+        "demo": "https://shliamin.github.io/API-For-Mercedes-Benz.io/",
+        "status": "Completed",
+        "images": {
+            "card": "images/API-for-Mercedes.gif",
+            "description": "images/API-for-Mercedes.gif"
+        },
+        "technologies": "HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, AJAX, Flask, Flask-CORS, Overpass API, Nominatim API",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/JavaScript.svg",
+            "images/HTML5.svg",
+            "images/CSS3.svg",
+            "images/Flask.svg",
+            "images/OpenStreetMap-Logo.svg",
+            "images/leafletjs_logo_icon_170303.svg",
+            "images/Heroku.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "Rails-Restaurants-API",
+        "description": "The Restaurants API is a Ruby on Rails application designed to manage and provide access to restaurant data. It supports CRUD operations for restaurant entries, enabling users to create, read, update, and delete restaurant information.",
+        "github": "https://github.com/shliamin/Rails-Restaurants-API",
+        "demo": "https://rails-restaurants-api-bddc05516750.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Rails-Restaurants-API.gif",
+            "description": "images/Rails-Restaurants-API.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Webpack.svg",
+            "images/SQLite.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg"
+        ],
+        "priority": 2
+    },
+    {
+        "name": "Rails-NABO",
+        "description": "NABO is a Rails-based social platform where people can help out their neighbors. Users exchange Nabo coins based on how much time they spend on helping each other.",
+        "github": "Private code",
+        "demo": "https://rails-nabo-3c2b2191f43a.herokuapp.com/",
+        "status": "In Development",
+        "images": {
+            "card": "images/NABO.gif",
+            "description": "images/NABO.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Webpack.svg",
+            "images/SQLite.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "Interactive-Tent-Model",
+        "description": "An interactive 3D tent model visualizer using Plotly.js, allowing users to input dimensions, toggle surfaces, and dynamically view the structure with real-time surface area calculations. Backend (private): This application uses Flask to handle web requests, integrating Flask-CORS for cross-origin resource sharing. It leverages SciPy and NumPy for mathematical and spatial computations, Trimesh for 3D model processing, and ReportLab for generating PDF reports. Additionally, EZDXF and Pillow are used for working with DXF files and images, while logging and threading ensure robust debugging and concurrent task management. In case you are reading this, open the app, scroll down to the bottom of the description page, and use the free promo code FREEPATTERN to understand how it works.",
+        "github": "https://github.com/shliamin/Interactive-Tent-Model",
+        "demo": "https://shliamin.github.io/Interactive-Tent-Model/",
+        "status": "In Development",
+        "images": {
+            "card": "images/interactive-tent.gif",
+            "description": "images/interactive-tent.gif"
+        },
+        "technologies": "HTML, CSS, JavaScript, Plotly.js, GitHub Actions, Flask, Flask-CORS, logging, os, SciPy, NumPy, Trimesh, ReportLab, PIL (Pillow), EZDXF, JSON, Threading",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/JavaScript.svg",
+            "images/python-brands-solid.svg",
+            "images/GitHub Actions.svg",
+            "images/Flask.svg",
+            "images/Ploty.svg",
+            "images/NumPy.svg",
+            "images/SCIPY_2.svg"
+        ],
+        "priority": 1
+    },
+    {
+        "name": "JS-3D-Car",
+        "description": "It is an interactive 3D visualization project that utilizes modern web technologies to render a detailed car model in a browser. Leveraging the power of Three.js, the application allows users to explore the intricate design of a car in a fully immersive 3D environment.",
+        "github": "https://github.com/shliamin/JS-3D-Car",
+        "demo": "https://shliamin.github.io/JS-3D-Car/",
+        "status": "Completed",
+        "images": {
+            "card": "images/JS-3D-Car.gif",
+            "description": "images/JS-3D-Car.gif"
+        },
+        "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Three.js.svg",
+            "images/JavaScript.svg",
+            "images/webgl.svg",
+            "images/HTML5.svg",
+            "images/CSS3.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 2
+    },
+    {
+        "name": "JS-Coord-Finder",
+        "description": "The JS-Coord-Finder is a dynamic web application designed to demonstrate the capabilities of the Three.js library in creating and manipulating a 3D scene. It allows users to interact with a 3D plane, adding and removing objects, calculating coordinates in real-time, and dynamically drawing and measuring shapes like lines and triangles.",
+        "github": "https://github.com/shliamin/JS-Coord-Finder",
+        "demo": "https://shliamin.github.io/JS-Coord-Finder/",
+        "status": "Completed",
+        "images": {
+            "card": "images/JS-Coord-Finder.gif",
+            "description": "images/JS-Coord-Finder.gif"
+        },
+        "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
+        "techField": "full-stack",
+        "techStack": "mern",
+        "icons": [
+            "images/Three.js.svg",
+            "images/JavaScript.svg",
+            "images/webgl.svg",
+            "images/HTML5.svg",
+            "images/CSS3.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 2
+    },
+    {
+        "name": "JS-Cinema-Sorter",
+        "description": "It is is an interactive JavaScript app focused on implementing the bubble sort algorithm to organize lists of new movies. This project combines JavaScript, Ajax, DOM manipulation, and event handling to create a dynamic user experience where users can see the sorted lists of movies.",
+        "github": "https://github.com/shliamin/JS-Cinema-Sorter",
+        "demo": "https://shliamin.github.io/JS-Cinema-Sorter/",
+        "status": "Completed",
+        "images": {
+            "card": "images/JS-Cinema-Sorter.gif",
+            "description": "images/JS-Cinema-Sorter.gif"
+        },
+        "technologies": "JavaScript, AJAX, DOM Manipulation, Event Handling, HTML and CSS",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/JavaScript.svg",
+            "images/HTML5.svg",
+            "images/CSS3.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 3
+    },
+    {
+        "name": "Rails-Sputnik",
+        "description": "The Sputnik Activity Recommendation System is a Ruby on Rails application that integrates a machine learning-based recommendation engine to suggest activities to users based on their previous interactions and the content features of the activities. A recommendation engine built using a combination of collaborative filtering and content-based filtering to suggest activities to users based on their interactions and activity features. Pandas is used for data manipulation and analysis, particularly for loading and merging data from a PostgreSQL database. NumPy is used for numerical operations, such as handling arrays and performing mathematical computations. StandardScaler from sklearn.preprocessing is used to normalize the data. NearestNeighbors from sklearn.neighbors is used to implement the k-nearest neighbors algorithm for finding similar activities. LinearRegression from sklearn.linear_model is used to build a linear regression model to predict user ratings based on activity features.",
+        "github": "https://github.com/shliamin/Rails-Sputnik",
+        "demo": "https://sputnik-50db9386c85a.herokuapp.com/",
+        "status": "In Development",
+        "images": {
+            "card": "images/sputnik.gif",
+            "description": "images/sputnik.gif"
+        },
+        "technologies": "Ruby, Ruby on Rails, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/JavaScript.svg",
+            "images/Docker.svg",
+            "images/pandas-svgrepo-com.svg",
+            "images/NumPy.svg",
+            "images/Scikit_learn_logo_small.svg"
+        ],
+        "priority": 2
+    },
+    {
+        "name": "Rails-Mister-Cocktail",
+        "description": "A Ruby on Rails web application for creating, managing, and sharing cocktail recipes. Perfect for mixologists and cocktail enthusiasts looking to expand their drink repertoire.",
+        "github": "https://github.com/shliamin/Rails-Mister-Cocktail",
+        "demo": "https://rails-mister-cocktail-46a67922c9a9.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Mister-Cocktail.gif",
+            "description": "images/Mister-Cocktail.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Bootstrap.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 4
+    },
+    {
+        "name": "Rails-Velp-MVP",
+        "description": "A Ruby on Rails MVP for a Yelp-like platform, allowing users to review and rate local businesses, complete with user authentication, search functionality, and responsive design.",
+        "github": "https://github.com/shliamin/Rails-Velp-MVP",
+        "demo": "https://rails-velp-mvp-cf43c90f7bb7.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Velp-MVP.gif",
+            "description": "images/Velp-MVP.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Bootstrap.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 4
+    },
+    {
+        "name": "Rails-Longest-Word-Game",
+        "description": "Rails application for a vocabulary game that challenges users to form the longest word from a random set of letters. This project tests both Ruby on Rails skills and linguistic creativity.",
+        "github": "https://github.com/shliamin/Rails-Longest-Word-Game",
+        "demo": "https://rails-longest-word-game-15aca0ae87c1.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Longest-word.gif",
+            "description": "images/Longest-word.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Bootstrap.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 4
+    },
+    {
+        "name": "Rails-Task-Manager",
+        "description": "It is an intuitive web application built using Ruby on Rails. It serves as a task management tool allowing users to create, update, and manage tasks efficiently. This application demonstrates basic CRUD (Create, Read, Update, Delete) operations within the Rails framework, providing a user-friendly interface and a robust back-end architecture.",
+        "github": "https://github.com/shliamin/Rails-Task-Manager",
+        "demo": "https://rails-task-manager-a6718843d50b.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/task-manager.gif",
+            "description": "images/task-manager.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Bootstrap.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 4
+    },
+    {
+        "name": "Rails-Stupid-Coaching",
+        "description": "A fun and interactive Rails application that simulates a conversation with a -stupid- coach. Users can ask any question and receive humorous or straightforward advice, making this project not only a showcase of Ruby on Rails capabilities but also an engaging way to demonstrate web interaction patterns.",
+        "github": "https://github.com/shliamin/Rails-Stupid-Coaching",
+        "demo": "https://rails-stupid-coaching-413940faaecf.herokuapp.com/",
+        "status": "Completed",
+        "images": {
+            "card": "images/Stupid-Coaching.gif",
+            "description": "images/Stupid-Coaching.gif"
+        },
+        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/Ruby.svg",
+            "images/Ruby on Rails.svg",
+            "images/PostgresSQL.svg",
+            "images/Bootstrap.svg",
+            "images/Docker.svg",
+            "images/Heroku.svg",
+            "images/Visual Studio Code (VS Code).svg"
+        ],
+        "priority": 5
+    },
+    {
+        "name": "NGS-pipeline",
+        "description": "A comprehensive pipeline for genome assembly and quality assessment, designed for genomic data analysis. It integrates various bioinformatics tools for accurate genome assembly, including Nextflow for workflow management, fastp for sequencing data preprocessing, SPAdes for genome assembly, and QUAST for quality evaluation of assembled genomes. The pipeline emphasizes scalability across different computational environments and focuses on dynamic command construction and data-driven execution.",
+        "github": "https://github.com/shliamin/NGS-pipeline",
+        "demo": "https://shliamin.github.io/NGS-pipeline/",
+        "status": "Completed",
+        "images": {
+            "card": "images/NGS.png",
+            "description": "images/NGS.png"
+        },
+        "technologies": "Nextflow, fastp, SPAdes, QUAST, Jupyter Notebook, Python, pandas, numpy, matplotlib",
+        "techField": "full-stack",
+        "techStack": "react",
+        "icons": [
+            "images/nextflow-logo-bg-light.svg",
+            "images/python-brands-solid.svg",
+            "images/pandas-svgrepo-com.svg",
+            "images/NumPy.svg",
+            "images/Matplotlib_icon.svg"
+        ],
+        "priority": 1
+    }
+]

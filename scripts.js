@@ -99,12 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const noResultsMessage = document.createElement('p');
-    noResultsMessage.id = 'no-results-message';
-    noResultsMessage.style.display = 'none';
-    noResultsMessage.innerText = "Nothing found here (yet), maybe try another option or enjoy a coffee break! ☕";
-    noResultsMessage.style.paddingBottom = '40px';
-    document.querySelector('.projects-grid').appendChild(noResultsMessage);
 
     // Pop-up functionality
     const popupContainer = document.getElementById('popup-container');
@@ -195,30 +189,6 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.add('active');
     document.getElementById(sectionId).classList.remove('hidden');
     document.querySelector(`button[onclick="showSection('${sectionId}')"]`).classList.add('active');
-}
-
-function loadProjectDetails(title, description, githubLink, websiteLink, status, imageUrl, techStack) {
-    document.getElementById('project-title').innerText = title;
-    document.getElementById('project-description').innerText = description;
-    document.getElementById('project-link').href = githubLink;
-    document.getElementById('project-link').innerText = githubLink;
-    document.getElementById('project-website').href = websiteLink;
-    document.getElementById('project-website').innerText = websiteLink;
-    document.getElementById('project-image').src = imageUrl;
-
-    const statusElement = document.getElementById('status-text');
-    statusElement.textContent = status;
-
-    const techStackElement = document.getElementById('tech-stack-text');
-    techStackElement.textContent = techStack;
-
-    if (status === 'Completed') {
-        statusElement.className = 'badge badge-success';
-    } else if (status === 'In Development') {
-        statusElement.className = 'badge badge-warning';
-    } else {
-        statusElement.className = 'badge badge-secondary';
-    }
 }
 
 

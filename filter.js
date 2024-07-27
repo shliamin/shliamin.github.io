@@ -1,3 +1,65 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('tech-fields').addEventListener('change', updateTechStack);
+    document.getElementById('tech-stack').addEventListener('change', filterProjects);
+
+    // Загрузка проектов из JSON файла
+    axios.get('projects.json')
+        .then(response => {
+            const projects = response.data;
+            const projectsGrid = document.getElementById('projects-grid');
+            projectsGrid.innerHTML = ''; // Очистка текущего содержимого
+
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('col-md-4', 'col-sm-6', 'col-12', 'mb-4', 'project');
+                projectCard.setAttribute('data-tech-field', project.techField);
+                projectCard.setAttribute('data-tech-stack', project.techStack);
+                projectCard.innerHTML = `
+                    <div class="card project" onclick="loadProjectDetails('${project.name}', '${project.description}', '${project.github}', '${project.demo}', '${project.status}', '${project.images.description}', '${project.technologies}');" uk-toggle="target: #project-modal">
+                        <div class="card-img-top" style="background-image: url('${project.images.card}');">
+                            <div class="badge-ribbon">${project.name}</div>
+                            <div class="card-body-overlay">
+                                <div class="icons-row">
+                                    ${project.icons.map(icon => `<img src="${icon}" class="technology-icon" alt="${icon.split('/').pop().split('.')[0]} Icon">`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
+            });
+
+            filterProjects(); // Применение фильтрации после загрузки проектов
+        })
+        .catch(error => {
+            console.error('Error loading projects:', error);
+        });
+});
+
+function loadProjectDetails(title, description, githubLink, websiteLink, status, imageUrl, techStack) {
+    document.getElementById('project-title').innerText = title;
+    document.getElementById('project-description').innerText = description;
+    document.getElementById('project-link').href = githubLink;
+    document.getElementById('project-link').innerText = githubLink;
+    document.getElementById('project-website').href = websiteLink;
+    document.getElementById('project-website').innerText = websiteLink;
+    document.getElementById('project-image').src = imageUrl;
+
+    const statusElement = document.getElementById('status-text');
+    statusElement.textContent = status;
+
+    const techStackElement = document.getElementById('tech-stack-text');
+    techStackElement.textContent = techStack;
+
+    if (status === 'Completed') {
+        statusElement.className = 'badge badge-success';
+    } else if (status === 'In Development') {
+        statusElement.className = 'badge badge-warning';
+    } else {
+        statusElement.className = 'badge badge-secondary';
+    }
+}
+
 function updateTechStack() {
     const techFields = document.getElementById('tech-fields').value;
     const techStack = document.getElementById('tech-stack');
@@ -19,7 +81,7 @@ function updateTechStack() {
         }
         options.forEach(option => {
             const opt = document.createElement('option');
-            opt.value = option.toLowerCase();
+            opt.value = option.toLowerCase().replace(/ /g, '-');
             opt.innerText = option;
             techStack.appendChild(opt);
         });
@@ -50,13 +112,10 @@ function filterProjects() {
             show = false;
         }
 
-        project.style.display = show ? 'block' : 'none';
+        project.classList.toggle('hidden', !show);
         hasVisibleProjects = hasVisibleProjects || show;
     });
 
     const noResultsMessage = document.getElementById('no-results-message');
     noResultsMessage.style.display = hasVisibleProjects ? 'none' : 'block';
-
-    const visibleProjects = projects.filter(project => project.style.display === 'block');
-    visibleProjects.forEach(project => projectsGrid.appendChild(project));
 }
