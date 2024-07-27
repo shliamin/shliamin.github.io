@@ -112,27 +112,34 @@ function updateTechStack() {
 function filterProjects() {
     const techFields = document.getElementById('tech-fields').value;
     const techStack = document.getElementById('tech-stack').value;
+    const projectsGrid = document.querySelector('.projects-grid');
 
-    let filteredProjects = allProjects.filter(project => {
-        const projectTechField = project.techField || '';
-        const projectTechStack = project.techStack || '';
-        let show = true;
+    const filteredProjects = allProjects.filter(project => {
+        const projectTechField = project.techField.split(', ');
+        const projectTechStack = project.techStack.split(', ');
 
-        if (techFields && !projectTechField.includes(techFields)) {
-            show = false;
+        let matchesField = true;
+        let matchesStack = true;
+
+        if (techFields) {
+            matchesField = projectTechField.some(field => field.includes(techFields));
         }
 
-        if (techStack && !projectTechStack.includes(techStack)) {
-            show = false;
+        if (techStack) {
+            matchesStack = projectTechStack.some(stack => stack.includes(techStack));
         }
 
-        return show;
-    });
-
-    filteredProjects.sort((a, b) => a.priority - b.priority);
+        return matchesField && matchesStack;
+    }).sort((a, b) => a.priority - b.priority);
 
     displayProjects(filteredProjects);
+
+    const projectCount = document.getElementById('project-count');
+    projectCount.innerText = `${filteredProjects.length} projects found`;
 
     const noResultsMessage = document.getElementById('no-results-message');
     noResultsMessage.style.display = filteredProjects.length > 0 ? 'none' : 'block';
 }
+
+
+
