@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     axios.get('projects.json')
         .then(response => {
-            allProjects = response.data; 
+            allProjects = response.data; // save all projects in a global variable
             const projectsGrid = document.getElementById('projects-grid');
             projectsGrid.innerHTML = '';
 
-            
+            // Sort projects by priority
             allProjects.sort((a, b) => a.priority - b.priority);
 
-            
+            // Display all projects by default
             displayProjects(allProjects);
         })
         .catch(error => {
@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayProjects(projects) {
     const projectsGrid = document.getElementById('projects-grid');
     projectsGrid.innerHTML = '';
+
+    // Display the number of found projects above the project grid
+    const projectCount = document.getElementById('project-count');
+    projectCount.innerText = `${projects.length} projects found:`;
 
     projects.forEach(project => {
         const projectCard = document.createElement('div');
