@@ -111,35 +111,52 @@ function updateTechStack() {
 
 function filterProjects() {
     const techFields = document.getElementById('tech-fields').value;
-    const techStack = document.getElementById('tech-stack').value;
+    const techStack = document.getElementById('tech-stack').value.trim().toLowerCase().replace(/ /g, '-');
     const projectsGrid = document.querySelector('.projects-grid');
 
     const filteredProjects = allProjects.filter(project => {
         const projectTechField = project.techField.split(', ');
-        const projectTechStack = project.techStack.split(', ');
+        const projectTechStack = project.techStack.split(', ').map(stack => stack.trim().toLowerCase().replace(/ /g, '-'));
+
 
         let matchesField = true;
         let matchesStack = true;
 
         if (techFields) {
-            matchesField = projectTechField.some(field => field.includes(techFields));
+            matchesField = projectTechField.some(field => {
+                const isMatch = field.includes(techFields);
+                
+                return isMatch;
+            });
         }
 
         if (techStack) {
-            matchesStack = projectTechStack.some(stack => stack.includes(techStack));
+            matchesStack = projectTechStack.some(stack => {
+                const isMatch = stack.includes(techStack);
+                
+                return isMatch;
+            });
         }
 
         return matchesField && matchesStack;
     }).sort((a, b) => a.priority - b.priority);
 
+
     displayProjects(filteredProjects);
 
     const projectCount = document.getElementById('project-count');
-    projectCount.innerText = `${filteredProjects.length} projects found`;
+    projectCount.innerText = `${filteredProjects.length} projects found:`;
 
     const noResultsMessage = document.getElementById('no-results-message');
     noResultsMessage.style.display = filteredProjects.length > 0 ? 'none' : 'block';
 }
+
+
+
+
+
+
+
 
 
 

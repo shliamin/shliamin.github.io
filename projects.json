@@ -31,8 +31,8 @@
             "description": "images/Python-Medical-Data-Analysis.png"
         },
         "technologies": "Python, SciPy, Pandas, Matplotlib",
-        "techField": "data-science, bioinformatics",
-        "techStack": "Python, Pandas, Matplotlib, Data Analysis of Medical Records",
+        "techField": "data-science,bioinformatics",
+        "techStack": "Python,Pandas,Matplotlib,Data Analysis of Medical Records,Statistical Analysis",
         "icons": [
             "images/python-brands-solid.svg",
             "images/Matplotlib_icon.svg",
@@ -53,8 +53,8 @@
             "description": "images/DICOM.gif"
         },
         "technologies": "Python, Pydicom, SciPy, NumPy, Matplotlib, Scikit-image, Sklearn (KMeans), Plotly, Jupyter Notebook",
-        "techField": "data-science, bioinformatics, machine-learning",
-        "techStack": "Python, NumPy, Matplotlib, Image Processing, Analysis and Visualization, DICOM Processing, 3D Visualization, Segmentation Algorithms, K-Means Clustering, Marching Cubes Algorithm",
+        "techField": "data-science,bioinformatics,machine-learning",
+        "techStack": "Python,NumPy,Matplotlib,Image Processing,Analysis and Visualization,DICOM Processing,3D Visualization,Segmentation Algorithms,K-Means Clustering,Marching Cubes Algorithm",
         "icons": [
             "images/python-brands-solid.svg",
             "images/NumPy.svg",
@@ -77,8 +77,8 @@
             "description": "images/opencv.png"
         },
         "technologies": "Python, OpenCV, NumPy, Matplotlib, imutils, Jupyter Notebook",
-        "techField": "bioinformatics, data-science",
-        "techStack": "Image Processing, Morphological Operations, Analysis and Visualization, Python, OpenCV, NumPy, Matplotlib",
+        "techField": "bioinformatics,data-science",
+        "techStack": "Image Processing,Morphological Operations,Analysis and Visualization,Python,OpenCV,NumPy,Matplotlib",
         "icons": [
             "images/python-brands-solid.svg",
             "images/OpenCV.svg",
@@ -333,8 +333,8 @@
             "description": "images/sputnik.gif"
         },
         "technologies": "Ruby, Ruby on Rails, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
-        "techField": "full-stack, data-science, machine-learning",
-        "techStack": "Ruby on Rails, Python, NumPy, Pandas, Collaborative Filtering, Content-Based Filtering, Hybrid Recommendation System",
+        "techField": "full-stack,data-science,machine-learning",
+        "techStack": "Ruby on Rails,Python,NumPy,Pandas,Collaborative Filtering,Content-Based Filtering,Hybrid Recommendation System",
         "icons": [
             "images/Ruby on Rails.svg",
             "images/PostgresSQL.svg",
@@ -477,8 +477,8 @@
             "description": "images/NGS.png"
         },
         "technologies": "Nextflow, fastp, SPAdes, QUAST, Jupyter Notebook, Python, pandas, numpy, matplotlib",
-        "techField": "bioinformatics, data-science", 
-        "techStack": "Analysis and Visualization, SPAdes, QUAST, Bioinformatics Workflow, Genome Assembly, Python, OpenCV, NumPy, Nextflow, Fastp, Pandas, Matplotlib",
+        "techField": "bioinformatics,data-science", 
+        "techStack": "Analysis and Visualization,SPAdes,QUAST,Bioinformatics Workflow,Genome Assembly,Python,OpenCV,NumPy,Nextflow,Fastp,Pandas,Matplotlib",
         "icons": [
             "images/nextflow-logo-bg-light.svg",
             "images/python-brands-solid.svg",
