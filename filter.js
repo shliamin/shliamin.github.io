@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('tech-fields').addEventListener('change', updateTechStack);
     document.getElementById('tech-stack').addEventListener('change', filterProjects);
 
-    // Загрузка проектов из JSON файла
+    
     axios.get('projects.json')
         .then(response => {
             const projects = response.data;
             const projectsGrid = document.getElementById('projects-grid');
-            projectsGrid.innerHTML = ''; // Очистка текущего содержимого
+            projectsGrid.innerHTML = ''; 
 
             projects.forEach(project => {
                 const projectCard = document.createElement('div');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectsGrid.appendChild(projectCard);
             });
 
-            filterProjects(); // Применение фильтрации после загрузки проектов
+            filterProjects(); 
         })
         .catch(error => {
             console.error('Error loading projects:', error);
@@ -75,7 +75,7 @@ function updateTechStack() {
         } else if (techFields === 'bioinformatics') {
             options = ['Image Processing', 'Morphological Operations', 'Analysis and Visualization', 'SPAdes', 'QUAST', 'Bioinformatics Workflow', 'Genome Assembly', 'Data Analysis of Medical Records', 'DICOM Processing', '3D Visualization', 'Segmentation Algorithms'];
         } else if (techFields === 'machine-learning') {
-            options = ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Recommendation System'];
+            options = ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Recommendation System', 'K-Means Clustering', 'Marching Cubes Algorithm'];
         } else if (techFields === 'quantum-computing') {
             options = ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Error Correction'];
         }

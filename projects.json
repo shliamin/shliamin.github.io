@@ -10,8 +10,8 @@
             "description": "images/Python-Genome-Assembler.png"
         },
         "technologies": "Python, FASTA and SAM",
-        "techField": "full-stack",
-        "techStack": "mern",
+        "techField": "bioinformatics",
+        "techStack": "Genome Assembly",
         "icons": [
             "images/python-brands-solid.svg",
             "images/pytest.svg",
@@ -31,8 +31,8 @@
             "description": "images/Python-Medical-Data-Analysis.png"
         },
         "technologies": "Python, SciPy, Pandas, Matplotlib",
-        "techField": "full-stack",
-        "techStack": "react",
+        "techField": "data-science, bioinformatics",
+        "techStack": "Python, Pandas, Matplotlib, Data Analysis of Medical Records",
         "icons": [
             "images/python-brands-solid.svg",
             "images/Matplotlib_icon.svg",
@@ -53,8 +53,8 @@
             "description": "images/DICOM.gif"
         },
         "technologies": "Python, Pydicom, SciPy, NumPy, Matplotlib, Scikit-image, Sklearn (KMeans), Plotly, Jupyter Notebook",
-        "techField": "full-stack",
-        "techStack": "react",
+        "techField": "data-science, bioinformatics, machine-learning",
+        "techStack": "Python, NumPy, Matplotlib, Image Processing, Analysis and Visualization, DICOM Processing, 3D Visualization, Segmentation Algorithms, K-Means Clustering, Marching Cubes Algorithm",
         "icons": [
             "images/python-brands-solid.svg",
             "images/NumPy.svg",
@@ -77,8 +77,8 @@
             "description": "images/opencv.png"
         },
         "technologies": "Python, OpenCV, NumPy, Matplotlib, imutils, Jupyter Notebook",
-        "techField": "full-stack",
-        "techStack": "react",
+        "techField": "bioinformatics, data-science",
+        "techStack": "Image Processing, Morphological Operations, Analysis and Visualization, Python, OpenCV, NumPy, Matplotlib",
         "icons": [
             "images/python-brands-solid.svg",
             "images/OpenCV.svg",
@@ -100,7 +100,7 @@
         },
         "technologies": "C#, .NET Core, ASP.NET, Xamarin, NuGet, Microsoft SQL Server, Visual Studio",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": ".NET Stack",
         "icons": [
             "images/CSharp.svg",
             "images/NET core.svg",
@@ -123,7 +123,7 @@
         },
         "technologies": "React.js, Express.js, Node.js, MongoDB (Atlas), Leaflet.js, JWT (JSON Web Tokens), Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "MERN",
         "icons": [
             "images/React.svg",
             "images/Node.js.svg",
@@ -147,7 +147,7 @@
         },
         "technologies": "Java 11, Spring Boot, Spring Cloud, Netflix Eureka, Spring Cloud Gateway, Spring Security, MongoDB, Docker, Kubernetes, Swagger, Zipkin",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Microservices Java Stack",
         "icons": [
             "images/Java.svg",
             "images/Spring.svg",
@@ -171,7 +171,7 @@
         },
         "technologies": "HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, AJAX, Flask, Flask-CORS, Overpass API, Nominatim API",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Python WebDev",
         "icons": [
             "images/JavaScript.svg",
             "images/HTML5.svg",
@@ -195,7 +195,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -219,7 +219,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -243,7 +243,7 @@
         },
         "technologies": "HTML, CSS, JavaScript, Plotly.js, GitHub Actions, Flask, Flask-CORS, logging, os, SciPy, NumPy, Trimesh, ReportLab, PIL (Pillow), EZDXF, JSON, Threading",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Python WebDev",
         "icons": [
             "images/JavaScript.svg",
             "images/python-brands-solid.svg",
@@ -267,7 +267,7 @@
         },
         "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "JAM Stack",
         "icons": [
             "images/Three.js.svg",
             "images/JavaScript.svg",
@@ -290,7 +290,7 @@
         },
         "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
-        "techStack": "mern",
+        "techStack": "JAM Stack",
         "icons": [
             "images/Three.js.svg",
             "images/JavaScript.svg",
@@ -313,7 +313,7 @@
         },
         "technologies": "JavaScript, AJAX, DOM Manipulation, Event Handling, HTML and CSS",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "JAM Stack",
         "icons": [
             "images/JavaScript.svg",
             "images/HTML5.svg",
@@ -333,8 +333,8 @@
             "description": "images/sputnik.gif"
         },
         "technologies": "Ruby, Ruby on Rails, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
-        "techField": "full-stack",
-        "techStack": "react",
+        "techField": "full-stack, data-science, machine-learning",
+        "techStack": "Ruby on Rails, Python, NumPy, Pandas, Collaborative Filtering, Content-Based Filtering, Hybrid Recommendation System",
         "icons": [
             "images/Ruby on Rails.svg",
             "images/PostgresSQL.svg",
@@ -358,7 +358,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -382,7 +382,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -406,7 +406,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -430,7 +430,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -454,7 +454,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "react",
+        "techStack": "Ruby on Rails",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -477,8 +477,8 @@
             "description": "images/NGS.png"
         },
         "technologies": "Nextflow, fastp, SPAdes, QUAST, Jupyter Notebook, Python, pandas, numpy, matplotlib",
-        "techField": "full-stack",
-        "techStack": "react",
+        "techField": "bioinformatics, data-science", 
+        "techStack": "Analysis and Visualization, SPAdes, QUAST, Bioinformatics Workflow, Genome Assembly, Python, OpenCV, NumPy, Nextflow, Fastp, Pandas, Matplotlib",
         "icons": [
             "images/nextflow-logo-bg-light.svg",
             "images/python-brands-solid.svg",
