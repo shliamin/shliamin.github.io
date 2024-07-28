@@ -160,16 +160,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function highlightResume() {
-    const resumeIconMobile = document.querySelector(".icon-row a[href='path/to/your/resume.pdf']");
-    const resumeIconDesktop = document.querySelector(".status-item a[href='path/to/your/resume.pdf']");
+    const resumeIconMobile = document.querySelector("#initial-download-link-mobile img.status-icon-mobile");
+    const resumeIconDesktop = document.querySelector("#initial-download-link-desktop img.status-icon");
     const resumeElement = window.innerWidth <= 768 ? resumeIconMobile : resumeIconDesktop;
 
-    resumeElement.classList.add('highlight');
+    if (resumeElement) {
+        resumeElement.classList.add('highlight');
 
-    setTimeout(() => {
-        resumeElement.classList.remove('highlight');
-    }, 4000);
+        setTimeout(() => {
+            resumeElement.classList.remove('highlight');
+        }, 4000);
+    }
 }
+
 
 function showSection(sectionId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -234,4 +237,40 @@ window.addEventListener('scroll', function () {
     } else {
         languageSwitcher.classList.remove('hidden');
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Desktop link event listener
+    document.getElementById('initial-download-link-desktop').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        
+        // Hide the initial link text and show the language selection buttons
+        document.getElementById('initial-download-link-desktop').style.display = 'none';
+        document.getElementById('language-selection-desktop').style.display = 'block';
+    });
+
+    document.getElementById('english-button-desktop').addEventListener('click', function() {
+        window.location.href = 'Efim Shliamin Computer Scientist, ENG.pdf';
+    });
+
+    document.getElementById('german-button-desktop').addEventListener('click', function() {
+        window.location.href = 'Efim Shliamin Informatiker, DEU.pdf';
+    });
+
+    // Mobile link event listener
+    document.getElementById('initial-download-link-mobile').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        
+        // Hide the initial link text and show the language selection buttons
+        document.getElementById('initial-download-link-mobile').style.display = 'none';
+        document.getElementById('language-selection-mobile').style.display = 'block';
+    });
+
+    document.getElementById('english-button-mobile').addEventListener('click', function() {
+        window.location.href = 'Efim Shliamin Computer Scientist, ENG.pdf';
+    });
+
+    document.getElementById('german-button-mobile').addEventListener('click', function() {
+        window.location.href = 'Efim Shliamin Informatiker, DEU.pdf';
+    });
 });
