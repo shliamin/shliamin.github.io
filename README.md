@@ -3,7 +3,7 @@ I'm Efim Shliamin, a skilled Computer Scientist, B.Sc., with a deep focus on sof
 
 Feel free to contact me (I also speak German 🇩🇪 fluently):
 - Phone: +49 176 452 78124 (What'sApp)
-- Email: efimshliamin@gmail.com
+- Email: efim.career@gmail.com
 - LinkedIn: https://www.linkedin.com/in/efimshliamin/
 - GitHub: https://github.com/shliamin/
 - Medium: https://medium.com/@efimshliamin
