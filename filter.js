@@ -1,4 +1,5 @@
 let allProjects = [];
+let originalURL = window.location.href;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('tech-fields').addEventListener('change', updateTechStack);
@@ -6,15 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     axios.get('projects.json')
         .then(response => {
-            allProjects = response.data; // save all projects in a global variable
-            const projectsGrid = document.getElementById('projects-grid');
-            projectsGrid.innerHTML = '';
-
-            // Sort projects by priority
-            allProjects.sort((a, b) => a.priority - b.priority);
-
-            // Display all projects by default
+            allProjects = response.data;
             displayProjects(allProjects);
+            addEventListenersToProjects(); 
         })
         .catch(error => {
             console.error('Error loading projects:', error);
@@ -24,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayProjects(projects) {
     const projectsGrid = document.getElementById('projects-grid');
     projectsGrid.innerHTML = '';
-
-    // Display the number of found projects above the project grid
     const projectCount = document.getElementById('project-count');
     projectCount.innerText = `${projects.length} projects found:`;
 
@@ -34,6 +27,12 @@ function displayProjects(projects) {
         projectCard.classList.add('col-md-4', 'col-sm-6', 'col-12', 'mb-4', 'project');
         projectCard.setAttribute('data-tech-field', project.techField);
         projectCard.setAttribute('data-tech-stack', project.techStack);
+
+        const projectLink = document.createElement('a');
+        projectLink.href = `?project=${encodeURIComponent(project.name)}`;
+        projectLink.className = 'project-link';
+        projectLink.setAttribute('data-project', project.name);
+
         projectCard.innerHTML = `
             <div class="card project" onclick="loadProjectDetails('${project.name}', '${project.description}', '${project.github}', '${project.demo}', '${project.status}', '${project.images.description}', '${project.technologies}');" uk-toggle="target: #project-modal">
                 <div class="card-img-top" style="background-image: url('${project.images.card}');">
@@ -46,6 +45,8 @@ function displayProjects(projects) {
                 </div>
             </div>
         `;
+
+        projectCard.appendChild(projectLink); 
         projectsGrid.appendChild(projectCard);
     });
 
@@ -53,8 +54,11 @@ function displayProjects(projects) {
     noResultsMessage.style.display = projects.length > 0 ? 'none' : 'block';
 }
 
-function loadProjectDetails(title, description, githubLink, websiteLink, status, imageUrl, techStack) {
-    document.getElementById('project-title').innerText = title;
+function loadProjectDetails(name, description, githubLink, websiteLink, status, imageUrl, techStack) {
+    originalURL = window.location.href;
+    history.pushState(null, '', `?project=${encodeURIComponent(name)}`);
+
+    document.getElementById('project-title').innerText = name;
     document.getElementById('project-description').innerText = description;
     document.getElementById('project-link').href = githubLink;
     document.getElementById('project-link').innerText = githubLink;
@@ -64,7 +68,6 @@ function loadProjectDetails(title, description, githubLink, websiteLink, status,
 
     const statusElement = document.getElementById('status-text');
     statusElement.textContent = status;
-
     const techStackElement = document.getElementById('tech-stack-text');
     techStackElement.textContent = techStack;
 
@@ -123,24 +126,15 @@ function filterProjects() {
         let matchesStack = true;
 
         if (techFields) {
-            matchesField = projectTechField.some(field => {
-                const isMatch = field.includes(techFields);
-                
-                return isMatch;
-            });
+            matchesField = projectTechField.some(field => field.includes(techFields));
         }
 
         if (techStack) {
-            matchesStack = projectTechStack.some(stack => {
-                const isMatch = stack.includes(techStack);
-                
-                return isMatch;
-            });
+            matchesStack = projectTechStack.some(stack => stack.includes(techStack));
         }
 
         return matchesField && matchesStack;
     }).sort((a, b) => a.priority - b.priority);
-
 
     displayProjects(filteredProjects);
 
@@ -151,12 +145,63 @@ function filterProjects() {
     noResultsMessage.style.display = filteredProjects.length > 0 ? 'none' : 'block';
 }
 
+function addEventListenersToProjects() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectParam = urlParams.get('project');
+
+    if (projectParam) {
+        // Ensure the section is shown first
+        showSection('my-work');
+
+        // Wait until the section is fully shown before opening the project
+        setTimeout(() => openProjectByParam(projectParam), 100); // Adding a delay to ensure everything is ready
+    }
+
+    window.onpopstate = function() {
+        const projectParam = new URLSearchParams(window.location.search).get('project');
+        if (projectParam) {
+            openProjectByParam(projectParam);
+        } else {
+            UIkit.modal('#project-modal').hide();
+        }
+    };
+
+    const closeModalButton = document.querySelector('#project-modal .uk-modal-close-default');
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', closeProjectDetails);
+    }
+
+    UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
+}
 
 
+function openProjectByParam(projectName) {
+    const project = allProjects.find(proj => proj.name === decodeURIComponent(projectName));
+    if (project) {
+        loadProjectDetails(
+            project.name,
+            project.description,
+            project.github,
+            project.demo,
+            project.status,
+            project.images.description,
+            project.technologies
+        );
+        UIkit.modal('#project-modal').show();
+    }
+}
+
+function closeProjectDetails() {
+    history.replaceState(null, '', originalURL);
+    UIkit.modal('#project-modal').hide();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    addEventListenersToProjects();
+});
 
 
+document.querySelector('#project-modal .uk-modal-close-default').addEventListener('click', closeProjectDetails);
 
 
-
-
-
+UIkit.util.on('#project-modal', 'hide', closeProjectDetails);

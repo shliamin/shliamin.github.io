@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         languageSwitcher.classList.remove('hidden');
     });
+    
 
     window.addEventListener('click', function (event) {
         if (event.target == popupContainer) {
