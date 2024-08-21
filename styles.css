@@ -18,6 +18,30 @@ body {
     box-sizing: border-box;
 }
 
+.download-link {
+    display: inline-block;
+    background-color: #003366; /* Blue background */
+    color: white; /* White text */
+    padding: 4px 8px; /* Smaller padding */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    margin-bottom: 15px; /* Center the button with margin */
+}
+
+.download-link:hover {
+    color: white; /* Gray text on hover */
+    background-color: #003366; /* Maintain the same background color */
+}
+
+/* Center the link within the parent container */
+.centered-container {
+    text-align: center;
+}
+
+
 .sidebar {
     background-color: #fff;
     padding: 20px 0;
