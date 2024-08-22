@@ -18,6 +18,21 @@ body {
     box-sizing: border-box;
 }
 
+#project-website-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.website-link-container {
+    display: flex;
+    align-items: center;
+}
+
+#project-website {
+    margin-left: 1px; 
+}
+
 .download-link {
     display: inline-block;
     background-color: #003366; /* Blue background */

@@ -71,6 +71,11 @@ function loadProjectDetails(name, description, githubLink, websiteLink, status, 
     const techStackElement = document.getElementById('tech-stack-text');
     techStackElement.textContent = techStack;
 
+    // Display delay message for all projects
+    const delayMessage = document.getElementById('delay-message');
+    delayMessage.style.display = 'block';
+    delayMessage.innerText = 'The website may take up to 30 seconds to load. Please be patient.';
+
     if (status === 'Completed') {
         statusElement.className = 'badge badge-success';
     } else if (status === 'In Development') {
