@@ -954,6 +954,13 @@ iframe {
         border-radius: 5px; 
     }
 
+    #news-container {
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 10px; 
+        border-radius: 0; 
+    }
+
     .container {
         position: relative;
         display: flex;
