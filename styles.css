@@ -948,6 +948,12 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    .uk-button.small-button {
+        padding: 8px 6px; 
+        font-size: 14px; 
+        border-radius: 5px; 
+    }
+
     .container {
         position: relative;
         display: flex;
