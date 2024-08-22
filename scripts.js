@@ -275,3 +275,57 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'Efim Shliamin Informatiker, DEU.pdf';
     });
 });
+
+
+function truncateText(text, maxLength) {
+    if (text.length > maxLength) {
+        return text.slice(0, maxLength) + '... <a href="#" class="read-more">Read more</a>';
+    } else {
+        return text;
+    }
+}
+
+function getBadgeClass(category) {
+    switch (category.toLowerCase()) {
+        case 'update':
+            return 'badge-update';
+        case 'milestone':
+            return 'badge-milestone';
+        case 'project':
+            return 'badge-project';
+        default:
+            return 'badge-default';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    axios.get('news.json')
+        .then(response => {
+            const newsList = document.getElementById('news-list');
+            const newsData = response.data;
+
+            newsData.forEach(newsItem => {
+                const newsElement = document.createElement('li');
+                newsElement.classList.add('news-item');
+
+                const badgeClass = getBadgeClass(newsItem.category);
+
+                newsElement.innerHTML = `
+                    <div class="news-header">
+                        <h3>${newsItem.title}</h3>
+                        <span class="badge ${badgeClass}">${newsItem.category}</span>
+                    </div>
+                    <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
+                    <p>${newsItem.content}</p>
+                    <a href="${newsItem.link}" target="_blank">Read more</a>
+                `;
+
+                newsList.appendChild(newsElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading news:', error);
+        });
+});
+
+

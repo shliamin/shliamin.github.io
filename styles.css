@@ -18,6 +18,127 @@ body {
     box-sizing: border-box;
 }
 
+#news-container {
+    width: 80%; /* Set the width of the news container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-item {
+    background-color: white; /* White background for news items */
+    margin-bottom: 20px; /* Space between news items */
+    padding: 20px; /* Inner padding for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for emphasis */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hover animation */
+}
+
+.news-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and content */
+}
+
+.news-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333; /* Dark text color */
+}
+
+.news-item p {
+    margin: 0 0 10px 0; /* Bottom margin */
+    color: #555; /* Gray text color */
+}
+
+.news-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold; /* Bold text for the link */
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+/* Update category */
+.badge-update {
+    background-color: #007BFF; /* Blue */
+}
+
+/* Milestone category */
+.badge-milestone {
+    background-color: #28A745; /* Green */
+}
+
+/* Project category */
+.badge-project {
+    background-color: #FFC107; /* Yellow */
+}
+
+/* Default category */
+.badge-default {
+    background-color: #6C757D; /* Gray */
+}
+
+
+#news-button {
+    
+}
+
+#news-button span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#news-button .n {
+    color: #007BFF; /* Blue for 'N' */
+}
+
+#news-button .e {
+    color: #28A745; /* Green for 'E' */
+}
+
+#news-button .w {
+    color: #FFC107; /* Yellow for 'W' */
+}
+
+#news-button .s {
+    color: #6C757D; /* Gray for 'S' */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #project-website-container {
     display: flex;
     flex-direction: column;
@@ -54,6 +175,14 @@ body {
 /* Center the link within the parent container */
 .centered-container {
     text-align: center;
+}
+
+
+.uk-button.small-button {
+    padding: 12px 10px;
+    font-size: 16px;
+    line-height: 1.0;
+    border-radius: 5px;
 }
 
 

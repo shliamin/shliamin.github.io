@@ -1,0 +1,26 @@
+[
+    {
+        "title": "New Feature: News Section Added",
+        "date": "2024-08-22",
+        "content": "I'm excited to announce that a new feature has been added to my personal website: a dynamic news section. This section will keep you updated on my latest projects, ideas, and milestones. Stay tuned for more updates!",
+        "link": "https://shliamin.github.io",
+        "author": "Efim Shliamin",
+        "category": "Update"
+    },
+    {
+        "title": "Working on a Machine Learning Tool for Job Relevance",
+        "date": "2024-08-10",
+        "content": "Currently, I'm focused on developing a machine learning tool to analyze the relevance of job listings to my resume. This project aims to streamline the job search process by matching my skills and experience with the most suitable opportunities in the field of bioinformatics and software development.",
+        "link": "https://shliamin.github.io",
+        "author": "Efim Shliamin",
+        "category": "Project"
+    },
+    {
+        "title": "Website Launched",
+        "date": "2024-06-15",
+        "content": "In June 2024, I launched my personal website, a platform to showcase my work, share my thoughts, and connect with like-minded professionals. It's been a fulfilling journey creating this space where I can share my passion for technology and innovation.",
+        "link": "https://shliamin.github.io",
+        "author": "Efim Shliamin",
+        "category": "Milestone"
+    }
+]

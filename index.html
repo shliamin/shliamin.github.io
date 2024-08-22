@@ -75,9 +75,18 @@
             </div>
             <nav>
                 <ul>
-                    <li><button class="uk-button uk-button-default" onclick="showSection('about-me')">About me</button></li>
-                    <li><button class="uk-button uk-button-default" onclick="showSection('my-work')">My work</button></li>
-                    <li><button class="uk-button uk-button-default" onclick="showSection('contact')">Contact</button></li>
+                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('about-me')">About me</button></li>
+                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('my-work')">My work</button></li>
+                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('contact')">Contact</button></li>
+                    <li>
+                        <button id="news-button" class="uk-button uk-button-default small-button" onclick="showSection('news')">
+                            <span class="n">N</span>
+                            <span class="e">E</span>
+                            <span class="w">W</span>
+                            <span class="s">S</span>
+                        </button>
+                    </li>
+                    
                 </ul>
             </nav>
             <div class="divider"></div> 
@@ -289,6 +298,13 @@
 
                 
                 
+            </section>
+            <section id="news" class="section">
+                <div id="news-container">
+                    <ul id="news-list">
+                        <!-- News here -->
+                    </ul>
+                </div>
             </section>
 
             <!-- Calendly widget scripts -->
