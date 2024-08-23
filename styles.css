@@ -125,12 +125,26 @@ body {
 
 #filter-form select,
 #filter-form input[type="date"] {
-    padding: 3px; /* Reduce padding inside form elements */
+    padding: 3px;
     font-size: 0.8em;
-    margin: 0; /* Remove additional margins */
-    width: 150px; /* Set a uniform width for both elements */
-    height: 36px; /* Set a uniform height for both elements */
-    box-sizing: border-box; /* Ensure padding does not affect element width/height */
+    margin: 0;
+    width: 150px;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.date-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.date-badge {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    color: #000; /* Black text */
+    background-color: transparent; /* No background */
+    border-radius: 4px;
 }
 
 
@@ -1199,15 +1213,27 @@ iframe {
     }
 
     #filter-form {
-        gap: 3px; /* Further reduce spacing on mobile */
+        gap: 3px;
     }
 
     #filter-form select,
     #filter-form input[type="date"] {
-        padding: 2px; /* Minimize padding for compactness */
-        font-size: 0.75em; /* Slightly smaller font size on mobile */
-        width: 100%; /* Make elements full width on mobile */
-        height: auto; /* Allow height to adjust naturally on mobile */
+        padding: 2px;
+        font-size: 0.75em;
+        width: 100%;
+        height: auto;
+    }
+
+    .date-filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .date-badge {
+        font-size: 0.7em;
+        padding: 2px 5px;
+        color: #000; /* Black text */
+        background-color: transparent; /* No background */
     }
 
    
