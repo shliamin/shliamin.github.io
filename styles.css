@@ -108,8 +108,8 @@ body {
 
 #filter-container {
     width: 80%;
-    margin: 0 auto 20px auto; 
-    padding: 10px;
+    margin: 0 auto 15px auto;
+    padding: 8px;
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -117,35 +117,22 @@ body {
 
 #filter-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 10px; 
+    gap: 5px; /* Minimal spacing between elements */
+    flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
 }
 
-#filter-form label {
-    margin-right: 10px;
-}
-
-#filter-form select, 
+#filter-form select,
 #filter-form input[type="date"] {
-    padding: 5px;
-    font-size: 1em;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
+    padding: 3px; /* Reduce padding inside form elements */
+    font-size: 0.8em;
+    margin: 0; /* Remove additional margins */
+    width: 150px; /* Set a uniform width for both elements */
+    height: 36px; /* Set a uniform height for both elements */
+    box-sizing: border-box; /* Ensure padding does not affect element width/height */
 }
 
-#filter-form button {
-    padding: 5px 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#filter-form button:hover {
-    background-color: #0056b3;
-}
 
 
 
@@ -1202,6 +1189,38 @@ iframe {
 
     #schedule-meeting-de{
         padding-bottom: 25px;
+    }
+
+
+
+    #filter-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #filter-form {
+        gap: 3px; /* Further reduce spacing on mobile */
+    }
+
+    #filter-form select,
+    #filter-form input[type="date"] {
+        padding: 2px; /* Minimize padding for compactness */
+        font-size: 0.75em; /* Slightly smaller font size on mobile */
+        width: 100%; /* Make elements full width on mobile */
+        height: auto; /* Allow height to adjust naturally on mobile */
+    }
+
+   
+
+    /* Reduce vertical padding and margin for news items */
+    .news-item {
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+    }
+
+    .news-item h3 {
+        font-size: 1.1em;
     }
 }
 

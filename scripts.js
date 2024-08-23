@@ -300,12 +300,15 @@ function getBadgeClass(category) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const newsList = document.getElementById('news-list');
+    const authorFilter = document.getElementById('author-filter');
     let newsData = [];
+    let authors = new Set();
 
     axios.get('news.json')
         .then(response => {
             newsData = response.data;
             displayNews(newsData);
+            populateAuthorFilter(newsData);
         })
         .catch(error => {
             console.error('Error loading news:', error);
@@ -333,21 +336,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const filterForm = document.getElementById('filter-form');
+    function populateAuthorFilter(data) {
+        data.forEach(newsItem => {
+            authors.add(newsItem.author);
+        });
+
+        authors.forEach(author => {
+            const option = document.createElement('option');
+            option.value = author;
+            option.textContent = author;
+            authorFilter.appendChild(option);
+        });
+    }
+
     const categoryFilter = document.getElementById('category-filter');
     const dateStartFilter = document.getElementById('date-start-filter');
     const dateEndFilter = document.getElementById('date-end-filter');
 
-    filterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        filterNews();
-    });
+    // Add event listeners for automatic filtering
+    categoryFilter.addEventListener('change', filterNews);
+    authorFilter.addEventListener('change', filterNews);
+    dateStartFilter.addEventListener('change', filterNews);
+    dateEndFilter.addEventListener('change', filterNews);
 
     function filterNews() {
         const selectedCategory = categoryFilter.value;
+        const selectedAuthor = authorFilter.value;
         const selectedStartDate = new Date(dateStartFilter.value);
         const selectedEndDate = new Date(dateEndFilter.value);
-        selectedEndDate.setHours(23, 59, 59, 999); 
+        selectedEndDate.setHours(23, 59, 59, 999); // Account for the end of the day
 
         let filteredData = newsData;
 
@@ -355,11 +372,19 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredData = filteredData.filter(newsItem => newsItem.category.toLowerCase() === selectedCategory);
         }
 
+        if (selectedAuthor !== 'all') {
+            filteredData = filteredData.filter(newsItem => newsItem.author === selectedAuthor);
+        }
+
         if (dateStartFilter.value && dateEndFilter.value) {
             filteredData = filteredData.filter(newsItem => {
                 const newsDate = new Date(newsItem.date);
                 return newsDate >= selectedStartDate && newsDate <= selectedEndDate;
             });
+        }
+
+        if (!dateStartFilter.value && !dateEndFilter.value && selectedCategory === 'all' && selectedAuthor === 'all') {
+            filteredData = newsData; // Show all news if no filters are applied
         }
 
         displayNews(filteredData);
