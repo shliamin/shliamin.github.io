@@ -308,13 +308,36 @@
                 
                 
             </section>
+
             <section id="news" class="section">
+                <div id="filter-container">
+                    <form id="filter-form">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All</option>
+                            <option value="update">Update</option>
+                            <option value="milestone">Milestone</option>
+                            <option value="project">Project</option>
+                        </select>
+            
+                        <label for="date-start-filter">Start Date:</label>
+                        <input type="date" id="date-start-filter">
+            
+                        <label for="date-end-filter">End Date:</label>
+                        <input type="date" id="date-end-filter">
+            
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            
                 <div id="news-container">
                     <ul id="news-list">
                         <!-- News here -->
                     </ul>
                 </div>
             </section>
+            
+            
 
             <!-- Calendly widget scripts -->
             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>

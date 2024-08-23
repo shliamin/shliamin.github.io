@@ -299,33 +299,73 @@ function getBadgeClass(category) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const newsList = document.getElementById('news-list');
+    let newsData = [];
+
     axios.get('news.json')
         .then(response => {
-            const newsList = document.getElementById('news-list');
-            const newsData = response.data;
-
-            newsData.forEach(newsItem => {
-                const newsElement = document.createElement('li');
-                newsElement.classList.add('news-item');
-
-                const badgeClass = getBadgeClass(newsItem.category);
-
-                newsElement.innerHTML = `
-                    <div class="news-header">
-                        <h3>${newsItem.title}</h3>
-                        <span class="badge ${badgeClass}">${newsItem.category}</span>
-                    </div>
-                    <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
-                    <p>${newsItem.content}</p>
-                    <a href="${newsItem.link}" target="_blank">Read more</a>
-                `;
-
-                newsList.appendChild(newsElement);
-            });
+            newsData = response.data;
+            displayNews(newsData);
         })
         .catch(error => {
             console.error('Error loading news:', error);
         });
+
+    function displayNews(filteredData) {
+        newsList.innerHTML = '';
+        filteredData.forEach(newsItem => {
+            const newsElement = document.createElement('li');
+            newsElement.classList.add('news-item');
+
+            const badgeClass = getBadgeClass(newsItem.category);
+
+            newsElement.innerHTML = `
+                <div class="news-header">
+                    <h3>${newsItem.title}</h3>
+                    <span class="badge ${badgeClass}">${newsItem.category}</span>
+                </div>
+                <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
+                <p>${newsItem.content}</p>
+                <a href="${newsItem.link}" target="_blank">Read more</a>
+            `;
+
+            newsList.appendChild(newsElement);
+        });
+    }
+
+    const filterForm = document.getElementById('filter-form');
+    const categoryFilter = document.getElementById('category-filter');
+    const dateStartFilter = document.getElementById('date-start-filter');
+    const dateEndFilter = document.getElementById('date-end-filter');
+
+    filterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        filterNews();
+    });
+
+    function filterNews() {
+        const selectedCategory = categoryFilter.value;
+        const selectedStartDate = new Date(dateStartFilter.value);
+        const selectedEndDate = new Date(dateEndFilter.value);
+        selectedEndDate.setHours(23, 59, 59, 999); 
+
+        let filteredData = newsData;
+
+        if (selectedCategory !== 'all') {
+            filteredData = filteredData.filter(newsItem => newsItem.category.toLowerCase() === selectedCategory);
+        }
+
+        if (dateStartFilter.value && dateEndFilter.value) {
+            filteredData = filteredData.filter(newsItem => {
+                const newsDate = new Date(newsItem.date);
+                return newsDate >= selectedStartDate && newsDate <= selectedEndDate;
+            });
+        }
+
+        displayNews(filteredData);
+    }
 });
+
+
 
 
