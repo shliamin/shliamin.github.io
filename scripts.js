@@ -314,27 +314,49 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading news:', error);
         });
 
-    function displayNews(filteredData) {
-        newsList.innerHTML = '';
-        filteredData.forEach(newsItem => {
-            const newsElement = document.createElement('li');
-            newsElement.classList.add('news-item');
-
-            const badgeClass = getBadgeClass(newsItem.category);
-
-            newsElement.innerHTML = `
-                <div class="news-header">
-                    <h3>${newsItem.title}</h3>
-                    <span class="badge ${badgeClass}">${newsItem.category}</span>
-                </div>
-                <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
-                <p>${newsItem.content}</p>
-                <a href="${newsItem.link}" target="_blank">Read more</a>
-            `;
-
-            newsList.appendChild(newsElement);
-        });
-    }
+        function displayNews(filteredData) {
+            newsList.innerHTML = ''; // Clear existing news items
+        
+            filteredData.forEach(newsItem => {
+                const newsElement = document.createElement('li');
+                newsElement.classList.add('news-item');
+        
+                // Determine the ribbon class based on the category
+                let ribbonClass;
+                switch (newsItem.category.toLowerCase()) {
+                    case 'update':
+                        ribbonClass = 'ribbon-update';
+                        break;
+                    case 'milestone':
+                        ribbonClass = 'ribbon-milestone';
+                        break;
+                    case 'project':
+                        ribbonClass = 'ribbon-project';
+                        break;
+                    default:
+                        ribbonClass = ''; // No ribbon for other categories
+                        break;
+                }
+        
+                // Add the ribbon with dynamic class
+                newsElement.innerHTML = `
+                    <div class="ribbon ${ribbonClass}"><span>${newsItem.category}</span></div>
+                    <div class="news-header">
+                        <h3>${newsItem.title}</h3>
+                        
+                    </div>
+                    <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
+                    <p>${newsItem.content}</p>
+                    <a href="${newsItem.link}" target="_blank">Read more</a>
+                `;
+        
+                newsList.appendChild(newsElement);
+            });
+        }
+        
+        
+        
+        
 
     function populateAuthorFilter(data) {
         data.forEach(newsItem => {

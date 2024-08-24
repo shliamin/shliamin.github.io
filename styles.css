@@ -105,6 +105,87 @@ body {
     background-color: #6C757D; /* Gray */
 }
 
+
+.news-item {
+    position: relative;
+    background-color: white; 
+    margin-bottom: 15px; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.ribbon {
+    position: absolute;
+    top: -5px; /* Slightly above the top edge */
+    right: -5px; /* Slightly to the right edge */
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 140px; /* Adjust width for smaller ribbon */
+    padding: 5px 0; /* Smaller padding */
+    background-color: white; /* Use the dynamic background color */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjusted shadow for smaller ribbon */
+    top: 20px; /* Adjust positioning for smaller ribbon */
+    right: -40px; /* Adjust positioning for smaller ribbon */
+    text-transform: uppercase;
+    font-size: 0.75em; /* Smaller font size */
+}
+
+/* Ribbon Style 1: Blue for 'Update' */
+.ribbon-update span {
+    background-color: #007BFF;
+}
+
+/* Ribbon Style 2: Green for 'Milestone' */
+.ribbon-milestone span {
+    background-color: #28A745;
+}
+
+/* Ribbon Style 3: Yellow for 'Project' */
+.ribbon-project span {
+    background-color: #FFC107;
+}
+
+.ribbon::before,
+.ribbon::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 3px solid inherit; /* Use the dynamic border color */
+    top: 100%;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.ribbon::before {
+    left: 0;
+}
+
+.ribbon::after {
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
 #filter-container {
     width: 80%;
     margin: 0 auto 15px auto;
@@ -307,6 +388,20 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+#degree-title {
+    margin: 0; /* Remove any default margin */
+    font-size: 1.0em; /* Adjust the font size if necessary */
+    color: #333; /* Dark color for the title */
+}
+
+#profession-title {
+    margin: 0; /* Remove any default margin */
+    margin-top: 2px; /* Minimal space between title and subtitle */
+    font-size: 0.9em; /* Slightly smaller font size than the title */
+    color: #777; /* Pleasant gray color for the subtitle */
+}
+
 
 .uk-comment-body {
     text-align: center;
@@ -946,6 +1041,8 @@ iframe {
 
 @media (min-width: 1181px) {
 
+    
+
     .contact-info {
         margin-top: 40px;
         margin-bottom: 40px;
@@ -1225,11 +1322,28 @@ iframe {
         width: 100%;
         padding: 5px;
     }
-
+    
     #filter-form {
+        display: flex;
+        flex-wrap: wrap;
         gap: 3px;
     }
+    
+    /* First line: Category and Author filters */
+    #category-filter, 
+    #author-filter {
+        flex: 1 1 calc(50% - 2px); /* Each takes up 50% of the width */
+    }
+    
+    /* Second line: Date filters */
+    .date-filter-group {
+        flex: 1 1 calc(50% - 10px); /* Два фильтра дат будут занимать по 50% ширины контейнера */
+    }
 
+    
+
+    
+    
     #filter-form select,
     #filter-form input[type="date"] {
         padding: 6px 10px;
@@ -1238,19 +1352,17 @@ iframe {
         height: auto;
         border-radius: 10px; /* Ensure consistent styling on mobile */
     }
-
-    .date-filter-group {
-        width: 100%;
-        justify-content: space-between;
-    }
-
+    
     .date-badge {
         font-size: 0.7em;
         padding: 2px 5px;
         color: #333; /* Match text color with other elements */
         background-color: transparent; /* No background */
         border-radius: 10px; /* Match border-radius with other elements */
+        white-space: nowrap; /* Prevents the label from wrapping */
     }
+    
+    
 
    
 
