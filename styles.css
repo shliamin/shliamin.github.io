@@ -934,6 +934,12 @@ iframe {
     cursor: pointer;
 }
 
+.click-news{
+    color: #003366; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .click-contact{
     color: #003366; 
     text-decoration: underline;

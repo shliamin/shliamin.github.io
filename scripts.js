@@ -158,6 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handler for clicking on "News" text
+    document.querySelectorAll('.click-news').forEach(word => {
+        word.addEventListener('click', function () {
+            const myWorkButton = document.querySelector('.uk-button.uk-button-default[onclick="showSection(\'news\')"]');
+            if (myWorkButton) {
+                myWorkButton.click();
+            }
+        });
+    });
+
 });
 
 function highlightResume() {
