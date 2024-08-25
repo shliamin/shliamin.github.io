@@ -276,14 +276,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// News
 
-function truncateText(text, maxLength) {
+function truncateText(text, maxLength, newsLink = null) {
     if (text.length > maxLength) {
-        return text.slice(0, maxLength) + '... <a href="#" class="read-more">Read more</a>';
+        if (newsLink) {
+            return text.slice(0, maxLength) + `... <a href="${newsLink}" target="_blank" class="read-more">Read more</a>`;
+        } else {
+            return text.slice(0, maxLength) + '...';
+        }
     } else {
         return text;
     }
 }
+
 
 function getBadgeClass(category) {
     switch (category.toLowerCase()) {
@@ -293,12 +299,16 @@ function getBadgeClass(category) {
             return 'badge-milestone';
         case 'project':
             return 'badge-project';
+        case 'news':
+            return 'badge-news';
         default:
             return 'badge-default';
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    
     const newsList = document.getElementById('news-list');
     const authorFilter = document.getElementById('author-filter');
     let newsData = [];
@@ -314,45 +324,76 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading news:', error);
         });
 
+        function formatDate(dateString) {
+            const options = { day: '2-digit', month: 'long', year: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-GB', options);
+        }
+        
         function displayNews(filteredData) {
-            newsList.innerHTML = ''; // Clear existing news items
+
+            filteredData.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+            newsList.innerHTML = '';
         
             filteredData.forEach(newsItem => {
                 const newsElement = document.createElement('li');
                 newsElement.classList.add('news-item');
         
-                // Determine the ribbon class based on the category
-                let ribbonClass;
+                let badgeClass;
                 switch (newsItem.category.toLowerCase()) {
                     case 'update':
-                        ribbonClass = 'ribbon-update';
+                        badgeClass = 'badge-update';
                         break;
                     case 'milestone':
-                        ribbonClass = 'ribbon-milestone';
+                        badgeClass = 'badge-milestone';
                         break;
                     case 'project':
-                        ribbonClass = 'ribbon-project';
+                        badgeClass = 'badge-project';
+                        break;
+                    case 'news':
+                        badgeClass = 'badge-news';
                         break;
                     default:
-                        ribbonClass = ''; // No ribbon for other categories
+                        badgeClass = 'badge-default';
                         break;
                 }
         
-                // Add the ribbon with dynamic class
+                
+                let titleContent = `<h3>${newsItem.title}</h3>`;
+                let content = truncateText(newsItem.content, 300);
+        
+                if (newsItem.category.toLowerCase() === 'news') {
+                    const newsLink = newsItem.link; 
+                    titleContent = `<h3><a href="${newsLink}" target="_blank">${newsItem.title}</a></h3>`;
+                    content = truncateText(newsItem.content, 300, newsLink);
+                }
+        
                 newsElement.innerHTML = `
-                    <div class="ribbon ${ribbonClass}"><span>${newsItem.category}</span></div>
-                    <div class="news-header">
-                        <h3>${newsItem.title}</h3>
-                        
+                    <div class="news-content">
+                        <img src="${newsItem.image}" alt="${newsItem.title}" class="news-image">
+                        <div class="news-text">
+                            <div class="news-title">
+                                <span class="badge ${badgeClass}">${newsItem.category}</span>
+                                ${titleContent}
+                            </div>
+                            <p class="news-meta"><small>by ${newsItem.author} on ${formatDate(newsItem.date)}</small></p>
+                            <p class="news-description">${content}</p>
+                        </div>
                     </div>
-                    <p><small>by ${newsItem.author} on ${newsItem.date}</small></p>
-                    <p>${newsItem.content}</p>
-                    <a href="${newsItem.link}" target="_blank">Read more</a>
                 `;
         
                 newsList.appendChild(newsElement);
             });
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -382,36 +423,49 @@ document.addEventListener('DOMContentLoaded', () => {
     dateEndFilter.addEventListener('change', filterNews);
 
     function filterNews() {
-        const selectedCategory = categoryFilter.value;
+        const selectedCategory = categoryFilter.value.toLowerCase();
         const selectedAuthor = authorFilter.value;
         const selectedStartDate = new Date(dateStartFilter.value);
         const selectedEndDate = new Date(dateEndFilter.value);
-        selectedEndDate.setHours(23, 59, 59, 999); // Account for the end of the day
-
+        selectedEndDate.setHours(23, 59, 59, 999); 
+    
         let filteredData = newsData;
-
+    
         if (selectedCategory !== 'all') {
-            filteredData = filteredData.filter(newsItem => newsItem.category.toLowerCase() === selectedCategory);
+            filteredData = filteredData.filter(newsItem => {
+                const mainCategory = newsItem.category.toLowerCase().trim(); 
+                const subCategory = newsItem.subcategory ? newsItem.subcategory.toLowerCase().trim() : ''; 
+                
+                
+                return mainCategory === selectedCategory || 
+                       `${mainCategory}:${subCategory}` === selectedCategory || 
+                       (selectedCategory === 'news:all' && mainCategory === 'news');
+            });
         }
-
+    
         if (selectedAuthor !== 'all') {
             filteredData = filteredData.filter(newsItem => newsItem.author === selectedAuthor);
         }
-
+    
         if (dateStartFilter.value && dateEndFilter.value) {
             filteredData = filteredData.filter(newsItem => {
                 const newsDate = new Date(newsItem.date);
                 return newsDate >= selectedStartDate && newsDate <= selectedEndDate;
             });
         }
-
+    
         if (!dateStartFilter.value && !dateEndFilter.value && selectedCategory === 'all' && selectedAuthor === 'all') {
-            filteredData = newsData; // Show all news if no filters are applied
+            filteredData = newsData; 
         }
-
+    
         displayNews(filteredData);
     }
+    
+    
+    
+    
 });
+
 
 
 

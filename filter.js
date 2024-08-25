@@ -77,11 +77,11 @@ function loadProjectDetails(name, description, githubLink, websiteLink, status, 
     delayMessage.innerText = 'The website may take up to 30 seconds to load. Please be patient.';
 
     if (status === 'Completed') {
-        statusElement.className = 'badge badge-success';
+        statusElement.className = 'badge-status badge-success';
     } else if (status === 'In Development') {
-        statusElement.className = 'badge badge-warning';
+        statusElement.className = 'badge-status badge-warning';
     } else {
-        statusElement.className = 'badge badge-secondary';
+        statusElement.className = 'badge-status badge-secondary';
     }
 }
 

@@ -5,7 +5,9 @@
         "content": "I'm excited to announce that a new feature has been added to my personal website: a dynamic news section. This section will keep you updated on my latest projects, ideas, and milestones. Stay tuned for more updates!",
         "link": "https://shliamin.github.io",
         "author": "Efim Shliamin",
-        "category": "Update"
+        "category": "Update",
+        "subcategory": "IT",
+        "image": "/images/update.webp"
     },
     {
         "title": "Working on a Machine Learning Tool for Job Relevance",
@@ -13,7 +15,9 @@
         "content": "Currently, I'm focused on developing a machine learning tool to analyze the relevance of job listings to my resume. This project aims to streamline the job search process by matching my skills and experience with the most suitable opportunities in the field of data science and software development.",
         "link": "https://shliamin.github.io",
         "author": "Efim Shliamin",
-        "category": "Project"
+        "category": "Project",
+        "subcategory": "IT",
+        "image": "/images/project.webp"
     },
     {
         "title": "Website Launched",
@@ -21,6 +25,18 @@
         "content": "In June 2024, I launched my personal website, a platform to showcase my work, share my thoughts, and connect with like-minded professionals. It's been a fulfilling journey creating this space where I can share my passion for technology and innovation.",
         "link": "https://shliamin.github.io",
         "author": "Efim Shliamin",
-        "category": "Milestone"
+        "category": "Milestone",
+        "subcategory": "IT",
+        "image": "images/milestone.webp"
+    },
+    {
+        "title": "Gemini makes your mobile device a powerful AI assistant",
+        "date": "2024-08-13",
+        "content": "Gemini Live is available today to Advanced subscribers, along with conversational overlay on Android and even more connected apps.",
+        "link": "https://blog.google/products/gemini/made-by-google-gemini-ai-updates/",  
+        "author": "Google",
+        "category": "news",
+        "subcategory": "AI & Data Science",
+        "image": "images/news.webp"
     }
 ]

@@ -35,146 +35,108 @@ body {
     padding: 0;
 }
 
-.news-item {
-    background-color: white; /* White background for news items */
-    margin-bottom: 15px; /* Space between news items */
-    padding: 15px; /* Inner padding for the card */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for emphasis */
-    transition: transform 0.2s, box-shadow 0.2s; /* Hover animation */
-}
 
-.news-item:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.news-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; /* Space between header and content */
-}
-
-.news-item h3 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333; /* Dark text color */
-}
-
-.news-item p {
-    margin: 0 0 10px 0; /* Bottom margin */
-    color: #555; /* Gray text color */
-}
-
-.news-item a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold; /* Bold text for the link */
-}
-
-.news-item a:hover {
-    text-decoration: underline;
-}
-
-.badge {
-    color: white;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 0.9em;
-    display: inline-block;
-}
-
-/* Update category */
-.badge-update {
-    background-color: #007BFF; /* Blue */
-}
-
-/* Milestone category */
-.badge-milestone {
-    background-color: #28A745; /* Green */
-}
-
-/* Project category */
-.badge-project {
-    background-color: #FFC107; /* Yellow */
-}
-
-/* Default category */
-.badge-default {
-    background-color: #6C757D; /* Gray */
-}
 
 
 .news-item {
     position: relative;
-    background-color: white; 
-    margin-bottom: 15px; 
-    padding: 15px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s, box-shadow 0.2s; 
-}
-
-.ribbon {
-    position: absolute;
-    top: -5px; /* Slightly above the top edge */
-    right: -5px; /* Slightly to the right edge */
-    width: 100px;
-    height: 100px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 220px; 
 }
 
-.ribbon span {
+.news-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.badge {
     position: absolute;
-    display: block;
-    width: 140px; /* Adjust width for smaller ribbon */
-    padding: 5px 0; /* Smaller padding */
-    background-color: white; /* Use the dynamic background color */
-    color: white;
-    text-align: center;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.75em;
     font-weight: bold;
-    transform: rotate(45deg);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjusted shadow for smaller ribbon */
-    top: 20px; /* Adjust positioning for smaller ribbon */
-    right: -40px; /* Adjust positioning for smaller ribbon */
     text-transform: uppercase;
-    font-size: 0.75em; /* Smaller font size */
+    border-radius: 5px;
+    color: white;
+    z-index: 10;
 }
 
-/* Ribbon Style 1: Blue for 'Update' */
-.ribbon-update span {
+.badge-update {
     background-color: #007BFF;
 }
 
-/* Ribbon Style 2: Green for 'Milestone' */
-.ribbon-milestone span {
+.badge-milestone {
     background-color: #28A745;
 }
 
-/* Ribbon Style 3: Yellow for 'Project' */
-.ribbon-project span {
+.badge-project {
     background-color: #FFC107;
 }
 
-.ribbon::before,
-.ribbon::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    border: 3px solid inherit; /* Use the dynamic border color */
-    top: 100%;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
+.badge-news {
+    background-color: #ff3407;
 }
 
-.ribbon::before {
-    left: 0;
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.ribbon::after {
-    right: 0;
+.news-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    object-position: center;
+}
+
+.news-text {
+    padding: 10px 15px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.news-title h3 {
+    margin: 0 0 2px 0; 
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.2; 
+    padding-right: 40px;
+}
+
+.news-meta {
+    color: #777;
+    font-size: 0.85em;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.news-description {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+    overflow: hidden;
+    margin-top: 2px; 
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 
@@ -257,7 +219,7 @@ body {
 }
 
 #news-button span {
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 16px;
 }
 
@@ -274,7 +236,7 @@ body {
 }
 
 #news-button .s {
-    color: #6C757D; /* Gray for 'S' */
+    color: #ff3407; /* Red for 'S' */
 }
 
 
@@ -1041,6 +1003,30 @@ iframe {
 
 @media (min-width: 1181px) {
 
+    .news-content {
+        flex-direction: row;
+        height: auto;
+        flex: 1;
+    }
+
+    .news-image {
+        width: 35%; 
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .news-text {
+        width: 65%;
+        padding: 5px 15px; 
+    }
+
+    .news-item {
+        height: 180px;
+    }
+
+    .news-title h3 {
+        padding-right: 70px;
+    }
     
 
     .contact-info {
@@ -1363,18 +1349,17 @@ iframe {
     }
     
     
-
-   
-
-    /* Reduce vertical padding and margin for news items */
-    .news-item {
-        padding: 8px;
-        margin-bottom: 8px;
-        font-size: 0.9em;
+    .news-title h3 {
+        padding-right: 0px;
     }
 
-    .news-item h3 {
-        font-size: 1.1em;
+    .news-item {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .news-text {
+        padding: 15px;
     }
 }
 
