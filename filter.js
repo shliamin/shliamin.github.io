@@ -159,7 +159,7 @@ function addEventListenersToProjects() {
         showSection('my-work');
 
         // Wait until the section is fully shown before opening the project
-        setTimeout(() => openProjectByParam(projectParam), 100); // Adding a delay to ensure everything is ready
+        setTimeout(() => openProjectByParam(projectParam), 300); // Adding a delay to ensure everything is ready
     }
 
     window.onpopstate = function() {
@@ -181,24 +181,27 @@ function addEventListenersToProjects() {
 
 
 function openProjectByParam(projectName) {
-    const project = allProjects.find(proj => proj.name === decodeURIComponent(projectName));
-    if (project) {
-        loadProjectDetails(
-            project.name,
-            project.description,
-            project.github,
-            project.demo,
-            project.status,
-            project.images.description,
-            project.technologies
-        );
-        UIkit.modal('#project-modal').show();
-    }
+    UIkit.modal('#project-modal').hide(); 
+    setTimeout(() => {
+        const project = allProjects.find(proj => proj.name === decodeURIComponent(projectName));
+        if (project) {
+            loadProjectDetails(
+                project.name,
+                project.description,
+                project.github,
+                project.demo,
+                project.status,
+                project.images.description,
+                project.technologies
+            );
+            UIkit.modal('#project-modal').show();
+        }
+    }, 300); 
 }
 
 function closeProjectDetails() {
-    history.replaceState(null, '', originalURL);
-    UIkit.modal('#project-modal').hide();
+    history.replaceState(null, '', originalURL); 
+    UIkit.modal('#project-modal').hide(); 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
