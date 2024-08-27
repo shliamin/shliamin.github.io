@@ -500,7 +500,7 @@ document.querySelectorAll('.button-docs').forEach(button => {
 
 window.addEventListener('load', function() {
     const contentDocs = document.getElementById('content-docs');
-    const maxScrollLeft = contentDocs.scrollWidth - contentDocs.clientWidth;
+    const maxScrollLeft = contentDocs.scrollWidth + 50;
 
     contentDocs.scrollLeft = 0;
 
@@ -524,7 +524,7 @@ function adjustMargin() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 500) { 
-        const marginLeft = screenWidth + 30; 
+        const marginLeft = screenWidth + 50; 
 
         
         const firstButton = document.querySelector('.button-docs:first-child');
