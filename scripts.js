@@ -533,10 +533,7 @@ function adjustMargin() {
         }
     } else {
         
-        const firstButton = document.querySelector('.button-docs:first-child');
-        if (firstButton) {
-            firstButton.style.marginLeft = '0px';
-        }
+        
     }
 }
 
