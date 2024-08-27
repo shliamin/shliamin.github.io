@@ -524,7 +524,7 @@ function adjustMargin() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 500) { 
-        const marginLeft = screenWidth + 10; 
+        const marginLeft = screenWidth + 30; 
 
         
         const firstButton = document.querySelector('.button-docs:first-child');
