@@ -1250,6 +1250,12 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    #content-docs {
+        padding-left: 0%;
+        padding-right: 0%;
+
+    }
+
     .greeting {
         font-size: 16px; 
     }

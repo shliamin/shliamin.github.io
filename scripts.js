@@ -500,11 +500,13 @@ document.querySelectorAll('.button-docs').forEach(button => {
 
 window.addEventListener('load', function() {
     const contentDocs = document.getElementById('content-docs');
+    const maxScrollLeft = contentDocs.scrollWidth - contentDocs.clientWidth;
+
     contentDocs.scrollLeft = 0;
 
     setTimeout(() => {
         contentDocs.scrollTo({
-            left: 150, 
+            left: maxScrollLeft, 
             behavior: 'smooth'
         });
 
@@ -513,8 +515,8 @@ window.addEventListener('load', function() {
                 left: 0,
                 behavior: 'smooth'
             });
-        }, 500); 
-    }, 500); 
+        }, 1000); 
+    }, 100); 
 });
 
 
