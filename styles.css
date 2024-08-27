@@ -535,6 +535,9 @@ body {
 
 
 
+
+
+
 #content-en {
     
     padding-top: 20px;
@@ -1158,6 +1161,8 @@ iframe {
 
 @media (min-width: 1181px) {
 
+    
+
     #content-docs {
         padding-left: 10%;
         padding-right: 10%;
@@ -1259,7 +1264,9 @@ iframe {
 
 @media (max-width: 1180px) {
 
-    
+    .button-docs:first-child {
+        margin-left: 15px; /* Добавляем дополнительный отступ слева для первой кнопки */
+    }
 
     .greeting {
         font-size: 16px; 
@@ -1387,7 +1394,8 @@ iframe {
     .section {
         width: 100%;
     }
-    
+
+
     .section p {
         padding-left: 0;
         padding-right: 0;
@@ -1532,6 +1540,8 @@ iframe {
     .news-text {
         padding: 15px;
     }
+
+   
 }
 
 @media (max-width: 380px) {
