@@ -473,15 +473,25 @@ body {
 
 
 
-
+#content-docs {
+    overflow-x: auto; /* Позволяет горизонтальную прокрутку */
+    white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
+    padding: 0; /* Убираем все отступы */
+    margin: 0; /* Убираем все внешние отступы */
+    position: relative;
+    width: 100%; /* Полная ширина контейнера */
+    box-sizing: border-box; 
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
 .scrolling-wrapper {
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: flex-start; /* Выравнивание элементов слева */
     align-items: center;
-    width: max-content; 
-    
+    width: max-content; /* Ширина зависит от содержимого */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
 }
 
 .button-docs {
@@ -494,14 +504,12 @@ body {
     margin: 0 5px;
     text-align: center;
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     background-color: #fff;
     transition: background-color 0.3s ease;
     flex-shrink: 0; 
-
     min-width: 150px;
     max-width: 150px; 
-    box-sizing: border-box;
+    box-sizing: border-box; /* Включает padding и border в ширину */
 }
 
 .button-docs:hover {
@@ -514,23 +522,12 @@ body {
     background-color: #f0f0f0;
 }
 
-
+/* Скрыть стандартный скроллбар */
 #content-docs::-webkit-scrollbar {
     display: none;
 }
 
-#content-docs {
-    -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
-    padding-left: 10%;
-    padding-right: 10%;
-    overflow-x: auto; 
-    white-space: nowrap; 
-    padding-bottom: 10px;
-    position: relative; 
-    width: 100%; 
-    box-sizing: border-box; 
-}
+
 
 
 
@@ -1161,6 +1158,12 @@ iframe {
 
 @media (min-width: 1181px) {
 
+    #content-docs {
+        padding-left: 10%;
+        padding-right: 10%;
+
+    }
+
     .news-content {
         flex-direction: row;
         height: auto;
@@ -1256,11 +1259,7 @@ iframe {
 
 @media (max-width: 1180px) {
 
-    #content-docs {
-        padding-left: 0%;
-        padding-right: 0%;
-
-    }
+    
 
     .greeting {
         font-size: 16px; 
