@@ -544,6 +544,7 @@ body {
 
 .mobile-icons {
     display: none;
+    height: 40px;
 }
 
 .icon-row {
