@@ -498,26 +498,7 @@ document.querySelectorAll('.button-docs').forEach(button => {
     });
 });
 
-window.addEventListener('load', function() {
-    const contentDocs = document.getElementById('content-docs');
-    const maxScrollLeft = contentDocs.scrollWidth - contentDocs.clientWidth;
 
-    contentDocs.scrollLeft = 0;
-
-    setTimeout(() => {
-        contentDocs.scrollTo({
-            left: maxScrollLeft, 
-            behavior: 'smooth'
-        });
-
-        setTimeout(() => {
-            contentDocs.scrollTo({
-                left: 0,
-                behavior: 'smooth'
-            });
-        }, 1000); 
-    }, 100); 
-});
 
 
 
