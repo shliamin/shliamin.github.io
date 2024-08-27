@@ -222,8 +222,14 @@ function switchLanguage(lang) {
         document.getElementById('current-location-de').style.display = 'none';
         document.getElementById('schedule-meeting-en').style.display = 'block';
         document.getElementById('schedule-meeting-de').style.display = 'none';
+
+        document.getElementById('greeting-en').style.display = 'block';
+        document.getElementById('greeting-de').style.display = 'none';
+
         document.getElementById('tool-info-en').style.display = 'block';
         document.getElementById('tool-info-de').style.display = 'none';
+
+        
     } else if (lang === 'de') {
         document.getElementById('btn-de').classList.add('active');
         document.getElementById('content-en').style.display = 'none';
@@ -236,8 +242,15 @@ function switchLanguage(lang) {
         document.getElementById('current-location-de').style.display = 'block';
         document.getElementById('schedule-meeting-en').style.display = 'none';
         document.getElementById('schedule-meeting-de').style.display = 'block';
+
+        document.getElementById('greeting-en').style.display = 'none';
+        document.getElementById('greeting-de').style.display = 'block';
+
+
         document.getElementById('tool-info-en').style.display = 'none';
         document.getElementById('tool-info-de').style.display = 'block';
+
+    
     }
 }
 
@@ -477,6 +490,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+document.querySelectorAll('.button-docs').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.add('clicked'); 
+    });
+});
+
+window.addEventListener('load', function() {
+    const contentDocs = document.getElementById('content-docs');
+    contentDocs.scrollLeft = 0;
+
+    setTimeout(() => {
+        contentDocs.scrollTo({
+            left: 150, 
+            behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+            contentDocs.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
+        }, 500); 
+    }, 500); 
+});
 
 
 

@@ -435,6 +435,151 @@ body {
     box-sizing: border-box;
 }
 
+.greeting {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 200;
+    color: #333;
+    letter-spacing: 2px;
+    padding-bottom: 25px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.greeting span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.date-stamp {
+    display: block;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #555;
+    text-align: right;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+#content-docs {
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-x: auto; /* Позволяет горизонтальную прокрутку */
+    white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
+    padding-bottom: 10px;
+    position: relative; /* Для позиции при анимации */
+}
+
+.scrolling-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content; /* Устанавливает ширину в зависимости от содержимого */
+    padding: 10px 0;
+}
+
+.button-docs {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5%;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Предотвращает сжатие кнопок */
+}
+
+.button-docs:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #000;
+}
+
+.button-docs.clicked {
+    background-color: #f0f0f0;
+}
+
+/* Скрыть стандартный скроллбар */
+#content-docs::-webkit-scrollbar {
+    display: none;
+}
+
+#content-docs {
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+#content-en {
+    
+    padding-top: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  
+    
+   
+}
+
+#content-de {
+    
+    padding-top: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+   
+}
+
+#welcome-en {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#welcome-de {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#new-opportunities-en {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#new-opportunities-de {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#current-location-en {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#current-location-de {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#schedule-meeting-en {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#schedule-meeting-de {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
 .section ul {
     padding-left: 13%;
     padding-right: 10%;
@@ -1105,6 +1250,15 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    .greeting {
+        font-size: 16px; 
+    }
+
+    #content-docs a {
+        flex-basis: calc(50% - 20px); 
+        font-size: 12px; 
+    }
+
     .spreadsheet-container {
         width: 100%;
         height: 600px; 
@@ -1369,7 +1523,7 @@ iframe {
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 380px) {
     .language-switcher {
         flex-direction: column; 
         top: 10px;
@@ -1379,6 +1533,11 @@ iframe {
 
     .btn {
         margin-bottom: 2px; 
+    }
+
+    #content-docs a {
+        flex-basis: 100%; 
+        font-size: 12px; 
     }
 }
 
