@@ -1265,7 +1265,7 @@ iframe {
 @media (max-width: 1180px) {
 
     .button-docs:first-child {
-        margin-left: 45px; /* Добавляем дополнительный отступ слева для первой кнопки */
+        margin-left: 145px; /* Добавляем дополнительный отступ слева для первой кнопки */
     }
 
     .greeting {

@@ -515,8 +515,8 @@ window.addEventListener('load', function() {
                 left: 0,
                 behavior: 'smooth'
             });
-        }, 1000); 
-    }, 100); 
+        }, 2000); 
+    }, 1000); 
 });
 
 
