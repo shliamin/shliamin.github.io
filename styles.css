@@ -612,7 +612,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    
 }
 
 .contact-item {
@@ -1036,8 +1036,7 @@ iframe {
     
 
     .contact-info {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -1301,11 +1300,11 @@ iframe {
     }
 
     #schedule-meeting-en{
-        padding-bottom: 25px;
+        margin-bottom: 0px !important;
     }
 
     #schedule-meeting-de{
-        padding-bottom: 25px;
+        margin-bottom: 0px !important;
     }
 
 
