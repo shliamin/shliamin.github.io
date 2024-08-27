@@ -520,4 +520,30 @@ window.addEventListener('load', function() {
 });
 
 
+function adjustMargin() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 500) { 
+        const marginLeft = screenWidth + 10; 
+
+        
+        const firstButton = document.querySelector('.button-docs:first-child');
+        if (firstButton) {
+            firstButton.style.marginLeft = marginLeft + 'px';
+        }
+    } else {
+        
+        const firstButton = document.querySelector('.button-docs:first-child');
+        if (firstButton) {
+            firstButton.style.marginLeft = '0px';
+        }
+    }
+}
+
+
+window.addEventListener('load', adjustMargin);
+
+
+window.addEventListener('resize', adjustMargin);
+
 
