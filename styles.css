@@ -1156,6 +1156,12 @@ iframe {
     margin: 0;
 }
 
+.scroll-indicator {
+    display: none; 
+}
+
+
+
 
 
 
@@ -1537,6 +1543,31 @@ iframe {
 
     .news-text {
         padding: 15px;
+    }
+
+    .scroll-indicator {
+        
+        position: absolute;
+        top: 20%;
+        left: 10px;
+        transform: translateY(-50%);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: #888;
+        animation: bounce 1.5s infinite;
+    }
+    
+    
+    
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-5px);
+        }
     }
 
    
