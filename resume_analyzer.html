@@ -4,106 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compatibility Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
             margin: 0;
-            padding: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
         }
         .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 650px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
             width: 100%;
             box-sizing: border-box;
         }
         h1 {
             text-align: center;
-            color: #007BFF;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
         form {
             display: flex;
             flex-direction: column;
         }
         label {
-            margin: 10px 0 5px;
-            color: #333;
-            font-weight: 500;
+            margin: 5px 0 5px;
+            font-size: 14px;
+            color: #666;
         }
         input[type="file"], textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+            padding: 14px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
             width: 100%;
-            box-sizing: border-box;
-            font-size: 14px;
             margin-bottom: 15px;
         }
         button {
-            padding: 12px;
-            background-color: #007BFF;
-            color: #ffffff;
+            padding: 14px;
+            background-color: #007aff;
+            color: #fff;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #005bb5;
         }
         #results {
             margin-top: 25px;
-            background-color: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
         #results h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 24px;
+            margin-bottom: 5px;
         }
         #results p {
-            color: #555;
             font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .contact {
             margin-top: 25px;
             text-align: center;
         }
         .contact a {
-            color: #007BFF;
+            color: #007aff;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 14px;
         }
         .contact a:hover {
             text-decoration: underline;
         }
+
+        .info-panel {
+            position: fixed;
+            left: -340px;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #f7f7f7;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .info-panel.open {
+            left: 0;
+            width: 270px;
+        }
+        .info-panel h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 0px;
+        }
+        .info-panel p {
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+        .info-panel .highlight {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .info-panel .highlight span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .highlight-professional span, .professional-subcategory {
+            color: #007aff;
+        }
+        .highlight-cultural span, .cultural-subcategory {
+            color: #28a745;
+        }
+        .highlight-education span, .education-subcategory {
+            color: #ffc107;
+        }
+        .highlight-portfolio span, .portfolio-subcategory {
+            color: #ff5733;
+        }
+        .highlight-references span, .references-subcategory {
+            color: #17a2b8;
+        }
+        .highlight-languages span, .languages-subcategory {
+            color: #e83e8c;
+        }
+        .info-panel button {
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            transform: translateY(-50%);
+            background-color: #007aff;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .info-panel button:hover {
+            background-color: #005bb5;
+        }
+        canvas {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
+    <div class="info-panel" id="infoPanel">
+        <button onclick="toggleInfoPanel()" id="toggleButton"><i class="fas fa-chevron-left"></i></button>
+        <h2>How It Works</h2>
+        <p class="highlight highlight-professional"><span>Professional Skills - 50%</span></p>
+        <p class="professional-subcategory">Experience - 25%</p>
+        <p class="professional-subcategory">Skills - 20%</p>
+        <p class="professional-subcategory">Tech Stack - 5%</p>
+
+        <p class="highlight highlight-cultural"><span>Cultural Fit - 20%</span></p>
+        <p class="cultural-subcategory">Soft Skills - 10%</p>
+        <p class="cultural-subcategory">Alignment - 10%</p>
+
+        <p class="highlight highlight-education"><span>Education - 10%</span></p>
+        <p class="education-subcategory">Education - 5%</p>
+        <p class="education-subcategory">Certifications - 5%</p>
+
+        <p class="highlight highlight-portfolio"><span>Portfolio - 10%</span></p>
+        <p class="portfolio-subcategory">Community - 5%</p>
+        <p class="portfolio-subcategory">Portfolio - 5%</p>
+
+        <p class="highlight highlight-references"><span>References - 5%</span></p>
+        <p class="references-subcategory"></p>
+
+        <p class="highlight highlight-languages"><span>Languages - 5%</span></p>
+        <p class="languages-subcategory"></p>
+        <canvas id="donutChart"></canvas>
+    </div>
+
     <div class="container">
         <h1>Compatibility Analyzer</h1>
         <form id="resume-form">
             <label for="resume">Upload Resume:</label>
             <input type="file" id="resume" name="resume" accept=".pdf,.txt" required>
             
-            <label for="job_description">Job Description or Business Partner Profile:</label>
-            <textarea id="job_description" name="job_description" rows="5" placeholder="Paste the job description or profile of the business partner here..." required></textarea>
+            <label for="job_description">Job Description:</label>
+            <textarea id="job_description" name="job_description" rows="5" placeholder="Paste the job description here..." required></textarea>
             
             <button type="submit">Analyze Compatibility</button>
         </form>
@@ -113,90 +212,53 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const stopWords = new Set(["a", "an", "the", "and", "or", "but", "if", "to", "of", "in", "for", "on", "with", "as", "by", "at"]);
+        function toggleInfoPanel() {
+            const panel = document.getElementById('infoPanel');
+            const button = document.getElementById('toggleButton');
+            panel.classList.toggle('open');
+            button.innerHTML = panel.classList.contains('open') ? '<i class="fas fa-chevron-left"></i>' : '<i class="fas fa-chevron-right"></i>';
+        }
 
-        function extractTextFromPDF(file) {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = function() {
-                    const typedarray = new Uint8Array(this.result);
-                    pdfjsLib.getDocument(typedarray).promise.then(pdf => {
-                        let text = '';
-                        let countPromises = [];
-                        for (let i = 1; i <= pdf.numPages; i++) {
-                            countPromises.push(pdf.getPage(i).then(page => {
-                                return page.getTextContent().then(textContent => {
-                                    textContent.items.forEach(item => {
-                                        text += item.str + ' ';
-                                    });
-                                });
-                            }));
+        window.onload = function() {
+            toggleInfoPanel();
+
+            const ctx = document.getElementById('donutChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Professional Skills',
+                        'Cultural Fit',
+                        'Education',
+                        'Portfolio',
+                        'References',
+                        'Languages'
+                    ],
+                    datasets: [{
+                        data: [50, 20, 10, 10, 5, 5],
+                        backgroundColor: [
+                            '#007aff',
+                            '#28a745',
+                            '#ffc107',
+                            '#ff5733',
+                            '#17a2b8',
+                            '#e83e8c'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
                         }
-                        Promise.all(countPromises).then(() => resolve(text));
-                    }).catch(reject);
-                };
-                reader.readAsArrayBuffer(file);
+                    }
+                }
             });
-        }
-
-        function preprocessText(text) {
-            return text.toLowerCase().split(/\W+/).filter(word => word && !stopWords.has(word));
-        }
-
-        function analyzeResume(resumeText, jobDescription) {
-            const resumeKeywords = preprocessText(resumeText);
-            const jobKeywords = preprocessText(jobDescription);
-            const matchingKeywords = resumeKeywords.filter(keyword => jobKeywords.includes(keyword));
-            const matchingSet = new Set(matchingKeywords);
-            const matchingCount = matchingSet.size;
-            const matchingPercentage = (matchingCount / jobKeywords.length) * 100;
-
-            return {
-                matchingKeywords: Array.from(matchingSet),
-                resumeKeywordsCount: resumeKeywords.length,
-                jobKeywordsCount: jobKeywords.length,
-                matchingCount: matchingCount,
-                matchingPercentage: matchingPercentage.toFixed(2)
-            };
-        }
-
-        document.getElementById('resume-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const resumeFile = document.getElementById('resume').files[0];
-            const jobDescription = document.getElementById('job_description').value;
-
-            if (resumeFile.type === 'application/pdf') {
-                extractTextFromPDF(resumeFile).then(resumeText => {
-                    const analysis = analyzeResume(resumeText, jobDescription);
-                    displayResults(analysis);
-                }).catch(err => console.error(err));
-            } else if (resumeFile.type === 'text/plain') {
-                const reader = new FileReader();
-                reader.onload = function() {
-                    const resumeText = reader.result;
-                    const analysis = analyzeResume(resumeText, jobDescription);
-                    displayResults(analysis);
-                };
-                reader.readAsText(resumeFile);
-            } else {
-                alert('Unsupported file type. Please upload a PDF or TXT file.');
-            }
-        });
-
-        function displayResults(data) {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <h3>Analysis Results:</h3>
-                <p><strong>Matching Keywords:</strong> ${data.matchingKeywords.join(', ')}</p>
-                <p><strong>Resume Keywords Count:</strong> ${data.resumeKeywordsCount}</p>
-                <p><strong>Job Description Keywords Count:</strong> ${data.jobKeywordsCount}</p>
-                <p><strong>Matching Count:</strong> ${data.matchingCount}</p>
-                <p><strong>Matching Percentage:</strong> ${data.matchingPercentage}%</p>
-            `;
-        }
+        };
     </script>
 </body>
 </html>
