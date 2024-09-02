@@ -29,6 +29,10 @@ export function detectLanguage(text, englishKeywords, germanKeywords) {
 }
 
 export function analyzeCategories(content, keywords) {
+    // Разбиваем строку на массив ключевых слов (это используется для анализа языка)
+    const keywordArray = keywords.split('\n').map(keyword => keyword.trim());
+    console.log('Содержимое текста:', content);
+
     const subcategoryKeywords = {
         'Experience': [
             'experience', 'work experience', 'professional experience', 'career history', 
@@ -133,9 +137,15 @@ export function analyzeCategories(content, keywords) {
             for (const subcategory in categoryInfo.subcategories) {
                 const originalValue = categoryInfo.subcategories[subcategory];
 
+                // Используем правильный массив ключевых слов для подкатегории
+                const keywordsForSubcategory = subcategoryKeywords[subcategory];
+                const found = keywordsForSubcategory.some(keyword => content.toLowerCase().includes(keyword.toLowerCase()));
 
-                const keywords = subcategoryKeywords[subcategory];
-                const found = keywords ? keywords.some(keyword => content.toLowerCase().includes(keyword.toLowerCase())) : false;
+                if (found) {
+                    console.log(`Подкатегория '${subcategory}' найдена в тексте.`);
+                } else {
+                    console.log(`Подкатегория '${subcategory}' НЕ найдена в тексте.`);
+                }
 
                 finalCategories[subcategory] = {
                     value: found ? originalValue : originalValue,
@@ -147,8 +157,11 @@ export function analyzeCategories(content, keywords) {
                 value: categoryInfo.value,
                 color: categoryInfo.color
             };
+
+            console.log(`Категория '${category}' не имеет подкатегорий.`);
         }
     }
 
+    console.log('Финальные категории:', finalCategories);
     return finalCategories;
 }

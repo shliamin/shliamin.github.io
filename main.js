@@ -141,6 +141,34 @@ import { analyzeCategories, detectLanguage } from './resumeAnalyzer.js';
 
 let chartInstance = null; 
 
+
+function extractTextFromPDF(pdfData) {
+    const pdfjsLib = window['pdfjsLib'];
+    if (!pdfjsLib) {
+        console.error('pdfjsLib is not loaded');
+        return;
+    }
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+    const loadingTask = pdfjsLib.getDocument({data: pdfData});
+    return loadingTask.promise.then(pdf => {
+        const maxPages = pdf.numPages;
+        const pagePromises = [];
+        for (let i = 1; i <= maxPages; i++) {
+            pagePromises.push(pdf.getPage(i).then(page => {
+                return page.getTextContent().then(textContent => {
+                    return textContent.items.map(item => item.str).join(' ');
+                });
+            }));
+        }
+        return Promise.all(pagePromises).then(pagesText => pagesText.join(' '));
+    });
+}
+
+
+
+
 // Resume upload handler
 document.getElementById('resume').addEventListener('change', function(event) {
     const resumeFile = event.target.files[0];
@@ -154,27 +182,17 @@ function analyzeResume(resume) {
 
     reader.onload = function(e) {
         const content = e.target.result;
-
-        fetch('english_keywords.txt')
-            .then(response => response.text())
-            .then(englishKeywords => {
-                fetch('german_keywords.txt')
-                    .then(response => response.text())
-                    .then(germanKeywords => {
-                        const language = detectLanguage(content, englishKeywords, germanKeywords);
-                        if (language !== 'en' && language !== 'de') {
-                            alert('The document must be in English or German.');
-                            return;
-                        }
-
-                        const categories = analyzeCategories(content, language === 'en' ? englishKeywords : germanKeywords);
-                        displayChart(categories);
-                    });
+        if (resume.type === 'application/pdf') {
+            extractTextFromPDF(content).then(text => {
+                analyzeTextContent(text);
             });
+        } else {
+            analyzeTextContent(content);
+        }
     };
 
     if (resume.type === 'application/pdf') {
-        reader.readAsBinaryString(resume);
+        reader.readAsArrayBuffer(resume);
     } else if (resume.type === 'text/plain') {
         reader.readAsText(resume);
     } else {
@@ -182,7 +200,24 @@ function analyzeResume(resume) {
     }
 }
 
+function analyzeTextContent(content) {
+    fetch('english_keywords.txt')
+        .then(response => response.text())
+        .then(englishKeywords => {
+            fetch('german_keywords.txt')
+                .then(response => response.text())
+                .then(germanKeywords => {
+                    const language = detectLanguage(content, englishKeywords, germanKeywords);
+                    if (language !== 'en' && language !== 'de') {
+                        alert('The document must be in English or German.');
+                        return;
+                    }
 
+                    const categories = analyzeCategories(content, language === 'en' ? englishKeywords : germanKeywords);
+                    displayChart(categories);
+                });
+        });
+}
 
 
 
