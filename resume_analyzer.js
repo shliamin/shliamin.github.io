@@ -33,7 +33,7 @@ function initializeChart() {
             value: 10,
             color: '#ffc107',
             subcategories: {
-                'Higher Education': 5,
+                'University': 5,
                 'Certifications': 5
             }
         },
@@ -41,7 +41,7 @@ function initializeChart() {
             value: 10,
             color: '#ff5733',
             subcategories: {
-                'Community Contribution': 5,
+                'Engagement': 5,
                 'Projects': 5
             }
         },
@@ -231,7 +231,7 @@ function analyzeCategories(content, keywords) {
             value: 10,
             color: '#ffc107',
             subcategories: {
-                'Higher Education': 5,
+                'University': 5,
                 'Certifications': 5
             }
         },
@@ -239,7 +239,7 @@ function analyzeCategories(content, keywords) {
             value: 10,
             color: '#ff5733',
             subcategories: {
-                'Community Contribution': 5,
+                'Engagement': 5,
                 'Projects': 5
             }
         },
@@ -308,12 +308,12 @@ function displayChart(categories) {
                         align: 'left',
                         labels: {
                             usePointStyle: false, 
-                            boxWidth: 20,
-                            padding: 2 
+                            boxWidth: 35,
+                            padding: 8 
                         },
                         title: {
                             display: true,
-                            text: 'Gray categories were not found in your resume:',
+                            text: 'Gray categories missing in your resume:',
                             color: '#000', 
                             font: {
                                 size: 12,
