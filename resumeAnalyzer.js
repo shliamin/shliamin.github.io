@@ -29,101 +29,86 @@ export function detectLanguage(text, englishKeywords, germanKeywords) {
 }
 
 export function analyzeCategories(content, keywords) {
+    const subcategoryKeywords = {
+        'Experience': [
+            'experience', 'work experience', 'professional experience', 'career history', 
+            'employment history', 'job experience', 'work background', 'professional background', 
+            'industry experience', 'career experience'
+        ],
+        'Skills': [
+            'skills', 'competencies', 'abilities', 'expertise', 
+            'capabilities', 'proficiencies', 'talents', 'know-how', 
+            'strengths', 'aptitudes'
+        ],
+        'Tech Stack': [
+            'tech stack', 'technology stack', 'technical stack', 'technologies used', 
+            'software stack', 'development stack', 'tools and technologies', 'technology environment', 
+            'programming languages', 'software tools'
+        ],
+        'Soft Skills': [
+            'soft skills', 'interpersonal skills', 'communication skills', 'teamwork', 
+            'emotional intelligence', 'problem-solving', 'adaptability', 'time management', 
+            'collaboration', 'leadership skills'
+        ],
+        'Cultural Fit': [
+            'cultural fit', 'company culture', 'organizational fit', 'values alignment', 
+            'team fit', 'company values', 'corporate culture', 'workplace culture', 
+            'company mission', 'company vision'
+        ],
+        'University': [
+            'university', 'college', 'higher education', 'academic background', 
+            'bachelor\'s degree', 'master\'s degree', 'academic qualifications', 'university degree', 
+            'alma mater', 'graduate'
+        ],
+        'Certifications': [
+            'certifications', 'certificates', 'professional certifications', 'training certificates', 
+            'industry certifications', 'accreditations', 'professional training', 'qualifications', 
+            'certified courses', 'certified programs'
+        ],
+        'Engagement': [
+            'engagement', 'client engagement', 'project engagement', 'stakeholder engagement', 
+            'team engagement', 'user engagement', 'customer engagement', 'participant engagement', 
+            'community engagement', 'collaboration engagement'
+        ],
+        'Projects': [
+            'projects', 'work projects', 'initiatives', 'assignments', 
+            'tasks', 'deliverables', 'project work', 'project management', 
+            'project outcomes', 'case studies'
+        ]
+    };
+
     const categories = {
         'Professional Skills': {
             value: 50,
             color: '#007aff',
             subcategories: {
-                'Experience': {
-                    value: 25,
-                    keywords: [
-                        'experience', 'work experience', 'professional experience', 'career history', 
-                        'employment history', 'job experience', 'work background', 'professional background', 
-                        'industry experience', 'career experience'
-                    ]
-                },
-                'Skills': {
-                    value: 20,
-                    keywords: [
-                        'skills', 'competencies', 'abilities', 'expertise', 
-                        'capabilities', 'proficiencies', 'talents', 'know-how', 
-                        'strengths', 'aptitudes'
-                    ]
-                },
-                'Tech Stack': {
-                    value: 5,
-                    keywords: [
-                        'tech stack', 'technology stack', 'technical stack', 'technologies used', 
-                        'software stack', 'development stack', 'tools and technologies', 'technology environment', 
-                        'programming languages', 'software tools'
-                    ]
-                }
+                'Experience': 25,
+                'Skills': 20,
+                'Tech Stack': 5
             }
         },
         'Cultural Fit': {
             value: 20,
             color: '#28a745',
             subcategories: {
-                'Soft Skills': {
-                    value: 10,
-                    keywords: [
-                        'soft skills', 'interpersonal skills', 'communication skills', 'teamwork', 
-                        'emotional intelligence', 'problem-solving', 'adaptability', 'time management', 
-                        'collaboration', 'leadership skills'
-                    ]
-                },
-                'Cultural Fit': {
-                    value: 10,
-                    keywords: [
-                        'cultural fit', 'company culture', 'organizational fit', 'values alignment', 
-                        'team fit', 'company values', 'corporate culture', 'workplace culture', 
-                        'company mission', 'company vision'
-                    ]
-                }
+                'Soft Skills': 10,
+                'Cultural Fit': 10
             }
         },
         'Education': {
             value: 10,
             color: '#ffc107',
             subcategories: {
-                'University': {
-                    value: 5,
-                    keywords: [
-                        'university', 'college', 'higher education', 'academic background', 
-                        'bachelor\'s degree', 'master\'s degree', 'academic qualifications', 'university degree', 
-                        'alma mater', 'graduate'
-                    ]
-                },
-                'Certifications': {
-                    value: 5,
-                    keywords: [
-                        'certifications', 'certificates', 'professional certifications', 'training certificates', 
-                        'industry certifications', 'accreditations', 'professional training', 'qualifications', 
-                        'certified courses', 'certified programs'
-                    ]
-                }
+                'University': 5,
+                'Certifications': 5
             }
         },
         'Portfolio': {
             value: 10,
             color: '#ff5733',
             subcategories: {
-                'Engagement': {
-                    value: 5,
-                    keywords: [
-                        'engagement', 'client engagement', 'project engagement', 'stakeholder engagement', 
-                        'team engagement', 'user engagement', 'customer engagement', 'participant engagement', 
-                        'community engagement', 'collaboration engagement'
-                    ]
-                },
-                'Projects': {
-                    value: 5,
-                    keywords: [
-                        'projects', 'work projects', 'initiatives', 'assignments', 
-                        'tasks', 'deliverables', 'project work', 'project management', 
-                        'project outcomes', 'case studies'
-                    ]
-                }
+                'Engagement': 5,
+                'Projects': 5
             }
         },
         'References': {
@@ -142,15 +127,25 @@ export function analyzeCategories(content, keywords) {
 
     for (const category in categories) {
         const categoryInfo = categories[category];
-        const subcategories = categoryInfo.subcategories;
+        const totalSubcategoriesValue = Object.values(categoryInfo.subcategories).reduce((sum, value) => sum + value, 0);
 
-        for (const subcategory in subcategories) {
-            const subcategoryInfo = subcategories[subcategory];
-            const found = subcategoryInfo.keywords.some(keyword => content.toLowerCase().includes(keyword.toLowerCase()));
+        if (totalSubcategoriesValue > 0) {
+            for (const subcategory in categoryInfo.subcategories) {
+                const originalValue = categoryInfo.subcategories[subcategory];
 
-            finalCategories[subcategory] = {
-                value: found ? subcategoryInfo.value : 0,
-                color: found ? categoryInfo.color : '#d3d3d3'
+
+                const keywords = subcategoryKeywords[subcategory];
+                const found = keywords ? keywords.some(keyword => content.toLowerCase().includes(keyword.toLowerCase())) : false;
+
+                finalCategories[subcategory] = {
+                    value: found ? originalValue : originalValue,
+                    color: found ? categoryInfo.color : '#d3d3d3'
+                };
+            }
+        } else {
+            finalCategories[category] = {
+                value: categoryInfo.value,
+                color: categoryInfo.color
             };
         }
     }

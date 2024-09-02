@@ -232,7 +232,9 @@
     <div class="beta-banner">BETA VERSION</div>
 
     <div class="info-panel" id="infoPanel">
-        <button onclick="toggleInfoPanel()" id="toggleButton"><i class="fas fa-chevron-left"></i></button>
+        <button onclick="import('./main.js').then(module => module.toggleInfoPanel())" id="toggleButton">
+            <i class="fas fa-chevron-left"></i>
+        </button>
         <h2>How It Works</h2>
         <p class="highlight highlight-professional"><span>Professional Skills - 50%</span></p>
         <p class="professional-subcategory">Experience - 25%</p>

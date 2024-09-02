@@ -1,5 +1,5 @@
 
-function toggleInfoPanel() {
+export function toggleInfoPanel() {
     const infoPanelElement = document.getElementById('infoPanel');
     const toggleButtonElement = document.getElementById('toggleButton');
     infoPanelElement.classList.toggle('open');
@@ -139,6 +139,8 @@ window.onload = function() {
 
 import { analyzeCategories, detectLanguage } from './resumeAnalyzer.js';
 
+let chartInstance = null; 
+
 // Resume upload handler
 document.getElementById('resume').addEventListener('change', function(event) {
     const resumeFile = event.target.files[0];
@@ -194,7 +196,14 @@ function displayChart(categories) {
     const canvas = document.getElementById('backgroundChart');
     if (canvas) {
         const ctx = canvas.getContext('2d');
-        new Chart(ctx, {
+
+        
+        if (chartInstance) {
+            chartInstance.destroy();
+        }
+
+       
+        chartInstance = new Chart(ctx, {
             type: 'doughnut',
             data: {
                 labels: labels,
@@ -221,7 +230,7 @@ function displayChart(categories) {
                             color: '#000', 
                             font: {
                                 size: 12,
-                                style: 'bold'
+                                style: 'normal'
                             },
                             padding: {
                                 top: 10,
@@ -241,7 +250,6 @@ function displayChart(categories) {
         console.error("Element with id 'backgroundChart' not found.");
     }
 }
-
 
 
 
