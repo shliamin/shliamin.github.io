@@ -29,9 +29,8 @@ export function detectLanguage(text, englishKeywords, germanKeywords) {
 }
 
 export function analyzeCategories(content, keywords) {
-    // Разбиваем строку на массив ключевых слов (это используется для анализа языка)
     const keywordArray = keywords.split('\n').map(keyword => keyword.trim());
-    console.log('Содержимое текста:', content);
+
 
     const subcategoryKeywords = {
         'Experience': [
@@ -47,7 +46,7 @@ export function analyzeCategories(content, keywords) {
         'Tech Stack': [
             'tech stack', 'technology stack', 'technical stack', 'technologies used', 
             'software stack', 'development stack', 'tools and technologies', 'technology environment', 
-            'programming languages', 'software tools'
+            'programming languages', 'software tools', 'skills'
         ],
         'Soft Skills': [
             'soft skills', 'interpersonal skills', 'communication skills', 'teamwork', 
@@ -57,7 +56,7 @@ export function analyzeCategories(content, keywords) {
         'Cultural Fit': [
             'cultural fit', 'company culture', 'organizational fit', 'values alignment', 
             'team fit', 'company values', 'corporate culture', 'workplace culture', 
-            'company mission', 'company vision'
+            'company mission', 'company vision', 'cultural', 'team'
         ],
         'University': [
             'university', 'college', 'higher education', 'academic background', 
@@ -70,7 +69,7 @@ export function analyzeCategories(content, keywords) {
             'certified courses', 'certified programs'
         ],
         'Engagement': [
-            'engagement', 'client engagement', 'project engagement', 'stakeholder engagement', 
+            'engagement', 'client engagement', 'project', 'stakeholder engagement', 
             'team engagement', 'user engagement', 'customer engagement', 'participant engagement', 
             'community engagement', 'collaboration engagement'
         ],
@@ -137,15 +136,11 @@ export function analyzeCategories(content, keywords) {
             for (const subcategory in categoryInfo.subcategories) {
                 const originalValue = categoryInfo.subcategories[subcategory];
 
-                // Используем правильный массив ключевых слов для подкатегории
+
                 const keywordsForSubcategory = subcategoryKeywords[subcategory];
                 const found = keywordsForSubcategory.some(keyword => content.toLowerCase().includes(keyword.toLowerCase()));
 
-                if (found) {
-                    console.log(`Подкатегория '${subcategory}' найдена в тексте.`);
-                } else {
-                    console.log(`Подкатегория '${subcategory}' НЕ найдена в тексте.`);
-                }
+
 
                 finalCategories[subcategory] = {
                     value: found ? originalValue : originalValue,
@@ -158,10 +153,9 @@ export function analyzeCategories(content, keywords) {
                 color: categoryInfo.color
             };
 
-            console.log(`Категория '${category}' не имеет подкатегорий.`);
         }
     }
 
-    console.log('Финальные категории:', finalCategories);
+
     return finalCategories;
 }
