@@ -15,6 +15,20 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            position: relative;
+        }
+        .beta-banner {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff4d4d;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid white;
         }
         .container {
             display: flex;
@@ -65,7 +79,6 @@
         button:hover {
             background-color: #005bb5;
         }
-
 
         #backgroundChart {
             flex: 1;
@@ -216,6 +229,8 @@
     </style>
 </head>
 <body>
+    <div class="beta-banner">BETA VERSION</div>
+
     <div class="info-panel" id="infoPanel">
         <button onclick="toggleInfoPanel()" id="toggleButton"><i class="fas fa-chevron-left"></i></button>
         <h2>How It Works</h2>
@@ -270,7 +285,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="resume_analyzer.js"></script>
+    <script type="module" src="main.js"></script>
 
 </body>
 </html>

@@ -137,7 +137,7 @@ window.onload = function() {
 
 
 
-
+import { analyzeCategories, detectLanguage } from './resumeAnalyzer.js';
 
 // Resume upload handler
 document.getElementById('resume').addEventListener('change', function(event) {
@@ -180,105 +180,9 @@ function analyzeResume(resume) {
     }
 }
 
-function detectLanguage(text, englishKeywords, germanKeywords) {
-    const englishWords = englishKeywords.split('\n').map(word => word.trim());
-    const germanWords = germanKeywords.split('\n').map(word => word.trim());
 
-    let englishCount = 0;
-    let germanCount = 0;
 
-    englishWords.forEach(word => {
-        if (text.includes(word)) {
-            englishCount++;
-        }
-    });
 
-    germanWords.forEach(word => {
-        if (text.includes(word)) {
-            germanCount++;
-        }
-    });
-
-    if (englishCount > germanCount) {
-        return 'en';
-    } else if (germanCount > englishCount) {
-        return 'de';
-    } else {
-        return 'unknown';
-    }
-}
-
-function analyzeCategories(content, keywords) {
-    const categories = {
-        'Professional Skills': {
-            value: 50,
-            color: '#007aff',
-            subcategories: {
-                'Experience': 25,
-                'Skills': 20,
-                'Tech Stack': 5
-            }
-        },
-        'Cultural Fit': {
-            value: 20,
-            color: '#28a745',
-            subcategories: {
-                'Soft Skills': 10,
-                'Cultural Fit': 10
-            }
-        },
-        'Education': {
-            value: 10,
-            color: '#ffc107',
-            subcategories: {
-                'University': 5,
-                'Certifications': 5
-            }
-        },
-        'Portfolio': {
-            value: 10,
-            color: '#ff5733',
-            subcategories: {
-                'Engagement': 5,
-                'Projects': 5
-            }
-        },
-        'References': {
-            value: 5,
-            color: '#17a2b8',
-            subcategories: {}
-        },
-        'Languages': {
-            value: 5,
-            color: '#e83e8c',
-            subcategories: {}
-        }
-    };
-
-    const finalCategories = {};
-
-    for (const category in categories) {
-        const categoryInfo = categories[category];
-        const totalSubcategoriesValue = Object.values(categoryInfo.subcategories).reduce((sum, value) => sum + value, 0);
-
-        if (totalSubcategoriesValue > 0) {
-            for (const subcategory in categoryInfo.subcategories) {
-                const originalValue = categoryInfo.subcategories[subcategory];
-                finalCategories[subcategory] = {
-                    value: content.includes(subcategory.toLowerCase()) ? originalValue : originalValue,
-                    color: content.includes(subcategory.toLowerCase()) ? categoryInfo.color : '#d3d3d3'
-                };
-            }
-        } else {
-            finalCategories[category] = {
-                value: categoryInfo.value,
-                color: categoryInfo.color
-            };
-        }
-    }
-
-    return finalCategories;
-}
 
 
 
