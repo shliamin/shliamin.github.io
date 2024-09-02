@@ -17,6 +17,9 @@
             height: 100vh;
         }
         .container {
+            display: flex;
+            flex-direction: column;
+            height: 85vh; 
             background-color: #fff;
             padding: 40px;
             border-radius: 15px;
@@ -24,6 +27,9 @@
             max-width: 600px;
             width: 100%;
             box-sizing: border-box;
+        }
+        #resume-form, #chartContainer {
+            flex: 1; 
         }
         h1 {
             text-align: center;
@@ -59,20 +65,30 @@
         button:hover {
             background-color: #005bb5;
         }
-        #results {
-            margin-top: 25px;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+
+
+        #backgroundChart {
+            flex: 1;
+            margin-left: 0;
+            max-height: 180px !important;
+            margin-top: 16px;
         }
-        #results h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
+
+        #chartContainer {
+            display: flex;
+            justify-content: space-between;
         }
-        #results p {
-            font-size: 14px;
-            margin-bottom: 5px;
+
+        .chartjs-legend {
+            display: flex;
+            flex-wrap: wrap; 
+            max-height: 100%; 
+            margin-left: 20px; 
+        }
+
+        .chartjs-legend li {
+            width: auto; 
+            margin-right: 10px; 
         }
         .contact {
             margin-top: 25px;
@@ -171,10 +187,14 @@
             margin-top: 0;  
             margin-bottom: 0;  
             width: 100%;
-            max-width: 250px;
+            max-width: auto;
             display: block;
             margin-left: auto;
             margin-right: auto;
+        }
+        #author {
+           text-align: center;
+           margin-bottom: -30px;
         }
         #efim {
             margin-bottom: -13px;
@@ -183,8 +203,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 300px;
-            margin-top: 40px;  
+            height: 370px;
+            margin-top: 20px;  
         }
 
         #donutChart {
@@ -208,11 +228,11 @@
         <p class="cultural-subcategory">Cultural Fit - 10%</p>
 
         <p class="highlight highlight-education"><span>Education - 10%</span></p>
-        <p class="education-subcategory">Higher education - 5%</p>
+        <p class="education-subcategory">Higher Education - 5%</p>
         <p class="education-subcategory">Certifications - 5%</p>
 
         <p class="highlight highlight-portfolio"><span>Portfolio - 10%</span></p>
-        <p class="portfolio-subcategory">Contribution to the community - 5%</p>
+        <p class="portfolio-subcategory">Community Contribution - 5%</p>
         <p class="portfolio-subcategory">Projects - 5%</p>
 
         <p class="highlight highlight-references"><span>References - 5%</span></p>
@@ -237,9 +257,11 @@
             
             <button type="submit">Analyze Compatibility</button>
         </form>
-        <div id="results"></div>
-        <canvas id="backgroundChart"></canvas>
-        <div class="contact">
+        <div id="chartContainer">
+            <canvas id="backgroundChart"></canvas>
+            <div class="chart-legend"></div>
+        </div>
+        <div id="author">
             <p id="efim">Made by Efim Shliamin</p>
             <p><a href="https://shliamin.github.io" target="_blank">shliamin.github.io</a></p>
         </div>

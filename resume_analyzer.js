@@ -26,14 +26,14 @@ function initializeChart() {
             color: '#28a745',
             subcategories: {
                 'Soft Skills': 10,
-                'Alignment': 10
+                'Cultural Fit': 10
             }
         },
         'Education': {
             value: 10,
             color: '#ffc107',
             subcategories: {
-                'Education': 5,
+                'Higher Education': 5,
                 'Certifications': 5
             }
         },
@@ -41,8 +41,8 @@ function initializeChart() {
             value: 10,
             color: '#ff5733',
             subcategories: {
-                'Community': 5,
-                'Portfolio': 5
+                'Community Contribution': 5,
+                'Projects': 5
             }
         },
         'References': {
@@ -139,7 +139,7 @@ window.onload = function() {
 
 
 
-// Обработчик загрузки резюме
+// Resume upload handler
 document.getElementById('resume').addEventListener('change', function(event) {
     const resumeFile = event.target.files[0];
     if (resumeFile) {
@@ -153,7 +153,6 @@ function analyzeResume(resume) {
     reader.onload = function(e) {
         const content = e.target.result;
 
-        // Загрузка ключевых слов для английского и немецкого языков
         fetch('english_keywords.txt')
             .then(response => response.text())
             .then(englishKeywords => {
@@ -211,23 +210,82 @@ function detectLanguage(text, englishKeywords, germanKeywords) {
 
 function analyzeCategories(content, keywords) {
     const categories = {
-        'Professional Skills': keywords.split('\n').some(word => content.includes(word)) ? 50 : 0,
-        'Cultural Fit': content.includes('cultural') ? 20 : 0,
-        'Education': content.includes('education') ? 10 : 0,
-        'Portfolio': content.includes('portfolio') ? 10 : 0,
-        'References': content.includes('references') ? 5 : 0,
-        'Languages': content.includes('languages') ? 5 : 0
+        'Professional Skills': {
+            value: 50,
+            color: '#007aff',
+            subcategories: {
+                'Experience': 25,
+                'Skills': 20,
+                'Tech Stack': 5
+            }
+        },
+        'Cultural Fit': {
+            value: 20,
+            color: '#28a745',
+            subcategories: {
+                'Soft Skills': 10,
+                'Cultural Fit': 10
+            }
+        },
+        'Education': {
+            value: 10,
+            color: '#ffc107',
+            subcategories: {
+                'Higher Education': 5,
+                'Certifications': 5
+            }
+        },
+        'Portfolio': {
+            value: 10,
+            color: '#ff5733',
+            subcategories: {
+                'Community Contribution': 5,
+                'Projects': 5
+            }
+        },
+        'References': {
+            value: 5,
+            color: '#17a2b8',
+            subcategories: {}
+        },
+        'Languages': {
+            value: 5,
+            color: '#e83e8c',
+            subcategories: {}
+        }
     };
 
-    return categories;
+    const finalCategories = {};
+
+    for (const category in categories) {
+        const categoryInfo = categories[category];
+        const totalSubcategoriesValue = Object.values(categoryInfo.subcategories).reduce((sum, value) => sum + value, 0);
+
+        if (totalSubcategoriesValue > 0) {
+            for (const subcategory in categoryInfo.subcategories) {
+                const originalValue = categoryInfo.subcategories[subcategory];
+                finalCategories[subcategory] = {
+                    value: content.includes(subcategory.toLowerCase()) ? originalValue : originalValue,
+                    color: content.includes(subcategory.toLowerCase()) ? categoryInfo.color : '#d3d3d3'
+                };
+            }
+        } else {
+            finalCategories[category] = {
+                value: categoryInfo.value,
+                color: categoryInfo.color
+            };
+        }
+    }
+
+    return finalCategories;
 }
+
+
 
 function displayChart(categories) {
     const labels = Object.keys(categories);
-    const data = Object.values(categories); // Значения категорий остаются такими, как они есть (например, 50, 10 и т.д.)
-    const backgroundColors = Object.values(categories).map(value => {
-        return value > 0 ? getColorForCategory(value) : '#d3d3d3'; // Если значение больше 0, используем цвет, иначе - серый
-    });
+    const data = labels.map(label => categories[label].value);
+    const backgroundColors = labels.map(label => categories[label].value > 0 ? categories[label].color : '#d3d3d3');
 
     const canvas = document.getElementById('backgroundChart');
     if (canvas) {
@@ -246,55 +304,37 @@ function displayChart(categories) {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'bottom',
+                        position: 'right',
+                        align: 'left',
+                        labels: {
+                            usePointStyle: false, 
+                            boxWidth: 20,
+                            padding: 2 
+                        },
+                        title: {
+                            display: true,
+                            text: 'Gray categories were not found in your resume:',
+                            color: '#000', 
+                            font: {
+                                size: 12,
+                                style: 'bold'
+                            },
+                            padding: {
+                                top: 10,
+                                bottom: 10
+                            }
+                        }
+                    }
+                },
+                layout: {
+                    padding: {
+                        right: 0
                     }
                 }
             }
         });
     } else {
         console.error("Element with id 'backgroundChart' not found.");
-    }
-}
-
-function analyzeCategories(content) {
-    const categories = {
-        'Professional Skills': content.includes('skills') ? 50 : 0,
-        'Cultural Fit': content.includes('cultural fit') ? 20 : 0,
-        'Education': content.includes('education') ? 10 : 0,
-        'Portfolio': content.includes('portfolio') ? 10 : 0,
-        'References': content.includes('references') ? 5 : 0,
-        'Languages': content.includes('languages') ? 5 : 0
-    };
-
-    // Устанавливаем значения по умолчанию для серых категорий
-    for (let category in categories) {
-        if (categories[category] === 0) {
-            categories[category] = getDefaultValueForCategory(category);
-        }
-    }
-
-    return categories;
-}
-
-function getDefaultValueForCategory(category) {
-    switch (category) {
-        case 'Professional Skills': return 50;
-        case 'Cultural Fit': return 20;
-        case 'Education': return 10;
-        case 'Portfolio': return 10;
-        case 'References': return 5;
-        case 'Languages': return 5;
-        default: return 0;
-    }
-}
-
-function getColorForCategory(value) {
-    switch (value) {
-        case 50: return '#007aff';
-        case 20: return '#28a745';
-        case 10: return '#ffc107';
-        case 5: return '#ff5733';
-        default: return '#d3d3d3'; // Серый цвет по умолчанию для отсутствующих категорий
     }
 }
 
