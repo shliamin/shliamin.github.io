@@ -1,0 +1,244 @@
+{
+    "Experience": {
+        "en": [
+            "experience", "work experience", "professional experience", "career history", 
+            "employment history", "job experience", "work background", "professional background", 
+            "industry experience", "career experience", "employment record", "career path", 
+            "work trajectory", "professional journey", "job history", "vocational experience", 
+            "employment timeline", "work tenure", "professional timeline", "employment experience", 
+            "career development", "job tenure", "work history", "career record", 
+            "industry background", "employment background", "workplace experience", "career story", 
+            "job trajectory", "professional record"
+        ],
+        "de": [
+            "Erfahrung", "Berufserfahrung", "Arbeitserfahrung", "Karriereverlauf", 
+            "Beschäftigungsverlauf", "Beruflicher Werdegang", "Arbeitshintergrund", 
+            "Beruflicher Hintergrund", "Branchenerfahrung", "Karriereerfahrung", "Beschäftigungsnachweis", 
+            "Karriereweg", "Arbeitspfad", "Berufliche Reise", "Jobverlauf", "Berufserfahrung", 
+            "Beschäftigungszeitachse", "Arbeitstätigkeit", "Berufliche Zeitachse", "Arbeitserfahrung", 
+            "Karriereentwicklung", "Beschäftigungsdauer", "Arbeitshistorie", "Karrierenachweis", 
+            "Branchenerfahrung", "Beschäftigungshintergrund", "Berufserfahrung", "Karrieregeschichte", 
+            "Jobpfad", "Beruflicher Nachweis", "Berufliche Zusammenfassung"
+        ]
+    },
+    "Skills": {
+        "en": [
+            "skills", "competencies", "abilities", "expertise", 
+            "capabilities", "proficiencies", "talents", "know-how", 
+            "strengths", "aptitudes", "technical skills", "hard skills", 
+            "professional skills", "specialized skills", "core competencies", "practical skills", 
+            "job skills", "skill set", "mastery", "knowledge", 
+            "proficiency", "dexterity", "technical abilities", "work-related skills", 
+            "core skills", "functional skills", "specialized knowledge", "skillfulness", 
+            "trade skills", "craftsmanship"
+        ],
+        "de": [
+            "Fähigkeiten", "Kompetenzen", "Fertigkeiten", "Expertise", 
+            "Kapazitäten", "Kenntnisse", "Talente", "Know-how", 
+            "Stärken", "Begabungen", "Technische Fähigkeiten", "Harte Fähigkeiten", 
+            "Berufliche Fähigkeiten", "Spezialisierte Fähigkeiten", "Kernkompetenzen", "Praktische Fähigkeiten", 
+            "Berufskenntnisse", "Fähigkeitsprofil", "Beherrschung", "Wissen", 
+            "Sachkenntnis", "Geschicklichkeit", "Technische Kompetenzen", "Berufliche Fähigkeiten", 
+            "Kernfähigkeiten", "Funktionale Fähigkeiten", "Spezialwissen", "Geschick", 
+            "Handwerksfähigkeiten", "Handwerkskunst"
+        ]
+    },
+    "Tech Stack": {
+        "en": [
+            "tech stack", "technology stack", "technical stack", "technologies used", 
+            "software stack", "development stack", "tools and technologies", "technology environment", 
+            "programming languages", "software tools", "development tools", "frameworks", 
+            "libraries", "platforms", "cloud services", "application stack", 
+            "infrastructure", "backend technologies", "frontend technologies", "system architecture", 
+            "microservices", "APIs", "databases", "middleware", 
+            "web technologies", "devops tools", "scripting languages", "automation tools", 
+            "containerization", "virtualization"
+        ],
+        "de": [
+            "Technologie-Stack", "Technik-Stack", "technischer Stack", "verwendete Technologien", 
+            "Software-Stack", "Entwicklungsstack", "Werkzeuge und Technologien", "Technologieumgebung", 
+            "Programmiersprachen", "Software-Tools", "Entwicklungswerkzeuge", "Frameworks", 
+            "Bibliotheken", "Plattformen", "Cloud-Dienste", "Anwendungsstack", 
+            "Infrastruktur", "Backend-Technologien", "Frontend-Technologien", "Systemarchitektur", 
+            "Mikroservices", "APIs", "Datenbanken", "Middleware", 
+            "Webtechnologien", "DevOps-Tools", "Skriptsprachen", "Automatisierungstools", 
+            "Containerisierung", "Virtualisierung"
+        ]
+    },
+    "Soft Skills": {
+        "en": [
+            "soft skills", "interpersonal skills", "communication skills", "teamwork", 
+            "emotional intelligence", "problem-solving", "adaptability", "time management", 
+            "collaboration", "leadership skills", "conflict resolution", "empathy", 
+            "negotiation skills", "active listening", "critical thinking", "decision making", 
+            "creative thinking", "stress management", "cultural awareness", "self-motivation", 
+            "work ethic", "responsibility", "initiative", "flexibility", 
+            "cooperation", "relationship building", "influence", "persuasion", 
+            "public speaking", "mediation"
+        ],
+        "de": [
+            "Soziale Fähigkeiten", "Zwischenmenschliche Fähigkeiten", "Kommunikationsfähigkeiten", "Teamarbeit", 
+            "Emotionale Intelligenz", "Problemlösung", "Anpassungsfähigkeit", "Zeitmanagement", 
+            "Zusammenarbeit", "Führungsfähigkeiten", "Konfliktlösung", "Empathie", 
+            "Verhandlungsgeschick", "Aktives Zuhören", "Kritisches Denken", "Entscheidungsfindung", 
+            "Kreatives Denken", "Stressmanagement", "Kulturelles Bewusstsein", "Selbstmotivation", 
+            "Arbeitsethik", "Verantwortung", "Eigeninitiative", "Flexibilität", 
+            "Kooperation", "Beziehungsaufbau", "Einfluss", "Überzeugungskraft", 
+            "Öffentliches Reden", "Mediation"
+        ]
+    },
+    "Cultural Fit": {
+        "en": [
+            "cultural fit", "company culture", "organizational fit", "values alignment", 
+            "team fit", "company values", "corporate culture", "workplace culture", 
+            "company mission", "company vision", "cultural", "team", 
+            "work environment", "shared values", "organizational culture", "mission alignment", 
+            "vision alignment", "cultural alignment", "team alignment", "organizational values", 
+            "corporate values", "cultural compatibility", "workplace values", "social fit", 
+            "community fit", "cultural match", "teamwork culture", "collaborative environment", 
+            "employee engagement", "organizational fitment"
+        ],
+        "de": [
+            "Kulturelle Passung", "Unternehmenskultur", "Organisatorische Passung", "Werteabgleich", 
+            "Teamfit", "Unternehmenswerte", "Konzernkultur", "Arbeitsplatzkultur", 
+            "Unternehmensmission", "Unternehmensvision", "Kulturell", "Team", 
+            "Arbeitsumfeld", "Gemeinsame Werte", "Organisationskultur", "Missionsabgleich", 
+            "Visionsabgleich", "Kulturelle Abstimmung", "Teamanpassung", "Organisationswerte", 
+            "Unternehmenswerte", "Kulturelle Kompatibilität", "Arbeitsplatzwerte", "Soziale Passung", 
+            "Gemeinschaftspassung", "Kulturelle Übereinstimmung", "Teamarbeitskultur", "Kooperatives Umfeld", 
+            "Mitarbeiterengagement", "Organisatorische Passung"
+        ]
+    },
+    "University": {
+        "en": [
+            "university", "college", "higher education", "academic background", 
+            "bachelor's degree", "master's degree", "academic qualifications", "university degree", 
+            "alma mater", "graduate", "academic achievements", "educational background", 
+            "degree program", "graduate studies", "undergraduate studies", "tertiary education", 
+            "academic institution", "college education", "university education", "academic history", 
+            "academic career", "academic experience", "educational qualifications", "higher learning", 
+            "academic credentials", "scholarly background", "educational achievements", "university alumni", 
+            "academic record", "scholarship"
+        ],
+        "de": [
+            "Universität", "Hochschule", "Hochschulbildung", "Akademischer Hintergrund", 
+            "Bachelor-Abschluss", "Master-Abschluss", "Akademische Qualifikationen", "Universitätsabschluss", 
+            "Alma Mater", "Absolvent", "Akademische Leistungen", "Bildungshintergrund", 
+            "Studiengang", "Absolventenstudium", "Grundstudium", "Tertiäre Bildung", 
+            "Akademische Einrichtung", "Hochschulbildung", "Universitätsbildung", "Akademische Laufbahn", 
+            "Akademische Karriere", "Akademische Erfahrung", "Bildungsqualifikationen", "Höhere Bildung", 
+            "Akademische Zeugnisse", "Wissenschaftlicher Hintergrund", "Bildungserfolge", "Universitätsalumni", 
+            "Akademischer Werdegang", "Stipendium"
+        ]
+    },
+    "Certifications": {
+        "en": [
+            "certifications", "certificates", "professional certifications", "training certificates", 
+            "industry certifications", "accreditations", "professional training", "qualifications", 
+            "certified courses", "certified programs", "certificates of completion", "licenses", 
+            "professional licenses", "credentials", "certification programs", "diplomas", 
+            "accredited training", "vocational qualifications", "certified skills", "endorsed qualifications", 
+            "professional credentials", "certification exams", "certified expertise", "specialized training", 
+            "industry-recognized certifications", "training programs", "certification pathways", "certification schemes", 
+            "accredited courses", "certified achievements"
+        ],
+        "de": [
+            "Zertifikate", "Zertifikate", "Berufszertifikate", "Schulungszertifikate", 
+            "Industriezertifikate", "Akkreditierungen", "Berufliche Ausbildung", "Qualifikationen", 
+            "Zertifizierte Kurse", "Zertifizierte Programme", "Abschlusszertifikate", "Lizenzen", 
+            "Berufslizenzen", "Anmeldeinformationen", "Zertifizierungsprogramme", "Diplome", 
+            "Akkreditierte Schulungen", "Berufsqualifikationen", "Zertifizierte Fähigkeiten", "Anerkannte Qualifikationen", 
+            "Berufliche Anmeldeinformationen", "Zertifizierungsprüfungen", "Zertifizierte Expertise", "Spezialisierte Schulungen", 
+            "Industrieanerkannte Zertifikate", "Schulungsprogramme", "Zertifizierungspfade", "Zertifizierungsschemata", 
+            "Akkreditierte Kurse", "Zertifizierte Leistungen"
+        ]
+    },
+    "Engagement": {
+        "en": [
+            "engagement", "client engagement", "project", "stakeholder engagement", 
+            "team engagement", "user engagement", "customer engagement", "participant engagement", 
+            "community engagement", "collaboration engagement", "work engagement", "employee engagement", 
+            "engagement activities", "audience engagement", "social engagement", "engagement strategies", 
+            "engagement practices", "online engagement", "digital engagement", "public engagement", 
+            "stakeholder involvement", "engagement initiatives", "partner engagement", "volunteer engagement", 
+            "engagement management", "engagement process", "engagement metrics", "relationship engagement", 
+            "participant involvement", "engagement programs"
+        ],
+        "de": [
+            "Engagement", "Kundenengagement", "Projekt", "Stakeholder-Engagement", 
+            "Teamengagement", "Benutzerengagement", "Kundenbindung", "Teilnehmerengagement", 
+            "Gemeinschaftsengagement", "Zusammenarbeitsengagement", "Arbeitseinsatz", "Mitarbeiterengagement", 
+            "Engagementaktivitäten", "Publikumsengagement", "Soziales Engagement", "Engagementstrategien", 
+            "Engagementpraktiken", "Online-Engagement", "Digitales Engagement", "Öffentliches Engagement", 
+            "Stakeholder-Beteiligung", "Engagementinitiativen", "Partnerengagement", "Freiwilligenengagement", 
+            "Engagementmanagement", "Engagementprozess", "Engagementmetriken", "Beziehungsengagement", 
+            "Teilnehmerbeteiligung", "Engagementprogramme"
+        ]
+    },
+    "Projects": {
+        "en": [
+            "projects", "work projects", "initiatives", "assignments", 
+            "tasks", "deliverables", "project work", "project management", 
+            "project outcomes", "case studies", "project deliverables", "project initiatives", 
+            "project plans", "research projects", "development projects", "project execution", 
+            "project objectives", "project milestones", "project planning", "project scope", 
+            "project timeline", "team projects", "collaborative projects", "strategic projects", 
+            "innovation projects", "pilot projects", "project implementation", "project evaluation", 
+            "project reports", "project resources"
+        ],
+        "de": [
+            "Projekte", "Arbeitsprojekte", "Initiativen", "Aufgaben", 
+            "Aufträge", "Ergebnisse", "Projektarbeit", "Projektmanagement", 
+            "Projektergebnisse", "Fallstudien", "Projektergebnisse", "Projektinitiativen", 
+            "Projektpläne", "Forschungsprojekte", "Entwicklungsprojekte", "Projektdurchführung", 
+            "Projektziele", "Projektmeilensteine", "Projektplanung", "Projektumfang", 
+            "Projektzeitachse", "Teamprojekte", "Kooperationsprojekte", "Strategische Projekte", 
+            "Innovationsprojekte", "Pilotprojekte", "Projektumsetzung", "Projektevaluation", 
+            "Projektberichte", "Projektressourcen"
+        ]
+    },
+    "References": {
+        "en": [
+            "references", "reference letters", "recommendation letters", "referees", 
+            "testimonials", "endorsements", "professional references", "character references", 
+            "employment references", "letter of recommendation", "reference checks", "reference contacts", 
+            "recommendations", "recommendation", "professional endorsements", "reference list", 
+            "recommendation contacts", "referral letters", "recommendation from employer", "colleague references", 
+            "client references", "academic references", "personal references", "reference documentation", 
+            "reference material", "recommendation documentation", "referees contact", "employer recommendations", 
+            "reference verification", "written testimonials"
+        ],
+        "de": [
+            "Referenzen", "Empfehlungsschreiben", "Referenzschreiben", "Empfehler", 
+            "Zeugnisse", "Empfehlungen", "Berufliche Referenzen", "Charakterreferenzen", 
+            "Arbeitszeugnisse", "Empfehlungsschreiben", "Referenzprüfungen", "Referenzkontakte", 
+            "Empfehlungen", "Empfehlung", "Berufliche Empfehlungen", "Referenzliste", 
+            "Empfehlungskontakte", "Empfehlungsschreiben", "Empfehlung vom Arbeitgeber", "Kollegenreferenzen", 
+            "Kundenreferenzen", "Akademische Referenzen", "Persönliche Referenzen", "Referenzdokumentation", 
+            "Referenzmaterial", "Empfehlungsdokumentation", "Empfehlerkontakt", "Arbeitgeberempfehlungen", 
+            "Referenzüberprüfung", "Schriftliche Zeugnisse"
+        ]
+    },
+    "Languages": {
+        "en": [
+            "languages", "language proficiency", "bilingual", "multilingual", 
+            "native speaker", "fluent in", "language skills", "foreign languages", 
+            "spoken languages", "written languages", "language abilities", "language fluency", 
+            "linguistic skills", "language knowledge", "language expertise", "language competence", 
+            "language abilities", "conversational in", "language levels", "intermediate proficiency", 
+            "advanced proficiency", "basic proficiency", "language certificates", "language courses", 
+            "language learning", "second language", "mother tongue", "linguistic proficiency", 
+            "language qualifications", "translation skills"
+        ],
+        "de": [
+            "Sprachen", "Sprachkenntnisse", "Zweisprachig", "Mehrsprachig", 
+            "Muttersprachler", "Fließend in", "Sprachfähigkeiten", "Fremdsprachen", 
+            "Gesprochene Sprachen", "Geschriebene Sprachen", "Sprachfähigkeiten", "Sprachgewandtheit", 
+            "Linguistische Fähigkeiten", "Sprachwissen", "Sprachkompetenz", "Sprachfertigkeit", 
+            "Sprachkompetenz", "Konversationsfähig in", "Sprachniveaus", "Mittlere Kenntnisse", 
+            "Fortgeschrittene Kenntnisse", "Grundkenntnisse", "Sprachzertifikate", "Sprachkurse", 
+            "Sprachenlernen", "Zweite Sprache", "Muttersprache", "Linguistische Kompetenz", 
+            "Sprachqualifikationen", "Übersetzungsfähigkeiten"
+        ]
+    }
+}

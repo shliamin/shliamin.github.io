@@ -200,24 +200,41 @@ function analyzeResume(resume) {
     }
 }
 
-function analyzeTextContent(content) {
-    fetch('english_keywords.txt')
-        .then(response => response.text())
-        .then(englishKeywords => {
-            fetch('german_keywords.txt')
-                .then(response => response.text())
-                .then(germanKeywords => {
-                    const language = detectLanguage(content, englishKeywords, germanKeywords);
-                    if (language !== 'en' && language !== 'de') {
-                        alert('The document must be in English or German.');
-                        return;
-                    }
+async function analyzeTextContent(content) {
+    try {
+        const englishResponse = await fetch('english_keywords.txt');
+        const englishKeywords = await englishResponse.text();
 
-                    const categories = analyzeCategories(content, language === 'en' ? englishKeywords : germanKeywords);
-                    displayChart(categories);
-                });
-        });
+        const germanResponse = await fetch('german_keywords.txt');
+        const germanKeywords = await germanResponse.text();
+
+
+        const language = detectLanguage(content, englishKeywords, germanKeywords);
+        console.log(`Detected language: ${language === 'en' ? 'English' : language === 'de' ? 'German' : 'Unknown'}`);
+
+        if (language !== 'en' && language !== 'de') {
+            alert('The document must be in English or German.');
+            return;
+        }
+
+
+        const selectedKeywords = language === 'en' ? englishKeywords : germanKeywords;
+
+
+        const lowerContent = content.toLowerCase();
+        const lowerKeywords = selectedKeywords.toLowerCase();
+
+        console.log(`Analyzing content as ${language === 'en' ? 'English' : 'German'}...`);
+        const categories = await analyzeCategories(lowerContent, lowerKeywords, language);
+        console.log('Analysis complete. Displaying results...');
+
+        displayChart(categories);
+    } catch (error) {
+        console.error('Error analyzing text content:', error);
+        alert('An error occurred while processing the document.');
+    }
 }
+
 
 
 
