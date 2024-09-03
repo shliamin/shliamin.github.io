@@ -202,6 +202,7 @@ function analyzeResume(resume) {
 
 async function analyzeTextContent(content) {
     try {
+
         const englishResponse = await fetch('english_keywords.txt');
         const englishKeywords = await englishResponse.text();
 
@@ -210,13 +211,13 @@ async function analyzeTextContent(content) {
 
 
         const language = detectLanguage(content, englishKeywords, germanKeywords);
-        console.log(`Detected language: ${language === 'en' ? 'English' : language === 'de' ? 'German' : 'Unknown'}`);
+
 
         if (language !== 'en' && language !== 'de') {
             alert('The document must be in English or German.');
+            console.log('Unsupported language detected. The document must be in English or German.');
             return;
         }
-
 
         const selectedKeywords = language === 'en' ? englishKeywords : germanKeywords;
 
@@ -224,11 +225,12 @@ async function analyzeTextContent(content) {
         const lowerContent = content.toLowerCase();
         const lowerKeywords = selectedKeywords.toLowerCase();
 
-        console.log(`Analyzing content as ${language === 'en' ? 'English' : 'German'}...`);
-        const categories = await analyzeCategories(lowerContent, lowerKeywords, language);
-        console.log('Analysis complete. Displaying results...');
 
-        displayChart(categories);
+        const categories = await analyzeCategories(lowerContent, lowerKeywords, language);
+
+
+
+        displayChart(categories, language);
     } catch (error) {
         console.error('Error analyzing text content:', error);
         alert('An error occurred while processing the document.');
@@ -240,22 +242,50 @@ async function analyzeTextContent(content) {
 
 
 
-function displayChart(categories) {
-    const labels = Object.keys(categories);
-    const data = labels.map(label => categories[label].value);
-    const backgroundColors = labels.map(label => categories[label].value > 0 ? categories[label].color : '#d3d3d3');
+function displayChart(categories, language) {
+    const translations = {
+        'Professional Skills': 'Kompetenzen',
+        'Experience': 'Erfahrung',
+        'Skills': 'Fähigkeiten',
+        'Tech Stack': 'Tech Stack',
+        'Cultural Fit': 'Kulturpassung',
+        'Soft Skills': 'Sozialkompetenz',
+        'Education': 'Ausbildung',
+        'University': 'Universität',
+        'Certifications': 'Zertifikate',
+        'Portfolio': 'Portfolio',
+        'Engagement': 'Engagement',
+        'Projects': 'Projekte',
+        'References': 'Referenzen',
+        'Languages': 'Sprachen'
+    };
+
+
+    const languageIndicator = document.getElementById('languageIndicator');
+
+    if (languageIndicator) {
+        const text = language === 'en' 
+            ? 'The CV is written in English.' 
+            : 'Der Lebenslauf ist auf Deutsch verfasst.';
+        languageIndicator.textContent = text;
+        languageIndicator.classList.add('visible');
+    }
+
+    const labels = Object.keys(categories).map(label => 
+        language === 'de' && translations[label] ? translations[label] : label
+    );
+    const data = Object.keys(categories).map(label => categories[label].value); 
+    const backgroundColors = Object.keys(categories).map(label => categories[label].value > 0 ? categories[label].color : '#d3d3d3');
 
     const canvas = document.getElementById('backgroundChart');
     if (canvas) {
         const ctx = canvas.getContext('2d');
 
-        
-        if (chartInstance) {
-            chartInstance.destroy();
+        if (window.chartInstance) {
+            window.chartInstance.destroy();
         }
 
-       
-        chartInstance = new Chart(ctx, {
+        window.chartInstance = new Chart(ctx, {
             type: 'doughnut',
             data: {
                 labels: labels,
@@ -278,7 +308,7 @@ function displayChart(categories) {
                         },
                         title: {
                             display: true,
-                            text: 'Gray categories missing in your resume:',
+                            text: language === 'de' ? 'Graue Kategorien fehlen in Ihrem Lebenslauf:' : 'Gray categories missing in your resume:',
                             color: '#000', 
                             font: {
                                 size: 12,
@@ -305,6 +335,7 @@ function displayChart(categories) {
 
 
 
+
 function getColorForCategory(value) {
     switch (value) {
         case 50: return '#007aff';
@@ -314,4 +345,6 @@ function getColorForCategory(value) {
         default: return '#d3d3d3';
     }
 }
+
+
 
