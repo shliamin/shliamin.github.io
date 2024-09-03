@@ -1,11 +1,22 @@
 
+
 export function toggleInfoPanel() {
-    const infoPanelElement = document.getElementById('infoPanel');
-    const toggleButtonElement = document.getElementById('toggleButton');
-    infoPanelElement.classList.toggle('open');
-    toggleButtonElement.innerHTML = infoPanelElement.classList.contains('open') ? '<i class="fas fa-chevron-left"></i>' : '<i class="fas fa-chevron-right"></i>';
-    resizeChart();  
+    const infoPanel = document.getElementById('infoPanel');
+    const toggleButton = document.getElementById('toggleButton');
+
+    if (infoPanel.classList.contains('open')) {
+
+        infoPanel.classList.remove('open');
+        toggleButton.style.left = '0'; 
+        toggleButton.innerHTML = '<i class="fas fa-chevron-right"></i>'; 
+    } else {
+
+        infoPanel.classList.add('open');
+        toggleButton.style.left = '300px'; 
+        toggleButton.innerHTML = '<i class="fas fa-chevron-left"></i>'; 
+    }
 }
+
 
 function initializeChart() {
     const donutChartElement = document.getElementById('donutChart').getContext('2d');
@@ -93,13 +104,13 @@ function initializeChart() {
             maintainAspectRatio: false,
             plugins: {
                 legend: {
-                    position: 'bottom',
+                    display: false,
                 }
             }
         }
     });
 
-    document.getElementById('donutChart').style.height = '200px';
+    document.getElementById('donutChart').style.height = '100px';
 }
 
 

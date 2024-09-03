@@ -123,16 +123,30 @@
 
         .info-panel {
             position: fixed;
-            left: -340px;
+            left: -340px; 
             top: 0;
             width: 300px;
             height: 100%;
             background-color: #f7f7f7;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            transition: all 0.3s ease;
+            transition: left 0.3s ease;
             z-index: 1000;
-            justify-content: flex-start;
+            overflow-y: auto;
+        }
+
+        .info-panel.open {
+            left: 0;
+        }
+        .info-panel::-webkit-scrollbar {
+            display: none;
+        }
+        .info-panel::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+        .info-panel::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
         }
         .info-panel.open {
             left: 0;
@@ -195,7 +209,9 @@
             border-radius: 50%;
             font-size: 18px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
         }
+
         .info-panel button:hover {
             background-color: #005bb5;
         }
@@ -224,13 +240,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 370px;
+            height: 230px;
             margin-top: 20px;  
         }
 
         #donutChart {
-            width: 100%;
-            height: 100%;
+            width: 220px;
+            height: 220px;
         }
 
         #languageIndicator {
@@ -253,16 +269,56 @@
             transform: translateY(0);
         }
 
+        .detailed-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
+        .detailed-info p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .detailed-info .highlight {
+            font-weight: bold;
+            color: #007aff;
+        }
+
+        #toggleButton {
+            position: fixed;
+            top: 20%;
+            left: 300px; 
+            transform: translate(-40%, -50%); 
+            background-color: #007aff;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1001; 
+            transition: left 0.3s ease;
+        }
+
+        .info-panel.open + #toggleButton {
+            left: 300px; 
+            transform: translate(-50%, -50%) rotate(180deg); 
+        }
     </style>
 </head>
 <body>
     <div class="beta-banner">BETA VERSION</div>
 
+    <button onclick="import('./main.js').then(module => module.toggleInfoPanel())" id="toggleButton">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
     <div class="info-panel" id="infoPanel">
-        <button onclick="import('./main.js').then(module => module.toggleInfoPanel())" id="toggleButton">
-            <i class="fas fa-chevron-left"></i>
-        </button>
         <h2>How It Works</h2>
         <p class="highlight highlight-professional"><span>Professional Skills - 50%</span></p>
         <p class="professional-subcategory">Experience - 25%</p>
@@ -271,14 +327,14 @@
 
         <p class="highlight highlight-cultural"><span>Team Fit - 20%</span></p>
         <p class="cultural-subcategory">Soft Skills - 10%</p>
-        <p class="cultural-subcategory">Cultural Fit - 10%</p>
+        <p class="cultural-subcategory">Cultural Fit* - 10%</p>
 
         <p class="highlight highlight-education"><span>Education - 10%</span></p>
         <p class="education-subcategory">University - 5%</p>
         <p class="education-subcategory">Certifications - 5%</p>
 
         <p class="highlight highlight-portfolio"><span>Portfolio - 10%</span></p>
-        <p class="portfolio-subcategory">Engagement - 5%</p>
+        <p class="portfolio-subcategory">Engagement** - 5%</p>
         <p class="portfolio-subcategory">Projects - 5%</p>
 
         <p class="highlight highlight-references"><span>References - 5%</span></p>
@@ -289,6 +345,17 @@
         <div class="chart-container">
             <canvas id="donutChart"></canvas>
         </div>
+
+        <div class="detailed-info" style="margin-bottom: 20px;">
+            <p class="highlight">*Cultural Fit - 10%</p>
+            <p>Cultural Fit refers to how well your values, beliefs, and work style align with the company's culture. It’s about whether you can thrive in the organization’s environment and contribute positively to its growth.</p>
+            <p>The code assesses Cultural Fit by scanning your CV for keywords and phrases that align with the company’s core values, mission, and vision. It looks for terms like "company culture," "values alignment," "mission-driven," and "workplace culture." These indicators show your awareness of and compatibility with the cultural aspects of the organization.</p>
+            <p>It's important to note that Cultural Fit goes beyond just <strong>Soft Skills</strong>. While Soft Skills encompass personal qualities and interpersonal abilities like communication, teamwork, and problem-solving, Cultural Fit also includes how your overall approach, goals, and ethics match the broader environment and ethos of the company.</p>
+        
+            <p class="highlight">**Engagement - 5%</p>
+            <p>Engagement measures your involvement in projects, initiatives, or activities beyond your core job responsibilities. This includes participation in community initiatives, volunteer work, contributing to open source projects, or any other activities that demonstrate your dedication and proactive attitude.</p>
+            <p>The code evaluates Engagement by identifying mentions of activities and roles that indicate active participation beyond your regular duties. It looks for terms such as "volunteering," "community engagement," "open source contributions," and "project participation." This helps gauge your willingness to contribute to the organization in more ways than just your primary job role.</p>
+        </div>
         
     </div>
 
@@ -296,7 +363,7 @@
         <h1>Compatibility Analyzer</h1>
         <div id="languageIndicator">
             <span id="languageIcon" style="margin-right: 10px;"></span>
-            <span id="languageText">The resume is written in English.</span>
+            <span id="languageText">The CV is written in English.</span>
         </div>
         
         <form id="resume-form">
@@ -312,6 +379,7 @@
             <canvas id="backgroundChart"></canvas>
             <div class="chart-legend"></div>
         </div>
+
         <div id="author">
             <p>Made by Efim Shliamin: <a href="https://shliamin.github.io" target="_blank">shliamin.github.io</a></p>
         </div>
