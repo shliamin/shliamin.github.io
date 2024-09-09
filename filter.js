@@ -94,7 +94,7 @@ function updateTechStack() {
         techStack.disabled = false;
         let options = [];
         if (techFields === 'full-stack') {
-            options = ['MERN', 'Ruby on Rails', 'Python WebDev', 'JAM Stack', '.NET Stack', 'Microservices Java Stack'];
+            options = ['React', 'Ruby on Rails', 'Python WebDev', '.NET Stack', 'Microservices Java Stack'];
         } else if (techFields === 'data-science') {
             options = ['Python', 'OpenCV', 'NumPy', 'Nextflow', 'Fastp', 'Pandas', 'Matplotlib', 'Statistical Analysis'];
         } else if (techFields === 'bioinformatics') {

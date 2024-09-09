@@ -10,7 +10,7 @@
             "description": "images/Python-Genome-Assembler.png"
         },
         "technologies": "Python, FASTA and SAM",
-        "techField": "bioinformatics",
+        "techField": "data-science",
         "techStack": "Genome Assembly",
         "icons": [
             "images/python-brands-solid.svg",
@@ -31,7 +31,7 @@
             "description": "images/Python-Medical-Data-Analysis.png"
         },
         "technologies": "Python, SciPy, Pandas, Matplotlib",
-        "techField": "data-science,bioinformatics",
+        "techField": "data-science",
         "techStack": "Python,Pandas,Matplotlib,Data Analysis of Medical Records,Statistical Analysis",
         "icons": [
             "images/python-brands-solid.svg",
@@ -53,7 +53,7 @@
             "description": "images/DICOM.gif"
         },
         "technologies": "Python, Pydicom, SciPy, NumPy, Matplotlib, Scikit-image, Sklearn (KMeans), Plotly, Jupyter Notebook",
-        "techField": "data-science,bioinformatics,machine-learning",
+        "techField": "data-science,machine-learning",
         "techStack": "Python,NumPy,Matplotlib,Image Processing,Analysis and Visualization,DICOM Processing,3D Visualization,Segmentation Algorithms,K-Means Clustering,Marching Cubes Algorithm",
         "icons": [
             "images/python-brands-solid.svg",
@@ -77,7 +77,7 @@
             "description": "images/opencv.png"
         },
         "technologies": "Python, OpenCV, NumPy, Matplotlib, imutils, Jupyter Notebook",
-        "techField": "bioinformatics,data-science",
+        "techField": "data-science",
         "techStack": "Image Processing,Morphological Operations,Analysis and Visualization,Python,OpenCV,NumPy,Matplotlib",
         "icons": [
             "images/python-brands-solid.svg",
@@ -112,7 +112,7 @@
         "priority": 3
     },
     {
-        "name": "MERN-Musical-Events",
+        "name": "React-Musical-Events",
         "description": "A full-stack application built with the MERN stack. The application is designed for managing musical event data using geocoding. Users can log in or register and then create their own unique music event with a real address.",
         "github": "https://github.com/shliamin/MERN-Musical-Events",
         "demo": "https://shliamin.github.io/MERN-Musical-Events/",
@@ -123,7 +123,7 @@
         },
         "technologies": "React.js, Express.js, Node.js, MongoDB (Atlas), Leaflet.js, JWT (JSON Web Tokens), Heroku",
         "techField": "full-stack",
-        "techStack": "MERN",
+        "techStack": "React",
         "icons": [
             "images/React.svg",
             "images/Node.js.svg",
@@ -267,7 +267,7 @@
         },
         "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
-        "techStack": "JAM Stack",
+        "techStack": "React",
         "icons": [
             "images/Three.js.svg",
             "images/JavaScript.svg",
@@ -290,7 +290,7 @@
         },
         "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
-        "techStack": "JAM Stack",
+        "techStack": "React",
         "icons": [
             "images/Three.js.svg",
             "images/JavaScript.svg",
@@ -313,7 +313,7 @@
         },
         "technologies": "JavaScript, AJAX, DOM Manipulation, Event Handling, HTML and CSS",
         "techField": "full-stack",
-        "techStack": "JAM Stack",
+        "techStack": "React",
         "icons": [
             "images/JavaScript.svg",
             "images/HTML5.svg",
@@ -477,7 +477,7 @@
             "description": "images/NGS.png"
         },
         "technologies": "Nextflow, fastp, SPAdes, QUAST, Jupyter Notebook, Python, pandas, numpy, matplotlib",
-        "techField": "bioinformatics,data-science", 
+        "techField": "data-science", 
         "techStack": "Analysis and Visualization,SPAdes,QUAST,Bioinformatics Workflow,Genome Assembly,Python,OpenCV,NumPy,Nextflow,Fastp,Pandas,Matplotlib",
         "icons": [
             "images/nextflow-logo-bg-light.svg",
