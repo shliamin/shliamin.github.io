@@ -100,7 +100,7 @@
         },
         "technologies": "C#, .NET Core, ASP.NET, Xamarin, NuGet, Microsoft SQL Server, Visual Studio",
         "techField": "full-stack",
-        "techStack": ".NET Stack",
+        "techStack": "Java Spring Boot",
         "icons": [
             "images/CSharp.svg",
             "images/NET core.svg",
@@ -147,7 +147,7 @@
         },
         "technologies": "Java 11, Spring Boot, Spring Cloud, Netflix Eureka, Spring Cloud Gateway, Spring Security, MongoDB, Docker, Kubernetes, Swagger, Zipkin",
         "techField": "full-stack",
-        "techStack": "Microservices Java Stack",
+        "techStack": "Java Spring Boot",
         "icons": [
             "images/Java.svg",
             "images/Spring.svg",
@@ -171,7 +171,7 @@
         },
         "technologies": "HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, AJAX, Flask, Flask-CORS, Overpass API, Nominatim API",
         "techField": "full-stack",
-        "techStack": "Python WebDev",
+        "techStack": "Java Spring Boot",
         "icons": [
             "images/JavaScript.svg",
             "images/HTML5.svg",
@@ -195,7 +195,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -219,7 +219,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -243,7 +243,7 @@
         },
         "technologies": "HTML, CSS, JavaScript, Plotly.js, GitHub Actions, Flask, Flask-CORS, logging, os, SciPy, NumPy, Trimesh, ReportLab, PIL (Pillow), EZDXF, JSON, Threading",
         "techField": "full-stack",
-        "techStack": "Python WebDev",
+        "techStack": "React",
         "icons": [
             "images/JavaScript.svg",
             "images/python-brands-solid.svg",
@@ -334,7 +334,7 @@
         },
         "technologies": "Ruby, Ruby on Rails, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
         "techField": "full-stack,data-science,machine-learning",
-        "techStack": "Ruby on Rails,Python,NumPy,Pandas,Collaborative Filtering,Content-Based Filtering,Hybrid Recommendation System",
+        "techStack": "Java Spring Boot, React, Python,NumPy,Pandas,Collaborative Filtering,Content-Based Filtering,Hybrid Recommendation System",
         "icons": [
             "images/Ruby on Rails.svg",
             "images/PostgresSQL.svg",
@@ -358,7 +358,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -382,7 +382,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -406,7 +406,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -430,7 +430,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -454,7 +454,7 @@
         },
         "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Ruby on Rails",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
