@@ -474,24 +474,24 @@ body {
 
 
 #content-docs {
-    overflow-x: auto; /* Позволяет горизонтальную прокрутку */
-    white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
-    padding: 0; /* Убираем все отступы */
-    margin: 0; /* Убираем все внешние отступы */
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 0; 
+    margin: 0; 
     position: relative;
-    width: 100%; /* Полная ширина контейнера */
+    width: 100%; 
     box-sizing: border-box; 
-    -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
 }
 
 .scrolling-wrapper {
     display: flex;
-    justify-content: flex-start; /* Выравнивание элементов слева */
+    justify-content: flex-start; 
     align-items: center;
-    width: max-content; /* Ширина зависит от содержимого */
-    padding: 0; /* Убираем отступы */
-    margin: 0; /* Убираем внешние отступы */
+    width: max-content; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .button-docs {
@@ -509,7 +509,7 @@ body {
     flex-shrink: 0; 
     min-width: 150px;
     max-width: 150px; 
-    box-sizing: border-box; /* Включает padding и border в ширину */
+    box-sizing: border-box; 
 }
 
 .button-docs:hover {
@@ -1159,6 +1159,45 @@ iframe {
 
 
 
+.articles-section {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.articles-section h3 {
+    font-size: 1.0em;
+    margin-bottom: 5px;
+}
+
+
+.articles-list {
+    max-height: 120px; 
+    overflow-y: auto; 
+    border: none;
+    padding: 10px;
+}
+
+
+.article-item {
+    margin-bottom: 5px;
+
+}
+
+
+.article-item a {
+    text-decoration: none;
+    color: #777777; 
+    font-weight: bold;
+    font-size: 14px; 
+    padding: 5px 0;
+}
+
+.article-item a:hover {
+    text-decoration: underline;
+}
+
+
+
 
 
 
@@ -1504,7 +1543,7 @@ iframe {
     
     /* Second line: Date filters */
     .date-filter-group {
-        flex: 1 1 calc(50% - 10px); /* Два фильтра дат будут занимать по 50% ширины контейнера */
+        flex: 1 1 calc(50% - 10px); 
     }
 
     

@@ -38,26 +38,5 @@
         "category": "news",
         "subcategory": "AI & Data Science",
         "image": "images/news.webp"
-    },
-    {
-        "title": "Google Restricted My Email After Requesting Anonymous Feedback from Multiple Companies",
-        "date": "2024-08-28",
-        "content": "Google restrickted my email (efim.career@gmail.com) after I sent multiple similar anonymous feedback requests to companies. Please use efimshliamin@gmail.com to contact me.",
-        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdZsodMMWRnGaG5MC5WpmHAE-oagiYx1erlHCi2Yje5CJoFvw/viewform?usp=sf_link",  
-        "author": "Efim Shliamin",
-        "category": "update",
-        "subcategory": "Career & Job Applications",
-        "image": "images/email-important-information.jpeg"
-    },
-    {
-        "title": "Google Restricted My Email After Feedback Request -Part 2-",
-        "date": "2024-08-29",
-        "content": "I asked companies I applied to for anonymous feedback to improve as a professional. Google flagged this as spam, resulting in my email being restricted. I can no longer read or send emails until my appeal is reviewed.",
-        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdZsodMMWRnGaG5MC5WpmHAE-oagiYx1erlHCi2Yje5CJoFvw/viewform?usp=sf_link",  
-        "author": "Efim Shliamin",
-        "category": "update",
-        "subcategory": "Career & Job Applications",
-        "image": "images/email-important-information.jpeg"
     }
-    
 ]
