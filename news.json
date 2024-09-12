@@ -58,5 +58,15 @@
         "category": "news",
         "subcategory": "Fullstack",
         "image": "https://assets.roadmap.sh/guest/java-full-stack-developer-skills-ft8ta.png"
+    },
+    {
+        "title": "Mayfield allocates $100M to AI incubator modeled after its entrepreneur-in-residence program",
+        "date": "2024-09-04",
+        "content": "Mayfield allocates $100M for an AI incubator, modeled after its Entrepreneur-in-Residence program, to support early-stage AI startups. The incubator will provide resources and mentorship to help startups scale rapidly and innovate in AI technologies.",
+        "link": "https://techcrunch.com/2024/09/04/mayfield-allocates-100m-to-ai-incubator-modeled-after-its-entrepreneur-in-residence-program/?guccounter=1&utm_source=Iterable&utm_medium=email&utm_campaign=newsletter-20240905",
+        "author": "Marina Temkin",
+        "category": "news",
+        "subcategory": "ai",
+        "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-1435014643.jpg"
     }
 ]
