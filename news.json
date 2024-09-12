@@ -33,10 +33,40 @@
         "title": "Gemini makes your mobile device a powerful AI assistant",
         "date": "2024-08-13",
         "content": "Gemini Live is available today to Advanced subscribers, along with conversational overlay on Android and even more connected apps.",
-        "link": "https://blog.google/products/gemini/made-by-google-gemini-ai-updates/",  
+        "link": "https://blog.google/products/gemini/made-by-google-gemini-ai-updates/",
         "author": "Google",
         "category": "news",
         "subcategory": "AI & Data Science",
+        "image": "images/news.webp"
+    },
+    {
+        "title": "Fullstack Development Trends for 2024",
+        "date": "2024-09-12",
+        "content": "Fullstack development with Vite and Spring Boot 3 gains traction for faster front-end builds and more efficient backend solutions. React Query also emerges as a key tool for data management.",
+        "link": "https://roadmap.sh/java-fullstack-2024",
+        "author": "Roadmap.sh",
+        "category": "news",
+        "subcategory": "Fullstack",
+        "image": "images/news.webp"
+    },
+    {
+        "title": "Building CRUD Applications with Spring Boot and React",
+        "date": "2024-09-10",
+        "content": "New tutorials focus on building scalable CRUD apps using Spring Boot and React. These projects highlight the integration of MySQL and REST APIs for streamlined data handling.",
+        "link": "https://javaguides.net/crud-project-springboot-react",
+        "author": "JavaGuides",
+        "category": "news",
+        "subcategory": "Fullstack",
+        "image": "images/news.webp"
+    },
+    {
+        "title": "Essential Java Fullstack Skills for 2024",
+        "date": "2024-09-12",
+        "content": "Java developers should master Docker, Jenkins, JWT, and OAuth for secure and scalable applications. Proficiency in web security and deployment pipelines is key in the current job market.",
+        "link": "https://roadmap.sh/java-fullstack-skills-2024",
+        "author": "Roadmap.sh",
+        "category": "news",
+        "subcategory": "Fullstack",
         "image": "images/news.webp"
     }
 ]
