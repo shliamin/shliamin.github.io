@@ -40,21 +40,11 @@
         "image": "images/news.webp"
     },
     {
-        "title": "Fullstack Development Trends for 2024",
-        "date": "2024-09-12",
-        "content": "Fullstack development with Vite and Spring Boot 3 gains traction for faster front-end builds and more efficient backend solutions. React Query also emerges as a key tool for data management.",
-        "link": "https://roadmap.sh/java-fullstack-2024",
-        "author": "Roadmap.sh",
-        "category": "news",
-        "subcategory": "Fullstack",
-        "image": "images/news.webp"
-    },
-    {
         "title": "Building CRUD Applications with Spring Boot and React",
         "date": "2024-09-10",
         "content": "New tutorials focus on building scalable CRUD apps using Spring Boot and React. These projects highlight the integration of MySQL and REST APIs for streamlined data handling.",
-        "link": "https://javaguides.net/crud-project-springboot-react",
-        "author": "JavaGuides",
+        "link": "https://www.javaguides.net/2021/10/spring-boot-react-full-stack-web-development-tutorial.html#google_vignette",
+        "author": "Ramesh Fadatare",
         "category": "news",
         "subcategory": "Fullstack",
         "image": "images/news.webp"
@@ -63,10 +53,10 @@
         "title": "Essential Java Fullstack Skills for 2024",
         "date": "2024-09-12",
         "content": "Java developers should master Docker, Jenkins, JWT, and OAuth for secure and scalable applications. Proficiency in web security and deployment pipelines is key in the current job market.",
-        "link": "https://roadmap.sh/java-fullstack-skills-2024",
-        "author": "Roadmap.sh",
+        "link": "https://roadmap.sh/java/developer-skills",
+        "author": "William Imoh",
         "category": "news",
         "subcategory": "Fullstack",
-        "image": "images/news.webp"
+        "image": "https://assets.roadmap.sh/guest/java-full-stack-developer-skills-ft8ta.png"
     }
 ]
