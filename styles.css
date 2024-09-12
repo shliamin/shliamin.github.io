@@ -1222,6 +1222,7 @@ iframe {
         width: 35%; 
         height: 100%;
         border-radius: 5px 0 0 5px;
+        object-fit: contain;
     }
 
     .news-text {
