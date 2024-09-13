@@ -68,5 +68,16 @@
         "category": "news",
         "subcategory": "ai",
         "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-1435014643.jpg"
+    },
+    {
+        "title": "React 19 RC Introduces Server Components and `use` API for Asynchronous Rendering",
+        "date": "2024-04-25",
+        "content": "React 19 RC brings Server Components for improved page loading and the new `use` API to simplify asynchronous data fetching in components. Other enhancements include ref prop usage and updates to StrictMode behavior.",
+        "link": "https://react.dev/blog/2024/04/25/react-19",
+        "author": "The React Team",
+        "category": "news",
+        "subcategory": "Fullstack",
+        "image": "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcpy5lr1yjweparjrj84h.png"
     }
+    
 ]
