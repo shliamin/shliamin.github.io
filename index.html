@@ -178,13 +178,7 @@
         <main class="content">
             <section id="about-me" class="section">
 
-                <div class="greeting" id="greeting-en">
-                    <span>Welcome to my website!</span>
-                </div>
-
-                <div class="greeting" id="greeting-de" style="display:none;">
-                    <span>Willkommen auf meiner Website!</span>
-                </div>
+                
 
                <!--
                 <a href="https://shliamin.github.io/resume_analyzer" target="_blank" style="color: #333; font-size: 16px; font-weight: bold; text-decoration: none; padding-left: 10%;">
@@ -318,6 +312,29 @@
                       
                     
                       <style>
+
+                        @media (max-width: 768px) {
+                            .certificate-item {
+                                min-width: 100px; /* Меньший размер для мобильных */
+                                height: auto; /* Высота будет подстраиваться под содержимое */
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .certificate-item embed {
+                                width: 100%; /* Убедитесь, что PDF масштабируется по ширине контейнера */
+                                height: auto;
+                                object-fit: contain; /* Масштабирование без потери пропорций */
+                            }
+
+                            /* Временный фон для тестирования */
+                            .certificate-item {
+                                background-color: #f0f0f0; /* Сделайте фон видимым для проверки */
+                            }
+                        }
+
+
                         
                         .certificate-carousel {
                             scrollbar-width: none; 
