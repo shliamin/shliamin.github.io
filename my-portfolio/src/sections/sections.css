@@ -1,0 +1,60 @@
+/* Общие стили для всех секций */
+.section {
+    background-color: #fff;
+    padding: 40px 0;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Центрирование секций */
+    display: none; /* По умолчанию скрываем секцию */
+  }
+  
+  .section.active {
+    display: block; /* Отображаем активную секцию */
+  }
+  
+  .section p,
+  .section ul {
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+  }
+  
+  /* Дополнительные стили для текста */
+  .section p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .section ul {
+    list-style: disc;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .section ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Можно добавить адаптивные стили */
+  @media (max-width: 768px) {
+    .section p,
+    .section ul {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
