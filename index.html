@@ -93,10 +93,6 @@
             alt="Profile Picture"
             class="profile-picture"
           />
-          <div class="note" id="note">
-            <div class="note-text" id="note-text">👋...</div>
-            <div class="note-tail"></div>
-          </div>
           <h4 class="uk-comment-title">Efim Shliamin</h4>
           <div class="uk-comment-body">
             <p id="degree-title">Computer Scientist, B.Sc.</p>
@@ -128,16 +124,6 @@
                   alt="X Icon"
                   class="status-icon-mobile"
               /></a>
-              <!--<a href="https://threads.net/@efimslife"><img src="images/square-threads.svg" alt="Threads Icon" class="status-icon-mobile"></a>
-                        <a href="https://vimeo.com"><img src="images/square-vimeo.svg" alt="Vimeo Icon" class="status-icon-mobile"></a>
-                        <a href="#" id="initial-download-link-mobile">
-                            <img src="images/file-solid.svg" alt="Resume Icon" class="status-icon-mobile">
-                        </a>
-                        <div id="language-selection-mobile" style="display: none;">
-                            <p>In English or German?</p>
-                            <button id="english-button-mobile">English</button>
-                            <button id="german-button-mobile">German</button>
-                        </div> -->
             </div>
           </div>
         </div>
@@ -173,10 +159,7 @@
                 class="uk-button uk-button-default small-button"
                 onclick="showSection('news')"
               >
-                <span class="n">N</span>
-                <span class="e">E</span>
-                <span class="w">W</span>
-                <span class="s">S</span>
+                News
               </button>
             </li>
           </ul>
@@ -223,31 +206,6 @@
               <p id="p-title">Follow me on X</p>
             </a>
           </div>
-          <!--
-                <div class="status-item">
-                    <a href="https://threads.net/@efimslife">
-                        <img src="images/square-threads.svg" alt="Threads Icon" class="status-icon">
-                        <p id="p-title">Follow me on Threads</p>
-                    </a>
-                </div>
-                <div class="status-item">
-                    <a href="https://vimeo.com">
-                        <img src="images/square-vimeo.svg" alt="Vimeo Icon" class="status-icon">
-                        <p id="p-title">Check out my Vimeo</p>
-                    </a>
-                </div>
-                <div class="status-item">
-                    <a href="#" id="initial-download-link-desktop">
-                        <img src="images/file-solid.svg" alt="Resume Icon" class="status-icon">
-                        <p id="p-title">Download my Resume</p>
-                    </a>
-                    <div id="language-selection-desktop" style="display: none;">
-                        <p>In English or German?</p>
-                        <button id="english-button-desktop">English</button>
-                        <button id="german-button-desktop">German</button>
-                    </div>
-                </div>-->
-
           <div class="articles-section desktop-only">
             <h3>Latest Articles on Notion:</h3>
             <div class="articles-list">
@@ -305,35 +263,6 @@
 
       <main class="content">
         <section id="about-me" class="section">
-          <!--
-                <a href="https://shliamin.github.io/resume_analyzer" target="_blank" style="color: #333; font-size: 16px; font-weight: bold; text-decoration: none; padding-left: 10%;">
-                    Discover our compatibility with my <span style="font-weight: bold; color: #999999; text-decoration: underline;">Work Fit Analysis Tool</span> 🔍 💼.
-                </a>
-                -->
-
-          <!--
-                <div id="content-docs">
-                    
-                    <div style="display: flex; justify-content: space-around; margin: 0 0 10px 0;">
-                        <a href="https://drive.google.com/file/d/1YtH54q-W46wN97APMiF1n38pjxGFSbpY/view?usp=sharing" target="_blank" class="button-docs">
-                            Download my <br><span style="color: #007BFF; font-weight: bold;">CERTIFICATES</span>
-                        </a>
-                        <a href="https://docs.google.com/spreadsheets/d/1AF3Wf2bBeUWrNkSUw5_opQwg-C31xhtuTxeYIsI84Dw/edit?usp=sharing" target="_blank" class="button-docs">
-                            Download my <br><span style="color: #28A745; font-weight: bold;">IT-SKILLS</span>
-                        </a>
-                        <a href="https://docs.google.com/document/d/1hP_CjaC2D7HOwTm03VHu8fJX1ImxZ0zVmmc8Ht_C3Ik/edit?usp=sharing" target="_blank" class="button-docs">
-                            Download my <br><span style="color: #FFC107; font-weight: bold;">CV DEUTCH</span>
-                        </a>
-                        <a href="https://docs.google.com/document/d/1vJDTlByTt1DmU9CQ1Ob1kzjkQBQ_ZG7-sOsUu-2Gw9s/edit?usp=sharing" target="_blank" class="button-docs">
-                            Download my <br><span style="color: #DC3545; font-weight: bold;">CV ENGLISH</span>
-                        </a>
-                        <a href="https://shliamin.github.io/resume_analyzer" target="_blank" class="button-docs">
-                            Check our <br><span style="color: #17A2B8; font-weight: bold;">WORK FIT</span>
-                        </a>
-                    </div>
-                </div>
-                -->
-
           <div id="content-en">
             <p><strong>About me:</strong></p>
             <p>
@@ -370,15 +299,32 @@
             </p>
           </div>
 
-          <div style="display: flex; align-items: center;">
-            <p id="certificates-title-en" style="padding-right: 20px !important; margin-bottom: 0px;"><strong>Certificates:</strong></p>
-            <p id="certificates-title-de" style="padding-right: 20px !important; margin-bottom: 0px; display: none;"><strong>Zeugnisse:</strong></p>
-            <select id="category-filter-certificates" style="padding: 5px 10px; font-size: 16px;">
-                <option value="all">All</option>
-                <option value="Udemy">Udemy</option>
-                <option value="HackerRank">HackerRank</option>
-                <option value="Work">Work</option>
-                <option value="Education">Education</option>
+          <div style="display: flex; align-items: center">
+            <p
+              id="certificates-title-en"
+              style="padding-right: 20px !important; margin-bottom: 0px"
+            >
+              <strong>Certificates:</strong>
+            </p>
+            <p
+              id="certificates-title-de"
+              style="
+                padding-right: 20px !important;
+                margin-bottom: 0px;
+                display: none;
+              "
+            >
+              <strong>Zeugnisse:</strong>
+            </p>
+            <select
+              id="category-filter-certificates"
+              style="padding: 5px 10px; font-size: 16px"
+            >
+              <option value="all">All</option>
+              <option value="Udemy">Udemy</option>
+              <option value="HackerRank">HackerRank</option>
+              <option value="Work">Work</option>
+              <option value="Education">Education</option>
             </select>
           </div>
 
@@ -407,17 +353,27 @@
             <p><strong>Key Achievements:</strong></p>
             <ul>
               <li>
-                Participated in the Mercedes-Benz Innovation Challenge, where I
-                helped create an IT solution to attract younger clients, earning
-                a recommendation letter and a prize.
+                Participated in the Mercedes-Benz Innovation Challenge as the
+                sole technical expert in a multidisciplinary team of five
+                selected from over 14,000 students. Together, we successfully
+                developed an IT solution aimed at attracting younger clients. My
+                key role was to explain and manage the technical aspects of the
+                project, which ultimately earned us a certificate and a prize.
               </li>
               <li>
-                Developed a software pipeline that improved genome assembly
-                quality, used by students in their dissertations.
+                Developed a software pipeline to find the optimal method for
+                trimming sequenced RNA molecules, leading to more accurate final
+                genome assemblies. This solution has potential applications in
+                research and disease treatment, and it has been used by students
+                in their dissertations to further their studies.
               </li>
               <li>
-                Contributed to the development of a university web portal used
-                by 14,000 students.
+                Contributed as a Fullstack Developer in the development team at
+                the University of Applied Sciences Berlin Data Centre, where we
+                built a university web portal used by 14,000 students. My
+                responsibilities included both frontend and backend development,
+                collaborating closely with the team to ensure a smooth user
+                experience for students.
               </li>
               <li>
                 Assisted Rhenus Logistics in passing an audit by creating
@@ -425,9 +381,11 @@
                 Security Management.
               </li>
               <li>
-                Supported the Institute of Geographic Information Technology in
-                developing proprietary technologies, reducing dependency on
-                foreign software licenses.
+                Supported the Institute of Geographic Information Technology as
+                a Fullstack Developer in developing proprietary technologies,
+                which reduced dependency on foreign software licenses. My role
+                involved working on both frontend and backend aspects of the
+                projects, ensuring seamless integration and functionality.
               </li>
               <li>
                 Created numerous web and cloud-based applications, many of which
@@ -447,36 +405,54 @@
             <p><strong>Wichtige Erfolge:</strong></p>
             <ul>
               <li>
-                An der Innovation Challenge von Mercedes-Benz teilgenommen, bei
-                der ich an der Entwicklung einer IT-Lösung zur Gewinnung
-                jüngerer Kunden beteiligt war und dafür ein Empfehlungsschreiben
-                sowie einen Preis erhalten habe.
+                Teilnahme an der Mercedes-Benz Innovation Challenge als einziger
+                technischer Experte in einem multidisziplinären Team von fünf
+                Personen, das aus über 14.000 Studierenden ausgewählt wurde.
+                Gemeinsam haben wir erfolgreich eine Lösung zur Gewinnung
+                jüngerer Kunden entwickelt. Meine Hauptaufgabe bestand darin,
+                die technischen Aspekte des Projekts zu erklären und zu
+                verwalten, was uns letztlich ein Zertifikat und einen Preis
+                einbrachte.
               </li>
               <li>
-                Entwicklung einer Software-Pipeline, die die Qualität der
-                Genomassemblierung verbessert hat und von Studierenden in ihren
-                Dissertationen verwendet wird.
+                Entwicklung einer Software-Pipeline zur Bestimmung der optimalen
+                Methode zum Trimmen sequenzierter RNA-Moleküle, was zu genaueren
+                finalen Genomassemblierungen führte. Diese Lösung hat
+                potenzielle Anwendungen in der Forschung und der
+                Krankheitsbehandlung und wurde von Studierenden in ihren
+                Dissertationen verwendet, um ihre Studien zu vertiefen.
               </li>
               <li>
-                Beitrag zur Entwicklung eines Universitätsportals, das von
-                14.000 Studierenden genutzt wird.
+                Beitrag als Fullstack-Entwickler im Entwicklungsteam des
+                Rechenzentrums der Hochschule für Technik und Wirtschaft Berlin
+                zur Erstellung eines Universitätsportals, das von 14.000
+                Studierenden genutzt wird. Meine Aufgaben umfassten sowohl die
+                Frontend- als auch die Backend-Entwicklung, wobei ich eng mit
+                dem Team zusammenarbeitete, um den Studierenden ein
+                reibungsloses Benutzererlebnis zu ermöglichen.
               </li>
               <li>
-                Rhenus Logistics bei der erfolgreichen Durchführung einer
-                Prüfung unterstützt, indem ich technische Dokumentationen zu
-                Datenschutzrichtlinien und Sicherheitsmanagement erstellt habe.
+                Unterstützung von Rhenus Logistics bei der erfolgreichen
+                Durchführung einer Prüfung durch die Erstellung technischer
+                Dokumentationen zu Datenschutzrichtlinien und
+                Sicherheitsmanagement.
               </li>
               <li>
-                Das Institut für Geographische Informationstechnologie bei der
-                Entwicklung eigener Technologien unterstützt und so die
-                Abhängigkeit von ausländischen Softwarelizenzen reduziert.
+                Unterstützung des Instituts für Geographische
+                Informationstechnologie als Fullstack-Entwickler bei der
+                Entwicklung eigener Technologien, die die Abhängigkeit von
+                ausländischen Softwarelizenzen verringerten. Meine Rolle
+                umfasste sowohl die Frontend- als auch die Backend-Entwicklung,
+                um eine nahtlose Integration und Funktionalität zu
+                gewährleisten.
               </li>
               <li>
                 Erstellung zahlreicher Web- und Cloud-basierter Anwendungen, von
-                denen viele Open-Source sind und in der Community große
-                Akzeptanz finden.
+                denen viele Open-Source sind und von der Community weit
+                verbreitet angenommen werden.
               </li>
             </ul>
+
             <p style="margin-bottom: 40px">
               Ich bin an langfristigen Vollzeit-Kooperationen interessiert und
               strebe stets danach, Mehrwert zu schaffen, sei es durch direkte
@@ -543,31 +519,6 @@
             benötigen oder einfach nur in Kontakt treten möchten, zögern Sie
             nicht, sich über eine der folgenden Methoden zu melden:
           </p>
-
-          <!-- Start of added announcement -->
-          <div
-            class="alert"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 20px auto;
-              max-width: 500px;
-            "
-          >
-            <img
-              src="images/email-important-information.jpeg"
-              alt="Important Email Information"
-              style="width: 50%; height: auto; margin-right: 10px"
-            />
-            <p style="flex: 1; text-align: left">
-              <strong>Important:</strong> The previous email address
-              <strong>shliamin.career@gmail.com</strong> may be unavailable due
-              to technical issues with Google. Please contact me through my
-              personal address at <strong>efimshliamin@gmail.com</strong>.
-            </p>
-          </div>
-          <!-- End of added announcement -->
 
           <div class="contact-info">
             <div class="contact-item">
@@ -733,12 +684,5 @@
         <iframe id="popup-document" src="" frameborder="0"></iframe>
       </div>
     </div>
-    <footer class="footer">
-      <p>
-        &copy; 2024 shliamin.github.io All rights reserved.
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </p>
-      <p>Designed by Efim Shliamin</p>
-    </footer>
   </body>
 </html>

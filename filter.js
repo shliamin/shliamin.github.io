@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.querySelector('#project-modal .uk-modal-close-default').addEventListener('click', closeProjectDetails);
+
 
 
 UIkit.util.on('#project-modal', 'hide', closeProjectDetails);

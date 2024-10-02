@@ -24,7 +24,7 @@ body {
   padding: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  height: 220px;
+  height: 200px;
 }
 
 .achievement-item {
@@ -348,6 +348,7 @@ body {
 }
 
 .profile-container {
+  margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
 }
@@ -1149,22 +1150,21 @@ iframe {
   scrollbar-color: #cccccc transparent; /* Firefox */
 }
 
-/* Для браузеров на основе WebKit (Chrome, Safari, Edge) */
 .articles-list::-webkit-scrollbar {
-  width: 6px; /* Устанавливаем ширину скроллбара */
+  width: 6px; 
 }
 
 .articles-list::-webkit-scrollbar-track {
-  background: transparent; /* Фон скроллбара */
+  background: transparent; 
 }
 
 .articles-list::-webkit-scrollbar-thumb {
-  background-color: #cccccc; /* Цвет ползунка */
-  border-radius: 10px; /* Закругляем края */
+  background-color: #cccccc; 
+  border-radius: 10px; 
 }
 
 .articles-list::-webkit-scrollbar-thumb:hover {
-  background-color: #888888; /* Цвет ползунка при наведении */
+  background-color: #888888; 
 }
 
 .article-item {
