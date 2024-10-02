@@ -1,67 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Efim Shliamin</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css"
+    />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G2N3K97HJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1G2N3K97HJ"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-1G2N3K97HJ');
+      gtag("config", "G-1G2N3K97HJ");
     </script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NFHPZNCC');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NFHPZNCC");
+    </script>
     <!-- End Google Tag Manager -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9260340933763892"
-     crossorigin="anonymous"></script>
-</head>
-    
-<body>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9260340933763892"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFHPZNCC"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NFHPZNCC"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="language-switcher btn-group">
-        <button class="btn btn-secondary active" onclick="switchLanguage('en')" id="btn-en">EN</button>
-        <button class="btn btn-secondary" onclick="switchLanguage('de')" id="btn-de">DE</button>
+      <button
+        class="btn btn-secondary active"
+        onclick="switchLanguage('en')"
+        id="btn-en"
+      >
+        EN
+      </button>
+      <button
+        class="btn btn-secondary"
+        onclick="switchLanguage('de')"
+        id="btn-de"
+      >
+        DE
+      </button>
     </div>
     <div id="overlay"></div>
     <div class="container">
-        <aside class="sidebar">
-            <div class="profile-container">
-                <img src="images/efim.jpg" alt="Profile Picture" class="profile-picture">
-                <div class="note" id="note">
-                    <div class="note-text" id="note-text">
-                        👋...
-                    </div>
-                    <div class="note-tail"></div>
-                </div>
-                <h4 class="uk-comment-title">Efim Shliamin</h4>
-                <div class="uk-comment-body">
-                    <p id="degree-title">Computer Scientist, B.Sc.</p>
-                    <!--<p id="profession-title">Fullstack & Data Science</p>-->
-                </div>
-                <div class="mobile-icons">
-                    <div class="icon-row">
-                        <a href="https://medium.com/@efimshliamin"><img src="images/medium-3.svg" alt="Medium Icon" class="status-icon-mobile"></a>
-                        <a href="https://www.linkedin.com/in/efimshliamin/"><img src="images/linkedin-3.svg" alt="LinkedIn Icon" class="status-icon-mobile"></a>
-                        <a href="https://github.com/shliamin"><img src="images/square-github-2.svg" alt="GitHub Icon" class="status-icon-mobile"></a>
-                        <a href="https://x.com/EfimShliamin"><img src="images/square-x-twitter.svg" alt="X Icon" class="status-icon-mobile"></a>
-                        <!--<a href="https://threads.net/@efimslife"><img src="images/square-threads.svg" alt="Threads Icon" class="status-icon-mobile"></a>
+      <aside class="sidebar">
+        <div class="profile-container">
+          <img
+            src="images/efim.jpg"
+            alt="Profile Picture"
+            class="profile-picture"
+          />
+          <div class="note" id="note">
+            <div class="note-text" id="note-text">👋...</div>
+            <div class="note-tail"></div>
+          </div>
+          <h4 class="uk-comment-title">Efim Shliamin</h4>
+          <div class="uk-comment-body">
+            <p id="degree-title">Computer Scientist, B.Sc.</p>
+            <!--<p id="profession-title">Fullstack & Data Science</p>-->
+          </div>
+          <div class="mobile-icons">
+            <div class="icon-row">
+              <a href="https://medium.com/@efimshliamin"
+                ><img
+                  src="images/medium-3.svg"
+                  alt="Medium Icon"
+                  class="status-icon-mobile"
+              /></a>
+              <a href="https://www.linkedin.com/in/efimshliamin/"
+                ><img
+                  src="images/linkedin-3.svg"
+                  alt="LinkedIn Icon"
+                  class="status-icon-mobile"
+              /></a>
+              <a href="https://github.com/shliamin"
+                ><img
+                  src="images/square-github-2.svg"
+                  alt="GitHub Icon"
+                  class="status-icon-mobile"
+              /></a>
+              <a href="https://x.com/EfimShliamin"
+                ><img
+                  src="images/square-x-twitter.svg"
+                  alt="X Icon"
+                  class="status-icon-mobile"
+              /></a>
+              <!--<a href="https://threads.net/@efimslife"><img src="images/square-threads.svg" alt="Threads Icon" class="status-icon-mobile"></a>
                         <a href="https://vimeo.com"><img src="images/square-vimeo.svg" alt="Vimeo Icon" class="status-icon-mobile"></a>
                         <a href="#" id="initial-download-link-mobile">
                             <img src="images/file-solid.svg" alt="Resume Icon" class="status-icon-mobile">
@@ -71,52 +138,92 @@
                             <button id="english-button-mobile">English</button>
                             <button id="german-button-mobile">German</button>
                         </div> -->
-                    </div>
-                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('about-me')">About me</button></li>
-                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('my-work')">My work</button></li>
-                    <li><button class="uk-button uk-button-default small-button" onclick="showSection('contact')">Contact</button></li>
-                    <li>
-                        <button id="news-button" class="uk-button uk-button-default small-button" onclick="showSection('news')">
-                            <span class="n">N</span>
-                            <span class="e">E</span>
-                            <span class="w">W</span>
-                            <span class="s">S</span>
-                        </button>
-                    </li>
-                    
-                </ul>
-            </nav>
-            <div class="divider"></div> 
-            <div class="status">
-                <div class="status-item">
-                    <a href="https://medium.com/@efimshliamin">
-                        <img src="images/medium-3.svg" alt="Medium Icon" class="status-icon">
-                        <p id="p-title">Read me on Medium</p>
-                    </a>
-                </div>
-                <div class="status-item">
-                    <a href="https://www.linkedin.com/in/efimshliamin/">
-                        <img src="images/linkedin-3.svg" alt="LinkedIn Icon" class="status-icon">
-                        <p id="p-title">Follow me on LinkedIn</p>
-                    </a>
-                </div>
-                <div class="status-item">
-                    <a href="https://github.com/shliamin">
-                        <img src="images/square-github-2.svg" alt="GitHub Icon" class="status-icon">
-                        <p id="p-title">Check out my GitHub</p>
-                    </a>
-                </div>
-                <div class="status-item">
-                    <a href="https://x.com/EfimShliamin">
-                        <img src="images/square-x-twitter.svg" alt="X Icon" class="status-icon">
-                        <p id="p-title">Follow me on X</p>
-                    </a>
-                </div>
-                <!--
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <button
+                class="uk-button uk-button-default small-button"
+                onclick="showSection('about-me')"
+              >
+                About me
+              </button>
+            </li>
+            <li>
+              <button
+                class="uk-button uk-button-default small-button"
+                onclick="showSection('my-work')"
+              >
+                My work
+              </button>
+            </li>
+            <li>
+              <button
+                class="uk-button uk-button-default small-button"
+                onclick="showSection('contact')"
+              >
+                Contact
+              </button>
+            </li>
+            <li>
+              <button
+                id="news-button"
+                class="uk-button uk-button-default small-button"
+                onclick="showSection('news')"
+              >
+                <span class="n">N</span>
+                <span class="e">E</span>
+                <span class="w">W</span>
+                <span class="s">S</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="divider"></div>
+        <div class="status">
+          <div class="status-item">
+            <a href="https://medium.com/@efimshliamin">
+              <img
+                src="images/medium-3.svg"
+                alt="Medium Icon"
+                class="status-icon"
+              />
+              <p id="p-title">Read me on Medium</p>
+            </a>
+          </div>
+          <div class="status-item">
+            <a href="https://www.linkedin.com/in/efimshliamin/">
+              <img
+                src="images/linkedin-3.svg"
+                alt="LinkedIn Icon"
+                class="status-icon"
+              />
+              <p id="p-title">Follow me on LinkedIn</p>
+            </a>
+          </div>
+          <div class="status-item">
+            <a href="https://github.com/shliamin">
+              <img
+                src="images/square-github-2.svg"
+                alt="GitHub Icon"
+                class="status-icon"
+              />
+              <p id="p-title">Check out my GitHub</p>
+            </a>
+          </div>
+          <div class="status-item">
+            <a href="https://x.com/EfimShliamin">
+              <img
+                src="images/square-x-twitter.svg"
+                alt="X Icon"
+                class="status-icon"
+              />
+              <p id="p-title">Follow me on X</p>
+            </a>
+          </div>
+          <!--
                 <div class="status-item">
                     <a href="https://threads.net/@efimslife">
                         <img src="images/square-threads.svg" alt="Threads Icon" class="status-icon">
@@ -140,55 +247,71 @@
                         <button id="german-button-desktop">German</button>
                     </div>
                 </div>-->
-                
-                <div class="articles-section desktop-only">
-                    <h3>Latest Articles on Notion:</h3>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <a href="https://familiar-surf-4ec.notion.site/Java-Grundlagen-und-OOP-8c5cf3e361564b5580319c88c7e35ac2" target="_blank" >Java Grundlagen</a>
-                        </div>
-                        <div class="article-item">
-                            <a href="https://familiar-surf-4ec.notion.site/Spring-Boot-11cc1a5bfe1f4f56a71db9505cdc63c7" target="_blank" >Spring Boot</a>
-                        </div>
-                        <div class="article-item">
-                            <a href="https://familiar-surf-4ec.notion.site/Jenkins-88ec7d611b754853be5f586281ac37e9" target="_blank" >Jenkins</a>
-                        </div>
-                        <div class="article-item">
-                            <a href="https://familiar-surf-4ec.notion.site/React-c4a058765a0c4b4cbded6296786c43e3" target="_blank" >React</a>
-                        </div>
-                    </div>
-                </div>
 
+          <div class="articles-section desktop-only">
+            <h3>Latest Articles on Notion:</h3>
+            <div class="articles-list">
+              <div class="article-item">
+                <a
+                  href="https://familiar-surf-4ec.notion.site/Java-Grundlagen-und-OOP-8c5cf3e361564b5580319c88c7e35ac2"
+                  target="_blank"
+                  >Java Grundlagen</a
+                >
+              </div>
+              <div class="article-item">
+                <a
+                  href="https://familiar-surf-4ec.notion.site/Spring-Boot-11cc1a5bfe1f4f56a71db9505cdc63c7"
+                  target="_blank"
+                  >Spring Boot</a
+                >
+              </div>
+              <div class="article-item">
+                <a
+                  href="https://familiar-surf-4ec.notion.site/Jenkins-88ec7d611b754853be5f586281ac37e9"
+                  target="_blank"
+                  >Jenkins</a
+                >
+              </div>
+              <div class="article-item">
+                <a
+                  href="https://familiar-surf-4ec.notion.site/React-c4a058765a0c4b4cbded6296786c43e3"
+                  target="_blank"
+                  >React</a
+                >
+              </div>
             </div>
-            <div class="sidebar-image">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9260340933763892"
-                    crossorigin="anonymous"></script>
-                <!-- ads -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-9260340933763892"
-                    data-ad-slot="9788072404"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </aside>
+          </div>
+        </div>
+        <div class="sidebar-image">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9260340933763892"
+            crossorigin="anonymous"
+          ></script>
+          <!-- ads -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-9260340933763892"
+            data-ad-slot="9788072404"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </aside>
 
-        <main class="content">
-            <section id="about-me" class="section">
-
-                
-
-               <!--
+      <main class="content">
+        <section id="about-me" class="section">
+          <!--
                 <a href="https://shliamin.github.io/resume_analyzer" target="_blank" style="color: #333; font-size: 16px; font-weight: bold; text-decoration: none; padding-left: 10%;">
                     Discover our compatibility with my <span style="font-weight: bold; color: #999999; text-decoration: underline;">Work Fit Analysis Tool</span> 🔍 💼.
                 </a>
                 -->
-                
-                
-                <!--
+
+          <!--
                 <div id="content-docs">
                     
                     <div style="display: flex; justify-content: space-around; margin: 0 0 10px 0;">
@@ -210,492 +333,393 @@
                     </div>
                 </div>
                 -->
-                
-                
-                
-                
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                
-                
-                <div id="content-en">
-                    <p><strong>About me:</strong></p>
-                    <p>I am a Computer Scientist with a B.Sc. in Computer Science from the University of Applied Sciences Berlin and previous studies in Electrical Engineering and IT Security at Ruhr University Bochum. Since 2019, I have been engaged in software development, cloud computing, DevOps, and data science, completing internships at Rhenus Logistics, the Data Centre of the University of Applied Sciences Berlin, participating in the Mercedes-Benz Innovation Challenge, and working for the Institute of Geographic Information Technology, alongside freelancing for various clients. I focus on solving business, scientific, and social problems through scalable and efficient IT solutions, contributing to the community through open-source projects and technical writing.</p>
-                    
-                    
-                    <p><strong>Certificates:</strong></p>
-                    <div style="width: 80%; margin: 0 auto; overflow: hidden; padding-bottom: 20px;">
-                        <div class="certificate-carousel" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px 10px; scroll-behavior: smooth;">
-                          
-                    
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/problem_solving_basic certificate hr.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
 
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/frontend_developer_react certificate-hr.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div id="content-en">
+            <p><strong>About me:</strong></p>
+            <p>
+              I am a Computer Scientist with a B.Sc. in Computer Science from
+              the University of Applied Sciences Berlin and previous studies in
+              Electrical Engineering and IT Security at Ruhr University Bochum.
+              Since 2019, I have been engaged in software development, cloud
+              computing, DevOps, and data science, completing internships at
+              Rhenus Logistics, the Data Centre of the University of Applied
+              Sciences Berlin, participating in the Mercedes-Benz Innovation
+              Challenge, and working for the Institute of Geographic Information
+              Technology, alongside freelancing for various clients. I focus on
+              solving business, scientific, and social problems through scalable
+              and efficient IT solutions, contributing to the community through
+              open-source projects and technical writing.
+            </p>
+          </div>
 
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/ASP.NET.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div id="content-de" style="display: none">
+            <p><strong>Über mich:</strong></p>
+            <p>
+              Ich bin Informatiker mit einem B.Sc. in Informatik von der
+              HTW-Berlin und habe zuvor Elektrotechnik und IT-Sicherheit an der
+              Ruhr-Universität Bochum studiert. Seit 2019 arbeite ich in der
+              Software-Entwicklung, Cloud Computing, DevOps und Data Science.
+              Ich habe Praktika bei Rhenus Logistics, im Rechenzentrum der
+              HTW-Berlin absolviert, am Mercedes-Benz Innovation Challenge
+              teilgenommen und für das Institut für Geographische
+              Informationstechnologie gearbeitet. Parallel dazu war ich als
+              Freelancer tätig. Mein Fokus liegt auf der Lösung von
+              geschäftlichen, wissenschaftlichen und sozialen Problemen durch
+              IT-Lösungen. Außerdem unterstütze ich die Community durch
+              Open-Source-Projekte und technische Beiträge.
+            </p>
+          </div>
 
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/ISO 27001 Zertifikat Udemy.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div style="display: flex; align-items: center;">
+            <p id="certificates-title-en" style="padding-right: 20px !important; margin-bottom: 0px;"><strong>Certificates:</strong></p>
+            <p id="certificates-title-de" style="padding-right: 20px !important; margin-bottom: 0px; display: none;"><strong>Zeugnisse:</strong></p>
+            <select id="category-filter-certificates" style="padding: 5px 10px; font-size: 16px;">
+                <option value="all">All</option>
+                <option value="Udemy">Udemy</option>
+                <option value="HackerRank">HackerRank</option>
+                <option value="Work">Work</option>
+                <option value="Education">Education</option>
+            </select>
+          </div>
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/Mercedes-Benz Certificate.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div
+            id="achievement-container"
+            style="
+              width: 80%;
+              margin: 0 auto;
+              overflow: hidden;
+              padding-bottom: 20px;
+            "
+          >
+            <div
+              class="achievement-carousel"
+              style="
+                display: flex;
+                overflow-x: auto;
+                gap: 20px;
+                padding: 10px 10px;
+                scroll-behavior: smooth;
+              "
+            ></div>
+          </div>
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/B.Sc. Degree Certificate - HTW Berlin.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div id="content-en-2">
+            <p><strong>Key Achievements:</strong></p>
+            <ul>
+              <li>
+                Participated in the Mercedes-Benz Innovation Challenge, where I
+                helped create an IT solution to attract younger clients, earning
+                a recommendation letter and a prize.
+              </li>
+              <li>
+                Developed a software pipeline that improved genome assembly
+                quality, used by students in their dissertations.
+              </li>
+              <li>
+                Contributed to the development of a university web portal used
+                by 14,000 students.
+              </li>
+              <li>
+                Assisted Rhenus Logistics in passing an audit by creating
+                technical documentation on Data Protection Policies and Data
+                Security Management.
+              </li>
+              <li>
+                Supported the Institute of Geographic Information Technology in
+                developing proprietary technologies, reducing dependency on
+                foreign software licenses.
+              </li>
+              <li>
+                Created numerous web and cloud-based applications, many of which
+                are open source and widely adopted by the community.
+              </li>
+            </ul>
+            <p style="margin-bottom: 40px">
+              I am interested in long-term full-time collaborations and always
+              strive to provide value, whether through direct collaboration or
+              by offering insights into IT challenges your organization might
+              face. Please visit the CONTACT section to get in touch, and feel
+              free to explore my NEWS section for the latest in IT.
+            </p>
+          </div>
 
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/The MERN Full Stack Certificate - Udemy.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div id="content-de-2" style="display: none">
+            <p><strong>Wichtige Erfolge:</strong></p>
+            <ul>
+              <li>
+                An der Innovation Challenge von Mercedes-Benz teilgenommen, bei
+                der ich an der Entwicklung einer IT-Lösung zur Gewinnung
+                jüngerer Kunden beteiligt war und dafür ein Empfehlungsschreiben
+                sowie einen Preis erhalten habe.
+              </li>
+              <li>
+                Entwicklung einer Software-Pipeline, die die Qualität der
+                Genomassemblierung verbessert hat und von Studierenden in ihren
+                Dissertationen verwendet wird.
+              </li>
+              <li>
+                Beitrag zur Entwicklung eines Universitätsportals, das von
+                14.000 Studierenden genutzt wird.
+              </li>
+              <li>
+                Rhenus Logistics bei der erfolgreichen Durchführung einer
+                Prüfung unterstützt, indem ich technische Dokumentationen zu
+                Datenschutzrichtlinien und Sicherheitsmanagement erstellt habe.
+              </li>
+              <li>
+                Das Institut für Geographische Informationstechnologie bei der
+                Entwicklung eigener Technologien unterstützt und so die
+                Abhängigkeit von ausländischen Softwarelizenzen reduziert.
+              </li>
+              <li>
+                Erstellung zahlreicher Web- und Cloud-basierter Anwendungen, von
+                denen viele Open-Source sind und in der Community große
+                Akzeptanz finden.
+              </li>
+            </ul>
+            <p style="margin-bottom: 40px">
+              Ich bin an langfristigen Vollzeit-Kooperationen interessiert und
+              strebe stets danach, Mehrwert zu schaffen, sei es durch direkte
+              Zusammenarbeit oder durch Einblicke in IT-Herausforderungen, mit
+              denen Ihr Unternehmen konfrontiert sein könnte. Besuchen Sie den
+              Bereich CONTACT, um mit mir in Verbindung zu treten, und schauen
+              Sie sich gerne den NEWS-Bereich an, um sich über die neuesten
+              Entwicklungen in der IT zu informieren.
+            </p>
+          </div>
+        </section>
 
-                          <!-- Second Certificate (Frontend Developer React Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="frontend_developer_react certificate.pdf" target="_blank">
-                              <img src="images/certificates/Spring Cloud Certificate - Udemy.jpg" alt="Frontend Developer React Certificate Thumbnail" width="220" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">Frontend Developer React Certificate</p>
-                              <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+        <section id="my-work" class="section">
+          <p id="github-stats-text">Statistics of my GitHub repositories:</p>
+          <div id="github-stats" class="github-stats-info"></div>
+          <p id="welcome-en">
+            <strong>Welcome to my personal showcase!</strong> Each project is
+            deployed on Heroku with Docker or hosted on GitHub Pages, with
+            open-source code. Explore, interact, and see how I solve real-world
+            problems.
+          </p>
+          <!-- Deutsch -->
+          <p id="welcome-de" style="display: none">
+            <strong>Willkommen in meinem Portfolio! </strong> Jedes Projekt ist
+            auf Heroku mit Docker oder auf GitHub Pages bereitgestellt und
+            enthält Open-Source-Code. Erkunden, interagieren und sehen Sie, wie
+            ich Probleme löse.
+          </p>
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/Internship Certificate - HTW Berlin.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <div class="filters">
+            <select id="tech-fields" class="uk-select">
+              <option value="">Select Tech Field</option>
+              <option value="full-stack">Fullstack</option>
+              <option value="data-science">Data Science & ML</option>
+            </select>
+            <select id="tech-stack" class="uk-select" disabled>
+              <option value="">Select Tech Stack</option>
+            </select>
+          </div>
+          <div
+            id="project-count"
+            style="color: #b0b0b0; text-align: center; padding-bottom: 15px"
+          ></div>
+          <div class="row projects-grid" id="projects-grid">
+            <!-- Projects -->
+          </div>
+          <p id="no-results-message" style="display: none">
+            Nothing found here (yet), maybe try another option or enjoy a coffee
+            break! ☕
+          </p>
+        </section>
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/Full Stack Coding Certificate - Le Wagon.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+        <section id="contact" class="section">
+          <p id="new-opportunities-en">
+            <strong>I am always open to new </strong>opportunities and
+            collaborations. Whether you have a question, need my expertise, or
+            just want to connect, feel free to reach out through any of the
+            following methods:
+          </p>
+          <!-- Deutsch -->
+          <p id="new-opportunities-de" style="display: none">
+            <strong>Ich bin immer offen für neue </strong>Möglichkeiten und
+            Kooperationen. Egal, ob Sie eine Frage haben, meine Expertise
+            benötigen oder einfach nur in Kontakt treten möchten, zögern Sie
+            nicht, sich über eine der folgenden Methoden zu melden:
+          </p>
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/Internship Certificate - Rhenus Logistics.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
+          <!-- Start of added announcement -->
+          <div
+            class="alert"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 20px auto;
+              max-width: 500px;
+            "
+          >
+            <img
+              src="images/email-important-information.jpeg"
+              alt="Important Email Information"
+              style="width: 50%; height: auto; margin-right: 10px"
+            />
+            <p style="flex: 1; text-align: left">
+              <strong>Important:</strong> The previous email address
+              <strong>shliamin.career@gmail.com</strong> may be unavailable due
+              to technical issues with Google. Please contact me through my
+              personal address at <strong>efimshliamin@gmail.com</strong>.
+            </p>
+          </div>
+          <!-- End of added announcement -->
 
-                          <!-- First Certificate (B.Sc. Degree Certificate) -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <img src="images/certificates/German C1 Certificate - Eurasia Institute.jpg" alt="B.Sc. Degree Certificate Thumbnail" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
-                    
-                        </div>
-                    </div>
-                    
-                    <style>
-                      .certificate-item {
-                        position: relative;
-                      }
-                    
-                      .certificate-overlay {
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 50%;
-                        background-color: rgba(0, 0, 0, 0.6);
-                        color: white;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                      }
-                    
-                      .certificate-item:hover .certificate-overlay {
-                        opacity: 1;
-                      }
-                    
-                      .certificate-item img {
-                        transition: transform 0.3s ease;
-                      }
-                    
-                      .certificate-item:hover img {
-                        transform: scale(1.05);
-                      }
-
-                    </style>
-                    
-
-                        
-
-                    <p><strong>Key Achievements:</strong></p>
-                    <ul>
-                        <li >Participated in an Innovation Challenge with Mercedes-Benz, where I helped create an IT solution to attract younger clients, earning a recommendation letter and a prize.</li>
-                        <li >Developed a software pipeline that improved genome assembly quality, used by students in their dissertations.</li>
-                        <li >Contributed to the development of a university web portal used by 14,000 students.</li>
-                        <li >Assisted Rhenus Logistics in passing an audit by creating technical documentation on Data Protection Policies and Data Security Management.</li>
-                        <li >Supported the Institute of Geographic Information Technology in developing proprietary technologies, reducing dependency on foreign software licenses.</li>
-                        <li >Created numerous web and cloud-based applications, many of which are open source and widely adopted by the community.</li>
-                    </ul>
-                    <p style="margin-bottom: 40px;">I am interested in long-term full-time collaborations and always strive to provide value, whether through direct collaboration or by offering insights into IT challenges your organization might face. Please visit the CONTACT section to get in touch, and feel free to explore my NEWS section for the latest in IT.</p>
-                </div> 
-
-
-                <!-- Deutsch -->
-                <div id="content-de" style="display: none;">
-                    <p><strong>Über mich:</strong></p>
-                    <p>Ich bin Informatiker mit einem B.Sc. in Informatik von der HTW-Berlin und habe zuvor Elektrotechnik und IT-Sicherheit an der Ruhr-Universität Bochum studiert. Seit 2019 arbeite ich in der Software-Entwicklung, Cloud Computing, DevOps und Data Science. Ich habe Praktika bei Rhenus Logistics, im Rechenzentrum der HTW-Berlin absolviert, am Mercedes-Benz Innovation Challenge teilgenommen und für das Institut für Geographische Informationstechnologie gearbeitet. Parallel dazu war ich als Freelancer tätig. Mein Fokus liegt auf der Lösung von geschäftlichen, wissenschaftlichen und sozialen Problemen durch IT-Lösungen. Außerdem unterstütze ich die Community durch Open-Source-Projekte und technische Beiträge.</p>
-
-
-                    
-                    <p><strong>Zeugnisse:</strong></p>
-                    
-                      
-                    <div style="width: 80%; margin: 0 auto; overflow: hidden; padding-bottom: 20px;">
-                        <div class="certificate-carousel" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px 10px; scroll-behavior: smooth;">
-                          <!-- First Certificate -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <embed src="B.Sc. Degree Certificate - HTW Berlin.pdf" type="application/pdf" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
-    
-                            <!-- Second -->
-                            <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                                <a href="frontend_developer_react certificate.pdf" target="_blank">
-                                  <embed src="frontend_developer_react certificate.pdf" type="application/pdf" width="170" height="170" style="box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                                </a>
-                                <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                                  <p style="margin: 5px 5px; font-size: 11px;">frontend_developer_react certificate</p>
-                                  <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                                </div>
-                            </div>
-                    
-    
-                               
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <embed src="B.Sc. Degree Certificate - HTW Berlin.pdf" type="application/pdf" width="120" height="170" style="box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style="margin: 5px 0; font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
-
-                          <!-- First Certificate -->
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <embed src="B.Sc. Degree Certificate - HTW Berlin.pdf" type="application/pdf" width="120" height="170" style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style=" font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
-    
-                            <!-- Second -->
-                            <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                                <a href="frontend_developer_react certificate.pdf" target="_blank">
-                                  <embed src="frontend_developer_react certificate.pdf" type="application/pdf" width="170" height="170" style="box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                                </a>
-                                <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                                  <p style="margin: 5px 5px; font-size: 11px;">frontend_developer_react certificate</p>
-                                  <a href="frontend_developer_react certificate.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                                </div>
-                            </div>
-                    
-    
-                               
-                          <div class="certificate-item" style="position: relative; min-width: 120px; flex-shrink: 0;">
-                            <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank">
-                              <embed src="B.Sc. Degree Certificate - HTW Berlin.pdf" type="application/pdf" width="120" height="170" style="box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                            </a>
-                            <div class="certificate-overlay" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-                              <p style="margin: 5px 0; font-size: 12px;">B.Sc. Degree Certificate</p>
-                              <a href="B.Sc. Degree Certificate - HTW Berlin.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-size: 12px;">Open Full Size</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
-                
-                   
-                      
-                      <script>
-                        document.querySelectorAll('.certificate-item').forEach(item => {
-                          const overlay = item.querySelector('.certificate-overlay');
-                          const embed = item.querySelector('embed');
-                          
-                          
-                          item.addEventListener('mouseenter', () => {
-                            overlay.style.opacity = '1';
-                            embed.style.transform = 'scale(1.05)'; 
-                          });
-                      
-                          
-                          item.addEventListener('mouseleave', () => {
-                            overlay.style.opacity = '0';
-                            embed.style.transform = 'scale(1)'; 
-                          });
-                        });
-                      </script>
-                    
-    
-                      
-                    <p><strong>Wichtige Erfolge:</strong></p>
-                    <ul>
-                        <li>An einer Innovation Challenge von Mercedes-Benz teilgenommen, bei der ich an der Entwicklung einer IT-Lösung zur Gewinnung jüngerer Kunden beteiligt war und dafür ein Empfehlungsschreiben sowie einen Preis erhalten habe.</li>
-                        <li>Entwicklung einer Software-Pipeline, die die Qualität der Genomassemblierung verbessert hat und von Studierenden in ihren Dissertationen verwendet wird.</li>
-                        <li>Beitrag zur Entwicklung eines Universitätsportals, das von 14.000 Studierenden genutzt wird.</li>
-                        <li>Rhenus Logistics bei der erfolgreichen Durchführung einer Prüfung unterstützt, indem ich technische Dokumentationen zu Datenschutzrichtlinien und Sicherheitsmanagement erstellt habe.</li>
-                        <li>Das Institut für Geographische Informationstechnologie bei der Entwicklung eigener Technologien unterstützt und so die Abhängigkeit von ausländischen Softwarelizenzen reduziert.</li>
-                        <li>Erstellung zahlreicher Web- und Cloud-basierter Anwendungen, von denen viele Open-Source sind und in der Community große Akzeptanz finden.</li>
-                    </ul>
-                
-                    <p>Ich bin an langfristigen Vollzeit-Kooperationen interessiert und strebe stets danach, Mehrwert zu schaffen, sei es durch direkte Zusammenarbeit oder durch Einblicke in IT-Herausforderungen, mit denen Ihr Unternehmen konfrontiert sein könnte. Besuchen Sie den Bereich CONTACT, um mit mir in Verbindung zu treten, und schauen Sie sich gerne den NEWS-Bereich an, um sich über die neuesten Entwicklungen in der IT zu informieren.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <a href="https://wa.me/4917645278124" target="_blank">
+                <img
+                  src="images/square-whatsapp.svg"
+                  alt="Phone Icon"
+                  class="contact-icon"
+                />
+                <div class="contact-detail-container">
+                  <p id="p-title" class="contact-detail">+49 176 45278124</p>
+                  <p id="p-title" class="contact-label">Phone (WhatsApp)</p>
                 </div>
-                
-                
-                
-                
-            </section>
-
-            <section id="my-work" class="section">
-                <p id="github-stats-text">Statistics of my GitHub repositories:</p>
-                <div id="github-stats" class="github-stats-info"></div>
-                <p id="welcome-en"><strong>Welcome to my personal showcase!</strong> Each project is deployed on Heroku with Docker or hosted on GitHub Pages, with open-source code. Explore, interact, and see how I solve real-world problems.</p>
-                <!-- Deutsch -->
-                <p id="welcome-de" style="display: none;"><strong>Willkommen in meinem Portfolio! </strong> Jedes Projekt ist auf Heroku mit Docker oder auf GitHub Pages bereitgestellt und enthält Open-Source-Code. Erkunden, interagieren und sehen Sie, wie ich Probleme löse.</p>
-
-                <div class="filters">
-                    <select id="tech-fields" class="uk-select">
-                        <option value="">Select Tech Field</option>
-                        <option value="full-stack">Fullstack</option>
-                        <option value="data-science">Data Science & ML</option>
-                    </select>
-                    <select id="tech-stack" class="uk-select" disabled>
-                        <option value="">Select Tech Stack</option>
-                    </select>
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="mailto:efim.career@gmail.com">
+                <img
+                  src="images/envelope-solid-2.svg"
+                  alt="Email Icon"
+                  class="contact-icon"
+                />
+                <div class="contact-detail-container">
+                  <p id="p-title" class="contact-detail">
+                    efimshliamin@gmail.com
+                  </p>
+                  <p id="p-title" class="contact-label">Email</p>
                 </div>
-                <div id="project-count" style="color: #b0b0b0; text-align: center; padding-bottom: 15px;"></div>
-                <div class="row projects-grid" id="projects-grid">
-                    <!-- Projects -->
+              </a>
+            </div>
+            <div class="contact-item">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Berlin%2C+10243%2C+Germany"
+                target="_blank"
+              >
+                <img
+                  src="images/location-dot-solid.svg"
+                  alt="Address Icon"
+                  class="contact-icon"
+                />
+                <div class="contact-detail-container">
+                  <p id="p-title" class="contact-detail">
+                    Berlin, 10243, Germany
+                  </p>
+                  <p id="p-title" class="contact-label">Address</p>
                 </div>
-                <p id="no-results-message" style="display:none;">Nothing found here (yet), maybe try another option or enjoy a coffee break! ☕</p>
-            </section>
-            
+              </a>
+            </div>
+          </div>
 
-            <section id="contact" class="section">
-                <p id="new-opportunities-en"><strong>I am always open to new </strong>opportunities and collaborations. Whether you have a question, need my expertise, or just want to connect, feel free to reach out through any of the following methods:</p>
-                <!-- Deutsch -->
-                <p id="new-opportunities-de" style="display: none;"><strong>Ich bin immer offen für neue </strong>Möglichkeiten und Kooperationen. Egal, ob Sie eine Frage haben, meine Expertise benötigen oder einfach nur in Kontakt treten möchten, zögern Sie nicht, sich über eine der folgenden Methoden zu melden:</p>
-                
-                <!-- Start of added announcement -->
-                <div class="alert" style="display: flex; align-items: center; justify-content: center; margin: 20px auto; max-width: 500px;">
-                    <img src="images/email-important-information.jpeg" alt="Important Email Information" style="width: 50%; height: auto; margin-right: 10px;">
-                    <p style="flex: 1; text-align: left;"><strong>Important:</strong> The previous email address <strong>shliamin.career@gmail.com</strong> may be unavailable due to technical issues with Google. Please contact me through my personal address at <strong>efimshliamin@gmail.com</strong>.</p>
-                </div>
-                <!-- End of added announcement -->
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <a href="https://wa.me/4917645278124" target="_blank">
-                            <img src="images/square-whatsapp.svg" alt="Phone Icon" class="contact-icon">
-                            <div class="contact-detail-container">
-                                <p id="p-title" class="contact-detail">+49 176 45278124</p>
-                                <p id="p-title" class="contact-label">Phone (WhatsApp)</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="mailto:efim.career@gmail.com">
-                            <img src="images/envelope-solid-2.svg" alt="Email Icon" class="contact-icon">
-                            <div class="contact-detail-container">
-                                <p id="p-title" class="contact-detail">efimshliamin@gmail.com</p>
-                                <p id="p-title" class="contact-label">Email</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Berlin%2C+10243%2C+Germany" target="_blank">
-                            <img src="images/location-dot-solid.svg" alt="Address Icon" class="contact-icon">
-                            <div class="contact-detail-container">
-                                <p id="p-title" class="contact-detail">Berlin, 10243, Germany</p>
-                                <p id="p-title" class="contact-label">Address</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+          <p id="current-location-en">
+            <strong
+              >I currently live in Berlin and would enjoy working here</strong
+            >, but I am flexible and open to relocating if needed. I am also
+            ready for business trips.
+          </p>
+          <!-- Deutsch -->
+          <p id="current-location-de" style="display: none">
+            <strong
+              >Ich wohne derzeit in Berlin und würde gerne hier arbeiten</strong
+            >, aber ich bin flexibel und bereit, bei Bedarf umzuziehen. Ich bin
+            auch für Geschäftsreisen bereit.
+          </p>
 
-                <p id="current-location-en"><strong>I currently live in Berlin and would enjoy working here</strong>, but I am flexible and open to relocating if needed. I am also ready for business trips. </p>
-                <!-- Deutsch -->
-                <p id="current-location-de" style="display: none;"><strong>Ich wohne derzeit in Berlin und würde gerne hier arbeiten</strong>, aber ich bin flexibel und bereit, bei Bedarf umzuziehen. Ich bin auch für Geschäftsreisen bereit. </p>
+          <p id="schedule-meeting-en">
+            <strong
+              >If you would like to schedule a video conference with me</strong
+            >, please use the Calendly widget below. It allows you to book a
+            time that suits you, and you'll receive a confirmation email with
+            all the details:
+          </p>
+          <!-- Deutsch -->
+          <p id="schedule-meeting-de" style="display: none">
+            <strong
+              >Wenn Sie ein Videokonferenz mit mir vereinbaren möchten</strong
+            >, verwenden Sie bitte das untenstehende Calendly-Widget. Es
+            ermöglicht Ihnen, eine Zeit zu buchen, die Ihnen passt, und Sie
+            erhalten eine Bestätigungs-E-Mail mit allen Details:
+          </p>
 
-                <p id="schedule-meeting-en" ><strong>If you would like to schedule a video conference with me</strong>, please use the Calendly widget below. It allows you to book a time that suits you, and you'll receive a confirmation email with all the details:</p>
-                <!-- Deutsch -->
-                <p id="schedule-meeting-de" style="display: none;"><strong>Wenn Sie ein Videokonferenz mit mir vereinbaren möchten</strong>, verwenden Sie bitte das untenstehende Calendly-Widget. Es ermöglicht Ihnen, eine Zeit zu buchen, die Ihnen passt, und Sie erhalten eine Bestätigungs-E-Mail mit allen Details:</p>
+          <!-- Calendly link widget for mobile -->
+          <div id="calendly-link" class="mobile-only">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/efimshliamin/conference-with-efim?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e2f4f"
+              style="min-width: 320px; height: 700px"
+            ></div>
+          </div>
 
-                <!-- Calendly link widget for mobile -->
-                <div id="calendly-link" class="mobile-only">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/efimshliamin/conference-with-efim?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1e2f4f" style="min-width:320px;height:700px;"></div>
-                </div>
+          <!-- Calendly inline widget for desktop -->
+          <div id="calendly-widget" class="calendly-container desktop-only">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/efimshliamin/conference-with-efim?hide_gdpr_banner=1&primary_color=1e2f4f"
+              style="min-width: 320px; height: 700px"
+            ></div>
+          </div>
+        </section>
 
-                
+        <section id="news" class="section">
+          <div id="filter-container">
+            <form id="filter-form">
+              <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="update">Updates</option>
+                <option value="milestone">Milestones</option>
+                <option value="project">Projects</option>
+                <option value="news:all">News: All</option>
+                <option value="news:AI & Data Science">
+                  News: AI & Data Science
+                </option>
+                <option value="news:Fullstack">News: Fullstack</option>
+                <option value="news:Big Data">News: Big Data</option>
+                <option value="news:Quantum Computing">
+                  News: Quantum Computing
+                </option>
+                <option value="news:Blockchain">News: Blockchain</option>
+                <option value="news:Cloud Computing">
+                  News: Cloud Computing
+                </option>
+              </select>
 
-           
+              <select id="author-filter">
+                <option value="all">All Authors</option>
+                <!-- Author options will be populated dynamically -->
+              </select>
 
-                <!-- Calendly inline widget for desktop -->
-                <div id="calendly-widget" class="calendly-container desktop-only">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/efimshliamin/conference-with-efim?hide_gdpr_banner=1&primary_color=1e2f4f" style="min-width:320px;height:700px;"></div>
-                </div>
+              <div class="date-filter-group">
+                <span class="date-badge">From</span>
+                <input type="date" id="date-start-filter" />
+              </div>
+              <div class="date-filter-group">
+                <span class="date-badge">To</span>
+                <input type="date" id="date-end-filter" />
+              </div>
+            </form>
+          </div>
 
-                
+          <div id="news-container">
+            <ul id="news-list">
+              <!-- News items will be populated dynamically -->
+            </ul>
+          </div>
+        </section>
 
-                
-                
-            </section>
-
-            <section id="news" class="section">
-                <div id="filter-container">
-                    <form id="filter-form">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="update">Updates</option>
-                            <option value="milestone">Milestones</option>
-                            <option value="project">Projects</option>
-                            <option value="news:all">News: All</option>
-                            <option value="news:AI & Data Science">News: AI & Data Science</option>
-                            <option value="news:Fullstack">News: Fullstack</option>
-                            <option value="news:Big Data">News: Big Data</option>
-                            <option value="news:Quantum Computing">News: Quantum Computing</option>
-                            <option value="news:Blockchain">News: Blockchain</option>
-                            <option value="news:Cloud Computing">News: Cloud Computing</option>
-                        </select>
-                        
-            
-                        <select id="author-filter">
-                            <option value="all">All Authors</option>
-                            <!-- Author options will be populated dynamically -->
-                        </select>
-                        
-                        
-                            <div class="date-filter-group">
-                                <span class="date-badge">From</span>
-                                <input type="date" id="date-start-filter">
-                            </div>
-                            <div class="date-filter-group">
-                                <span class="date-badge">To</span>
-                                <input type="date" id="date-end-filter">
-                            </div>
-                        
-                    </form>
-                </div>
-            
-                <div id="news-container">
-                    <ul id="news-list">
-                        <!-- News items will be populated dynamically -->
-                    </ul>
-                </div>
-            </section>
-            
-            
-            
-            
-            
-
-            <!-- Calendly widget scripts -->
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-            
-        </main>
+        <!-- Calendly widget scripts -->
+        <script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          type="text/javascript"
+          async
+        ></script>
+      </main>
     </div>
     <div id="project-modal-placeholder"></div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -704,14 +728,17 @@
 
     <!-- Pop-up container -->
     <div id="popup-container" class="popup-container">
-        <div class="popup-content">
-            <span id="popup-close" class="popup-close">&times;</span>
-            <iframe id="popup-document" src="" frameborder="0"></iframe>
-        </div>
+      <div class="popup-content">
+        <span id="popup-close" class="popup-close">&times;</span>
+        <iframe id="popup-document" src="" frameborder="0"></iframe>
+      </div>
     </div>
     <footer class="footer">
-        <p>&copy; 2024 shliamin.github.io All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
-        <p>Designed by Efim Shliamin</p>
+      <p>
+        &copy; 2024 shliamin.github.io All rights reserved.
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </p>
+      <p>Designed by Efim Shliamin</p>
     </footer>
-</body>
+  </body>
 </html>

@@ -214,6 +214,8 @@ function switchLanguage(lang) {
         document.getElementById('btn-en').classList.add('active');
         document.getElementById('content-en').style.display = 'block';
         document.getElementById('content-de').style.display = 'none';
+        document.getElementById('content-en-2').style.display = 'block';
+        document.getElementById('content-de-2').style.display = 'none';
         document.getElementById('welcome-en').style.display = 'block';
         document.getElementById('welcome-de').style.display = 'none';
         document.getElementById('new-opportunities-en').style.display = 'block';
@@ -229,11 +231,17 @@ function switchLanguage(lang) {
         document.getElementById('tool-info-en').style.display = 'block';
         document.getElementById('tool-info-de').style.display = 'none';
 
+        document.getElementById('certificates-title-en').style.display = 'block';
+        document.getElementById('certificates-title-de').style.display = 'none';
+
+
         
     } else if (lang === 'de') {
         document.getElementById('btn-de').classList.add('active');
         document.getElementById('content-en').style.display = 'none';
         document.getElementById('content-de').style.display = 'block';
+        document.getElementById('content-en-2').style.display = 'none';
+        document.getElementById('content-de-2').style.display = 'block';
         document.getElementById('welcome-en').style.display = 'none';
         document.getElementById('welcome-de').style.display = 'block';
         document.getElementById('new-opportunities-en').style.display = 'none';
@@ -250,7 +258,9 @@ function switchLanguage(lang) {
         document.getElementById('tool-info-en').style.display = 'none';
         document.getElementById('tool-info-de').style.display = 'block';
 
-    
+
+        document.getElementById('certificates-title-en').style.display = 'none';
+        document.getElementById('certificates-title-de').style.display = 'block';
     }
 }
 
@@ -552,3 +562,69 @@ document.addEventListener("DOMContentLoaded", function() {
     const formattedDate = `${day}.${month}.${year}`;
     document.querySelector('.date-stamp').textContent = formattedDate;
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    let certificates = []; // To store the fetched data
+
+    fetch('certificates.json')
+        .then(response => response.json())
+        .then(data => {
+            certificates = data;
+            displayCertificates(certificates); // Initially display all certificates
+        })
+        .catch(error => console.error('Error fetching certificates:', error));
+
+    const container = document.querySelector('.achievement-carousel');
+    const filterDropdown = document.getElementById('category-filter-certificates');
+
+    // Function to display certificates in the carousel
+    function displayCertificates(certificates) {
+        if (!container) {
+            console.error('Container not found!');
+            return;
+        }
+
+        // Clear the current items
+        container.innerHTML = '';
+
+        // Sort certificates by date in descending order
+        certificates.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        certificates.forEach(certificate => {
+            const achievementItem = document.createElement('div');
+            achievementItem.classList.add('achievement-item');
+            achievementItem.style.cssText = 'position: relative; min-width: 120px; flex-shrink: 0;';
+
+            const anchor = document.createElement('a');
+            anchor.href = certificate.link;
+            anchor.target = '_blank'; // Open in a new tab
+
+            const image = document.createElement('img');
+            image.src = certificate.image;
+            image.alt = certificate.name + ' Thumbnail';
+            image.style.cssText = 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; max-height: 100%; width: 100%;';
+            anchor.appendChild(image);
+
+            achievementItem.appendChild(anchor);
+            container.appendChild(achievementItem);
+        });
+    }
+
+    // Event listener for the filter dropdown
+    filterDropdown.addEventListener('change', function () {
+        const selectedCategory = filterDropdown.value;
+
+        // Filter the certificates based on the selected category
+        const filteredCertificates = selectedCategory === 'all'
+            ? certificates
+            : certificates.filter(certificate => certificate.category === selectedCategory);
+
+        // Redisplay the filtered certificates
+        displayCertificates(filteredCertificates);
+    });
+});
+
+
+

@@ -1,0 +1,132 @@
+[
+    {
+        "name": "Spring Boot Testing",
+        "image": "images/certificates/Spring-Boot-Testing.jpg",
+        "link": "https://www.udemy.com/certificate/UC-afbcb2c8-a78e-4372-9843-92b2932e47e8/",
+        "date": "2024-10-02",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Problem Solving (Basic) - HackerRank",
+        "image": "images/certificates/problem_solving_basic certificate hr.jpg",
+        "link": "https://www.hackerrank.com/certificates/570541557929",
+        "date": "2024-09-28",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "Frontend Developer (React) - HackerRank",
+        "image": "images/certificates/frontend_developer_react certificate-hr.jpg",
+        "link": "https://www.hackerrank.com/certificates/83f4bdd7f788",
+        "date": "2024-09-28",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "The complete ASP.NET Core 9 course Certificate",
+        "image": "images/certificates/ASP.NET.jpg",
+        "link": "https://www.udemy.com/certificate/UC-80834f45-24b7-412c-8db9-648571501a7c/",
+        "date": "2024-09-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "ISO 27001 für Startups und KMU",
+        "image": "images/certificates/ISO 27001 Zertifikat Udemy.jpg",
+        "link": "https://www.udemy.com/certificate/UC-6e6e4fbd-1308-4027-89a6-586d43927546/",
+        "date": "2024-09-18",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "The MERN Fullstack Certificate",
+        "image": "images/certificates/The MERN Full Stack Certificate - Udemy.jpg",
+        "link": "https://www.udemy.com/certificate/UC-55a7cf9f-c36a-41ba-92c8-60b10d15424e/",
+        "date": "2024-02-27",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "B.Sc. Degree - HTW Berlin",
+        "image": "images/certificates/B.Sc. Degree Certificate - HTW Berlin.jpg",
+        "link": "certificates_pdf/B.Sc. Degree Certificate - HTW Berlin.pdf",
+        "date": "2024-03-01",
+        "organization": "HTW Berlin",
+        "width": 120,
+        "height": 170,
+        "category": "Education"
+    },
+    {
+        "name": "Merceds Benz Innovation Challenge",
+        "image": "images/certificates/Mercedes-Benz Certificate.jpg",
+        "link": "certificates_pdf/Mercedes-Benz Certificate.pdf",
+        "date": "2024-06-05",
+        "organization": "Mercedes-Benz",
+        "width": 120,
+        "height": 170,
+        "category": "Work"
+    },
+    {
+        "name": "Spring Cloud Certificate",
+        "image": "images/certificates/Spring Cloud Certificate - Udemy.jpg",
+        "link": "https://www.udemy.com/certificate/UC-e388eb03-dbd9-4d0f-8a5f-fae8fe159697/",
+        "date": "2023-09-22",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Praktikumszeugnis HTW Berlin",
+        "image": "images/certificates/Internship Certificate - HTW Berlin.jpg",
+        "link": "certificates_pdf/Praktikumszeugnis HTW Berlin.pdf",
+        "date": "2021-05-15",
+        "organization": "HTW Berlin Data Centre",
+        "width": 120,
+        "height": 170,
+        "category": "Work"
+    },
+    {
+        "name": "Coding Bootcamp Le Wagon",
+        "image": "images/certificates/Full Stack Coding Certificate - Le Wagon.jpg",
+        "link": "certificates_pdf/Le Wagon Certificate.pdf",
+        "date": "2019-06-07",
+        "organization": "Le Wagon",
+        "width": 120,
+        "height": 170,
+        "category": "Education"
+    },
+    {
+        "name": "Internship Reference - RMS",
+        "image": "images/certificates/Internship Certificate - Rhenus Logistics.jpg",
+        "link": "certificates_pdf/Internship Reference Rhenus Logistics.pdf",
+        "date": "2019-03-31",
+        "organization": "Rhenus Logistics",
+        "width": 120,
+        "height": 170,
+        "category": "Work"
+    },
+    {
+        "name": "Zetifikat C1 Deutsch",
+        "image": "images/certificates/German C1 Certificate - Eurasia Institute.jpg",
+        "link": "certificates_pdf/German C1 Certificate - Eurasia Institute.pdf",
+        "date": "2014-05-26",
+        "organization": "Eurasia Institute",
+        "width": 120,
+        "height": 170,
+        "category": "Education"
+    }
+]

@@ -19,11 +19,63 @@ body {
 }
 
 
+.achievement-carousel {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 270px; 
+    }
+
+
+    .achievement-item {
+    position: relative;
+    height: 100%;
+    width: auto;
+    }
+
+
+
+
+    .achievement-item img {
+    transition: transform 0.3s ease;
+    max-height: 100%; 
+    width: auto; 
+    z-index: 1; 
+    }
+
+    .achievement-item:hover img {
+    transform: scale(1.07); 
+    }
+
+
+    #category-filter-certificates {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        font-size: 14px;
+        padding: 5px 10px;
+        transition: box-shadow 0.3s ease;
+      }
+    
+      #category-filter-certificates:focus {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        outline: none;
+      }
+    
+      #filter-certificates-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
 
 
 #news-container {
-    width: 80%; /* Set the width of the news container */
-    margin: 0 auto; /* Center the container */
+    width: 80%; 
+    margin: 0 auto; 
     padding: 15px;
     
     border-radius: 8px;
