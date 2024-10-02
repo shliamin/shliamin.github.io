@@ -604,9 +604,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const image = document.createElement('img');
             image.src = certificate.image;
             image.alt = certificate.name + ' Thumbnail';
-            image.style.cssText = 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; max-height: 100%; width: 100%;';
-            anchor.appendChild(image);
 
+            // Use width and height from the JSON data
+            image.style.width = certificate.width + 'px';
+            image.style.height = certificate.height + 'px';
+            image.style.cssText += 'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;';
+
+            anchor.appendChild(image);
             achievementItem.appendChild(anchor);
             container.appendChild(achievementItem);
         });
@@ -625,6 +629,7 @@ document.addEventListener('DOMContentLoaded', function () {
         displayCertificates(filteredCertificates);
     });
 });
+
 
 
 
