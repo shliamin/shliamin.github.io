@@ -320,7 +320,7 @@
               id="category-filter-certificates"
               style="padding: 5px 10px; font-size: 16px"
             >
-              <option value="all">All</option>
+              <option value="All">All</option>
               <option value="Udemy">Udemy</option>
               <option value="HackerRank">HackerRank</option>
               <option value="Work">Work</option>
@@ -392,13 +392,6 @@
                 are open source and widely adopted by the community.
               </li>
             </ul>
-            <p style="margin-bottom: 40px">
-              I am interested in long-term full-time collaborations and always
-              strive to provide value, whether through direct collaboration or
-              by offering insights into IT challenges your organization might
-              face. Please visit the CONTACT section to get in touch, and feel
-              free to explore my NEWS section for the latest in IT.
-            </p>
           </div>
 
           <div id="content-de-2" style="display: none">
@@ -453,15 +446,60 @@
               </li>
             </ul>
 
-            <p style="margin-bottom: 40px">
-              Ich bin an langfristigen Vollzeit-Kooperationen interessiert und
-              strebe stets danach, Mehrwert zu schaffen, sei es durch direkte
-              Zusammenarbeit oder durch Einblicke in IT-Herausforderungen, mit
-              denen Ihr Unternehmen konfrontiert sein könnte. Besuchen Sie den
-              Bereich CONTACT, um mit mir in Verbindung zu treten, und schauen
-              Sie sich gerne den NEWS-Bereich an, um sich über die neuesten
-              Entwicklungen in der IT zu informieren.
+          </div>
+
+          <div style="display: flex; align-items: center">
+            <p
+              id="books-title-en"
+              style="padding-right: 20px !important; margin-bottom: 0px"
+            >
+              <strong>Favorite Books:</strong>
             </p>
+            <p
+              id="books-title-de"
+              style="
+                padding-right: 20px !important;
+                margin-bottom: 0px;
+                display: none;
+              "
+            >
+              <strong>Lieblingsbücher:</strong>
+            </p>
+            <select
+              id="category-filter-books"
+              style="padding: 5px 10px; font-size: 16px"
+            >
+              <option value="All-genres">All genres</option>
+              <option value="Technical">Technical</option>
+              <option value="Business & Leadership">
+                Business & Leadership
+              </option>
+              <option value="Personal Development">Personal Development</option>
+              <option value="Innovation & Startups">
+                Innovation & Startups
+              </option>
+            </select>
+          </div>
+
+          <div
+            id="books-container"
+            style="
+              width: 80%;
+              margin: 0 auto;
+              overflow: hidden;
+              padding-bottom: 20px;
+            "
+          >
+            <div
+              class="books-carousel"
+              style="
+                display: flex;
+                overflow-x: auto;
+                gap: 20px;
+                padding: 10px 10px;
+                scroll-behavior: smooth;
+              "
+            ></div>
           </div>
         </section>
 

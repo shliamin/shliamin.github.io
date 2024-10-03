@@ -1,0 +1,98 @@
+[
+    {
+        "title": "HPC in Science",
+        "genre": "Technical",
+        "coverImage": "https://covers.openlibrary.org/b/id/10138151-L.jpg",
+        "link": "https://openlibrary.org/works/OL20832330W/High_Performance_Computing_in_Science_and_Engineering_%27_17?edition=key%3A/books/OL28237553M"
+    },
+    {
+        "title": "Algorithms",
+        "genre": "Technical",
+        "coverImage": "https://covers.openlibrary.org/b/id/7992499-L.jpg",
+        "link": "https://openlibrary.org/works/OL16116506W/Algorithms?edition=key%3A/books/OL25004213M"
+    },
+    {
+        "title": "Learning React",
+        "genre": "Technical",
+        "coverImage": "https://covers.openlibrary.org/b/id/10282783-L.jpg",
+        "link": "https://openlibrary.org/works/OL20915214W/Learning_React?edition=key%3A/books/OL32916346M"
+    },
+    {
+        "title": "Kryptografie",
+        "genre": "Technical",
+        "coverImage": "https://ia800507.us.archive.org/view_archive.php?archive=/8/items/l_covers_0009/l_covers_0009_41.zip&file=0009413089-L.jpg",
+        "link": "https://openlibrary.org/works/OL20727825W/Kryptografie_verst%C3%A4ndlich?edition=key%3A/books/OL28032329M"
+    },
+    {
+        "title": "Diskrete Strukturen",
+        "genre": "Technical",
+        "coverImage": "https://ia802203.us.archive.org/view_archive.php?archive=/10/items/olcovers101/olcovers101-L.zip&file=1019428-L.jpg",
+        "link": "https://openlibrary.org/works/OL9078305W/Diskrete_Strukturen_1?edition=key%3A/books/OL9063388M"
+    },
+    {
+        "title": "Start with no",
+        "genre": "Business & Leadership",
+        "coverImage": "https://ia800409.us.archive.org/view_archive.php?archive=/6/items/olcovers39/olcovers39-L.zip&file=390585-L.jpg",
+        "link": "https://openlibrary.org/works/OL6214243W/Start_with_no?edition=key%3A/books/OL3952181M"
+    },
+    {
+        "title": "WGYHWGYT",
+        "genre": "Business & Leadership",
+        "coverImage": "https://ia600206.us.archive.org/view_archive.php?archive=/14/items/olcovers643/olcovers643-L.zip&file=6430258-L.jpg",
+        "link": "https://openlibrary.org/works/OL15172684W/What_Got_You_Here_Won%27t_Get_You_There?edition=key%3A/books/OL24304393M"
+    },
+    {
+        "title": "Good to great",
+        "genre": "Business & Leadership",
+        "coverImage": "https://ia800505.us.archive.org/view_archive.php?archive=/35/items/l_covers_0014/l_covers_0014_62.zip&file=0014620216-L.jpg",
+        "link": "https://openlibrary.org/works/OL3486275W/Good_to_Great?edition=key%3A/books/OL17035731M"
+    },
+    {
+        "title": "Tribal leadership",
+        "genre": "Business & Leadership",
+        "coverImage": "https://ia800402.us.archive.org/view_archive.php?archive=/4/items/olcovers550/olcovers550-L.zip&file=5506670-L.jpg",
+        "link": "https://openlibrary.org/works/OL11659147W/Tribal_leadership?edition=key%3A/books/OL19470452M"
+    },
+    {
+        "title": "Zero to One",
+        "genre": "Innovation & Startups",
+        "coverImage": "https://covers.openlibrary.org/b/id/7318839-L.jpg",
+        "link": "https://openlibrary.org/works/OL17078706W/Zero_to_One?edition=key%3A/books/OL26498045M"
+    },
+    {
+        "title": "Sprint",
+        "genre": "Innovation & Startups",
+        "coverImage": "https://covers.openlibrary.org/b/id/7431269-L.jpg",
+        "link": "https://openlibrary.org/works/OL17353358W/Sprint"
+    },
+    {
+        "title": "Simple",
+        "genre": "Innovation & Startups",
+        "coverImage": "https://covers.openlibrary.org/b/id/8196603-L.jpg",
+        "link": "https://openlibrary.org/works/OL17885465W/Simple?edition=key%3A/books/OL26464472M"
+    },
+    {
+        "title": "SuperBetter",
+        "genre": "Personal Development",
+        "coverImage": "https://covers.openlibrary.org/b/id/10054092-L.jpg",
+        "link": "https://openlibrary.org/works/OL19669906W/SuperBetter"
+    },
+    {
+        "title": "EQ",
+        "genre": "Personal Development",
+        "coverImage": "https://ia801400.us.archive.org/view_archive.php?archive=/16/items/olcovers36/olcovers36-L.zip&file=369650-L.jpg",
+        "link": "https://openlibrary.org/works/OL1878301W/Emotional_Intelligence?edition=key%3A/books/OL7826336M"
+    },
+    {
+        "title": "Outliers",
+        "genre": "Personal Development",
+        "coverImage": "https://ia800404.us.archive.org/view_archive.php?archive=/33/items/l_covers_0010/l_covers_0010_85.zip&file=0010858646-L.jpg",
+        "link": "https://openlibrary.org/works/OL5749847W/Outliers?edition=key%3A/books/OL10426237M"
+    },
+    {
+        "title": "Games people play",
+        "genre": "Personal Development",
+        "coverImage": "https://ia802309.us.archive.org/view_archive.php?archive=/20/items/l_covers_0008/l_covers_0008_28.zip&file=0008281189-L.jpg",
+        "link": "https://openlibrary.org/works/OL1593567W/Games_People_Play?edition=key%3A/books/OL5911996M"
+    }
+]

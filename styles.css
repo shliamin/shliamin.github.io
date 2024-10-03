@@ -69,6 +69,57 @@ body {
   margin-bottom: 20px;
 }
 
+.books-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  height: 220px;
+}
+
+.book-item {
+  position: relative;
+  height: auto;
+  width: auto;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.book-item img {
+  transition: transform 0.3s ease;
+  max-height: 100%;
+  width: auto;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.book-item:hover img {
+  transform: scale(1.07);
+}
+
+#category-filter-books {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+#category-filter-books:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+#filter-books-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
 #news-container {
   width: 80%;
   margin: 0 auto;
@@ -298,7 +349,7 @@ body {
 }
 
 .uk-button.small-button {
-  padding: 12px 10px;
+  padding: 8px 10px;
   font-size: 16px;
   line-height: 1;
   border-radius: 5px;
@@ -356,18 +407,17 @@ body {
 .uk-comment-title {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 5px;
+  line-height: 0.8 !important;
 }
 
 #degree-title {
   margin: 0; /* Remove any default margin */
   font-size: 1em; /* Adjust the font size if necessary */
-  color: #333; /* Dark color for the title */
+  color: #555; /* Dark color for the title */
 }
 
 #profession-title {
   margin: 0; /* Remove any default margin */
-  margin-top: 2px; /* Minimal space between title and subtitle */
   font-size: 0.9em; /* Slightly smaller font size than the title */
   color: #777; /* Pleasant gray color for the subtitle */
 }
@@ -621,7 +671,7 @@ body {
 
 .divider {
   border-top: 1px solid #ccc;
-  margin: 20px 0;
+  margin: 16px 0;
 }
 
 .status {
@@ -636,7 +686,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   max-width: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   margin-left: 25px;
   text-decoration: none;
   color: inherit;
@@ -1151,20 +1201,20 @@ iframe {
 }
 
 .articles-list::-webkit-scrollbar {
-  width: 6px; 
+  width: 6px;
 }
 
 .articles-list::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
 
 .articles-list::-webkit-scrollbar-thumb {
-  background-color: #cccccc; 
-  border-radius: 10px; 
+  background-color: #cccccc;
+  border-radius: 10px;
 }
 
 .articles-list::-webkit-scrollbar-thumb:hover {
-  background-color: #888888; 
+  background-color: #888888;
 }
 
 .article-item {

@@ -197,6 +197,8 @@ function switchLanguage(lang) {
     document.getElementById("schedule-meeting-de").style.display = "none";
     document.getElementById("certificates-title-en").style.display = "block";
     document.getElementById("certificates-title-de").style.display = "none";
+    document.getElementById("books-title-en").style.display = "block";
+    document.getElementById("books-title-de").style.display = "none";
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
     document.getElementById("content-en").style.display = "none";
@@ -213,6 +215,8 @@ function switchLanguage(lang) {
     document.getElementById("schedule-meeting-de").style.display = "block";
     document.getElementById("certificates-title-en").style.display = "none";
     document.getElementById("certificates-title-de").style.display = "block";
+    document.getElementById("books-title-en").style.display = "none";
+    document.getElementById("books-title-de").style.display = "block";
   }
 }
 
@@ -444,6 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       certificates = data;
+      updateCategoryCounts(certificates); // Update dropdown with counts
       displayCertificates(certificates); // Initially display all certificates
     })
     .catch((error) => console.error("Error fetching certificates:", error));
@@ -490,6 +495,39 @@ document.addEventListener("DOMContentLoaded", function () {
       achievementItem.appendChild(anchor);
       container.appendChild(achievementItem);
     });
+
+    // Update the count in the dropdown for the current selected category
+    updateDropdownLabel(certificates.length);
+  }
+
+  // Function to update the dropdown label with the number of certificates
+  function updateDropdownLabel(count) {
+    const selectedCategory =
+      filterDropdown.options[filterDropdown.selectedIndex];
+    selectedCategory.textContent = `${selectedCategory.value} (${count})`;
+  }
+
+  // Function to update category counts in the dropdown
+  function updateCategoryCounts(certificates) {
+    const allCount = certificates.length;
+    const udemyCount = certificates.filter(
+      (certificate) => certificate.category === "Udemy"
+    ).length;
+    const hackerRankCount = certificates.filter(
+      (certificate) => certificate.category === "HackerRank"
+    ).length;
+    const workCount = certificates.filter(
+      (certificate) => certificate.category === "Work"
+    ).length;
+    const educationCount = certificates.filter(
+      (certificate) => certificate.category === "Education"
+    ).length;
+
+    filterDropdown.options[0].textContent = `All (${allCount})`;
+    filterDropdown.options[1].textContent = `Udemy (${udemyCount})`;
+    filterDropdown.options[2].textContent = `HackerRank (${hackerRankCount})`;
+    filterDropdown.options[3].textContent = `Work (${workCount})`;
+    filterDropdown.options[4].textContent = `Education (${educationCount})`;
   }
 
   // Event listener for the filter dropdown
@@ -498,7 +536,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filter the certificates based on the selected category
     const filteredCertificates =
-      selectedCategory === "all"
+      selectedCategory === "All"
         ? certificates
         : certificates.filter(
             (certificate) => certificate.category === selectedCategory
@@ -508,3 +546,93 @@ document.addEventListener("DOMContentLoaded", function () {
     displayCertificates(filteredCertificates);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let books = []; // Store fetched data about books
+  
+    fetch("books.json")
+      .then((response) => response.json())
+      .then((data) => {
+        books = data;
+        updateDropdownCounts(); // Update dropdown with book counts
+        displayBooks(books); // Initially display all books
+      })
+      .catch((error) => console.error("Error fetching books:", error));
+  
+    const container = document.querySelector(".books-carousel");
+    const filterDropdown = document.getElementById("category-filter-books");
+  
+    // Function to display books in the carousel
+    function displayBooks(books) {
+      if (!container) {
+        console.error("Container not found!");
+        return;
+      }
+  
+      container.innerHTML = ""; // Clear the current items
+      books.sort((a, b) => a.title.localeCompare(b.title)); // Optional sorting
+  
+      books.forEach((book) => {
+        const bookItem = document.createElement("div");
+        bookItem.classList.add("book-item");
+        bookItem.style.cssText = "position: relative; min-width: 120px; flex-shrink: 0;";
+  
+        const anchor = document.createElement("a");
+        anchor.href = book.link;
+        anchor.target = "_blank";
+  
+        const image = document.createElement("img");
+        image.src = book.coverImage;
+        image.alt = book.title + " Cover";
+        image.style.width = "120px";
+        image.style.height = "180px";
+        image.style.cssText += "box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+  
+        anchor.appendChild(image);
+        bookItem.appendChild(anchor);
+        container.appendChild(bookItem);
+      });
+    }
+  
+    // Function to update dropdown with book counts
+    function updateDropdownCounts() {
+      const categoryCounts = {
+        "Technical": 0,
+        "Business & Leadership": 0,
+        "Innovation & Startups": 0,
+        "Personal Development": 0,
+      };
+  
+      books.forEach((book) => {
+        if (categoryCounts[book.genre] !== undefined) {
+          categoryCounts[book.genre]++;
+        }
+      });
+  
+      // Add total count for "All" option
+      const allBooksCount = books.length;
+  
+      // Update dropdown options with counts
+      document.querySelector('option[value="All-genres"]').textContent = `All genres (${allBooksCount})`;
+  
+      for (const category in categoryCounts) {
+        const option = document.querySelector(`option[value="${category}"]`);
+        if (option) {
+          option.textContent = `${category} (${categoryCounts[category]})`;
+        }
+      }
+    }
+  
+    // Event listener for the filter dropdown
+    filterDropdown.addEventListener("change", function () {
+      const selectedCategory = filterDropdown.value;
+  
+      // Filter books by selected genre/category
+      const filteredBooks = selectedCategory === "All-genres" ? books : books.filter((book) => book.genre === selectedCategory);
+  
+      // Redisplay the filtered books
+      displayBooks(filteredBooks);
+    });
+  });
+  
+  
