@@ -361,10 +361,10 @@
           <div
             id="achievement-container"
             style="
-              width: 80%;
-              margin: 0 auto;
               overflow: hidden;
               padding-bottom: 20px;
+              padding-left: 80px;
+              padding-right: 10%;
             "
           >
             <div
@@ -513,10 +513,10 @@
           <div
             id="books-container"
             style="
-              width: 80%;
-              margin: 0 auto;
               overflow: hidden;
               padding-bottom: 20px;
+              padding-left: 80px;
+              padding-right: 10%;
             "
           >
             <div
@@ -866,9 +866,21 @@
           </div>
 
         <!-- Results -->
-          <div id="result-container" class="analysis-results" style="display: none;">
-            <!-- Analyze will be displayed here dynamically -->
-          </div>
+        <div id="result-container" class="analysis-results-container">
+            <div class="column">
+                <h4>Your requirements:</h4>
+                <div id="loaded-cards" class="analysis-results"></div>
+            </div>
+            <div class="column">
+                <h4>My offers:</h4>
+                <div id="other-cards" class="analysis-results"></div>
+            </div>
+            <div class="column">
+                <h4>Analysis:</h4>
+                <div id="analysis-results" class="analysis-results"></div>
+            </div>
+        </div>
+        
         </section>
 
         <!-- Calendly widget scripts -->

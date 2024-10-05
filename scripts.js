@@ -747,10 +747,12 @@ function showSpinner() {
     document.getElementById('result-container').style.display = 'none';
 }
 
-// Hide loading spinner
+// Hide loading spinner and show results container
 function hideSpinner() {
     document.getElementById('loading-spinner').style.display = 'none';
+    document.getElementById('result-container').style.display = 'flex';  // Восстанавливаем видимость контейнера
 }
+
 
 // Display detected language
 function displayDetectedLanguage(language) {
@@ -759,10 +761,8 @@ function displayDetectedLanguage(language) {
     languageDisplay.textContent = `Detected Language: ${language === 'en' ? 'English' : 'German'}`;
 }
 
-const predefinedOrder = [
-    "Experience", "Skills", "Tech Stack", "Soft Skills", "Cultural Fit",
-    "University", "Certifications", "Engagement", "Projects", "References", "Languages"
-];
+
+
 
 // Colors for each category
 const categoryColors = {
@@ -798,9 +798,11 @@ const categoryPercentages = {
 
 // Функция для отображения результатов анализа
 function displayResults(result) {
-    const resultContainer = document.getElementById('result-container');
+    const resultContainer = document.getElementById('loaded-cards');
     resultContainer.innerHTML = '';
-    resultContainer.style.display = 'block';
+    resultContainer.style.display = 'flex';
+
+    
 
     // Упорядоченный список категорий
     const orderedCategories = [
@@ -813,6 +815,12 @@ function displayResults(result) {
         if (result.analysis.hasOwnProperty(category)) {
             const card = document.createElement('div');
             card.classList.add('category-card');
+
+            const columns = document.querySelectorAll('.column');
+            columns.forEach(column => {
+            column.style.visibility = 'visible';
+            });
+
 
             // Устанавливаем цвет фона карточки в зависимости от категории
             const backgroundColor = categoryColors[category] || '#fff';
@@ -849,11 +857,11 @@ function displayResults(result) {
             percentageBadge.classList.add('percentage-badge');
             percentageBadge.textContent = `${categoryPercentages[category]}%`;
             percentageBadge.style.position = 'absolute';
-            percentageBadge.style.top = '10px';
-            percentageBadge.style.right = '10px';
+            percentageBadge.style.top = '5px';
+            percentageBadge.style.right = '5px';
             percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
             percentageBadge.style.color = '#fff';
-            percentageBadge.style.padding = '5px 10px';
+            percentageBadge.style.padding = '2px 7px';
             percentageBadge.style.borderRadius = '5px';
 
             // Добавляем элементы в карточку
