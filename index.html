@@ -95,7 +95,10 @@
           />
           <h4 class="uk-comment-title">Efim Shliamin</h4>
           <div class="uk-comment-body">
-            <p id="degree-title">Computer Scientist, B.Sc.</p>
+            <p id="degree-title-en">Computer Scientist, B.Sc.</p>
+            <p id="degree-title-de" style="display: none">
+              Informatiker, B.Sc.
+            </p>
             <!--<p id="profession-title">Fullstack & Data Science</p>-->
           </div>
           <div class="mobile-icons">
@@ -131,14 +134,25 @@
           <ul>
             <li>
               <button
+                id="about-me-btn-en"
                 class="uk-button uk-button-default small-button"
                 onclick="showSection('about-me')"
               >
                 About me
               </button>
             </li>
+            <li id="job-match-button">
+                <button
+                  id="our-match-btn-en"
+                  class="uk-button uk-button-default small-button"
+                  onclick="showSection('our-fit')"
+                >
+                  Our match (<span class="colorful-ai">AI</span>)
+                </button>
+            </li>              
             <li>
               <button
+                id="my-work-btn-en"
                 class="uk-button uk-button-default small-button"
                 onclick="showSection('my-work')"
               >
@@ -147,6 +161,7 @@
             </li>
             <li>
               <button
+                id="contact-btn-en"
                 class="uk-button uk-button-default small-button"
                 onclick="showSection('contact')"
               >
@@ -155,7 +170,7 @@
             </li>
             <li>
               <button
-                id="news-button"
+                id="news-btn-en"
                 class="uk-button uk-button-default small-button"
                 onclick="showSection('news')"
               >
@@ -173,7 +188,10 @@
                 alt="Medium Icon"
                 class="status-icon"
               />
-              <p id="p-title">Read me on Medium</p>
+              <p id="p-title-medium-en">Read me on Medium</p>
+              <p id="p-title-medium-de" style="display: none">
+                Lesen Sie mich auf Medium
+              </p>
             </a>
           </div>
           <div class="status-item">
@@ -183,7 +201,10 @@
                 alt="LinkedIn Icon"
                 class="status-icon"
               />
-              <p id="p-title">Follow me on LinkedIn</p>
+              <p id="p-title-linkedin-en">Follow me on LinkedIn</p>
+              <p id="p-title-linkedin-de" style="display: none">
+                Folgen Sie mir auf LinkedIn
+              </p>
             </a>
           </div>
           <div class="status-item">
@@ -193,7 +214,10 @@
                 alt="GitHub Icon"
                 class="status-icon"
               />
-              <p id="p-title">Check out my GitHub</p>
+              <p id="p-title-github-en">Check out my GitHub</p>
+              <p id="p-title-github-de" style="display: none">
+                Besuchen Sie mein GitHub
+              </p>
             </a>
           </div>
           <div class="status-item">
@@ -203,11 +227,17 @@
                 alt="X Icon"
                 class="status-icon"
               />
-              <p id="p-title">Follow me on X</p>
+              <p id="p-title-x-en">Follow me on X</p>
+              <p id="p-title-x-de" style="display: none">
+                Folgen Sie mir auf X
+              </p>
             </a>
           </div>
           <div class="articles-section desktop-only">
-            <h3>Latest Articles on Notion:</h3>
+            <h3 id="notion-en">Latest articles on Notion:</h3>
+            <h3 id="notion-de" style="display: none">
+              Neueste Artikel auf Notion:
+            </h3>
             <div class="articles-list">
               <div class="article-item">
                 <a
@@ -350,7 +380,7 @@
           </div>
 
           <div id="content-en-2">
-            <p><strong>Key Achievements:</strong></p>
+            <p><strong>Key achievements:</strong></p>
             <ul>
               <li>
                 Participated in the Mercedes-Benz Innovation Challenge as the
@@ -445,15 +475,14 @@
                 verbreitet angenommen werden.
               </li>
             </ul>
-
           </div>
 
-          <div style="display: flex; align-items: center">
+          <div style="display: flex; align-items: center; margin-bottom: 10px">
             <p
               id="books-title-en"
               style="padding-right: 20px !important; margin-bottom: 0px"
             >
-              <strong>Favorite Books:</strong>
+              <strong>Favorite books:</strong>
             </p>
             <p
               id="books-title-de"
@@ -567,8 +596,20 @@
                   class="contact-icon"
                 />
                 <div class="contact-detail-container">
-                  <p id="p-title" class="contact-detail">+49 176 45278124</p>
-                  <p id="p-title" class="contact-label">Phone (WhatsApp)</p>
+                  <p
+                    id="p-title"
+                    class="contact-detail"
+                    style="padding-left: 0; padding-right: 0"
+                  >
+                    +49 176 45278124
+                  </p>
+                  <p
+                    id="p-title"
+                    class="contact-label"
+                    style="padding-left: 0; padding-right: 0"
+                  >
+                    Phone (WhatsApp)
+                  </p>
                 </div>
               </a>
             </div>
@@ -580,10 +621,20 @@
                   class="contact-icon"
                 />
                 <div class="contact-detail-container">
-                  <p id="p-title" class="contact-detail">
+                  <p
+                    id="p-title"
+                    class="contact-detail"
+                    style="padding-left: 0; padding-right: 0"
+                  >
                     efimshliamin@gmail.com
                   </p>
-                  <p id="p-title" class="contact-label">Email</p>
+                  <p
+                    id="p-title"
+                    class="contact-label"
+                    style="padding-left: 0; padding-right: 0"
+                  >
+                    Email
+                  </p>
                 </div>
               </a>
             </div>
@@ -598,10 +649,20 @@
                   class="contact-icon"
                 />
                 <div class="contact-detail-container">
-                  <p id="p-title" class="contact-detail">
+                  <p
+                    id="p-title"
+                    class="contact-detail"
+                    style="padding-left: 0; padding-right: 0"
+                  >
                     Berlin, 10243, Germany
                   </p>
-                  <p id="p-title" class="contact-label">Address</p>
+                  <p
+                    id="p-title"
+                    class="contact-label"
+                    style="padding-left: 0; padding-right: 0"
+                  >
+                    Address
+                  </p>
                 </div>
               </a>
             </div>
@@ -702,6 +763,114 @@
           </div>
         </section>
 
+        <section id="our-fit" class="section">
+          <p style="padding-top: 20px" id="comp-analyzer">
+                <strong>How it works:</strong>
+          </p>
+          <div class="chartAndInfo">
+            <div class="chart-container">
+                    <canvas id="donutChart"></canvas>
+            </div>
+            <div id="text-container" class="multi-column-text">
+                <div class="category">
+                    <p class="highlight highlight-professional" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-professional"></span> 
+                        Prof. Skills - 50%
+                    </p>
+                    <ul class="subcategory-list">
+                        <li>Experience - 25%</li>
+                        <li>Skills - 20%</li>
+                        <li>Tech Stack - 5%</li>
+                    </ul>
+                </div>
+                
+                <div class="category">
+                    <p class="highlight highlight-cultural" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-cultural"></span> 
+                        Team Fit - 20%
+                    </p>
+                    <ul class="subcategory-list">
+                        <li>Soft Skills - 10%</li>
+                        <li>Cultural Fit - 10%</li>
+                    </ul>
+                </div>
+                
+                <div class="category">
+                    <p class="highlight highlight-education" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-education"></span> 
+                        Education - 10%
+                    </p>
+                    <ul class="subcategory-list">
+                        <li>University - 5%</li>
+                        <li>Certifications - 5%</li>
+                    </ul>
+                </div>
+            
+                <div class="category">
+                    <p class="highlight highlight-portfolio" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-portfolio"></span> 
+                        Portfolio - 10%
+                    </p>
+                    <ul class="subcategory-list">
+                        <li>Engagement - 5%</li>
+                        <li>Projects - 5%</li>
+                    </ul>
+                </div>
+            
+                <div class="category">
+                    <p class="highlight highlight-references" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-references"></span> 
+                        References - 5%
+                    </p>
+                </div>
+            
+                <div class="category">
+                    <p class="highlight highlight-languages" style="margin-bottom: 0px !important; font-weight: 700;">
+                        <span class="badge-analysis badge-languages"></span> 
+                        Languages - 5%
+                    </p>
+                </div>
+            </div>
+            
+            
+          </div>
+        
+          <p id="comp-analyzer">
+            <strong>Compatibility Analyzer:</strong>
+          </p>
+          <form id="resume-form">
+            <div class="form-group">
+              <textarea
+                id="job_description-en"
+                name="job_description"
+                rows="4"
+                placeholder="Please paste your job description or professional profile here (maximum 2000 characters, only English or German). My machine learning algorithms will analyze the input to provide a preliminary assessment of our compatibility. Please note, this is a beta version, and the results may not be 100% accurate. Results may take up to 30 seconds. To provide more precise results, I am available for a meeting."
+                required
+              ></textarea>
+              <!-- Display character count dynamically here -->
+              <p id="character-count" style="padding-left: 0 !important">
+                Characters: 0/2000
+              </p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <button type="submit" class="analyze-btn" id="match-analyze-en">
+                  Analyze our match
+                </button>
+                <div id="language-detected" style="display:none; margin-left: 15px;"></div>
+              </div>
+          </form>
+          <!-- Spinning wheel (hidden by default) -->
+          <div id="loading-spinner" style="display: none; text-align: center;">
+            <div class="spinner"></div>
+            <p>Analyzing your job description...</p>
+          </div>
+
+        <!-- Results -->
+          <div id="result-container" class="analysis-results" style="display: none;">
+            <!-- Analyze will be displayed here dynamically -->
+          </div>
+        </section>
+
         <!-- Calendly widget scripts -->
         <script
           src="https://assets.calendly.com/assets/external/widget.js"
@@ -710,10 +879,12 @@
         ></script>
       </main>
     </div>
-    <div id="project-modal-placeholder"></div>
+    <div id="project-modal-placeholder"></div>  
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts.js"></script>
     <script src="filter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Pop-up container -->
     <div id="popup-container" class="popup-container">

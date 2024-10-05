@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   showSection("about-me");
 
@@ -66,9 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         detail.id = "p-title";
         detail.innerText = stat.value;
 
+        detail.style.padding = "0";
+
         const label = document.createElement("p");
         label.classList.add("github-stats-label");
         label.innerText = stat.label;
+        label.style.fontSize = "13px";
 
         detailContainer.appendChild(detail);
         detailContainer.appendChild(label);
@@ -129,6 +134,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Handler for clicking on "Our match (AI)" button
+  document.querySelector("#our-match-btn-en").addEventListener("click", function () {
+    // Open the section first
+    const ourMatchButton = document.querySelector(".uk-button.uk-button-default[onclick=\"showSection('our-fit')\"]");
+    if (ourMatchButton) {
+        ourMatchButton.click();
+    }
+
+    // Initialize the chart after the section is displayed
+    setTimeout(function () {
+        initializeChart();
+    }, 300);  // Delay to ensure the section is fully visible before chart initialization
+});
+
+  
 
   // Handler for clicking on "Contact" text
   document.querySelectorAll(".click-contact").forEach((word) => {
@@ -199,6 +220,18 @@ function switchLanguage(lang) {
     document.getElementById("certificates-title-de").style.display = "none";
     document.getElementById("books-title-en").style.display = "block";
     document.getElementById("books-title-de").style.display = "none";
+    document.getElementById("degree-title-en").style.display = "block";
+    document.getElementById("degree-title-de").style.display = "none";
+    document.getElementById("notion-en").style.display = "block";
+    document.getElementById("notion-de").style.display = "none";
+    document.getElementById("p-title-medium-en").style.display = "block";
+    document.getElementById("p-title-medium-de").style.display = "none";
+    document.getElementById("p-title-linkedin-en").style.display = "block";
+    document.getElementById("p-title-linkedin-de").style.display = "none";
+    document.getElementById("p-title-github-en").style.display = "block";
+    document.getElementById("p-title-github-de").style.display = "none";
+    document.getElementById("p-title-x-en").style.display = "block";
+    document.getElementById("p-title-x-de").style.display = "none";
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
     document.getElementById("content-en").style.display = "none";
@@ -217,6 +250,18 @@ function switchLanguage(lang) {
     document.getElementById("certificates-title-de").style.display = "block";
     document.getElementById("books-title-en").style.display = "none";
     document.getElementById("books-title-de").style.display = "block";
+    document.getElementById("degree-title-en").style.display = "none";
+    document.getElementById("degree-title-de").style.display = "block";
+    document.getElementById("notion-en").style.display = "none";
+    document.getElementById("notion-de").style.display = "block";
+    document.getElementById("p-title-medium-en").style.display = "none";
+    document.getElementById("p-title-medium-de").style.display = "block";
+    document.getElementById("p-title-linkedin-en").style.display = "none";
+    document.getElementById("p-title-linkedin-de").style.display = "block";
+    document.getElementById("p-title-github-en").style.display = "none";
+    document.getElementById("p-title-github-de").style.display = "block";
+    document.getElementById("p-title-x-en").style.display = "none";
+    document.getElementById("p-title-x-de").style.display = "block";
   }
 }
 
@@ -548,91 +593,474 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    let books = []; // Store fetched data about books
-  
-    fetch("books.json")
-      .then((response) => response.json())
-      .then((data) => {
-        books = data;
-        updateDropdownCounts(); // Update dropdown with book counts
-        displayBooks(books); // Initially display all books
-      })
-      .catch((error) => console.error("Error fetching books:", error));
-  
-    const container = document.querySelector(".books-carousel");
-    const filterDropdown = document.getElementById("category-filter-books");
-  
-    // Function to display books in the carousel
-    function displayBooks(books) {
-      if (!container) {
-        console.error("Container not found!");
-        return;
-      }
-  
-      container.innerHTML = ""; // Clear the current items
-      books.sort((a, b) => a.title.localeCompare(b.title)); // Optional sorting
-  
-      books.forEach((book) => {
-        const bookItem = document.createElement("div");
-        bookItem.classList.add("book-item");
-        bookItem.style.cssText = "position: relative; min-width: 120px; flex-shrink: 0;";
-  
-        const anchor = document.createElement("a");
-        anchor.href = book.link;
-        anchor.target = "_blank";
-  
-        const image = document.createElement("img");
-        image.src = book.coverImage;
-        image.alt = book.title + " Cover";
-        image.style.width = "120px";
-        image.style.height = "180px";
-        image.style.cssText += "box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
-  
-        anchor.appendChild(image);
-        bookItem.appendChild(anchor);
-        container.appendChild(bookItem);
-      });
+  let books = []; // Store fetched data about books
+
+  fetch("books.json")
+    .then((response) => response.json())
+    .then((data) => {
+      books = data;
+      updateDropdownCounts(); // Update dropdown with book counts
+      displayBooks(books); // Initially display all books
+    })
+    .catch((error) => console.error("Error fetching books:", error));
+
+  const container = document.querySelector(".books-carousel");
+  const filterDropdown = document.getElementById("category-filter-books");
+
+  // Function to display books in the carousel
+  function displayBooks(books) {
+    if (!container) {
+      console.error("Container not found!");
+      return;
     }
-  
-    // Function to update dropdown with book counts
-    function updateDropdownCounts() {
-      const categoryCounts = {
-        "Technical": 0,
-        "Business & Leadership": 0,
-        "Innovation & Startups": 0,
-        "Personal Development": 0,
-      };
-  
-      books.forEach((book) => {
-        if (categoryCounts[book.genre] !== undefined) {
-          categoryCounts[book.genre]++;
-        }
-      });
-  
-      // Add total count for "All" option
-      const allBooksCount = books.length;
-  
-      // Update dropdown options with counts
-      document.querySelector('option[value="All-genres"]').textContent = `All genres (${allBooksCount})`;
-  
-      for (const category in categoryCounts) {
-        const option = document.querySelector(`option[value="${category}"]`);
-        if (option) {
-          option.textContent = `${category} (${categoryCounts[category]})`;
-        }
-      }
-    }
-  
-    // Event listener for the filter dropdown
-    filterDropdown.addEventListener("change", function () {
-      const selectedCategory = filterDropdown.value;
-  
-      // Filter books by selected genre/category
-      const filteredBooks = selectedCategory === "All-genres" ? books : books.filter((book) => book.genre === selectedCategory);
-  
-      // Redisplay the filtered books
-      displayBooks(filteredBooks);
+
+    container.innerHTML = ""; // Clear the current items
+    books.sort((a, b) => a.title.localeCompare(b.title)); // Optional sorting
+
+    books.forEach((book) => {
+      const bookItem = document.createElement("div");
+      bookItem.classList.add("book-item");
+      bookItem.style.cssText =
+        "position: relative; min-width: 120px; flex-shrink: 0;";
+
+      const anchor = document.createElement("a");
+      anchor.href = book.link;
+      anchor.target = "_blank";
+
+      const image = document.createElement("img");
+      image.src = book.coverImage;
+      image.alt = book.title + " Cover";
+      image.style.width = "120px";
+      image.style.height = "180px";
+      image.style.cssText +=
+        "box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+      anchor.appendChild(image);
+      bookItem.appendChild(anchor);
+      container.appendChild(bookItem);
     });
+  }
+
+  // Function to update dropdown with book counts
+  function updateDropdownCounts() {
+    const categoryCounts = {
+      Technical: 0,
+      "Business & Leadership": 0,
+      "Innovation & Startups": 0,
+      "Personal Development": 0,
+    };
+
+    books.forEach((book) => {
+      if (categoryCounts[book.genre] !== undefined) {
+        categoryCounts[book.genre]++;
+      }
+    });
+
+    // Add total count for "All" option
+    const allBooksCount = books.length;
+
+    // Update dropdown options with counts
+    document.querySelector(
+      'option[value="All-genres"]'
+    ).textContent = `All genres (${allBooksCount})`;
+
+    for (const category in categoryCounts) {
+      const option = document.querySelector(`option[value="${category}"]`);
+      if (option) {
+        option.textContent = `${category} (${categoryCounts[category]})`;
+      }
+    }
+  }
+
+  // Event listener for the filter dropdown
+  filterDropdown.addEventListener("change", function () {
+    const selectedCategory = filterDropdown.value;
+
+    // Filter books by selected genre/category
+    const filteredBooks =
+      selectedCategory === "All-genres"
+        ? books
+        : books.filter((book) => book.genre === selectedCategory);
+
+    // Redisplay the filtered books
+    displayBooks(filteredBooks);
   });
-  
-  
+});
+
+
+
+
+
+
+
+
+// Function to detect language 
+function detectLanguage(text) {
+    // Convert text to lowercase for easier comparison
+    const lowerText = text.toLowerCase();
+    
+    // English-specific characters and words
+    const englishPattern = /[a-z]/;
+    const commonEnglishWords = ['the', 'and', 'is', 'are', 'you'];
+    
+    // German-specific characters and words
+    const germanPattern = /[äöüß]/;
+    const commonGermanWords = ['der', 'und', 'ist', 'sie', 'das'];
+    
+    // Count occurrences of patterns and words
+    let englishScore = 0;
+    let germanScore = 0;
+
+    // Check for English characters and words
+    if (englishPattern.test(lowerText)) englishScore++;
+    commonEnglishWords.forEach(word => {
+        if (lowerText.includes(word)) englishScore++;
+    });
+
+    // Check for German characters and words
+    if (germanPattern.test(lowerText)) germanScore++;
+    commonGermanWords.forEach(word => {
+        if (lowerText.includes(word)) germanScore++;
+    });
+
+    // Decide language based on scores
+    if (germanScore > englishScore) {
+        return 'de';  // German
+    } else if (englishScore > germanScore) {
+        return 'en';  // English
+    } else {
+        return null;  // Cannot determine language
+    }
+}
+
+
+// Function to update character count dynamically
+function updateCharacterCount(textArea, countDisplay, maxLength) {
+    const textLength = textArea.value.length;
+    countDisplay.textContent = `Characters: ${textLength}/${maxLength}`;
+    countDisplay.style.color = textLength > maxLength ? 'red' : 'black';
+}
+
+// Show loading spinner
+function showSpinner() {
+    document.getElementById('loading-spinner').style.display = 'block';
+    document.getElementById('result-container').style.display = 'none';
+}
+
+// Hide loading spinner
+function hideSpinner() {
+    document.getElementById('loading-spinner').style.display = 'none';
+}
+
+// Display detected language
+function displayDetectedLanguage(language) {
+    const languageDisplay = document.getElementById('language-detected');
+    languageDisplay.style.display = 'block';
+    languageDisplay.textContent = `Detected Language: ${language === 'en' ? 'English' : 'German'}`;
+}
+
+const predefinedOrder = [
+    "Experience", "Skills", "Tech Stack", "Soft Skills", "Cultural Fit",
+    "University", "Certifications", "Engagement", "Projects", "References", "Languages"
+];
+
+// Colors for each category
+const categoryColors = {
+    'Experience': '#1E2F4F',   // Deep navy-blue
+    'Skills': '#1E2F4F',       // Deep navy-blue
+    'Tech Stack': '#1E2F4F',   // Deep navy-blue
+    'Soft Skills': '#FFB02E',  // Golden yellow
+    'Cultural Fit': '#FFB02E', // Golden yellow
+    'University': '#A0C1B9',   // Soft turquoise
+    'Certifications': '#A0C1B9', // Soft turquoise
+    'Engagement': '#6C7B95',   // Gray-blue
+    'Projects': '#6C7B95',     // Gray-blue
+    'References': '#F39C6B',   // Soft orange
+    'Languages': '#E5E9F0'     // Light grayish-blue
+};
+
+// Percentages for each category
+const categoryPercentages = {
+    'Experience': 25,
+    'Skills': 20,
+    'Tech Stack': 5,
+    'Soft Skills': 10,
+    'Cultural Fit': 10,
+    'University': 5,
+    'Certifications': 5,
+    'Engagement': 5,
+    'Projects': 5,
+    'References': 5,
+    'Languages': 5
+};
+
+
+
+// Функция для отображения результатов анализа
+function displayResults(result) {
+    const resultContainer = document.getElementById('result-container');
+    resultContainer.innerHTML = '';
+    resultContainer.style.display = 'block';
+
+    // Упорядоченный список категорий
+    const orderedCategories = [
+        "Experience", "Skills", "Tech Stack", "Soft Skills", "Cultural Fit",
+        "University", "Certifications", "Engagement", "Projects", "References", "Languages"
+    ];
+
+    orderedCategories.forEach(function(category) {
+        // Проверяем, есть ли категория в результатах анализа
+        if (result.analysis.hasOwnProperty(category)) {
+            const card = document.createElement('div');
+            card.classList.add('category-card');
+
+            // Устанавливаем цвет фона карточки в зависимости от категории
+            const backgroundColor = categoryColors[category] || '#fff';
+            card.style.backgroundColor = backgroundColor;
+
+            // Устанавливаем цвет текста на карточке
+            if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+                // Для указанных категорий устанавливаем белый цвет текста
+                card.style.color = '#fff';
+            } else {
+                // Для остальных категорий цвет текста по умолчанию (чёрный)
+                card.style.color = '#000';
+            }
+
+            const title = document.createElement('div');
+            title.classList.add('category-title');
+            title.textContent = category;
+
+            // Устанавливаем цвет заголовка
+            if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+                // Для указанных категорий устанавливаем светлый цвет заголовка
+                title.style.color = '#E5E9F0'; // Светлый цвет из вашей палитры
+            } else {
+                // Для остальных категорий цвет заголовка по умолчанию (чёрный)
+                title.style.color = '#000';
+            }
+
+            const text = document.createElement('div');
+            text.classList.add('category-text');
+            text.textContent = result.analysis[category] || '-';
+
+            // Создаём бейджик с процентом
+            const percentageBadge = document.createElement('div');
+            percentageBadge.classList.add('percentage-badge');
+            percentageBadge.textContent = `${categoryPercentages[category]}%`;
+            percentageBadge.style.position = 'absolute';
+            percentageBadge.style.top = '10px';
+            percentageBadge.style.right = '10px';
+            percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            percentageBadge.style.color = '#fff';
+            percentageBadge.style.padding = '5px 10px';
+            percentageBadge.style.borderRadius = '5px';
+
+            // Добавляем элементы в карточку
+            card.appendChild(title);
+            card.appendChild(text);
+            card.appendChild(percentageBadge);
+
+            // Добавляем карточку в контейнер
+            resultContainer.appendChild(card);
+        }
+    });
+}
+
+
+// Form submission handler
+document.getElementById('resume-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const jobDescriptionEN = document.getElementById('job_description-en');
+    let jobDescription = jobDescriptionEN.value;
+
+    showSpinner();
+
+    if (jobDescription.length > 2000) {
+        alert('The job description exceeds 2000 characters.');
+        hideSpinner();
+        return;
+    }
+
+    const detectedLanguage = detectLanguage(jobDescription);
+    if (!detectedLanguage) {
+        alert('Only English or German text is supported.');
+        hideSpinner();
+        return;
+    }
+
+    // Display the detected language
+    displayDetectedLanguage(detectedLanguage);
+
+    const formData = new FormData();
+    formData.append('job_description', jobDescription);
+
+    try {
+        const response = await fetch('https://scrape-jobs-c0657e779443.herokuapp.com/analyze_with_categories', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        hideSpinner();
+
+        if (response.ok) {
+            displayResults(result);
+        } else {
+            document.getElementById('result-container').innerHTML = `
+                <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">
+                    <strong>Error:</strong> ${result.error}
+                </div>`;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        hideSpinner();
+        document.getElementById('result-container').innerHTML = `
+            <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">
+                <strong>An error occurred while processing your request.</strong>
+            </div>`;
+    }
+});
+
+// Dynamic character count display
+document.getElementById('job_description-en').addEventListener('input', function() {
+    const countDisplay = document.getElementById('character-count');
+    updateCharacterCount(this, countDisplay, 2000);
+});
+
+
+
+
+
+let donutChartInstance = null;
+
+
+function initializeChart() {
+    const donutChartElement = document.getElementById('donutChart').getContext('2d');
+
+    // Check if a chart instance already exists and destroy it
+    if (donutChartInstance !== null) {
+        donutChartInstance.destroy();
+    }
+
+    const categories = {
+        'Professional Skills': {
+            value: 50,
+            color: '#1E2F4F',
+            subcategories: {
+                'Experience': 25,
+                'Skills': 20,
+                'Tech Stack': 5
+            }
+        },
+        'Cultural Fit': {
+            value: 20,
+            color: '#FFB02E',
+            subcategories: {
+                'Soft Skills': 10,
+                'Cultural Fit': 10
+            }
+        },
+        'Education': {
+            value: 10,
+            color: '#A0C1B9',
+            subcategories: {
+                'University': 5,
+                'Certifications': 5
+            }
+        },
+        'Portfolio': {
+            value: 10,
+            color: '#6C7B95',
+            subcategories: {
+                'Engagement': 5,
+                'Projects': 5
+            }
+        },
+        'References': {
+            value: 5,
+            color: '#F39C6B',
+            subcategories: {}
+        },
+        'Languages': {
+            value: 5,
+            color: '#E5E9F0',
+            subcategories: {}
+        }
+    };
+
+    const labels = [];
+    const data = [];
+    const backgroundColors = [];
+
+    for (const category in categories) {
+        const categoryInfo = categories[category];
+
+        if (Object.keys(categoryInfo.subcategories).length > 0) {
+            for (const subcategory in categoryInfo.subcategories) {
+                labels.push(subcategory);
+                data.push(categoryInfo.subcategories[subcategory]);
+                backgroundColors.push(categoryInfo.color);
+            }
+        } else {
+            labels.push(category);
+            data.push(categoryInfo.value);
+            backgroundColors.push(categoryInfo.color);
+        }
+    }
+
+    // Create the chart and store it in the global variable
+    donutChartInstance = new Chart(donutChartElement, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: backgroundColors,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
