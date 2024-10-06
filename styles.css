@@ -1693,6 +1693,7 @@ iframe {
 
   .section {
     padding: 0 0;
+    width: auto;
   }
 
   .contact-info {
@@ -1703,9 +1704,6 @@ iframe {
     font-size: 13px;
   }
 
-  .section {
-    width: 100%;
-  }
 
   .section p {
     padding-left: 0;
@@ -1780,6 +1778,10 @@ iframe {
 
   #github-stats-text {
     display: block;
+  }
+
+  #about-me{
+    width: auto;
   }
 
   #achievement-container {
