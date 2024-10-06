@@ -232,6 +232,11 @@ function switchLanguage(lang) {
     document.getElementById("p-title-github-de").style.display = "none";
     document.getElementById("p-title-x-en").style.display = "block";
     document.getElementById("p-title-x-de").style.display = "none";
+    document.getElementById("p-title-hr-en").style.display = "block";
+    document.getElementById("p-title-hr-de").style.display = "none";
+    document.getElementById("p-title-udemy-en").style.display = "block";
+    document.getElementById("p-title-udemy-de").style.display = "none";
+
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
     document.getElementById("content-en").style.display = "none";
@@ -262,6 +267,10 @@ function switchLanguage(lang) {
     document.getElementById("p-title-github-de").style.display = "block";
     document.getElementById("p-title-x-en").style.display = "none";
     document.getElementById("p-title-x-de").style.display = "block";
+    document.getElementById("p-title-hr-en").style.display = "none";
+    document.getElementById("p-title-hr-de").style.display = "block";
+    document.getElementById("p-title-udemy-en").style.display = "none";
+    document.getElementById("p-title-udemy-de").style.display = "block";
   }
 }
 

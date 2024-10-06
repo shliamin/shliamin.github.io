@@ -1,5 +1,25 @@
 [
     {
+        "name": "CSS (Basic) - HackerRank",
+        "image": "images/certificates/javascript_basic certificate.jpg",
+        "link": "https://www.hackerrank.com/certificates/86dabe0f1483",
+        "date": "2024-10-06",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "CSS (Basic) - HackerRank",
+        "image": "images/certificates/css certificate.jpg",
+        "link": "https://www.hackerrank.com/certificates/f422b827cd30",
+        "date": "2024-10-06",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
         "name": "Software Engineer - HackerRank",
         "image": "images/certificates/software_engineer certificate.jpg",
         "link": "https://www.hackerrank.com/certificates/ad5403bc9d8e",

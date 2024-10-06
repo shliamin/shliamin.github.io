@@ -68,24 +68,25 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="language-switcher btn-group">
-      <button
-        class="btn btn-secondary active"
-        onclick="switchLanguage('en')"
-        id="btn-en"
-      >
-        EN
-      </button>
-      <button
-        class="btn btn-secondary"
-        onclick="switchLanguage('de')"
-        id="btn-de"
-      >
-        DE
-      </button>
-    </div>
+
     <div id="overlay"></div>
     <div class="container">
+        <div class="language-switcher btn-group">
+            <button
+              class="btn btn-secondary active"
+              onclick="switchLanguage('en')"
+              id="btn-en"
+            >
+              EN
+            </button>
+            <button
+              class="btn btn-secondary"
+              onclick="switchLanguage('de')"
+              id="btn-de"
+            >
+              DE
+            </button>
+          </div>
       <aside class="sidebar">
         <div class="profile-container">
           <img
@@ -190,7 +191,7 @@
               />
               <p id="p-title-medium-en">Read me on Medium</p>
               <p id="p-title-medium-de" style="display: none">
-                Lesen Sie mich auf Medium
+                Auf Medium lesen
               </p>
             </a>
           </div>
@@ -203,7 +204,7 @@
               />
               <p id="p-title-linkedin-en">Follow me on LinkedIn</p>
               <p id="p-title-linkedin-de" style="display: none">
-                Folgen Sie mir auf LinkedIn
+                Auf LinkedIn folgen
               </p>
             </a>
           </div>
@@ -216,7 +217,7 @@
               />
               <p id="p-title-github-en">Check out my GitHub</p>
               <p id="p-title-github-de" style="display: none">
-                Besuchen Sie mein GitHub
+                Mein GitHub
               </p>
             </a>
           </div>
@@ -229,10 +230,40 @@
               />
               <p id="p-title-x-en">Follow me on X</p>
               <p id="p-title-x-de" style="display: none">
-                Folgen Sie mir auf X
+                Auf X folgen
               </p>
             </a>
           </div>
+          <div class="status-item">
+            <a href="https://www.hackerrank.com/profile/efimshliamin">
+              <img
+                src="images/hackerrank-brands-solid.svg"
+                alt="HR Icon"
+                class="status-icon"
+              />
+              <p id="p-title-hr-en">Explore my HackerRank</p>
+              <p id="p-title-hr-de" style="display: none">
+                Mein HackerRank
+              </p>
+            </a>
+          </div>
+
+          <div class="status-item">
+            <a href="https://www.udemy.com/user/efim-shliamin/">
+              <img
+                src="images/udemy-seeklogo.svg"
+                alt="Udemy Icon"
+                class="status-icon"
+              />
+              <p id="p-title-udemy-en">My Udemy profile</p>
+              <p id="p-title-udemy-de" style="display: none">
+                Mein Udemy-Profil
+              </p>
+            </a>
+          </div>
+
+
+
           <div class="articles-section desktop-only">
             <h3 id="notion-en">Latest articles on Notion:</h3>
             <h3 id="notion-de" style="display: none">
