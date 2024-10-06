@@ -1574,8 +1574,7 @@ iframe {
 
 @media (max-width: 1180px) {
   .sidebar-ad,
-  #ad-info-en,
-  #ad-info-de,
+  #ad-info,
   #ads {
     display: none;
   }
@@ -1623,6 +1622,7 @@ iframe {
     background-color: #fff;
     border-radius: 20px;
     box-sizing: border-box;
+    max-width: 100% !important;
   }
 
 
