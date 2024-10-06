@@ -236,6 +236,8 @@ function switchLanguage(lang) {
     document.getElementById("p-title-hr-de").style.display = "none";
     document.getElementById("p-title-udemy-en").style.display = "block";
     document.getElementById("p-title-udemy-de").style.display = "none";
+    document.getElementById("ad-info-en").style.display = "block";
+    document.getElementById("ad-info-de").style.display = "none";
 
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
@@ -271,6 +273,8 @@ function switchLanguage(lang) {
     document.getElementById("p-title-hr-de").style.display = "block";
     document.getElementById("p-title-udemy-en").style.display = "none";
     document.getElementById("p-title-udemy-de").style.display = "block";
+    document.getElementById("ad-info-en").style.display = "none";
+    document.getElementById("ad-info-de").style.display = "block";
   }
 }
 
