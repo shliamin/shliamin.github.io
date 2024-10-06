@@ -1054,7 +1054,10 @@ function initializeChart() {
 
 
 
-
+function refreshAd() {
+    // Обновить рекламный блок
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
 
 
 
