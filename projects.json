@@ -100,7 +100,7 @@
         },
         "technologies": "C#, .NET Core, ASP.NET, Xamarin, NuGet, Microsoft SQL Server, Visual Studio",
         "techField": "full-stack",
-        "techStack": "Java Spring Boot",
+        "techStack": "React, .NET",
         "icons": [
             "images/CSharp.svg",
             "images/NET core.svg",
@@ -123,7 +123,7 @@
         },
         "technologies": "React.js, Express.js, Node.js, MongoDB (Atlas), Leaflet.js, JWT (JSON Web Tokens), Heroku",
         "techField": "full-stack",
-        "techStack": "React",
+        "techStack": "React, Node.js",
         "icons": [
             "images/React.svg",
             "images/Node.js.svg",
@@ -169,9 +169,9 @@
             "card": "images/API-for-Mercedes.gif",
             "description": "images/API-for-Mercedes.gif"
         },
-        "technologies": "HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, AJAX, Flask, Flask-CORS, Overpass API, Nominatim API",
+        "technologies": "Java, React, HTML, CSS, JavaScript, Leaflet.js, OpenStreetMap, AJAX, Flask, Flask-CORS, Overpass API, Nominatim API",
         "techField": "full-stack",
-        "techStack": "Java Spring Boot",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/JavaScript.svg",
             "images/HTML5.svg",
@@ -184,8 +184,8 @@
         "priority": 1
     },
     {
-        "name": "Rails-Restaurants-API",
-        "description": "The Restaurants API is a Ruby on Rails application designed to manage and provide access to restaurant data. It supports CRUD operations for restaurant entries, enabling users to create, read, update, and delete restaurant information.",
+        "name": "Restaurants-API",
+        "description": "The Restaurants API is an application designed to manage and provide access to restaurant data. It supports CRUD operations for restaurant entries, enabling users to create, read, update, and delete restaurant information.",
         "github": "https://github.com/shliamin/Rails-Restaurants-API",
         "demo": "https://rails-restaurants-api-bddc05516750.herokuapp.com/",
         "status": "Completed",
@@ -193,7 +193,7 @@
             "card": "images/Rails-Restaurants-API.gif",
             "description": "images/Rails-Restaurants-API.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
@@ -208,8 +208,8 @@
         "priority": 1
     },
     {
-        "name": "Rails-NABO",
-        "description": "NABO is a Rails-based social platform where people can help out their neighbors. Users exchange Nabo coins based on how much time they spend on helping each other.",
+        "name": "NABO",
+        "description": "NABO is s social platform where people can help out their neighbors. Users exchange Nabo coins based on how much time they spend on helping each other.",
         "github": "Private code",
         "demo": "https://rails-nabo-3c2b2191f43a.herokuapp.com/",
         "status": "In Development",
@@ -217,9 +217,9 @@
             "card": "images/NABO.gif",
             "description": "images/NABO.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Pundit, Rack-CORS, HTML, CSS, JavaScript, Webpacker, Simple Form, Font Awesome, Capybara, Selenium WebDriver, SQLite3, Docker, Heroku",
         "techField": "full-stack",
-        "techStack": "Java Spring Boot",
+        "techStack": "Java Spring Boot, React",
         "icons": [
             "images/Ruby.svg",
             "images/Ruby on Rails.svg",
@@ -241,9 +241,9 @@
             "card": "images/interactive-tent.gif",
             "description": "images/interactive-tent.gif"
         },
-        "technologies": "HTML, CSS, JavaScript, Plotly.js, GitHub Actions, Flask, Flask-CORS, logging, os, SciPy, NumPy, Trimesh, ReportLab, PIL (Pillow), EZDXF, JSON, Threading",
+        "technologies": "React, Python, HTML, CSS, JavaScript, Plotly.js, GitHub Actions, Flask, Flask-CORS, logging, os, SciPy, NumPy, Trimesh, ReportLab, PIL (Pillow), EZDXF, JSON, Threading",
         "techField": "full-stack",
-        "techStack": "React",
+        "techStack": "React, Python",
         "icons": [
             "images/JavaScript.svg",
             "images/python-brands-solid.svg",
@@ -256,7 +256,7 @@
         "priority": 1
     },
     {
-        "name": "JS-3D-Car",
+        "name": "React-3D-Car",
         "description": "It is an interactive 3D visualization project that utilizes modern web technologies to render a detailed car model in a browser. Leveraging the power of Three.js, the application allows users to explore the intricate design of a car in a fully immersive 3D environment.",
         "github": "https://github.com/shliamin/JS-3D-Car",
         "demo": "https://shliamin.github.io/JS-3D-Car/",
@@ -265,7 +265,7 @@
             "card": "images/JS-3D-Car.gif",
             "description": "images/JS-3D-Car.gif"
         },
-        "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
+        "technologies": "React, Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
         "techStack": "React",
         "icons": [
@@ -279,8 +279,8 @@
         "priority": 2
     },
     {
-        "name": "JS-Coord-Finder",
-        "description": "The JS-Coord-Finder is a dynamic web application designed to demonstrate the capabilities of the Three.js library in creating and manipulating a 3D scene. It allows users to interact with a 3D plane, adding and removing objects, calculating coordinates in real-time, and dynamically drawing and measuring shapes like lines and triangles.",
+        "name": "React-Coord-Finder",
+        "description": "A dynamic web application designed to demonstrate the capabilities of the Three.js library in creating and manipulating a 3D scene. It allows users to interact with a 3D plane, adding and removing objects, calculating coordinates in real-time, and dynamically drawing and measuring shapes like lines and triangles.",
         "github": "https://github.com/shliamin/JS-Coord-Finder",
         "demo": "https://shliamin.github.io/JS-Coord-Finder/",
         "status": "Completed",
@@ -288,7 +288,7 @@
             "card": "images/JS-Coord-Finder.gif",
             "description": "images/JS-Coord-Finder.gif"
         },
-        "technologies": "Three.js, JavaScript, HTML and CSS, WebGL",
+        "technologies": "React, Three.js, JavaScript, HTML and CSS, WebGL",
         "techField": "full-stack",
         "techStack": "React",
         "icons": [
@@ -302,8 +302,8 @@
         "priority": 2
     },
     {
-        "name": "JS-Cinema-Sorter",
-        "description": "It is is an interactive JavaScript app focused on implementing the bubble sort algorithm to organize lists of new movies. This project combines JavaScript, Ajax, DOM manipulation, and event handling to create a dynamic user experience where users can see the sorted lists of movies.",
+        "name": "React-Cinema-Sorter",
+        "description": "It is is an interactive React app focused on implementing the bubble sort algorithm to organize lists of new movies. This project combines JavaScript, Ajax, DOM manipulation, and event handling to create a dynamic user experience where users can see the sorted lists of movies.",
         "github": "https://github.com/shliamin/JS-Cinema-Sorter",
         "demo": "https://shliamin.github.io/JS-Cinema-Sorter/",
         "status": "Completed",
@@ -311,7 +311,7 @@
             "card": "images/JS-Cinema-Sorter.gif",
             "description": "images/JS-Cinema-Sorter.gif"
         },
-        "technologies": "JavaScript, AJAX, DOM Manipulation, Event Handling, HTML and CSS",
+        "technologies": "JavaScript, React, AJAX, DOM Manipulation, Event Handling, HTML and CSS",
         "techField": "full-stack",
         "techStack": "React",
         "icons": [
@@ -323,8 +323,8 @@
         "priority": 2
     },
     {
-        "name": "Rails-Sputnik",
-        "description": "The Sputnik Activity Recommendation System is a Ruby on Rails application that integrates a machine learning-based recommendation engine to suggest activities to users based on their previous interactions and the content features of the activities. A recommendation engine built using a combination of collaborative filtering and content-based filtering to suggest activities to users based on their interactions and activity features. Pandas is used for data manipulation and analysis, particularly for loading and merging data from a PostgreSQL database. NumPy is used for numerical operations, such as handling arrays and performing mathematical computations. StandardScaler from sklearn.preprocessing is used to normalize the data. NearestNeighbors from sklearn.neighbors is used to implement the k-nearest neighbors algorithm for finding similar activities. LinearRegression from sklearn.linear_model is used to build a linear regression model to predict user ratings based on activity features.",
+        "name": "Sputnik",
+        "description": "The Sputnik Activity Recommendation System is an application that integrates a machine learning-based recommendation engine to suggest activities to users based on their previous interactions and the content features of the activities. A recommendation engine built using a combination of collaborative filtering and content-based filtering to suggest activities to users based on their interactions and activity features. Pandas is used for data manipulation and analysis, particularly for loading and merging data from a PostgreSQL database. NumPy is used for numerical operations, such as handling arrays and performing mathematical computations. StandardScaler from sklearn.preprocessing is used to normalize the data. NearestNeighbors from sklearn.neighbors is used to implement the k-nearest neighbors algorithm for finding similar activities. LinearRegression from sklearn.linear_model is used to build a linear regression model to predict user ratings based on activity features.",
         "github": "https://github.com/shliamin/Rails-Sputnik",
         "demo": "https://sputnik-50db9386c85a.herokuapp.com/",
         "status": "In Development",
@@ -332,7 +332,7 @@
             "card": "images/sputnik.gif",
             "description": "images/sputnik.gif"
         },
-        "technologies": "Ruby, Ruby on Rails, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
+        "technologies": "Java, React, PostgreSQL (Supabase), Machine Learning, Python, scikit-learn, NumPy, Docker, JavaScript, Heroku, pandas, HTML and CSS",
         "techField": "full-stack,data-science,machine-learning",
         "techStack": "Java Spring Boot, React, Python,NumPy,Pandas,Collaborative Filtering,Content-Based Filtering,Hybrid Recommendation System",
         "icons": [
@@ -347,8 +347,8 @@
         "priority": 2
     },
     {
-        "name": "Rails-Mister-Cocktail",
-        "description": "A Ruby on Rails web application for creating, managing, and sharing cocktail recipes. Perfect for mixologists and cocktail enthusiasts looking to expand their drink repertoire.",
+        "name": "Mister-Cocktail",
+        "description": "A web application for creating, managing, and sharing cocktail recipes. Perfect for mixologists and cocktail enthusiasts looking to expand their drink repertoire.",
         "github": "https://github.com/shliamin/Rails-Mister-Cocktail",
         "demo": "https://rails-mister-cocktail-46a67922c9a9.herokuapp.com/",
         "status": "Completed",
@@ -356,7 +356,7 @@
             "card": "images/Mister-Cocktail.gif",
             "description": "images/Mister-Cocktail.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
@@ -371,8 +371,8 @@
         "priority": 4
     },
     {
-        "name": "Rails-Velp-MVP",
-        "description": "A Ruby on Rails MVP for a Yelp-like platform, allowing users to review and rate local businesses, complete with user authentication, search functionality, and responsive design.",
+        "name": "Velp-MVP",
+        "description": "MVP for a Yelp-like platform, allowing users to review and rate local businesses, complete with user authentication, search functionality, and responsive design.",
         "github": "https://github.com/shliamin/Rails-Velp-MVP",
         "demo": "https://rails-velp-mvp-cf43c90f7bb7.herokuapp.com/",
         "status": "Completed",
@@ -380,7 +380,7 @@
             "card": "images/Velp-MVP.gif",
             "description": "images/Velp-MVP.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
@@ -395,7 +395,7 @@
         "priority": 4
     },
     {
-        "name": "Rails-Longest-Word-Game",
+        "name": "Longest-Word-Game",
         "description": "Rails application for a vocabulary game that challenges users to form the longest word from a random set of letters. This project tests both Ruby on Rails skills and linguistic creativity.",
         "github": "https://github.com/shliamin/Rails-Longest-Word-Game",
         "demo": "https://rails-longest-word-game-15aca0ae87c1.herokuapp.com/",
@@ -404,7 +404,7 @@
             "card": "images/Longest-word.gif",
             "description": "images/Longest-word.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
@@ -419,8 +419,8 @@
         "priority": 4
     },
     {
-        "name": "Rails-Task-Manager",
-        "description": "It is an intuitive web application built using Ruby on Rails. It serves as a task management tool allowing users to create, update, and manage tasks efficiently. This application demonstrates basic CRUD (Create, Read, Update, Delete) operations within the Rails framework, providing a user-friendly interface and a robust back-end architecture.",
+        "name": "Task-Manager",
+        "description": "It is an intuitive web application built using Java. It serves as a task management tool allowing users to create, update, and manage tasks efficiently. This application demonstrates basic CRUD (Create, Read, Update, Delete), providing a user-friendly interface and a robust back-end architecture.",
         "github": "https://github.com/shliamin/Rails-Task-Manager",
         "demo": "https://rails-task-manager-a6718843d50b.herokuapp.com/",
         "status": "Completed",
@@ -428,7 +428,7 @@
             "card": "images/task-manager.gif",
             "description": "images/task-manager.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
@@ -443,8 +443,8 @@
         "priority": 4
     },
     {
-        "name": "Rails-Stupid-Coaching",
-        "description": "A fun and interactive Rails application that simulates a conversation with a -stupid- coach. Users can ask any question and receive humorous or straightforward advice, making this project not only a showcase of Ruby on Rails capabilities but also an engaging way to demonstrate web interaction patterns.",
+        "name": "Stupid-Coaching",
+        "description": "A fun and interactive application that simulates a conversation with a -stupid- coach. Users can ask any question and receive humorous or straightforward advice, making this project an engaging way to demonstrate web interaction patterns.",
         "github": "https://github.com/shliamin/Rails-Stupid-Coaching",
         "demo": "https://rails-stupid-coaching-413940faaecf.herokuapp.com/",
         "status": "Completed",
@@ -452,7 +452,7 @@
             "card": "images/Stupid-Coaching.gif",
             "description": "images/Stupid-Coaching.gif"
         },
-        "technologies": "Ruby on Rails, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
+        "technologies": "Java, React, PostgreSQL (Supabase), Devise, Bootstrap, ActiveRecord, HTML, CSS, JavaScript, Docker, Heroku",
         "techField": "full-stack",
         "techStack": "Java Spring Boot, React",
         "icons": [
