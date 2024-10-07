@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function displayProjects(projects) {
+    projects.sort((a, b) => a.priority - b.priority);
+
     const projectsGrid = document.getElementById('projects-grid');
     projectsGrid.innerHTML = '';
     const projectCount = document.getElementById('project-count');
@@ -36,12 +38,8 @@ function displayProjects(projects) {
         projectCard.innerHTML = `
             <div class="card project" onclick="loadProjectDetails('${project.name}', '${project.description}', '${project.github}', '${project.demo}', '${project.status}', '${project.images.description}', '${project.technologies}');" uk-toggle="target: #project-modal">
                 <div class="card-img-top" style="background-image: url('${project.images.card}');">
-                    <div class="badge-ribbon">${project.name}</div>
-                    <div class="card-body-overlay">
-                        <div class="icons-row">
-                            ${project.icons.map(icon => `<img src="${icon}" class="technology-icon" alt="${icon.split('/').pop().split('.')[0]} Icon">`).join('')}
-                        </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
         `;
@@ -213,3 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
+
+
+
+

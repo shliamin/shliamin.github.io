@@ -18,7 +18,7 @@
             "images/Biopython_logo.svg",
             "images/Visual Studio Code (VS Code).svg"
         ],
-        "priority": 2
+        "priority": 3
     },
     {
         "name": "Python-Medical-Data-Analysis",
@@ -40,7 +40,7 @@
             "images/pandas-svgrepo-com.svg",
             "images/Visual Studio Code (VS Code).svg"
         ],
-        "priority": 3
+        "priority": 4
     },
     {
         "name": "Python-DICOM-Processing-And-Segmentation",
@@ -64,7 +64,7 @@
             "images/Matplotlib_icon.svg",
             "images/SCIPY_2.svg"
         ],
-        "priority": 1
+        "priority": 2
     },
     {
         "name": "OpenCV-Mitosis-Detection",
@@ -86,7 +86,7 @@
             "images/Jupyter.svg",
             "images/Matplotlib_icon.svg"
         ],
-        "priority": 1
+        "priority": 2
     },
     {
         "name": "Finance",
@@ -109,7 +109,7 @@
             "images/Microsoft SQL Server.svg",
             "images/Visual Studio.svg"
         ],
-        "priority": 3
+        "priority": 4
     },
     {
         "name": "React-Musical-Events",
@@ -157,7 +157,7 @@
             "images/Swagger.svg",
             "images/Visual Studio Code (VS Code).svg"
         ],
-        "priority": 3
+        "priority": 2
     },
     {
         "name": "API-for-Mercedes-Benz.io",
@@ -205,7 +205,7 @@
             "images/Docker.svg",
             "images/Heroku.svg"
         ],
-        "priority": 2
+        "priority": 1
     },
     {
         "name": "Rails-NABO",
@@ -320,7 +320,7 @@
             "images/CSS3.svg",
             "images/Visual Studio Code (VS Code).svg"
         ],
-        "priority": 3
+        "priority": 2
     },
     {
         "name": "Rails-Sputnik",
@@ -464,7 +464,7 @@
             "images/Heroku.svg",
             "images/Visual Studio Code (VS Code).svg"
         ],
-        "priority": 5
+        "priority": 4
     },
     {
         "name": "NGS-pipeline",
@@ -486,6 +486,6 @@
             "images/NumPy.svg",
             "images/Matplotlib_icon.svg"
         ],
-        "priority": 1
+        "priority": 3
     }
 ]
