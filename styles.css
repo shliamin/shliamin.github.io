@@ -1694,6 +1694,7 @@ iframe {
   .section {
     padding: 0 0;
     width: auto;
+    margin-left: 0px;
   }
 
   .contact-info {
