@@ -45,7 +45,6 @@ body {
 .analysis-results {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Space between cards */
 }
 
 /*

@@ -807,6 +807,151 @@ const categoryPercentages = {
     'Languages': 5
 };
 
+// Функция для создания карточек с индикатором загрузки
+function createLoadingCard(category) {
+    const card = document.createElement('div');
+    card.classList.add('category-card');
+    card.style.backgroundColor = categoryColors[category] || '#fff';
+
+    const title = document.createElement('div');
+    title.classList.add('category-title');
+    title.textContent = category;
+
+    const spinner = document.createElement('div');
+    spinner.classList.add('spinner');
+    spinner.innerHTML = '<div class="loading-spinner"></div>'; 
+
+    card.appendChild(title);
+    card.appendChild(spinner);
+    return card;
+}
+
+// Вспомогательная функция для создания карточки категории
+function createCategoryCard(category, textContent = '-', isLoading = true) {
+    const card = document.createElement('div');
+    card.classList.add('category-card');
+
+    const backgroundColor = categoryColors[category] || '#fff';
+    card.style.backgroundColor = backgroundColor;
+
+    if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+        card.style.color = '#fff';
+    } else {
+        card.style.color = '#000';
+    }
+
+    const title = document.createElement('div');
+    title.classList.add('category-title');
+    title.textContent = category;
+    title.style.color = ["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category) ? '#E5E9F0' : '#000';
+
+    const text = document.createElement('div');
+    text.classList.add('category-text');
+    text.textContent = isLoading ? '' : textContent;
+
+    // Добавляем индикатор загрузки, если `isLoading` равно `true`
+    if (isLoading) {
+        const spinner = document.createElement('div');
+        spinner.classList.add('spinner'); // Добавьте CSS класс для индикатора загрузки
+        text.appendChild(spinner);
+    }
+
+    const percentageBadge = document.createElement('div');
+    percentageBadge.classList.add('percentage-badge');
+    percentageBadge.textContent = `${categoryPercentages[category]}%`;
+    percentageBadge.style.position = 'absolute';
+    percentageBadge.style.top = '5px';
+    percentageBadge.style.right = '5px';
+    percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    percentageBadge.style.color = '#fff';
+    percentageBadge.style.padding = '2px 7px';
+    percentageBadge.style.borderRadius = '5px';
+
+    card.appendChild(title);
+    card.appendChild(text);
+    card.appendChild(percentageBadge);
+
+    return card;
+}
+
+// Функция для отображения данных в `other-cards`
+async function displayExtendedResults(jobDescription) {
+    const otherContainer = document.getElementById('other-cards');
+    otherContainer.innerHTML = '';
+
+    const endpoints = [
+        { name: "Experience", url: "/experience" },
+        { name: "Skills", url: "/skills" },
+        { name: "Tech Stack", url: "/tech_stack" },
+        { name: "Soft Skills", url: "/soft_skills" },
+        { name: "Cultural Fit", url: "/cultural_fit" },
+        { name: "University", url: "/university" },
+        { name: "Certifications", url: "/certifications" },
+        { name: "Engagement", url: "/engagement" },
+        { name: "Projects", url: "/projects" },
+        { name: "References", url: "/references" },
+        { name: "Languages", url: "/languages" }
+    ];
+
+    // Создаем пустые карточки с индикаторами загрузки
+    endpoints.forEach(endpoint => {
+        const loadingCard = createCategoryCard(endpoint.name, '', true);
+        otherContainer.appendChild(loadingCard);
+    });
+
+    // Выполняем запросы по каждому эндпоинту и обновляем содержимое карточек
+    for (let i = 0; i < endpoints.length; i++) {
+        const endpoint = endpoints[i];
+        try {
+            const formData = new FormData();
+            formData.append('job_description', jobDescription);
+
+            const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                const updatedCard = createCategoryCard(endpoint.name, result[endpoint.name], false);
+                otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
+            } else {
+                throw new Error(result.error || 'Error fetching data');
+            }
+        } catch (error) {
+            console.error(`Error loading ${endpoint.name}:`, error);
+            const errorCard = createCategoryCard(endpoint.name, 'Error loading data', false);
+            otherContainer.replaceChild(errorCard, otherContainer.childNodes[i]);
+        }
+    }
+}
+
+
+// Функция для обновления карточки с данными из API
+function updateExtendedResultCard(container, categoryName, result) {
+    const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
+    if (card) {
+        card.querySelector('.spinner').style.display = 'none'; // Скрыть спиннер
+        const content = document.createElement('div');
+        content.classList.add('category-text');
+        content.textContent = result[categoryName] || '-';
+        card.appendChild(content);
+    }
+}
+
+// Функция для отображения ошибки в карточке
+function updateErrorCard(container, categoryName) {
+    const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
+    if (card) {
+        card.querySelector('.spinner').style.display = 'none';
+        card.style.backgroundColor = '#dc3545'; // Красный цвет для ошибки
+        const errorText = document.createElement('div');
+        errorText.classList.add('category-text');
+        errorText.textContent = 'Error loading data';
+        card.appendChild(errorText);
+    }
+}
+
 
 
 // Функция для отображения результатов анализа
@@ -928,6 +1073,7 @@ document.getElementById('resume-form').addEventListener('submit', async function
 
         if (response.ok) {
             displayResults(result);
+            await displayExtendedResults(jobDescriptionEN);
         } else {
             document.getElementById('result-container').innerHTML = `
                 <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">
