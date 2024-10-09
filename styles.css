@@ -1519,6 +1519,8 @@ iframe {
   padding-left: 10%;
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #cccccc transparent; /* Firefox */
+  max-height: 100px; /* Adjust the height based on your design requirements */
+  overflow-y: auto;  /* Enables vertical scrolling */
 }
 
 .articles-list::-webkit-scrollbar {
