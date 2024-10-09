@@ -12,6 +12,81 @@ body {
   color: #333;
 }
 
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: ""; /* Необходимо для создания псевдоэлемента */
+    position: absolute;
+    left: 190px; 
+    top: 5px;
+    bottom: 10px;
+    width: 1px; /* Ширина линии */
+    background-color: #777; /* Цвет линии */
+}
+
+
+
+
+
+.entry::before {
+    content: "";
+    position: absolute;
+    left: 186px; /* Смещает точку влево к линии времени */
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #777;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+
+.entry {
+    padding-left: 80px;
+    display: flex;
+    align-items: baseline;
+    margin: 5px 0;
+}
+
+.date {
+    color: #777;
+    min-width: 100px; /* Ensures sufficient width for two-line dates */
+    line-height: 1.5; /* Proper spacing between two lines */
+}
+
+
+.entry p {
+    margin: 0;
+    padding-left: 10px; /* Space between date and description */
+    padding-bottom: 10px;
+}
+
+#experience-description{
+
+    color: #777;
+}
+
+#role{
+    background-color: #E5E9EF ;
+    color: #1E2F50;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#company{
+    background-color: #E5E9EF ;
+    color: #1E2F50;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+
+
+
+
 .colorful-ai {
   font-weight: bold;
   background: linear-gradient(
@@ -375,6 +450,17 @@ textarea {
   scroll-behavior: smooth;
   height: 220px;
 }
+
+.photo-carousel {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 220px;
+}
+
+
 
 .book-item {
   position: relative;
@@ -1579,13 +1665,27 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    .image-container {
+        padding-left: 20px; /* уменьшаем отступ слева */
+        padding-right: 20px; /* уменьшаем отступ справа */
+    }
+
+    .image-container img {
+        height: auto; /* позволяет высоте автоматически адаптироваться */
+        max-height: 100px; /* максимальная высота изображения на маленьких экранах */
+        width: 100%; /* ширина изображения становится адаптивной */
+        flex-shrink: 1; /* позволяет изображению уменьшаться */
+    }
+
   .carousel-container {
         display: block;
   }
 
   .sidebar-ad,
   #ad-info,
-  #ads {
+  #ads-1,
+  #ads-2,
+  #ads-3 {
     display: none;
   }
 
@@ -1800,6 +1900,9 @@ iframe {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
+
+
 
   .section ul {
     padding-left: 0px;

@@ -657,10 +657,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update dropdown with book counts
   function updateDropdownCounts() {
     const categoryCounts = {
-      Technical: 0,
+      "Technical": 0,
       "Business & Leadership": 0,
       "Innovation & Startups": 0,
       "Personal Development": 0,
+      "Philosophy": 0,
+      "Biography": 0
     };
 
     books.forEach((book) => {
@@ -1428,10 +1430,99 @@ function refreshAd() {
   
   
   
+  document.addEventListener("DOMContentLoaded", function () {
+    let photos = []; // Store fetched data about photos
+
+    fetch("photos.json")
+        .then((response) => response.json())
+        .then((data) => {
+            photos = data;
+            displayPhotos(photos); // Display all photos initially
+        })
+        .catch((error) => console.error("Error fetching photos:", error));
+
+    const container = document.querySelector(".photo-carousel");
+
+    // Function to display photos in the carousel
+    function displayPhotos(photos) {
+        if (!container) {
+            console.error("Container not found!");
+            return;
+        }
+
+        container.innerHTML = ""; // Clear the current items
+
+        photos.forEach((photo) => {
+            const photoItem = document.createElement("div");
+            photoItem.classList.add("photo-item");
+            photoItem.style.cssText =
+                "position: relative; min-width: 120px; flex-shrink: 0;";
+
+            const anchor = document.createElement("a");
+            anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
+            anchor.target = "_blank";
+
+            const image = document.createElement("img");
+            image.src = photo.imageSource; // Adjust property name based on your actual data
+            image.alt = photo.description; // Use description for alt text
+            image.style.cssText =
+                "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+            anchor.appendChild(image);
+            photoItem.appendChild(anchor);
+            container.appendChild(photoItem);
+        });
+    }
+});
+
+
+
+
   
+document.addEventListener("DOMContentLoaded", function () {
+    let photos = []; // Store fetched data about photos
 
+    fetch("photos-2.json")
+        .then((response) => response.json())
+        .then((data) => {
+            photos = data;
+            displayPhotos(photos); // Display all photos initially
+        })
+        .catch((error) => console.error("Error fetching photos:", error));
 
+    const container = document.querySelector(".photo-carousel-2");
 
+    // Function to display photos in the carousel
+    function displayPhotos(photos) {
+        if (!container) {
+            console.error("Container not found!");
+            return;
+        }
+
+        container.innerHTML = ""; // Clear the current items
+
+        photos.forEach((photo) => {
+            const photoItem = document.createElement("div");
+            photoItem.classList.add("photo-item");
+            photoItem.style.cssText =
+                "position: relative; min-width: 120px; flex-shrink: 0;";
+
+            const anchor = document.createElement("a");
+            anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
+            anchor.target = "_blank";
+
+            const image = document.createElement("img");
+            image.src = photo.imageSource; // Adjust property name based on your actual data
+            image.alt = photo.description; // Use description for alt text
+            image.style.cssText =
+                "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+            anchor.appendChild(image);
+            photoItem.appendChild(anchor);
+            container.appendChild(photoItem);
+        });
+    }
+});
 
 
 

@@ -94,5 +94,17 @@
         "genre": "Personal Development",
         "coverImage": "https://ia802309.us.archive.org/view_archive.php?archive=/20/items/l_covers_0008/l_covers_0008_28.zip&file=0008281189-L.jpg",
         "link": "https://openlibrary.org/works/OL1593567W/Games_People_Play?edition=key%3A/books/OL5911996M"
+    },
+    {
+        "title": "Kritik der reinen Vernunft",
+        "genre": "Philosophy",
+        "coverImage": "https://ia800404.us.archive.org/view_archive.php?archive=/8/items/olcovers578/olcovers578-L.zip&file=5784520-L.jpg",
+        "link": "https://openlibrary.org/works/OL99844W/Kritik_der_reinen_Vernunft?edition=key%3A/books/OL14017114M"
+    },
+    {
+        "title": "The autobiography of Benjamin Franklin",
+        "genre": "Biography",
+        "coverImage": "https://ia600507.us.archive.org/view_archive.php?archive=/8/items/l_covers_0009/l_covers_0009_92.zip&file=0009921674-L.jpg",
+        "link": "https://openlibrary.org/works/OL26492W/Autobiography"
     }
 ]
