@@ -1667,6 +1667,26 @@ iframe {
 
 @media (max-width: 1180px) {
 
+    #photo-container{
+        padding-left: 140px !important;
+    }
+
+    #photo-container-2{
+        padding-left: 140px !important;
+    }
+
+    .timeline::before {
+        left: 110px; 
+    }
+
+    .entry {
+        padding-left: 0px;
+    }
+
+    .entry::before {
+        left: 106px; /* Смещает точку влево к линии времени */
+    }
+
     .image-container {
         padding-left: 20px; /* уменьшаем отступ слева */
         padding-right: 20px; /* уменьшаем отступ справа */
