@@ -250,6 +250,17 @@ function switchLanguage(lang) {
     document.getElementById("hobby-1-de").style.display = "none";
     document.getElementById("hobby-description-en").style.display = "block";
     document.getElementById("hobby-description-de").style.display = "none";
+    document.getElementById("three_months-en").style.display = "block";
+    document.getElementById("three_months-de").style.display = "none";
+    document.getElementById("two_years-en").style.display = "block";
+    document.getElementById("two_years-de").style.display = "none";
+    document.getElementById("three_months-2-en").style.display = "block";
+    document.getElementById("three_months-2-de").style.display = "none";
+    document.getElementById("six_months-en").style.display = "block";
+    document.getElementById("six_months-de").style.display = "none";
+    document.getElementById("six_months-2-en").style.display = "none";
+    document.getElementById("six_months-2-de").style.display = "block";
+    
 
 
   } else if (lang === "de") {
@@ -300,6 +311,16 @@ function switchLanguage(lang) {
     document.getElementById("hobby-1-de").style.display = "block";
     document.getElementById("hobby-description-en").style.display = "none";
     document.getElementById("hobby-description-de").style.display = "block";
+    document.getElementById("three_months-en").style.display = "none";
+    document.getElementById("three_months-de").style.display = "block";
+    document.getElementById("two_years-en").style.display = "none";
+    document.getElementById("two_years-de").style.display = "block";
+    document.getElementById("three_months-2-en").style.display = "none";
+    document.getElementById("three_months-2-de").style.display = "block";
+    document.getElementById("six_months-en").style.display = "none";
+    document.getElementById("six_months-de").style.display = "block";
+    document.getElementById("six_months-2-en").style.display = "none";
+    document.getElementById("six_months-2-de").style.display = "block";
   }
 }
 
