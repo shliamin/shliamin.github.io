@@ -258,9 +258,21 @@ function switchLanguage(lang) {
     document.getElementById("three_months-2-de").style.display = "none";
     document.getElementById("six_months-en").style.display = "block";
     document.getElementById("six_months-de").style.display = "none";
-    document.getElementById("six_months-2-en").style.display = "none";
-    document.getElementById("six_months-2-de").style.display = "block";
-    
+    document.getElementById("six_months-2-en").style.display = "block";
+    document.getElementById("six_months-2-de").style.display = "none";
+    document.getElementById("four_years-en").style.display = "block";
+    document.getElementById("four_years-de").style.display = "none";
+    document.getElementById("three_months_3-en").style.display = "block";
+    document.getElementById("three_months_3-de").style.display = "none";
+    document.getElementById("three_years-en").style.display = "block";
+    document.getElementById("three_years-de").style.display = "none";
+    document.getElementById("one_year-en").style.display = "block";
+    document.getElementById("one_year-de").style.display = "none";
+    document.getElementById("one_year-2-en").style.display = "block";
+    document.getElementById("one_year-2-de").style.display = "none";
+    document.getElementById("eleven_years-en").style.display = "block";
+    document.getElementById("eleven_years-de").style.display = "none";
+
 
 
   } else if (lang === "de") {
@@ -321,6 +333,19 @@ function switchLanguage(lang) {
     document.getElementById("six_months-de").style.display = "block";
     document.getElementById("six_months-2-en").style.display = "none";
     document.getElementById("six_months-2-de").style.display = "block";
+    document.getElementById("four_years-en").style.display = "none";
+    document.getElementById("four_years-de").style.display = "block";
+    document.getElementById("three_months_3-en").style.display = "none";
+    document.getElementById("three_months_3-de").style.display = "block";
+    document.getElementById("three_years-en").style.display = "none";
+    document.getElementById("three_years-de").style.display = "block";
+    document.getElementById("one_year-en").style.display = "none";
+    document.getElementById("one_year-de").style.display = "block";
+    document.getElementById("one_year-2-en").style.display = "none";
+    document.getElementById("one_year-2-de").style.display = "block";
+    document.getElementById("eleven_years-en").style.display = "none";
+    document.getElementById("eleven_years-de").style.display = "block";
+
   }
 }
 
