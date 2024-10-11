@@ -4,6 +4,26 @@
   height: 100vh; /* Высота рекламного блока (или динамическое значение) */
 }
 
+#institution_type{
+    background-color: #FFA30F;
+}
+
+#degree_type {
+    background-color: #1E2F50;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+#subject_study_type {
+    background-color: #586C90;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 5px;
+}
+
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   background: white;
