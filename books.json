@@ -2,109 +2,109 @@
     {
         "title": "HPC in Science",
         "genre": "Technical",
-        "coverImage": "https://covers.openlibrary.org/b/id/10138151-L.jpg",
-        "link": "https://openlibrary.org/works/OL20832330W/High_Performance_Computing_in_Science_and_Engineering_%27_17?edition=key%3A/books/OL28237553M"
+        "coverImage": "images/books/HPC.jpg",
+        "link": "https://www.amazon.com/High-Performance-Computing-Clouds-Cost-Effective-ebook/dp/B0BYN665C2/ref=sr_1_5?crid=348MWPQB71325&dib=eyJ2IjoiMSJ9.weAf20ZDtLYUP_BT1EgQrLBW6oVH-xBBOIVu42rhU9bW6y6NjJDWTkeRc3owuqtq2LP3rJt6AutlWDrQEtQatikcAJ8amCgLay-xbKsYbTx9OVJB-FzRE5XoJgrpX1O7lwErUqYDGiA5THYjlxJ7NuOP3N6XfBmhtiTR6qsIoI7UFloCzNraZeU2z_zIYxmjUZxL4MxBE_DFT6GXqz6e4DOAtvRupNnJGxbso9CHoyk.D0oWbduPSTEhbz6Y01VGc0tXhP1kLa423yLZSADuw2Q&dib_tag=se&keywords=HPC+in+Science&qid=1728629023&s=books&sprefix=hpc+in+science%2Cstripbooks%2C170&sr=1-5"
     },
     {
         "title": "Algorithms",
         "genre": "Technical",
-        "coverImage": "https://covers.openlibrary.org/b/id/7992499-L.jpg",
-        "link": "https://openlibrary.org/works/OL16116506W/Algorithms?edition=key%3A/books/OL25004213M"
+        "coverImage": "images/books/algo.jpg",
+        "link": "https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_2?crid=3F3QDFSJ4TTWR&dib=eyJ2IjoiMSJ9.ZVH0AphRHsPUq62e05IoVegpmS4kmYcOCZM6_MVuwhc0rwLe7bvafP-8b6WUkVerm44dZ6YipJtFAG5QSo3DLNddPID6IulD8zBoJeD5RmseCu_hmgMlrs3A_SALgvienVu9WJ-aoqAroypRSM-K7aqnDmazpU7hZoA7JwuH19xcUIxRI5vh9fqnPUaRTSoimT3UsNlXCKjpG3qDDHFYaRgFp1LjyVrKtel5xghkRb0.e5jbhEPikBwMDwVrPgdtcPk2Jubuab5WwPZW-dMKBDQ&dib_tag=se&keywords=Algorithms&qid=1728629292&s=books&sprefix=algorithms%2Cstripbooks-intl-ship%2C254&sr=1-2"
     },
     {
         "title": "Learning React",
         "genre": "Technical",
-        "coverImage": "https://covers.openlibrary.org/b/id/10282783-L.jpg",
-        "link": "https://openlibrary.org/works/OL20915214W/Learning_React?edition=key%3A/books/OL32916346M"
+        "coverImage": "images/books/react.jpg",
+        "link": "https://www.amazon.com/Road-learn-React-pragmatic-React-js/dp/172004399X/ref=sr_1_2?crid=370MB0GDI4FIL&dib=eyJ2IjoiMSJ9.XtOYbTS0Dr03EKtxT-uW9qSxK9pCY7ijh-DXEowEW7kDesMOzp6bZHBxiKcS26IO6UExE61qg8Vt9UzzdgfIp2efdDrdJXK3N3xkL8rPnPvjYiB1GT8sbhR7EpaKIi43QcnjtXS-7w_qemy5bBSecj-5BIiPVfDrnIP0Zx8WZqQm7ykejSWsIoZTEi_7_0PFUq6jNQwnDz8yeNd7G1KxNMhaoQnIn8tDluuMrtQ3GfY.ZZXX4YqOTUCW2_jYOAJH6z0sy_Vz4Wzwal3uuL0XQEI&dib_tag=se&keywords=Learning+React&qid=1728629377&s=books&sprefix=learning+react%2Cstripbooks-intl-ship%2C277&sr=1-2"
     },
     {
         "title": "Kryptografie",
         "genre": "Technical",
-        "coverImage": "https://ia800507.us.archive.org/view_archive.php?archive=/8/items/l_covers_0009/l_covers_0009_41.zip&file=0009413089-L.jpg",
-        "link": "https://openlibrary.org/works/OL20727825W/Kryptografie_verst%C3%A4ndlich?edition=key%3A/books/OL28032329M"
+        "coverImage": "images/books/krypto.jpg",
+        "link": "https://www.amazon.com/Kryptografie-verst%C3%A4ndlich-Lehrbuch-Studierende-eXamen-press/dp/3662492962/ref=sr_1_1?crid=1DG58T0P03QMW&dib=eyJ2IjoiMSJ9.eWrM5LHdjH832Od-PlegjA.6v3CV2IhBw7hzPlQxCZwmfdeA0reHFkw4-G5LpWpdhY&dib_tag=se&keywords=Kryptografie+verst%C3%A4ndlich&qid=1728629443&s=books&sprefix=kryptografie+verst%C3%A4ndlich%2Cstripbooks-intl-ship%2C161&sr=1-1"
     },
     {
         "title": "Diskrete Strukturen",
         "genre": "Technical",
-        "coverImage": "https://ia802203.us.archive.org/view_archive.php?archive=/10/items/olcovers101/olcovers101-L.zip&file=1019428-L.jpg",
-        "link": "https://openlibrary.org/works/OL9078305W/Diskrete_Strukturen_1?edition=key%3A/books/OL9063388M"
+        "coverImage": "images/books/diskrete.jpg",
+        "link": "https://www.amazon.com/Diskrete-Strukturen-Kombinatorik-Graphentheorie-Springer-Lehrbuch/dp/3540466606/ref=sr_1_1?crid=G61YMYA551ED&dib=eyJ2IjoiMSJ9.s1jil7lEh9oe3QYcg0mOB2icD_GQtX10Wbj2701JELXOhpDRRtoRvg0Cb0W-4x2xPBi5WwjVv5x-H27JVMyEwjfVGlsAFiHvu3I7Lz5sa1BeQnEyD13JJ7GWAAvGzCc6E8RARW2JN4vxoPXZ4CfDzyntHDGScmonFrA11P5mzvR2WFGihaZXihqlvKbXMQqR0DTp70vRp4ATntwuI63zIHgfc9JugXc5RM4IAGPajqw.DSQBkFoqPIW5FaKU57gyhuhEZSwQQsetfHQn9lzsNns&dib_tag=se&keywords=Diskrete+Strukturen&qid=1728629487&s=books&sprefix=diskrete+strukturen%2Cstripbooks-intl-ship%2C251&sr=1-1"
     },
     {
         "title": "Start with no",
         "genre": "Business & Leadership",
-        "coverImage": "https://ia800409.us.archive.org/view_archive.php?archive=/6/items/olcovers39/olcovers39-L.zip&file=390585-L.jpg",
-        "link": "https://openlibrary.org/works/OL6214243W/Start_with_no?edition=key%3A/books/OL3952181M"
+        "coverImage": "images/books/no.jpg",
+        "link": "https://www.amazon.com/Start-No-Negotiating-Tools-That/dp/B082QQF66Q/ref=sr_1_1?crid=1BI6YTMVAKINR&dib=eyJ2IjoiMSJ9.Pq7ZIKPjLkjeEd36L3jtMN6yn5PWDRED928Hj-YxtWfs9htIbUuSSBGflnREfybvf5Wu2zxbAAtDFayVuE_3_PspcOhDrgTzIbp0FSXHcowPf1yHfIRVoO5HrR47iaof7B7zfPnMZuv4HVILq2N13To4MD7gMc-iHSwVRDh3APvMEXstBoZXrv5uOHxxwxlQ9fhq2khv4ZR5pMnoPyRm_6U542lkAufNmg2LnR82DKI.PtjdoT4g7mOGzR9VNhoz-oRyn2MIIg29C_mA7-kUkcs&dib_tag=se&keywords=Start+with+no&qid=1728629541&s=books&sprefix=start+with+no%2Cstripbooks-intl-ship%2C197&sr=1-1"
     },
     {
         "title": "WGYHWGYT",
         "genre": "Business & Leadership",
-        "coverImage": "https://ia600206.us.archive.org/view_archive.php?archive=/14/items/olcovers643/olcovers643-L.zip&file=6430258-L.jpg",
-        "link": "https://openlibrary.org/works/OL15172684W/What_Got_You_Here_Won%27t_Get_You_There?edition=key%3A/books/OL24304393M"
+        "coverImage": "images/books/wgyh.jpg",
+        "link": "https://www.amazon.com/What-Here-There-Marshall-Goldsmith/dp/B09Z2YY2BX/ref=sr_1_1?crid=F063FGSJOFH&dib=eyJ2IjoiMSJ9.5vQAZijWVLk354uBLJbagbkNwtt9bYLn-fERoe8AoG9jR0RvIUR7STWHtKGz6MX8snZ0KrjDb1qBF1U7hl853IiVTtaTIn0pWI6HB3BAkkIYfvt4uJVdba-ivKDHvxPznmwL3Qexp-eOFJvyXs0VBIcGMu3uyKCNgMaHiHAzlJS4v_ueGoNDXsMBanlGgKrJGxtpj9htl8DUPIsI914PIacHcv1FAu3kItbU7EsVwoc.DIcjDVy8e37lNuQhs76iuZZqY-lkPXiqPmP5WzgpUR0&dib_tag=se&keywords=what+got+you+here+won%27t+get&qid=1728629595&s=audible&sprefix=what+got+you+here+wont+get%2Caudible%2C159&sr=1-1-catcorr"
     },
     {
         "title": "Good to great",
         "genre": "Business & Leadership",
-        "coverImage": "https://ia800505.us.archive.org/view_archive.php?archive=/35/items/l_covers_0014/l_covers_0014_62.zip&file=0014620216-L.jpg",
-        "link": "https://openlibrary.org/works/OL3486275W/Good_to_Great?edition=key%3A/books/OL17035731M"
+        "coverImage": "images/books/good.jpg",
+        "link": "https://www.amazon.com/Author-Jim-Collins-Good-Great/dp/B0839GJS2N/ref=sr_1_9?crid=3DRAS2WB3ZT29&dib=eyJ2IjoiMSJ9.zoq7ofISwxsBwvV3ss-VOnC6gjQCEj1-yHcS_encCNf24Id1A_xconLrrKnkDeuCH9cDYJHBu568OxMkomEscQNo2dwUIujg9dEwHszf4_zxgXOIY-d3E4Z58_MLgCbuSg-wFLNyr24DSQMRrjQZuTPhwRHxUEoc4OY0yxi0mI9CJRXU8KbOFX-BDevW_Bx9Tk-2QKIp3FwSxxxpb0wkm_hdTO9X3KIEcCHjmvYK2Y0.IDhD9P1QY-bRyyAJiaZxCNCH1WmyjF3hbjjNDUuaszk&dib_tag=se&keywords=good+to+great&qid=1728629792&sprefix=good+to+great%2Caps%2C424&sr=8-9"
     },
     {
         "title": "Tribal leadership",
         "genre": "Business & Leadership",
-        "coverImage": "https://ia800402.us.archive.org/view_archive.php?archive=/4/items/olcovers550/olcovers550-L.zip&file=5506670-L.jpg",
-        "link": "https://openlibrary.org/works/OL11659147W/Tribal_leadership?edition=key%3A/books/OL19470452M"
+        "coverImage": "images/books/tribal.jpg",
+        "link": "https://www.amazon.com/Tribal-Leadership-Leveraging-Thriving-Organization/dp/0061251321/ref=sr_1_1?crid=ZQJTQVKCRRRT&dib=eyJ2IjoiMSJ9.5H0kr23YAD8jnEpr-ZNA50BHKj7tDfHx8RVKnT3x7by_pM-2IMOkURBdSy6VLezVtzVqHKgjUNtPRn03g4tnscfIVmSC81LPpv3sMQsZblldTnrOn7y60jOilZQLekn6FZu_JuzFAdeXstzKTFsTltacCZ2KgB7u9yGjj69I7rFMGn75Jb_cIEll3Ft7n2o2rWJfv0yxcGs4jQAuiFalodPCijIXw2BjhDhPzfibclQ.orK14hZ1KpqKkEOPm84ekeM9NrrdVSGaIl4zy53T0ik&dib_tag=se&keywords=Tribal+leadership&qid=1728629857&sprefix=tribal+leadership%2Caps%2C288&sr=8-1"
     },
     {
         "title": "Zero to One",
         "genre": "Innovation & Startups",
-        "coverImage": "https://covers.openlibrary.org/b/id/7318839-L.jpg",
-        "link": "https://openlibrary.org/works/OL17078706W/Zero_to_One?edition=key%3A/books/OL26498045M"
+        "coverImage": "images/books/zero.jpg",
+        "link": "https://www.amazon.com/Zero-One-Paperback-Peter-Thiel/dp/B00W0TK2R0/ref=sr_1_4?crid=1LM4MWZXFD1RY&dib=eyJ2IjoiMSJ9.OPyU8uSaSLjKaBb-898flOP0HrBVJ-7d532ozEXyVCr9q2wFTimPbL4a8x6Tt_WF0msbNbkRIgt4FwQDM7mgAjpANV8mY3YlbV0Y_Mv0Ibat-S7ZFQf9bdeP7VLtcBNvV2RNVBhJNzoRc9EJF1y7PAJwq2NAkDCB-HAtc2qlCR7kKjZD_vYMH8IByn6crsRhavme-48Rev1j6ooKYJAIu-wkhRQZLCzYRdBwL9DE0Xs.xxIPGKbTpeBH-WDUb_2Wss8O_97RePHVT02R4vJKCWk&dib_tag=se&keywords=zero+to+one&qid=1728629959&sprefix=zero+to+on%2Caps%2C196&sr=8-4"
     },
     {
         "title": "Sprint",
         "genre": "Innovation & Startups",
-        "coverImage": "https://covers.openlibrary.org/b/id/7431269-L.jpg",
-        "link": "https://openlibrary.org/works/OL17353358W/Sprint"
+        "coverImage": "images/books/sprint.jpg",
+        "link": "https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X/ref=sr_1_1?crid=20BBQQSI3TQTC&dib=eyJ2IjoiMSJ9.IbVFzjAWqzBEa0u0__fWfgc85HqcFsys77ekwoHP_KwMyVIEx9lOtfp2U461BzzNMiBNvcyWzWisfLo2doE11GeZ5ZwNrqdIxGfsPZq2O3b3v5ASUWmg8voCvFQrfGJ-1raaNaap9UeSBiQfobkPaUn8C7O_QjsOFR7q19NQmuKppnu3ReE6YzUgy-2jOSuHhq9OyrPN_BtoFQPtX1GfOSX4Acxu9ih7fNzkKOjNnFQ.wX4Rfz0qN2_c6LjAXaZiJVYoyj8MrfO6mVp48U6j4FQ&dib_tag=se&keywords=Sprint&qid=1728630095&sprefix=sprint%2Caps%2C305&sr=8-1"
     },
     {
         "title": "Simple",
         "genre": "Innovation & Startups",
-        "coverImage": "https://covers.openlibrary.org/b/id/8196603-L.jpg",
-        "link": "https://openlibrary.org/works/OL17885465W/Simple?edition=key%3A/books/OL26464472M"
+        "coverImage": "images/books/simple.jpg",
+        "link": "https://www.amazon.com/Simple-Irene-Etzkorn/dp/1847940951/ref=sr_1_1?crid=FI07USYKVZNO&dib=eyJ2IjoiMSJ9.r_spdjXa_kEaHPFZrkZyLDKuNNPQ9KEfJGd1vndeBjU.lD4i4_cNRBMGqmdYIUrLj-365W-Bc_fwbEiwJCUhTcI&dib_tag=se&keywords=simple+Conquering+the+Crisis+of+Complexity&qid=1728630296&sprefix=simple+conquering+the+crisis+of+complexity%2Caps%2C225&sr=8-1"
     },
     {
         "title": "SuperBetter",
         "genre": "Personal Development",
-        "coverImage": "https://covers.openlibrary.org/b/id/10054092-L.jpg",
-        "link": "https://openlibrary.org/works/OL19669906W/SuperBetter"
+        "coverImage": "images/books/supperbetter.jpg",
+        "link": "https://www.amazon.com/Superbetter-Jane-McGonigal/dp/B078Z1X8WK/ref=sr_1_2?crid=9GR3601VDQQI&dib=eyJ2IjoiMSJ9.jQwA6l5XbRzooPPfYywFM408QoNbfRb5hiN4u1mR0plsmYPenLeAbwnQLqiqCig-bOrNhKaVz2abKSwZlJhS4g.eQK3ES2DX7y-mr6QN4vwwhE3DSJUGbWotS6zkG1OJoU&dib_tag=se&keywords=superbetter&qid=1728630392&sprefix=superbette%2Caps%2C192&sr=8-2"
     },
     {
         "title": "EQ",
         "genre": "Personal Development",
-        "coverImage": "https://ia801400.us.archive.org/view_archive.php?archive=/16/items/olcovers36/olcovers36-L.zip&file=369650-L.jpg",
-        "link": "https://openlibrary.org/works/OL1878301W/Emotional_Intelligence?edition=key%3A/books/OL7826336M"
+        "coverImage": "images/books/EQ.jpg",
+        "link": "https://www.amazon.com/Emotional-Intelligence-Matter-More-Than/dp/055338371X/ref=sr_1_2?crid=YK04DRAPI68M&dib=eyJ2IjoiMSJ9.FZr7OHShByTKrwAO4j8WEt9ShIA5-a6MkhrhqMH44K_0kB2vd42vanPlbIRwyKQatyMk7bnbCusCx9wo2MTN2dSWDAuPnnrmy4fELECnJwR8pH6LBSTS9NMyj6maSXP19vpJ3RyIwCd0A8AomnLKxJjuxElTIOQZlDl4fp2F5zpzVo0gewprlD0YuenYWsNRfz5ZjEoqFjHdDY5W43k8-UQ_LG777Ll9f0rBbRXj6Jqmho265ZcIkSu4MC9GKO_NPQZgghZ62nFy0kZh4_Lhd_VKEn9mJy_-aiAjtC_f7-U.-0YqNqShXjNrblSyZSgouJm5nvKUtzsxZtLQtkww77o&dib_tag=se&keywords=emotional+intelligence&qid=1728630470&sprefix=emotional+intelligenc%2Caps%2C211&sr=8-2"
     },
     {
         "title": "Outliers",
         "genre": "Personal Development",
-        "coverImage": "https://ia800404.us.archive.org/view_archive.php?archive=/33/items/l_covers_0010/l_covers_0010_85.zip&file=0010858646-L.jpg",
-        "link": "https://openlibrary.org/works/OL5749847W/Outliers?edition=key%3A/books/OL10426237M"
+        "coverImage": "images/books/outliers.jpg",
+        "link": "https://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017930/ref=sr_1_1?crid=2I8N6ANSMO43S&dib=eyJ2IjoiMSJ9.FhkpvadOUxYuO90852wWbFp9QX9lFRCyF7_8V5oxZSkc6o5AdOXeluKiAjdFZU6KpkVAcoJC4dnsYX7kylkagZq5bG3jD5VoYIrPvmB2W1It5cqcyvJpunT33upG4LaBiBIJmPQMPfyUZTc6jQ4CdkvHLLJ5xWkxQqYRRH44SZ7A7OlHelog9Agv5ka42MKVTmJ6v9mLckmuAS94tHE_lS7j1h1LNKKPMIa7494_fzg.hiEqc2KMbJ1vIMjUhVCP2iZDmEVuA1ocae5kS31Uv4E&dib_tag=se&keywords=Outliers&qid=1728630610&sprefix=outliers%2Caps%2C297&sr=8-1"
     },
     {
         "title": "Games people play",
         "genre": "Personal Development",
-        "coverImage": "https://ia802309.us.archive.org/view_archive.php?archive=/20/items/l_covers_0008/l_covers_0008_28.zip&file=0008281189-L.jpg",
-        "link": "https://openlibrary.org/works/OL1593567W/Games_People_Play?edition=key%3A/books/OL5911996M"
+        "coverImage": "images/books/Games.jpg",
+        "link": "https://www.amazon.com/Games-People-Play-Psychology-Relationships/dp/B011T7FOQ2/ref=sr_1_1?crid=1RO4FCQWTLYWG&dib=eyJ2IjoiMSJ9._D1352NscVVIjwPM1_dsh43vCB0HZL4jzXGdz3Mm0aBs444AuNUAA5tXgMfIbYz-pZ9kve457NMJoJ6MxiKMhaKhqvd4QroXVU--D_vmqbk6nK6kGJZrvnNpoiQV_G97iweLmsFXcuRVRBPJ-dCUksZ82y7PJW1Kh_gsBGu-QvOH8tmiLCycynSKlA8c_hlex3ALB1lQruhhiSPt9tmpRaimZ2pWZ7AtWfh-LYONCvU.3WcKFWalThBpSEcKW-zQhh4_VfxThcCNx_3f6HIZrrA&dib_tag=se&keywords=games+people+play+eric+berne&qid=1728630661&sprefix=Games+%2Caps%2C277&sr=8-1"
     },
     {
         "title": "Kritik der reinen Vernunft",
         "genre": "Philosophy",
-        "coverImage": "https://ia800404.us.archive.org/view_archive.php?archive=/8/items/olcovers578/olcovers578-L.zip&file=5784520-L.jpg",
-        "link": "https://openlibrary.org/works/OL99844W/Kritik_der_reinen_Vernunft?edition=key%3A/books/OL14017114M"
+        "coverImage": "images/books/Kant.jpg",
+        "link": "https://www.amazon.com/Kritik-reinen-Vernunft-Zweite-Auflage/dp/1532723792/ref=sr_1_2?crid=3L1DI84LVQCS1&dib=eyJ2IjoiMSJ9.THw6agujncn3g-WL-wQbFkd6fr3w0ALD5WbSQwOx9UXjRWVwENu3dN-DCVdb2TQrWo2DyLpv1dgJNJJXiPaHikZQzsKglixlLMEBnA0Uqztz1ETSYG8lLFzekzhp4PtarfjtNSq9e4DBH7N6selGZDLFnXUDYNMWpOzNWnmVf7woor01_bOB_pjvXiaP0-VcVRuGijJ9T_W1S-DO2k2jKHysoVm_NX2E-7bMMyvuqnE.Olelw5f9sSeI5RkFfd7rOwmYve7YWAaWicpixYmXhJw&dib_tag=se&keywords=Kritik+der+reinen+Vernunft&qid=1728630721&sprefix=kritik+der+reinen+vernunft%2Caps%2C292&sr=8-2"
     },
     {
         "title": "The autobiography of Benjamin Franklin",
         "genre": "Biography",
-        "coverImage": "https://ia600507.us.archive.org/view_archive.php?archive=/8/items/l_covers_0009/l_covers_0009_92.zip&file=0009921674-L.jpg",
-        "link": "https://openlibrary.org/works/OL26492W/Autobiography"
+        "coverImage": "images/books/franklin.jpg",
+        "link": "https://www.amazon.com/Autobiography-Benjamin-Franklin/dp/1508475091/ref=sr_1_1?crid=3W3ME6E9PX4Y8&dib=eyJ2IjoiMSJ9.jKTDIJpjBSiwwBSQkOrpxrBy6bTEFFjpjlj7-tWUGRr4gp4DyynbwDvCk0Fq5dnOhpKUaqSeicpAmk8Yp6mkeAoT_3gm4loC4H01CzHQdijv4NFZbPd02HGVIJu_z3rPXwDTuBVm7bbzEFjd3JmYb3IkhbiG15tQMxIQj5qoMl6TpLL1-GCeeW-Gn63tAQ7qpd9_Cty_3i9Oy4NFx8Y6WlHrjytnd_7be3zlKNW6ePw.1cyOlBvotKdVDFhwFpijzPLY8WgPk01s1d-E5Sc_qfs&dib_tag=se&keywords=The+autobiography+of+Benjamin+Franklin&qid=1728630771&sprefix=the+autobiography+of+benjamin+franklin%2Caps%2C275&sr=8-1"
     }
 ]
