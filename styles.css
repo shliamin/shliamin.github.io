@@ -9,7 +9,7 @@
 }
 
 #degree_type {
-    background-color: #1E2F50;
+    background-color: #A0C1B9;
     color: white;
     border-radius: 5px;
     padding: 3px;
@@ -88,12 +88,7 @@ body {
     color: #777;
 }
 
-#role{
-    background-color: #E5E9EF ;
-    color: #1E2F50;
-    border-radius: 5px;
-    padding: 3px;
-}
+
 
 #company{
     background-color: #E5E9EF ;
@@ -102,6 +97,26 @@ body {
     padding: 3px;
 }
 
+#role{
+    background-color: #E5E9EF ;
+    color: #1E2F50;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#position{
+    background-color: #1E2F50 ;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#type_of_activity{
+    background-color: #A0C1B9 ;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
 
 
 
