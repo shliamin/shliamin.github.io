@@ -272,7 +272,10 @@ function switchLanguage(lang) {
     document.getElementById("one_year-2-de").style.display = "none";
     document.getElementById("eleven_years-en").style.display = "block";
     document.getElementById("eleven_years-de").style.display = "none";
-
+    document.getElementById("eleven_years-2-en").style.display = "block";
+    document.getElementById("eleven_years-2-de").style.display = "none";
+    document.getElementById("eleven_years-3-en").style.display = "block";
+    document.getElementById("eleven_years-3-de").style.display = "none";
 
 
   } else if (lang === "de") {
@@ -345,7 +348,10 @@ function switchLanguage(lang) {
     document.getElementById("one_year-2-de").style.display = "block";
     document.getElementById("eleven_years-en").style.display = "none";
     document.getElementById("eleven_years-de").style.display = "block";
-
+    document.getElementById("eleven_years-2-en").style.display = "none";
+    document.getElementById("eleven_years-2-de").style.display = "block";
+    document.getElementById("eleven_years-3-en").style.display = "none";
+    document.getElementById("eleven_years-3-de").style.display = "block";
   }
 }
 
