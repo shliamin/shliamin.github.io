@@ -276,6 +276,17 @@ function switchLanguage(lang) {
     document.getElementById("eleven_years-2-de").style.display = "none";
     document.getElementById("eleven_years-3-en").style.display = "block";
     document.getElementById("eleven_years-3-de").style.display = "none";
+    document.getElementById("sole-tech-exp-en").style.display = "block";
+    document.getElementById("sole-tech-exp-de").style.display = "none";
+    document.getElementById("software-htw-en").style.display = "block";
+    document.getElementById("software-htw-de").style.display = "none";
+    document.getElementById("htw-data-centre-fullstack-en").style.display = "block";
+    document.getElementById("htw-data-centre-fullstack-de").style.display = "none";
+    document.getElementById("IGIT-en").style.display = "block";
+    document.getElementById("IGIT-de").style.display = "none";
+    document.getElementById("RMS-en").style.display = "block";
+    document.getElementById("RMS-de").style.display = "none";
+    
 
 
   } else if (lang === "de") {
@@ -352,6 +363,16 @@ function switchLanguage(lang) {
     document.getElementById("eleven_years-2-de").style.display = "block";
     document.getElementById("eleven_years-3-en").style.display = "none";
     document.getElementById("eleven_years-3-de").style.display = "block";
+    document.getElementById("sole-tech-exp-en").style.display = "none";
+    document.getElementById("sole-tech-exp-de").style.display = "block";
+    document.getElementById("software-htw-en").style.display = "none";
+    document.getElementById("software-htw-de").style.display = "block";
+    document.getElementById("htw-data-centre-fullstack-en").style.display = "none";
+    document.getElementById("htw-data-centre-fullstack-de").style.display = "block";
+    document.getElementById("IGIT-en").style.display = "none";
+    document.getElementById("IGIT-de").style.display = "block";
+    document.getElementById("RMS-en").style.display = "none";
+    document.getElementById("RMS-de").style.display = "block";
   }
 }
 
