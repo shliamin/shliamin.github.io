@@ -242,7 +242,14 @@ function switchLanguage(lang) {
     document.getElementById("edu-de").style.display = "none";
     document.getElementById("Hobbies-en").style.display = "block";
     document.getElementById("Hobbies-de").style.display = "none";
-
+    document.getElementById("hobby-2-en").style.display = "block";
+    document.getElementById("hobby-2-de").style.display = "none";
+    document.getElementById("karate-en").style.display = "block";
+    document.getElementById("karate-de").style.display = "none";
+    document.getElementById("hobby-1-en").style.display = "block";
+    document.getElementById("hobby-1-de").style.display = "none";
+    document.getElementById("hobby-description-en").style.display = "block";
+    document.getElementById("hobby-description-de").style.display = "none";
 
 
   } else if (lang === "de") {
@@ -285,6 +292,14 @@ function switchLanguage(lang) {
     document.getElementById("edu-de").style.display = "block";
     document.getElementById("Hobbies-en").style.display = "none";
     document.getElementById("Hobbies-de").style.display = "block";
+    document.getElementById("hobby-2-en").style.display = "none";
+    document.getElementById("hobby-2-de").style.display = "block";
+    document.getElementById("karate-en").style.display = "none";
+    document.getElementById("karate-de").style.display = "block";
+    document.getElementById("hobby-1-en").style.display = "none";
+    document.getElementById("hobby-1-de").style.display = "block";
+    document.getElementById("hobby-description-en").style.display = "none";
+    document.getElementById("hobby-description-de").style.display = "block";
   }
 }
 
