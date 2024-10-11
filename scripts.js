@@ -206,8 +206,6 @@ function switchLanguage(lang) {
     document.getElementById("btn-en").classList.add("active");
     document.getElementById("content-en").style.display = "block";
     document.getElementById("content-de").style.display = "none";
-    document.getElementById("content-en-2").style.display = "block";
-    document.getElementById("content-de-2").style.display = "none";
     document.getElementById("welcome-en").style.display = "block";
     document.getElementById("welcome-de").style.display = "none";
     document.getElementById("new-opportunities-en").style.display = "block";
@@ -238,13 +236,19 @@ function switchLanguage(lang) {
     document.getElementById("p-title-udemy-de").style.display = "none";
     document.getElementById("ad-info-en").style.display = "block";
     document.getElementById("ad-info-de").style.display = "none";
+    document.getElementById("prof-exp-en").style.display = "block";
+    document.getElementById("prof-exp-de").style.display = "none";
+    document.getElementById("edu-en").style.display = "block";
+    document.getElementById("edu-de").style.display = "none";
+    document.getElementById("Hobbies-en").style.display = "block";
+    document.getElementById("Hobbies-de").style.display = "none";
+
+
 
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
     document.getElementById("content-en").style.display = "none";
     document.getElementById("content-de").style.display = "block";
-    document.getElementById("content-en-2").style.display = "none";
-    document.getElementById("content-de-2").style.display = "block";
     document.getElementById("welcome-en").style.display = "none";
     document.getElementById("welcome-de").style.display = "block";
     document.getElementById("new-opportunities-en").style.display = "none";
@@ -275,6 +279,12 @@ function switchLanguage(lang) {
     document.getElementById("p-title-udemy-de").style.display = "block";
     document.getElementById("ad-info-en").style.display = "none";
     document.getElementById("ad-info-de").style.display = "block";
+    document.getElementById("prof-exp-en").style.display = "none";
+    document.getElementById("prof-exp-de").style.display = "block";
+    document.getElementById("edu-en").style.display = "none";
+    document.getElementById("edu-de").style.display = "block";
+    document.getElementById("Hobbies-en").style.display = "none";
+    document.getElementById("Hobbies-de").style.display = "block";
   }
 }
 
