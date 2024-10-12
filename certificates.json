@@ -1,4 +1,14 @@
-[
+[   
+    {
+        "name": "Mastering TypeScript 2024 - Udemy",
+        "image": "images/certificates/TypeScript.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-50d19525-4212-4dbe-b5dc-a3b8bc504250/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
     {
         "name": "CSS (Basic) - HackerRank",
         "image": "images/certificates/javascript_basic certificate.jpg",

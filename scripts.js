@@ -286,8 +286,22 @@ function switchLanguage(lang) {
     document.getElementById("IGIT-de").style.display = "none";
     document.getElementById("RMS-en").style.display = "block";
     document.getElementById("RMS-de").style.display = "none";
-    
+    document.getElementById("htw-edu-en").style.display = "block";
+    document.getElementById("htw-edu-de").style.display = "none";
+    document.getElementById("edu-lewagon-en").style.display = "block";
+    document.getElementById("edu-lewagon-de").style.display = "none";  
+    document.getElementById("bochum-edu-en").style.display = "block";
+    document.getElementById("bochum-edu-de").style.display = "none";
+    document.getElementById("studienkolleg-en").style.display = "block";
+    document.getElementById("studienkolleg-de").style.display = "none";
+    document.getElementById("language-edu-en").style.display = "block";
+    document.getElementById("language-edu-de").style.display = "none";
+    document.getElementById("school-en").style.display = "block";
+    document.getElementById("school-de").style.display = "none";
 
+
+
+    
 
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
@@ -373,6 +387,18 @@ function switchLanguage(lang) {
     document.getElementById("IGIT-de").style.display = "block";
     document.getElementById("RMS-en").style.display = "none";
     document.getElementById("RMS-de").style.display = "block";
+    document.getElementById("htw-edu-en").style.display = "none";
+    document.getElementById("htw-edu-de").style.display = "block";
+    document.getElementById("edu-lewagon-en").style.display = "none";
+    document.getElementById("edu-lewagon-de").style.display = "block";
+    document.getElementById("bochum-edu-en").style.display = "none";
+    document.getElementById("bochum-edu-de").style.display = "block";
+    document.getElementById("studienkolleg-en").style.display = "none";
+    document.getElementById("studienkolleg-de").style.display = "block";
+    document.getElementById("language-edu-en").style.display = "none";
+    document.getElementById("language-edu-de").style.display = "block";
+    document.getElementById("school-en").style.display = "none";
+    document.getElementById("school-de").style.display = "block";
   }
 }
 
