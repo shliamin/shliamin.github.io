@@ -298,9 +298,28 @@ function switchLanguage(lang) {
     document.getElementById("language-edu-de").style.display = "none";
     document.getElementById("school-en").style.display = "block";
     document.getElementById("school-de").style.display = "none";
-
-
-
+    document.getElementById("mercedes-en").style.display = "block";
+    document.getElementById("mercedes-de").style.display = "none";
+    document.getElementById("HTW-HIWI-en").style.display = "block";
+    document.getElementById("HTW-HIWI-de").style.display = "none";
+    document.getElementById("htw-internship-en").style.display = "block";
+    document.getElementById("htw-internship-de").style.display = "none";
+    document.getElementById("IGIT-1-en").style.display = "block";
+    document.getElementById("IGIT-1-de").style.display = "none";
+    document.getElementById("rhenus-en").style.display = "block";
+    document.getElementById("rhenus-de").style.display = "none";
+    document.getElementById("cs-en").style.display = "block";
+    document.getElementById("cs-de").style.display = "none";
+    document.getElementById("lewagon-en").style.display = "block";
+    document.getElementById("lewagon-de").style.display = "none";
+    document.getElementById("ei-en").style.display = "block";
+    document.getElementById("ei-de").style.display = "none";
+    document.getElementById("kolleg-en").style.display = "block";
+    document.getElementById("kolleg-de").style.display = "none";
+    document.getElementById("eurasia-en").style.display = "block";
+    document.getElementById("eurasia-de").style.display = "none";
+    document.getElementById("school-1-en").style.display = "block";
+    document.getElementById("school-1-de").style.display = "none";
     
 
   } else if (lang === "de") {
@@ -399,6 +418,28 @@ function switchLanguage(lang) {
     document.getElementById("language-edu-de").style.display = "block";
     document.getElementById("school-en").style.display = "none";
     document.getElementById("school-de").style.display = "block";
+    document.getElementById("mercedes-en").style.display = "none";
+    document.getElementById("mercedes-de").style.display = "block";
+    document.getElementById("HTW-HIWI-en").style.display = "none";
+    document.getElementById("HTW-HIWI-de").style.display = "block";
+    document.getElementById("htw-internship-en").style.display = "none";
+    document.getElementById("htw-internship-de").style.display = "block";
+    document.getElementById("IGIT-1-en").style.display = "none";
+    document.getElementById("IGIT-1-de").style.display = "block";
+    document.getElementById("rhenus-en").style.display = "none";
+    document.getElementById("rhenus-de").style.display = "block";
+    document.getElementById("cs-en").style.display = "none";
+    document.getElementById("cs-de").style.display = "block";
+    document.getElementById("lewagon-en").style.display = "none";
+    document.getElementById("lewagon-de").style.display = "block";
+    document.getElementById("ei-en").style.display = "none";
+    document.getElementById("ei-de").style.display = "block";
+    document.getElementById("kolleg-en").style.display = "none";
+    document.getElementById("kolleg-de").style.display = "block";
+    document.getElementById("eurasia-en").style.display = "none";
+    document.getElementById("eurasia-de").style.display = "block";
+    document.getElementById("school-1-en").style.display = "none";
+    document.getElementById("school-1-de").style.display = "block";
   }
 }
 
