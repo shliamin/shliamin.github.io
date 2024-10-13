@@ -698,6 +698,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const hackerRankCount = certificates.filter(
       (certificate) => certificate.category === "HackerRank"
     ).length;
+    const testdomeCount = certificates.filter(
+      (certificate) => certificate.category === "Testdome"
+    ).length;
     const workCount = certificates.filter(
       (certificate) => certificate.category === "Work"
     ).length;
@@ -708,8 +711,9 @@ document.addEventListener("DOMContentLoaded", function () {
     filterDropdown.options[0].textContent = `All (${allCount})`;
     filterDropdown.options[1].textContent = `Udemy (${udemyCount})`;
     filterDropdown.options[2].textContent = `HackerRank (${hackerRankCount})`;
-    filterDropdown.options[3].textContent = `Work (${workCount})`;
-    filterDropdown.options[4].textContent = `Education (${educationCount})`;
+    filterDropdown.options[3].textContent = `Testdome (${testdomeCount})`;
+    filterDropdown.options[4].textContent = `Work (${workCount})`;
+    filterDropdown.options[5].textContent = `Education (${educationCount})`;
   }
 
   // Event listener for the filter dropdown

@@ -1,8 +1,118 @@
 [   
     {
+        "name": "TYPESCRIPT",
+        "image": "images/certificates/Typescript Testdome1.png",
+        "link": "https://www.testdome.com/certificates/f552a66042f943f0bd0ebceb084ce487",
+        "date": "2024-10-12",
+        "organization": "Testdome",
+        "width": 170,
+        "height": 170,
+        "category": "Testdome"
+    },
+    {
+        "name": "React and Next.js - Udemy",
+        "image": "images/certificates/react_next.js_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-982f0f91-e6bd-4e79-8b3f-ed513490bc55/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "DevOps - Udemy",
+        "image": "images/certificates/DevOps_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-2575fb74-bbd5-481e-900c-770d0e242c91/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "C# AND .NET - Testdome",
+        "image": "images/certificates/Cscharp Testdome.png",
+        "link": "https://www.testdome.com/certificates/1aa3e38dcb454839a4c43a3900033c8e",
+        "date": "2024-10-12",
+        "organization": "Testdome",
+        "width": 170,
+        "height": 170,
+        "category": "Testdome"
+    },
+    {
+        "name": "ASP.NET CORE - Testdome",
+        "image": "images/certificates/ASP.NET Testdome.png",
+        "link": "https://www.testdome.com/certificates/c6a02705e5d3441886bfdb3bc14bb11a",
+        "date": "2024-10-12",
+        "organization": "Testdome",
+        "width": 170,
+        "height": 170,
+        "category": "Testdome"
+    },
+    {
+        "name": "GKE - Udemy",
+        "image": "images/certificates/GKE_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-ec423fb8-9dcd-420c-bac1-1a7ae0d07c75/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Kubernetes for the Absolute Beginners - Udemy",
+        "image": "images/certificates/Kubernetes_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-d155e458-9b3a-4e65-9fa7-243fd79c210a/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Design Patterns in C sharp and -NET - Udemy",
+        "image": "images/certificates/csharpdesignpatterns_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-05167ca0-57b5-486e-b9a5-68be19cd3083/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "TypeScript Design Patterns And SOLID Principles - Udemy",
+        "image": "images/certificates/typescript_design_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-7f35bc3a-ba1d-4850-a81f-bc48978ed3cc/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "Mastering TypeScript 2024 - Udemy",
         "image": "images/certificates/TypeScript.jpeg",
         "link": "https://www.udemy.com/certificate/UC-50d19525-4212-4dbe-b5dc-a3b8bc504250/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "AI - Udemy",
+        "image": "images/certificates/AI_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-eb94307d-9a23-4d2a-bb51-3961f479fb85/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-12",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "PowerBI - Udemy",
+        "image": "images/certificates/PowerBI_udemy.jpeg",
+        "link": "https://www.udemy.com/certificate/UC-3133339f-ec07-445e-bbab-55bbade28975/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
         "date": "2024-10-12",
         "organization": "Udemy",
         "width": 220,
