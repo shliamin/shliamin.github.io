@@ -1046,7 +1046,7 @@ function createCategoryCard(category, textContent = '-', isLoading = true) {
 }
 
 // Функция для отображения данных в `other-cards`
-async function displayExtendedResults(jobDescription) {
+async function displayExtendedResults(analysisData) {
     const otherContainer = document.getElementById('other-cards');
     otherContainer.innerHTML = '';
 
@@ -1075,7 +1075,9 @@ async function displayExtendedResults(jobDescription) {
         const endpoint = endpoints[i];
         try {
             const formData = new FormData();
-            formData.append('job_description', jobDescription);
+            // Используем данные из `analysisData` для текущей категории
+            const categoryData = analysisData[endpoint.name] || ''; // Данные для конкретной категории
+            formData.append('job_description', categoryData);
 
             const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
                 method: 'POST',
@@ -1244,7 +1246,7 @@ document.getElementById('resume-form').addEventListener('submit', async function
 
         if (response.ok) {
             displayResults(result);
-            await displayExtendedResults(jobDescriptionEN);
+            await displayExtendedResults(result.analysis);
         } else {
             document.getElementById('result-container').innerHTML = `
                 <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">

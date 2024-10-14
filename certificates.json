@@ -1,5 +1,15 @@
 [   
     {
+        "name": "ASP.NET Core 8 Web API:",
+        "image": "images/certificates/NET 8.jpg",
+        "link": "https://www.udemy.com/certificate/UC-e8e4ed4f-43a3-4ba7-b01d-f1bf0c0bfcf9/",
+        "date": "2024-10-14",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "TYPESCRIPT",
         "image": "images/certificates/Typescript Testdome1.png",
         "link": "https://www.testdome.com/certificates/f552a66042f943f0bd0ebceb084ce487",
