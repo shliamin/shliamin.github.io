@@ -1045,59 +1045,112 @@ function createCategoryCard(category, textContent = '-', isLoading = true) {
     return card;
 }
 
-// Функция для отображения данных в `other-cards`
+// Функция для отображения данных в `other-cards` и в "analydid-cards"
+// Функция для отображения данных в `other-cards` и в "analysis-cards"
 async function displayExtendedResults(analysisData) {
-    const otherContainer = document.getElementById('other-cards');
-    otherContainer.innerHTML = '';
+  const otherContainer = document.getElementById('other-cards');
+  const analysisContainer = document.getElementById('analysis-cards');
 
-    const endpoints = [
-        { name: "Experience", url: "/experience" },
-        { name: "Skills", url: "/skills" },
-        { name: "Tech Stack", url: "/tech_stack" },
-        { name: "Soft Skills", url: "/soft_skills" },
-        { name: "Cultural Fit", url: "/cultural_fit" },
-        { name: "University", url: "/university" },
-        { name: "Certifications", url: "/certifications" },
-        { name: "Engagement", url: "/engagement" },
-        { name: "Projects", url: "/projects" },
-        { name: "References", url: "/references" },
-        { name: "Languages", url: "/languages" }
-    ];
+  otherContainer.innerHTML = '';
+  analysisContainer.innerHTML = '';
 
-    // Создаем пустые карточки с индикаторами загрузки
-    endpoints.forEach(endpoint => {
-        const loadingCard = createCategoryCard(endpoint.name, '', true);
-        otherContainer.appendChild(loadingCard);
-    });
+  const endpoints = [
+      { name: "Experience", url: "/experience" },
+      { name: "Skills", url: "/skills" },
+      { name: "Tech Stack", url: "/tech_stack" },
+      { name: "Soft Skills", url: "/soft_skills" },
+      { name: "Cultural Fit", url: "/cultural_fit" },
+      { name: "University", url: "/university" },
+      { name: "Certifications", url: "/certifications" },
+      { name: "Engagement", url: "/engagement" },
+      { name: "Projects", url: "/projects" },
+      { name: "References", url: "/references" },
+      { name: "Languages", url: "/languages" }
+  ];
 
-    // Выполняем запросы по каждому эндпоинту и обновляем содержимое карточек
-    for (let i = 0; i < endpoints.length; i++) {
-        const endpoint = endpoints[i];
-        try {
-            const formData = new FormData();
-            // Используем данные из `analysisData` для текущей категории
-            const categoryData = analysisData[endpoint.name] || ''; // Данные для конкретной категории
-            formData.append('job_description', categoryData);
+  // Массив для хранения взвешенных значений каждой категории
+  const weightedScores = [];
 
-            const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
-                method: 'POST',
-                body: formData
-            });
+  // Создаем пустые карточки с индикаторами загрузки
+  endpoints.forEach(endpoint => {
+      const loadingCard = createCategoryCard(endpoint.name, '', true);
+      otherContainer.appendChild(loadingCard);
+      const compatibilityLoadingCard = createCategoryCard(endpoint.name, '', true);
+      analysisContainer.appendChild(compatibilityLoadingCard);
+  });
 
-            const result = await response.json();
-            if (response.ok) {
-                const updatedCard = createCategoryCard(endpoint.name, result[endpoint.name], false);
-                otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
-            } else {
-                throw new Error(result.error || 'Error fetching data');
-            }
-        } catch (error) {
-            console.error(`Error loading ${endpoint.name}:`, error);
-            const errorCard = createCategoryCard(endpoint.name, 'Error loading data', false);
-            otherContainer.replaceChild(errorCard, otherContainer.childNodes[i]);
-        }
-    }
+  // Выполняем запросы по каждому эндпоинту и обновляем содержимое карточек
+  for (let i = 0; i < endpoints.length; i++) {
+      const endpoint = endpoints[i];
+      try {
+          const formData = new FormData();
+          const categoryData = analysisData[endpoint.name] || ''; // Данные для конкретной категории
+          formData.append('job_description', categoryData);
+
+          const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
+              method: 'POST',
+              body: formData
+          });
+
+          const result = await response.json();
+          if (response.ok) {
+              const { actual_data, compatibility_percentage } = result[endpoint.name] || {};
+
+              // Рассчитываем взвешенное значение процента и добавляем его в массив
+              const weight = categoryPercentages[endpoint.name];
+              const weightedScore = (compatibility_percentage * weight) / 100;
+              weightedScores.push(weightedScore);  // Сохраняем взвешенное значение
+
+              // Обновляем карточку для 'other-cards' с actual_data и взвешенным значением
+              const updatedCard = createCategoryCard(
+                  endpoint.name, 
+                  `${actual_data} (${weightedScore.toFixed(2)}% weighted)`, 
+                  false
+              );
+              otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
+
+              // Создаем и обновляем карточку совместимости для 'analysis-cards' с compatibility_percentage
+              const compatibilityCard = createCompatibilityCard(
+                  endpoint.name, 
+                  `${compatibility_percentage}% compatibility`
+              );
+              analysisContainer.replaceChild(compatibilityCard, analysisContainer.childNodes[i]);
+
+          } else {
+              throw new Error(result.error || 'Error fetching data');
+          }
+      } catch (error) {
+          console.error(`Error loading ${endpoint.name}:`, error);
+
+          const errorCard = createCategoryCard(endpoint.name, 'Error loading data', false);
+          otherContainer.replaceChild(errorCard, otherContainer.childNodes[i]);
+
+          const compatibilityErrorCard = createCompatibilityCard(endpoint.name, 'Error loading data');
+          analysisContainer.replaceChild(compatibilityErrorCard, analysisContainer.childNodes[i]);
+      }
+  }
+
+
+  // Выводим итоговый взвешенный результат в `#total_weighted_score`
+  const totalWeightedScore = weightedScores.reduce((sum, score) => sum + score, 0).toFixed(2);
+  const totalScoreDiv = document.getElementById("total_weighted_score");
+
+  // Стилизация и отображение итогового результата
+  totalScoreDiv.style.display = 'block';
+  totalScoreDiv.style.backgroundColor = '#FFB02E'; // Мягкий оранжевый фон
+  totalScoreDiv.style.color = 'white';           // Темно-синий цвет текста
+  totalScoreDiv.style.padding = '5px';
+  totalScoreDiv.style.borderRadius = '5px';
+  totalScoreDiv.style.fontWeight = 'bold';
+  totalScoreDiv.style.textAlign = 'center';
+
+
+  // Устанавливаем текст итогового результата
+  totalScoreDiv.innerHTML = `Overall Compatibility Score: ${totalWeightedScore}%`;
 }
+
+
+
 
 
 // Функция для обновления карточки с данными из API
@@ -1268,6 +1321,104 @@ document.getElementById('job_description-en').addEventListener('input', function
     const countDisplay = document.getElementById('character-count');
     updateCharacterCount(this, countDisplay, 2000);
 });
+
+
+
+
+
+// Function to create a compatibility card with styling
+function createCompatibilityCard(category, percentage) {
+  const card = document.createElement('div');
+  card.classList.add('category-card');
+
+  // Set background color based on category
+  const backgroundColor = categoryColors[category] || '#fff';
+  card.style.backgroundColor = backgroundColor;
+
+  // Set text color based on category
+  card.style.color = ["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category) ? '#fff' : '#000';
+
+  const title = document.createElement('div');
+  title.classList.add('category-title');
+  title.textContent = category;
+
+  // Set title color based on category
+  title.style.color = ["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category) ? '#E5E9F0' : '#000';
+
+  const text = document.createElement('div');
+  text.classList.add('category-text');
+  text.textContent = `${percentage}`;
+
+  // Create percentage badge
+  const percentageBadge = document.createElement('div');
+  percentageBadge.classList.add('percentage-badge');
+  percentageBadge.textContent = `${categoryPercentages[category]}%`;
+  percentageBadge.style.position = 'absolute';
+  percentageBadge.style.top = '5px';
+  percentageBadge.style.right = '5px';
+  percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+  percentageBadge.style.color = '#fff';
+  percentageBadge.style.padding = '2px 7px';
+  percentageBadge.style.borderRadius = '5px';
+
+  // Append elements to the card
+  card.appendChild(title);
+  card.appendChild(text);
+  card.appendChild(percentageBadge);
+
+  return card;
+}
+
+
+// Calculate overall compatibility score
+function calculateOverallCompatibility() {
+  let totalScore = 0;          // Сумма итогового результата
+  let totalWeight = 0;         // Сумма весов с учётом пропущенных категорий
+  let adjustedWeights = {};    // Массив для пропорциональных весов
+
+  // Собираем категории с их фактическими значениями и весами
+  Object.keys(categoryPercentages).forEach(category => {
+      const card = Array.from(document.querySelectorAll('.category-card'))
+          .find(card => card.querySelector('.category-title').textContent === category);
+      if (card) {
+          const text = card.querySelector('.category-text').textContent;
+          const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
+
+          // Если есть валидное число для совместимости, добавляем его в расчёт
+          if (!isNaN(percentageMatch)) {
+              totalScore += percentageMatch * categoryPercentages[category];
+              totalWeight += categoryPercentages[category];
+          }
+      }
+  });
+
+  // Если totalWeight меньше 100 из-за пропущенных категорий, пересчитываем веса пропорционально
+  Object.keys(categoryPercentages).forEach(category => {
+      if (totalWeight < 100) {
+          adjustedWeights[category] = (categoryPercentages[category] / totalWeight) * 100;
+      } else {
+          adjustedWeights[category] = categoryPercentages[category];
+      }
+  });
+
+  // Пересчёт общего результата с учётом пропорциональных весов
+  let adjustedScore = 0;
+  Object.keys(adjustedWeights).forEach(category => {
+      const card = Array.from(document.querySelectorAll('.category-card'))
+          .find(card => card.querySelector('.category-title').textContent === category);
+      if (card) {
+          const text = card.querySelector('.category-text').textContent;
+          const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
+
+          if (!isNaN(percentageMatch)) {
+              adjustedScore += (percentageMatch * adjustedWeights[category]) / 100;
+          }
+      }
+  });
+
+  console.log("Overall Compatibility Score:", Math.round(adjustedScore), "%");
+  return Math.round(adjustedScore);
+}
 
 
 
