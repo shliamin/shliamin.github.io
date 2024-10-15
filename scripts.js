@@ -1101,19 +1101,19 @@ async function displayExtendedResults(analysisData) {
               const weightedScore = (compatibility_percentage * weight) / 100;
               weightedScores.push(weightedScore);  // Сохраняем взвешенное значение
 
-              // Обновляем карточку для 'other-cards' с actual_data и взвешенным значением
+              // Обновляем карточку для 'other-cards' 
               const updatedCard = createCategoryCard(
-                  endpoint.name, 
-                  `${actual_data} (${weightedScore.toFixed(2)}% weighted)`, 
-                  false
+                endpoint.name, 
+                actual_data, 
+                false
               );
               otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
 
               // Создаем и обновляем карточку совместимости для 'analysis-cards' с compatibility_percentage
               const compatibilityCard = createCompatibilityCard(
-                  endpoint.name, 
-                  `${compatibility_percentage}% compatibility`
-              );
+                endpoint.name, 
+                `${compatibility_percentage}% compatibility (${weightedScore.toFixed(2)}% weighted)`
+            );
               analysisContainer.replaceChild(compatibilityCard, analysisContainer.childNodes[i]);
 
           } else {
