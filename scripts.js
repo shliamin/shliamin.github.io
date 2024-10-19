@@ -140,16 +140,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Open the section first
     const ourMatchButton = document.querySelector(".uk-button.uk-button-default[onclick=\"showSection('our-fit')\"]");
     if (ourMatchButton) {
-        ourMatchButton.click();
+      ourMatchButton.click();
     }
 
     // Initialize the chart after the section is displayed
     setTimeout(function () {
-        initializeChart();
+      initializeChart();
     }, 300);  // Delay to ensure the section is fully visible before chart initialization
-});
+  });
 
-  
+
 
   // Handler for clicking on "Contact" text
   document.querySelectorAll(".click-contact").forEach((word) => {
@@ -289,7 +289,7 @@ function switchLanguage(lang) {
     document.getElementById("htw-edu-en").style.display = "block";
     document.getElementById("htw-edu-de").style.display = "none";
     document.getElementById("edu-lewagon-en").style.display = "block";
-    document.getElementById("edu-lewagon-de").style.display = "none";  
+    document.getElementById("edu-lewagon-de").style.display = "none";
     document.getElementById("bochum-edu-en").style.display = "block";
     document.getElementById("bochum-edu-de").style.display = "none";
     document.getElementById("studienkolleg-en").style.display = "block";
@@ -320,7 +320,7 @@ function switchLanguage(lang) {
     document.getElementById("eurasia-de").style.display = "none";
     document.getElementById("school-1-en").style.display = "block";
     document.getElementById("school-1-de").style.display = "none";
-    
+
 
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
@@ -545,19 +545,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       newsElement.innerHTML = `
                     <div class="news-content">
-                        <img src="${newsItem.image}" alt="${
-        newsItem.title
-      }" class="news-image">
+                        <img src="${newsItem.image}" alt="${newsItem.title
+        }" class="news-image">
                         <div class="news-text">
                             <div class="news-title">
-                                <span class="badge ${badgeClass}">${
-        newsItem.category
-      }</span>
+                                <span class="badge ${badgeClass}">${newsItem.category
+        }</span>
                                 ${titleContent}
                             </div>
-                            <p class="news-meta"><small>by ${
-                              newsItem.author
-                            } on ${formatDate(newsItem.date)}</small></p>
+                            <p class="news-meta"><small>by ${newsItem.author
+        } on ${formatDate(newsItem.date)}</small></p>
                             <p class="news-description">${content}</p>
                         </div>
                     </div>
@@ -766,8 +763,8 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedCategory === "All"
         ? certificates
         : certificates.filter(
-            (certificate) => certificate.category === selectedCategory
-          );
+          (certificate) => certificate.category === selectedCategory
+        );
 
     // Redisplay the filtered certificates
     displayCertificates(filteredCertificates);
@@ -880,69 +877,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to detect language 
 function detectLanguage(text) {
-    // Convert text to lowercase for easier comparison
-    const lowerText = text.toLowerCase();
-    
-    // English-specific characters and words
-    const englishPattern = /[a-z]/;
-    const commonEnglishWords = ['the', 'and', 'is', 'are', 'you'];
-    
-    // German-specific characters and words
-    const germanPattern = /[äöüß]/;
-    const commonGermanWords = ['der', 'und', 'ist', 'sie', 'das'];
-    
-    // Count occurrences of patterns and words
-    let englishScore = 0;
-    let germanScore = 0;
+  // Convert text to lowercase for easier comparison
+  const lowerText = text.toLowerCase();
 
-    // Check for English characters and words
-    if (englishPattern.test(lowerText)) englishScore++;
-    commonEnglishWords.forEach(word => {
-        if (lowerText.includes(word)) englishScore++;
-    });
+  // English-specific characters and words
+  const englishPattern = /[a-z]/;
+  const commonEnglishWords = ['the', 'and', 'is', 'are', 'you'];
 
-    // Check for German characters and words
-    if (germanPattern.test(lowerText)) germanScore++;
-    commonGermanWords.forEach(word => {
-        if (lowerText.includes(word)) germanScore++;
-    });
+  // German-specific characters and words
+  const germanPattern = /[äöüß]/;
+  const commonGermanWords = ['der', 'und', 'ist', 'sie', 'das'];
 
-    // Decide language based on scores
-    if (germanScore > englishScore) {
-        return 'de';  // German
-    } else if (englishScore > germanScore) {
-        return 'en';  // English
-    } else {
-        return null;  // Cannot determine language
-    }
+  // Count occurrences of patterns and words
+  let englishScore = 0;
+  let germanScore = 0;
+
+  // Check for English characters and words
+  if (englishPattern.test(lowerText)) englishScore++;
+  commonEnglishWords.forEach(word => {
+    if (lowerText.includes(word)) englishScore++;
+  });
+
+  // Check for German characters and words
+  if (germanPattern.test(lowerText)) germanScore++;
+  commonGermanWords.forEach(word => {
+    if (lowerText.includes(word)) germanScore++;
+  });
+
+  // Decide language based on scores
+  if (germanScore > englishScore) {
+    return 'de';  // German
+  } else if (englishScore > germanScore) {
+    return 'en';  // English
+  } else {
+    return null;  // Cannot determine language
+  }
 }
 
 
 // Function to update character count dynamically
 function updateCharacterCount(textArea, countDisplay, maxLength) {
-    const textLength = textArea.value.length;
-    countDisplay.textContent = `Characters: ${textLength}/${maxLength}`;
-    countDisplay.style.color = textLength > maxLength ? 'red' : 'black';
+  const textLength = textArea.value.length;
+  countDisplay.textContent = `Characters: ${textLength}/${maxLength}`;
+  countDisplay.style.color = textLength > maxLength ? 'red' : 'black';
 }
 
 // Show loading spinner
 function showSpinner() {
-    document.getElementById('loading-spinner').style.display = 'block';
-    document.getElementById('result-container').style.display = 'none';
+  document.getElementById('loading-spinner').style.display = 'block';
+  document.getElementById('result-container').style.display = 'none';
 }
 
 // Hide loading spinner and show results container
 function hideSpinner() {
-    document.getElementById('loading-spinner').style.display = 'none';
-    document.getElementById('result-container').style.display = 'flex';  // Восстанавливаем видимость контейнера
+  document.getElementById('loading-spinner').style.display = 'none';
+  document.getElementById('result-container').style.display = 'flex';  // Восстанавливаем видимость контейнера
 }
 
 
 // Display detected language
 function displayDetectedLanguage(language) {
-    const languageDisplay = document.getElementById('language-detected');
-    languageDisplay.style.display = 'block';
-    languageDisplay.textContent = `Detected Language: ${language === 'en' ? 'English' : 'German'}`;
+  const languageDisplay = document.getElementById('language-detected');
+  languageDisplay.style.display = 'block';
+  languageDisplay.textContent = `Detected Language: ${language === 'en' ? 'English' : 'German'}`;
 }
 
 
@@ -950,99 +947,99 @@ function displayDetectedLanguage(language) {
 
 // Colors for each category
 const categoryColors = {
-    'Experience': '#1E2F4F',   // Deep navy-blue
-    'Skills': '#1E2F4F',       // Deep navy-blue
-    'Tech Stack': '#1E2F4F',   // Deep navy-blue
-    'Soft Skills': '#FFB02E',  // Golden yellow
-    'Cultural Fit': '#FFB02E', // Golden yellow
-    'University': '#A0C1B9',   // Soft turquoise
-    'Certifications': '#A0C1B9', // Soft turquoise
-    'Engagement': '#6C7B95',   // Gray-blue
-    'Projects': '#6C7B95',     // Gray-blue
-    'References': '#F39C6B',   // Soft orange
-    'Languages': '#E5E9F0'     // Light grayish-blue
+  'Experience': '#1E2F4F',   // Deep navy-blue
+  'Skills': '#1E2F4F',       // Deep navy-blue
+  'Tech Stack': '#1E2F4F',   // Deep navy-blue
+  'Soft Skills': '#FFB02E',  // Golden yellow
+  'Cultural Fit': '#FFB02E', // Golden yellow
+  'University': '#A0C1B9',   // Soft turquoise
+  'Certifications': '#A0C1B9', // Soft turquoise
+  'Engagement': '#6C7B95',   // Gray-blue
+  'Projects': '#6C7B95',     // Gray-blue
+  'References': '#F39C6B',   // Soft orange
+  'Languages': '#E5E9F0'     // Light grayish-blue
 };
 
 // Percentages for each category
 const categoryPercentages = {
-    'Experience': 25,
-    'Skills': 20,
-    'Tech Stack': 5,
-    'Soft Skills': 10,
-    'Cultural Fit': 10,
-    'University': 5,
-    'Certifications': 5,
-    'Engagement': 5,
-    'Projects': 5,
-    'References': 5,
-    'Languages': 5
+  'Experience': 25,
+  'Skills': 20,
+  'Tech Stack': 5,
+  'Soft Skills': 10,
+  'Cultural Fit': 10,
+  'University': 5,
+  'Certifications': 5,
+  'Engagement': 5,
+  'Projects': 5,
+  'References': 5,
+  'Languages': 5
 };
 
 // Функция для создания карточек с индикатором загрузки
 function createLoadingCard(category) {
-    const card = document.createElement('div');
-    card.classList.add('category-card');
-    card.style.backgroundColor = categoryColors[category] || '#fff';
+  const card = document.createElement('div');
+  card.classList.add('category-card');
+  card.style.backgroundColor = categoryColors[category] || '#fff';
 
-    const title = document.createElement('div');
-    title.classList.add('category-title');
-    title.textContent = category;
+  const title = document.createElement('div');
+  title.classList.add('category-title');
+  title.textContent = category;
 
-    const spinner = document.createElement('div');
-    spinner.classList.add('spinner');
-    spinner.innerHTML = '<div class="loading-spinner"></div>'; 
+  const spinner = document.createElement('div');
+  spinner.classList.add('spinner');
+  spinner.innerHTML = '<div class="loading-spinner"></div>';
 
-    card.appendChild(title);
-    card.appendChild(spinner);
-    return card;
+  card.appendChild(title);
+  card.appendChild(spinner);
+  return card;
 }
 
 // Вспомогательная функция для создания карточки категории
 function createCategoryCard(category, textContent = '-', isLoading = true) {
-    const card = document.createElement('div');
-    card.classList.add('category-card');
+  const card = document.createElement('div');
+  card.classList.add('category-card');
 
-    const backgroundColor = categoryColors[category] || '#fff';
-    card.style.backgroundColor = backgroundColor;
+  const backgroundColor = categoryColors[category] || '#fff';
+  card.style.backgroundColor = backgroundColor;
 
-    if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
-        card.style.color = '#fff';
-    } else {
-        card.style.color = '#000';
-    }
+  if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+    card.style.color = '#fff';
+  } else {
+    card.style.color = '#000';
+  }
 
-    const title = document.createElement('div');
-    title.classList.add('category-title');
-    title.textContent = category;
-    title.style.color = ["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category) ? '#E5E9F0' : '#000';
+  const title = document.createElement('div');
+  title.classList.add('category-title');
+  title.textContent = category;
+  title.style.color = ["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category) ? '#E5E9F0' : '#000';
 
-    const text = document.createElement('div');
-    text.classList.add('category-text');
-    text.textContent = isLoading ? '' : textContent;
+  const text = document.createElement('div');
+  text.classList.add('category-text');
+  text.textContent = isLoading ? '' : textContent;
 
-    // Добавляем индикатор загрузки, если `isLoading` равно `true`
-    if (isLoading) {
-        const spinner = document.createElement('div');
-        spinner.classList.add('spinner'); // Добавьте CSS класс для индикатора загрузки
-        text.appendChild(spinner);
-    }
+  // Добавляем индикатор загрузки, если `isLoading` равно `true`
+  if (isLoading) {
+    const spinner = document.createElement('div');
+    spinner.classList.add('spinner'); // Добавьте CSS класс для индикатора загрузки
+    text.appendChild(spinner);
+  }
 
-    const percentageBadge = document.createElement('div');
-    percentageBadge.classList.add('percentage-badge');
-    percentageBadge.textContent = `${categoryPercentages[category]}%`;
-    percentageBadge.style.position = 'absolute';
-    percentageBadge.style.top = '5px';
-    percentageBadge.style.right = '5px';
-    percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-    percentageBadge.style.color = '#fff';
-    percentageBadge.style.padding = '2px 7px';
-    percentageBadge.style.borderRadius = '5px';
+  const percentageBadge = document.createElement('div');
+  percentageBadge.classList.add('percentage-badge');
+  percentageBadge.textContent = `${categoryPercentages[category]}%`;
+  percentageBadge.style.position = 'absolute';
+  percentageBadge.style.top = '5px';
+  percentageBadge.style.right = '5px';
+  percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+  percentageBadge.style.color = '#fff';
+  percentageBadge.style.padding = '2px 7px';
+  percentageBadge.style.borderRadius = '5px';
 
-    card.appendChild(title);
-    card.appendChild(text);
-    card.appendChild(percentageBadge);
+  card.appendChild(title);
+  card.appendChild(text);
+  card.appendChild(percentageBadge);
 
-    return card;
+  return card;
 }
 
 // Функция для отображения данных в `other-cards` и в "analydid-cards"
@@ -1055,17 +1052,17 @@ async function displayExtendedResults(analysisData) {
   analysisContainer.innerHTML = '';
 
   const endpoints = [
-      { name: "Experience", url: "/experience" },
-      { name: "Skills", url: "/skills" },
-      { name: "Tech Stack", url: "/tech_stack" },
-      { name: "Soft Skills", url: "/soft_skills" },
-      { name: "Cultural Fit", url: "/cultural_fit" },
-      { name: "University", url: "/university" },
-      { name: "Certifications", url: "/certifications" },
-      { name: "Engagement", url: "/engagement" },
-      { name: "Projects", url: "/projects" },
-      { name: "References", url: "/references" },
-      { name: "Languages", url: "/languages" }
+    { name: "Experience", url: "/experience" },
+    { name: "Skills", url: "/skills" },
+    { name: "Tech Stack", url: "/tech_stack" },
+    { name: "Soft Skills", url: "/soft_skills" },
+    { name: "Cultural Fit", url: "/cultural_fit" },
+    { name: "University", url: "/university" },
+    { name: "Certifications", url: "/certifications" },
+    { name: "Engagement", url: "/engagement" },
+    { name: "Projects", url: "/projects" },
+    { name: "References", url: "/references" },
+    { name: "Languages", url: "/languages" }
   ];
 
   // Массив для хранения взвешенных значений каждой категории
@@ -1073,61 +1070,61 @@ async function displayExtendedResults(analysisData) {
 
   // Создаем пустые карточки с индикаторами загрузки
   endpoints.forEach(endpoint => {
-      const loadingCard = createCategoryCard(endpoint.name, '', true);
-      otherContainer.appendChild(loadingCard);
-      const compatibilityLoadingCard = createCategoryCard(endpoint.name, '', true);
-      analysisContainer.appendChild(compatibilityLoadingCard);
+    const loadingCard = createCategoryCard(endpoint.name, '', true);
+    otherContainer.appendChild(loadingCard);
+    const compatibilityLoadingCard = createCategoryCard(endpoint.name, '', true);
+    analysisContainer.appendChild(compatibilityLoadingCard);
   });
 
   // Выполняем запросы по каждому эндпоинту и обновляем содержимое карточек
   for (let i = 0; i < endpoints.length; i++) {
-      const endpoint = endpoints[i];
-      try {
-          const formData = new FormData();
-          const categoryData = analysisData[endpoint.name] || ''; // Данные для конкретной категории
-          formData.append('job_description', categoryData);
+    const endpoint = endpoints[i];
+    try {
+      const formData = new FormData();
+      const categoryData = analysisData[endpoint.name] || ''; // Данные для конкретной категории
+      formData.append('job_description', categoryData);
 
-          const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
-              method: 'POST',
-              body: formData
-          });
+      const response = await fetch(`https://scrape-jobs-c0657e779443.herokuapp.com${endpoint.url}`, {
+        method: 'POST',
+        body: formData
+      });
 
-          const result = await response.json();
-          if (response.ok) {
-              const { actual_data, compatibility_percentage } = result[endpoint.name] || {};
+      const result = await response.json();
+      if (response.ok) {
+        const { actual_data, compatibility_percentage } = result[endpoint.name] || {};
 
-              // Рассчитываем взвешенное значение процента и добавляем его в массив
-              const weight = categoryPercentages[endpoint.name];
-              const weightedScore = (compatibility_percentage * weight) / 100;
-              weightedScores.push(weightedScore);  // Сохраняем взвешенное значение
+        // Рассчитываем взвешенное значение процента и добавляем его в массив
+        const weight = categoryPercentages[endpoint.name];
+        const weightedScore = (compatibility_percentage * weight) / 100;
+        weightedScores.push(weightedScore);  // Сохраняем взвешенное значение
 
-              // Обновляем карточку для 'other-cards' 
-              const updatedCard = createCategoryCard(
-                endpoint.name, 
-                actual_data, 
-                false
-              );
-              otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
+        // Обновляем карточку для 'other-cards' 
+        const updatedCard = createCategoryCard(
+          endpoint.name,
+          actual_data,
+          false
+        );
+        otherContainer.replaceChild(updatedCard, otherContainer.childNodes[i]);
 
-              // Создаем и обновляем карточку совместимости для 'analysis-cards' с compatibility_percentage
-              const compatibilityCard = createCompatibilityCard(
-                endpoint.name, 
-                `${compatibility_percentage}% compatibility (${weightedScore.toFixed(2)}% weighted)`
-            );
-              analysisContainer.replaceChild(compatibilityCard, analysisContainer.childNodes[i]);
+        // Создаем и обновляем карточку совместимости для 'analysis-cards' с compatibility_percentage
+        const compatibilityCard = createCompatibilityCard(
+          endpoint.name,
+          `${compatibility_percentage}% compatibility (${weightedScore.toFixed(2)}% weighted)`
+        );
+        analysisContainer.replaceChild(compatibilityCard, analysisContainer.childNodes[i]);
 
-          } else {
-              throw new Error(result.error || 'Error fetching data');
-          }
-      } catch (error) {
-          console.error(`Error loading ${endpoint.name}:`, error);
-
-          const errorCard = createCategoryCard(endpoint.name, 'Error loading data', false);
-          otherContainer.replaceChild(errorCard, otherContainer.childNodes[i]);
-
-          const compatibilityErrorCard = createCompatibilityCard(endpoint.name, 'Error loading data');
-          analysisContainer.replaceChild(compatibilityErrorCard, analysisContainer.childNodes[i]);
+      } else {
+        throw new Error(result.error || 'Error fetching data');
       }
+    } catch (error) {
+      console.error(`Error loading ${endpoint.name}:`, error);
+
+      const errorCard = createCategoryCard(endpoint.name, 'Error loading data', false);
+      otherContainer.replaceChild(errorCard, otherContainer.childNodes[i]);
+
+      const compatibilityErrorCard = createCompatibilityCard(endpoint.name, 'Error loading data');
+      analysisContainer.replaceChild(compatibilityErrorCard, analysisContainer.childNodes[i]);
+    }
   }
 
 
@@ -1155,171 +1152,171 @@ async function displayExtendedResults(analysisData) {
 
 // Функция для обновления карточки с данными из API
 function updateExtendedResultCard(container, categoryName, result) {
-    const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
-    if (card) {
-        card.querySelector('.spinner').style.display = 'none'; // Скрыть спиннер
-        const content = document.createElement('div');
-        content.classList.add('category-text');
-        content.textContent = result[categoryName] || '-';
-        card.appendChild(content);
-    }
+  const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
+  if (card) {
+    card.querySelector('.spinner').style.display = 'none'; // Скрыть спиннер
+    const content = document.createElement('div');
+    content.classList.add('category-text');
+    content.textContent = result[categoryName] || '-';
+    card.appendChild(content);
+  }
 }
 
 // Функция для отображения ошибки в карточке
 function updateErrorCard(container, categoryName) {
-    const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
-    if (card) {
-        card.querySelector('.spinner').style.display = 'none';
-        card.style.backgroundColor = '#dc3545'; // Красный цвет для ошибки
-        const errorText = document.createElement('div');
-        errorText.classList.add('category-text');
-        errorText.textContent = 'Error loading data';
-        card.appendChild(errorText);
-    }
+  const card = Array.from(container.children).find(card => card.querySelector('.category-title').textContent === categoryName);
+  if (card) {
+    card.querySelector('.spinner').style.display = 'none';
+    card.style.backgroundColor = '#dc3545'; // Красный цвет для ошибки
+    const errorText = document.createElement('div');
+    errorText.classList.add('category-text');
+    errorText.textContent = 'Error loading data';
+    card.appendChild(errorText);
+  }
 }
 
 
 
 // Функция для отображения результатов анализа
 function displayResults(result) {
-    const resultContainer = document.getElementById('loaded-cards');
-    resultContainer.innerHTML = '';
-    resultContainer.style.display = 'flex';
-
-    
-
-    // Упорядоченный список категорий
-    const orderedCategories = [
-        "Experience", "Skills", "Tech Stack", "Soft Skills", "Cultural Fit",
-        "University", "Certifications", "Engagement", "Projects", "References", "Languages"
-    ];
-
-    orderedCategories.forEach(function(category) {
-        // Проверяем, есть ли категория в результатах анализа
-        if (result.analysis.hasOwnProperty(category)) {
-            const card = document.createElement('div');
-            card.classList.add('category-card');
-
-            const columns = document.querySelectorAll('.column');
-            columns.forEach(column => {
-            column.style.visibility = 'visible';
-            });
+  const resultContainer = document.getElementById('loaded-cards');
+  resultContainer.innerHTML = '';
+  resultContainer.style.display = 'flex';
 
 
-            // Устанавливаем цвет фона карточки в зависимости от категории
-            const backgroundColor = categoryColors[category] || '#fff';
-            card.style.backgroundColor = backgroundColor;
 
-            // Устанавливаем цвет текста на карточке
-            if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
-                // Для указанных категорий устанавливаем белый цвет текста
-                card.style.color = '#fff';
-            } else {
-                // Для остальных категорий цвет текста по умолчанию (чёрный)
-                card.style.color = '#000';
-            }
+  // Упорядоченный список категорий
+  const orderedCategories = [
+    "Experience", "Skills", "Tech Stack", "Soft Skills", "Cultural Fit",
+    "University", "Certifications", "Engagement", "Projects", "References", "Languages"
+  ];
 
-            const title = document.createElement('div');
-            title.classList.add('category-title');
-            title.textContent = category;
+  orderedCategories.forEach(function (category) {
+    // Проверяем, есть ли категория в результатах анализа
+    if (result.analysis.hasOwnProperty(category)) {
+      const card = document.createElement('div');
+      card.classList.add('category-card');
 
-            // Устанавливаем цвет заголовка
-            if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
-                // Для указанных категорий устанавливаем светлый цвет заголовка
-                title.style.color = '#E5E9F0'; // Светлый цвет из вашей палитры
-            } else {
-                // Для остальных категорий цвет заголовка по умолчанию (чёрный)
-                title.style.color = '#000';
-            }
+      const columns = document.querySelectorAll('.column');
+      columns.forEach(column => {
+        column.style.visibility = 'visible';
+      });
 
-            const text = document.createElement('div');
-            text.classList.add('category-text');
-            text.textContent = result.analysis[category] || '-';
 
-            // Создаём бейджик с процентом
-            const percentageBadge = document.createElement('div');
-            percentageBadge.classList.add('percentage-badge');
-            percentageBadge.textContent = `${categoryPercentages[category]}%`;
-            percentageBadge.style.position = 'absolute';
-            percentageBadge.style.top = '5px';
-            percentageBadge.style.right = '5px';
-            percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-            percentageBadge.style.color = '#fff';
-            percentageBadge.style.padding = '2px 7px';
-            percentageBadge.style.borderRadius = '5px';
+      // Устанавливаем цвет фона карточки в зависимости от категории
+      const backgroundColor = categoryColors[category] || '#fff';
+      card.style.backgroundColor = backgroundColor;
 
-            // Добавляем элементы в карточку
-            card.appendChild(title);
-            card.appendChild(text);
-            card.appendChild(percentageBadge);
+      // Устанавливаем цвет текста на карточке
+      if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+        // Для указанных категорий устанавливаем белый цвет текста
+        card.style.color = '#fff';
+      } else {
+        // Для остальных категорий цвет текста по умолчанию (чёрный)
+        card.style.color = '#000';
+      }
 
-            // Добавляем карточку в контейнер
-            resultContainer.appendChild(card);
-        }
-    });
+      const title = document.createElement('div');
+      title.classList.add('category-title');
+      title.textContent = category;
+
+      // Устанавливаем цвет заголовка
+      if (["Experience", "Skills", "Tech Stack", "Engagement", "Projects"].includes(category)) {
+        // Для указанных категорий устанавливаем светлый цвет заголовка
+        title.style.color = '#E5E9F0'; // Светлый цвет из вашей палитры
+      } else {
+        // Для остальных категорий цвет заголовка по умолчанию (чёрный)
+        title.style.color = '#000';
+      }
+
+      const text = document.createElement('div');
+      text.classList.add('category-text');
+      text.textContent = result.analysis[category] || '-';
+
+      // Создаём бейджик с процентом
+      const percentageBadge = document.createElement('div');
+      percentageBadge.classList.add('percentage-badge');
+      percentageBadge.textContent = `${categoryPercentages[category]}%`;
+      percentageBadge.style.position = 'absolute';
+      percentageBadge.style.top = '5px';
+      percentageBadge.style.right = '5px';
+      percentageBadge.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      percentageBadge.style.color = '#fff';
+      percentageBadge.style.padding = '2px 7px';
+      percentageBadge.style.borderRadius = '5px';
+
+      // Добавляем элементы в карточку
+      card.appendChild(title);
+      card.appendChild(text);
+      card.appendChild(percentageBadge);
+
+      // Добавляем карточку в контейнер
+      resultContainer.appendChild(card);
+    }
+  });
 }
 
 
 // Form submission handler
-document.getElementById('resume-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
+document.getElementById('resume-form').addEventListener('submit', async function (event) {
+  event.preventDefault();
 
-    const jobDescriptionEN = document.getElementById('job_description-en');
-    let jobDescription = jobDescriptionEN.value;
+  const jobDescriptionEN = document.getElementById('job_description-en');
+  let jobDescription = jobDescriptionEN.value;
 
-    showSpinner();
+  showSpinner();
 
-    if (jobDescription.length > 2000) {
-        alert('The job description exceeds 2000 characters.');
-        hideSpinner();
-        return;
-    }
+  if (jobDescription.length > 2000) {
+    alert('The job description exceeds 2000 characters.');
+    hideSpinner();
+    return;
+  }
 
-    const detectedLanguage = detectLanguage(jobDescription);
-    if (!detectedLanguage) {
-        alert('Only English or German text is supported.');
-        hideSpinner();
-        return;
-    }
+  const detectedLanguage = detectLanguage(jobDescription);
+  if (!detectedLanguage) {
+    alert('Only English or German text is supported.');
+    hideSpinner();
+    return;
+  }
 
-    // Display the detected language
-    displayDetectedLanguage(detectedLanguage);
+  // Display the detected language
+  displayDetectedLanguage(detectedLanguage);
 
-    const formData = new FormData();
-    formData.append('job_description', jobDescription);
+  const formData = new FormData();
+  formData.append('job_description', jobDescription);
 
-    try {
-        const response = await fetch('https://scrape-jobs-c0657e779443.herokuapp.com/analyze_with_categories', {
-            method: 'POST',
-            body: formData
-        });
+  try {
+    const response = await fetch('https://scrape-jobs-c0657e779443.herokuapp.com/analyze_with_categories', {
+      method: 'POST',
+      body: formData
+    });
 
-        const result = await response.json();
-        hideSpinner();
+    const result = await response.json();
+    hideSpinner();
 
-        if (response.ok) {
-            displayResults(result);
-            await displayExtendedResults(result.analysis);
-        } else {
-            document.getElementById('result-container').innerHTML = `
+    if (response.ok) {
+      displayResults(result);
+      await displayExtendedResults(result.analysis);
+    } else {
+      document.getElementById('result-container').innerHTML = `
                 <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">
                     <strong>Error:</strong> ${result.error}
                 </div>`;
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        hideSpinner();
-        document.getElementById('result-container').innerHTML = `
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    hideSpinner();
+    document.getElementById('result-container').innerHTML = `
             <div style="color: white; background-color: #dc3545; padding: 15px; border-radius: 8px;">
                 <strong>An error occurred while processing your request.</strong>
             </div>`;
-    }
+  }
 });
 
 // Dynamic character count display
-document.getElementById('job_description-en').addEventListener('input', function() {
-    const countDisplay = document.getElementById('character-count');
-    updateCharacterCount(this, countDisplay, 2000);
+document.getElementById('job_description-en').addEventListener('input', function () {
+  const countDisplay = document.getElementById('character-count');
+  updateCharacterCount(this, countDisplay, 2000);
 });
 
 
@@ -1378,42 +1375,42 @@ function calculateOverallCompatibility() {
 
   // Собираем категории с их фактическими значениями и весами
   Object.keys(categoryPercentages).forEach(category => {
-      const card = Array.from(document.querySelectorAll('.category-card'))
-          .find(card => card.querySelector('.category-title').textContent === category);
-      if (card) {
-          const text = card.querySelector('.category-text').textContent;
-          const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
+    const card = Array.from(document.querySelectorAll('.category-card'))
+      .find(card => card.querySelector('.category-title').textContent === category);
+    if (card) {
+      const text = card.querySelector('.category-text').textContent;
+      const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
 
-          // Если есть валидное число для совместимости, добавляем его в расчёт
-          if (!isNaN(percentageMatch)) {
-              totalScore += percentageMatch * categoryPercentages[category];
-              totalWeight += categoryPercentages[category];
-          }
+      // Если есть валидное число для совместимости, добавляем его в расчёт
+      if (!isNaN(percentageMatch)) {
+        totalScore += percentageMatch * categoryPercentages[category];
+        totalWeight += categoryPercentages[category];
       }
+    }
   });
 
   // Если totalWeight меньше 100 из-за пропущенных категорий, пересчитываем веса пропорционально
   Object.keys(categoryPercentages).forEach(category => {
-      if (totalWeight < 100) {
-          adjustedWeights[category] = (categoryPercentages[category] / totalWeight) * 100;
-      } else {
-          adjustedWeights[category] = categoryPercentages[category];
-      }
+    if (totalWeight < 100) {
+      adjustedWeights[category] = (categoryPercentages[category] / totalWeight) * 100;
+    } else {
+      adjustedWeights[category] = categoryPercentages[category];
+    }
   });
 
   // Пересчёт общего результата с учётом пропорциональных весов
   let adjustedScore = 0;
   Object.keys(adjustedWeights).forEach(category => {
-      const card = Array.from(document.querySelectorAll('.category-card'))
-          .find(card => card.querySelector('.category-title').textContent === category);
-      if (card) {
-          const text = card.querySelector('.category-text').textContent;
-          const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
+    const card = Array.from(document.querySelectorAll('.category-card'))
+      .find(card => card.querySelector('.category-title').textContent === category);
+    if (card) {
+      const text = card.querySelector('.category-text').textContent;
+      const percentageMatch = parseInt(text.replace('% compatibility', '').trim());
 
-          if (!isNaN(percentageMatch)) {
-              adjustedScore += (percentageMatch * adjustedWeights[category]) / 100;
-          }
+      if (!isNaN(percentageMatch)) {
+        adjustedScore += (percentageMatch * adjustedWeights[category]) / 100;
       }
+    }
   });
 
   console.log("Overall Compatibility Score:", Math.round(adjustedScore), "%");
@@ -1428,151 +1425,151 @@ let donutChartInstance = null;
 
 
 function initializeChart() {
-    const donutChartElement = document.getElementById('donutChart').getContext('2d');
+  const donutChartElement = document.getElementById('donutChart').getContext('2d');
 
-    // Check if a chart instance already exists and destroy it
-    if (donutChartInstance !== null) {
-        donutChartInstance.destroy();
+  // Check if a chart instance already exists and destroy it
+  if (donutChartInstance !== null) {
+    donutChartInstance.destroy();
+  }
+
+  const categories = {
+    'Professional Skills': {
+      value: 50,
+      color: '#1E2F4F',
+      subcategories: {
+        'Experience': 25,
+        'Skills': 20,
+        'Tech Stack': 5
+      }
+    },
+    'Cultural Fit': {
+      value: 20,
+      color: '#FFB02E',
+      subcategories: {
+        'Soft Skills': 10,
+        'Cultural Fit': 10
+      }
+    },
+    'Education': {
+      value: 10,
+      color: '#A0C1B9',
+      subcategories: {
+        'University': 5,
+        'Certifications': 5
+      }
+    },
+    'Portfolio': {
+      value: 10,
+      color: '#6C7B95',
+      subcategories: {
+        'Engagement': 5,
+        'Projects': 5
+      }
+    },
+    'References': {
+      value: 5,
+      color: '#F39C6B',
+      subcategories: {}
+    },
+    'Languages': {
+      value: 5,
+      color: '#E5E9F0',
+      subcategories: {}
     }
+  };
 
-    const categories = {
-        'Professional Skills': {
-            value: 50,
-            color: '#1E2F4F',
-            subcategories: {
-                'Experience': 25,
-                'Skills': 20,
-                'Tech Stack': 5
-            }
-        },
-        'Cultural Fit': {
-            value: 20,
-            color: '#FFB02E',
-            subcategories: {
-                'Soft Skills': 10,
-                'Cultural Fit': 10
-            }
-        },
-        'Education': {
-            value: 10,
-            color: '#A0C1B9',
-            subcategories: {
-                'University': 5,
-                'Certifications': 5
-            }
-        },
-        'Portfolio': {
-            value: 10,
-            color: '#6C7B95',
-            subcategories: {
-                'Engagement': 5,
-                'Projects': 5
-            }
-        },
-        'References': {
-            value: 5,
-            color: '#F39C6B',
-            subcategories: {}
-        },
-        'Languages': {
-            value: 5,
-            color: '#E5E9F0',
-            subcategories: {}
-        }
-    };
+  const labels = [];
+  const data = [];
+  const backgroundColors = [];
 
-    const labels = [];
-    const data = [];
-    const backgroundColors = [];
+  for (const category in categories) {
+    const categoryInfo = categories[category];
 
-    for (const category in categories) {
-        const categoryInfo = categories[category];
-
-        if (Object.keys(categoryInfo.subcategories).length > 0) {
-            for (const subcategory in categoryInfo.subcategories) {
-                labels.push(subcategory);
-                data.push(categoryInfo.subcategories[subcategory]);
-                backgroundColors.push(categoryInfo.color);
-            }
-        } else {
-            labels.push(category);
-            data.push(categoryInfo.value);
-            backgroundColors.push(categoryInfo.color);
-        }
+    if (Object.keys(categoryInfo.subcategories).length > 0) {
+      for (const subcategory in categoryInfo.subcategories) {
+        labels.push(subcategory);
+        data.push(categoryInfo.subcategories[subcategory]);
+        backgroundColors.push(categoryInfo.color);
+      }
+    } else {
+      labels.push(category);
+      data.push(categoryInfo.value);
+      backgroundColors.push(categoryInfo.color);
     }
+  }
 
-    // Create the chart and store it in the global variable
-    donutChartInstance = new Chart(donutChartElement, {
-        type: 'doughnut',
-        data: {
-            labels: labels,
-            datasets: [{
-                data: data,
-                backgroundColor: backgroundColors,
-                hoverOffset: 4
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false,
-                }
-            }
+  // Create the chart and store it in the global variable
+  donutChartInstance = new Chart(donutChartElement, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColors,
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
         }
-    });
+      }
+    }
+  });
 
-    
+
 }
 
 
 
 function refreshAd() {
-    // Обновить рекламный блок
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  }
+  // Обновить рекламный блок
+  (adsbygoogle = window.adsbygoogle || []).push({});
+}
 
 
 
-  let allProjects = [];
-  let originalURL = window.location.href;
-  
-  document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('tech-fields').addEventListener('change', updateTechStack);
-      document.getElementById('tech-stack').addEventListener('change', filterProjects);
-  
-      axios.get('projects.json')
-          .then(response => {
-              allProjects = response.data;
-              displayProjects(allProjects);
-              addEventListenersToProjects(); 
-          })
-          .catch(error => {
-              console.error('Error loading projects:', error);
-          });
-  });
-  
-  function displayProjects(projects) {
-      projects.sort((a, b) => a.priority - b.priority);
-  
-      const projectsGrid = document.getElementById('projects-grid');
-      projectsGrid.innerHTML = '';
-      const projectCount = document.getElementById('project-count');
-      projectCount.innerText = `${projects.length} projects found:`;
-  
-      projects.forEach(project => {
-          const projectCard = document.createElement('div');
-          projectCard.classList.add('col-md-4', 'col-sm-6', 'col-12', 'mb-4', 'project');
-          projectCard.setAttribute('data-tech-field', project.techField);
-          projectCard.setAttribute('data-tech-stack', project.techStack);
-  
-          const projectLink = document.createElement('a');
-          projectLink.href = `?project=${encodeURIComponent(project.name)}`;
-          projectLink.className = 'project-link';
-          projectLink.setAttribute('data-project', project.name);
-  
-          projectCard.innerHTML = `
+let allProjects = [];
+let originalURL = window.location.href;
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('tech-fields').addEventListener('change', updateTechStack);
+  document.getElementById('tech-stack').addEventListener('change', filterProjects);
+
+  axios.get('projects.json')
+    .then(response => {
+      allProjects = response.data;
+      displayProjects(allProjects);
+      addEventListenersToProjects();
+    })
+    .catch(error => {
+      console.error('Error loading projects:', error);
+    });
+});
+
+function displayProjects(projects) {
+  projects.sort((a, b) => a.priority - b.priority);
+
+  const projectsGrid = document.getElementById('projects-grid');
+  projectsGrid.innerHTML = '';
+  const projectCount = document.getElementById('project-count');
+  projectCount.innerText = `${projects.length} projects found:`;
+
+  projects.forEach(project => {
+    const projectCard = document.createElement('div');
+    projectCard.classList.add('col-md-4', 'col-sm-6', 'col-12', 'mb-4', 'project');
+    projectCard.setAttribute('data-tech-field', project.techField);
+    projectCard.setAttribute('data-tech-stack', project.techStack);
+
+    const projectLink = document.createElement('a');
+    projectLink.href = `?project=${encodeURIComponent(project.name)}`;
+    projectLink.className = 'project-link';
+    projectLink.setAttribute('data-project', project.name);
+
+    projectCard.innerHTML = `
               <div class="card project" onclick="loadProjectDetails('${project.name}', '${project.description}', '${project.github}', '${project.demo}', '${project.status}', '${project.images.description}', '${project.technologies}');" uk-toggle="target: #project-modal">
                   <div class="card-img-top" style="background-image: url('${project.images.card}');">
                       
@@ -1580,270 +1577,270 @@ function refreshAd() {
                   </div>
               </div>
           `;
-  
-          projectCard.appendChild(projectLink); 
-          projectsGrid.appendChild(projectCard);
-      });
-  
-      const noResultsMessage = document.getElementById('no-results-message');
-      noResultsMessage.style.display = projects.length > 0 ? 'none' : 'block';
-  }
-  
-  function loadProjectDetails(name, description, githubLink, websiteLink, status, imageUrl, techStack) {
-      originalURL = window.location.href;
-      history.pushState(null, '', `?project=${encodeURIComponent(name)}`);
-  
-      document.getElementById('project-title').innerText = name;
-      document.getElementById('project-description').innerText = description;
-      document.getElementById('project-link').href = githubLink;
-      document.getElementById('project-link').innerText = githubLink;
-      document.getElementById('project-website').href = websiteLink;
-      document.getElementById('project-website').innerText = websiteLink;
-      document.getElementById('project-image').src = imageUrl;
-  
-      const statusElement = document.getElementById('status-text');
-      statusElement.textContent = status;
-      const techStackElement = document.getElementById('tech-stack-text');
-      techStackElement.textContent = techStack;
-  
-      // Display delay message for all projects
-      const delayMessage = document.getElementById('delay-message');
-      delayMessage.style.display = 'block';
-      delayMessage.innerText = 'The website may take up to 30 seconds to load. Please be patient.';
-  
-      if (status === 'Completed') {
-          statusElement.className = 'badge-status badge-success';
-      } else if (status === 'In Development') {
-          statusElement.className = 'badge-status badge-warning';
-      } else {
-          statusElement.className = 'badge-status badge-secondary';
-      }
-  }
-  
-  function updateTechStack() {
-      const techFields = document.getElementById('tech-fields').value;
-      const techStack = document.getElementById('tech-stack');
-      techStack.innerHTML = '<option value="">Select Tech Stack</option>';
-  
-      if (techFields) {
-          techStack.disabled = false;
-          let options = [];
-          if (techFields === 'full-stack') {
-              options = ['React', 'Java Spring Boot', '.NET', 'Node.js', 'Python' ];
-          } else if (techFields === 'data-science') {
-              options = ['Python', 'OpenCV', 'NumPy', 'Nextflow', 'Fastp', 'Pandas', 'Matplotlib', 'Statistical Analysis'];
-          } else if (techFields === 'bioinformatics') {
-              options = ['Image Processing', 'Morphological Operations', 'Analysis and Visualization', 'SPAdes', 'QUAST', 'Bioinformatics Workflow', 'Genome Assembly', 'Data Analysis of Medical Records', 'DICOM Processing', '3D Visualization', 'Segmentation Algorithms'];
-          } else if (techFields === 'machine-learning') {
-              options = ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Recommendation System', 'K-Means Clustering', 'Marching Cubes Algorithm'];
-          } else if (techFields === 'quantum-computing') {
-              options = ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Error Correction'];
-          }
-          options.forEach(option => {
-              const opt = document.createElement('option');
-              opt.value = option.toLowerCase().replace(/ /g, '-');
-              opt.innerText = option;
-              techStack.appendChild(opt);
-          });
-      } else {
-          techStack.disabled = true;
-      }
-  
-      filterProjects();
-  }
-  
-  function filterProjects() {
-      const techFields = document.getElementById('tech-fields').value;
-      const techStack = document.getElementById('tech-stack').value.trim().toLowerCase().replace(/ /g, '-');
-      const projectsGrid = document.querySelector('.projects-grid');
-  
-      const filteredProjects = allProjects.filter(project => {
-          const projectTechField = project.techField.split(', ');
-          const projectTechStack = project.techStack.split(', ').map(stack => stack.trim().toLowerCase().replace(/ /g, '-'));
-  
-  
-          let matchesField = true;
-          let matchesStack = true;
-  
-          if (techFields) {
-              matchesField = projectTechField.some(field => field.includes(techFields));
-          }
-  
-          if (techStack) {
-              matchesStack = projectTechStack.some(stack => stack.includes(techStack));
-          }
-  
-          return matchesField && matchesStack;
-      }).sort((a, b) => a.priority - b.priority);
-  
-      displayProjects(filteredProjects);
-  
-      const projectCount = document.getElementById('project-count');
-      projectCount.innerText = `${filteredProjects.length} projects found:`;
-  
-      const noResultsMessage = document.getElementById('no-results-message');
-      noResultsMessage.style.display = filteredProjects.length > 0 ? 'none' : 'block';
-  }
-  
-  function addEventListenersToProjects() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const projectParam = urlParams.get('project');
-  
-      if (projectParam) {
-          // Ensure the section is shown first
-          showSection('my-work');
-  
-          // Wait until the section is fully shown before opening the project
-          setTimeout(() => openProjectByParam(projectParam), 300); // Adding a delay to ensure everything is ready
-      }
-  
-      window.onpopstate = function() {
-          const projectParam = new URLSearchParams(window.location.search).get('project');
-          if (projectParam) {
-              openProjectByParam(projectParam);
-          } else {
-              UIkit.modal('#project-modal').hide();
-          }
-      };
-  
-      const closeModalButton = document.querySelector('#project-modal .uk-modal-close-default');
-      if (closeModalButton) {
-          closeModalButton.addEventListener('click', closeProjectDetails);
-      }
-  
-      UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
-  }
-  
-  
-  function openProjectByParam(projectName) {
-      UIkit.modal('#project-modal').hide(); 
-      setTimeout(() => {
-          const project = allProjects.find(proj => proj.name === decodeURIComponent(projectName));
-          if (project) {
-              loadProjectDetails(
-                  project.name,
-                  project.description,
-                  project.github,
-                  project.demo,
-                  project.status,
-                  project.images.description,
-                  project.technologies
-              );
-              UIkit.modal('#project-modal').show();
-          }
-      }, 300); 
-  }
-  
-  function closeProjectDetails() {
-      history.replaceState(null, '', originalURL); 
-      UIkit.modal('#project-modal').hide(); 
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
-      addEventListenersToProjects();
+
+    projectCard.appendChild(projectLink);
+    projectsGrid.appendChild(projectCard);
   });
-  
-  
-  
-  
-  
-  UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
-  
-  
-  
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    let photos = []; // Store fetched data about photos
 
-    fetch("photos.json")
-        .then((response) => response.json())
-        .then((data) => {
-            photos = data;
-            displayPhotos(photos); // Display all photos initially
-        })
-        .catch((error) => console.error("Error fetching photos:", error));
+  const noResultsMessage = document.getElementById('no-results-message');
+  noResultsMessage.style.display = projects.length > 0 ? 'none' : 'block';
+}
 
-    const container = document.querySelector(".photo-carousel");
+function loadProjectDetails(name, description, githubLink, websiteLink, status, imageUrl, techStack) {
+  originalURL = window.location.href;
+  history.pushState(null, '', `?project=${encodeURIComponent(name)}`);
 
-    // Function to display photos in the carousel
-    function displayPhotos(photos) {
-        if (!container) {
-            console.error("Container not found!");
-            return;
-        }
+  document.getElementById('project-title').innerText = name;
+  document.getElementById('project-description').innerText = description;
+  document.getElementById('project-link').href = githubLink;
+  document.getElementById('project-link').innerText = githubLink;
+  document.getElementById('project-website').href = websiteLink;
+  document.getElementById('project-website').innerText = websiteLink;
+  document.getElementById('project-image').src = imageUrl;
 
-        container.innerHTML = ""; // Clear the current items
+  const statusElement = document.getElementById('status-text');
+  statusElement.textContent = status;
+  const techStackElement = document.getElementById('tech-stack-text');
+  techStackElement.textContent = techStack;
 
-        photos.forEach((photo) => {
-            const photoItem = document.createElement("div");
-            photoItem.classList.add("photo-item");
-            photoItem.style.cssText =
-                "position: relative; min-width: 120px; flex-shrink: 0;";
+  // Display delay message for all projects
+  const delayMessage = document.getElementById('delay-message');
+  delayMessage.style.display = 'block';
+  delayMessage.innerText = 'The website may take up to 30 seconds to load. Please be patient.';
 
-            const anchor = document.createElement("a");
-            anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
-            anchor.target = "_blank";
+  if (status === 'Completed') {
+    statusElement.className = 'badge-status badge-success';
+  } else if (status === 'In Development') {
+    statusElement.className = 'badge-status badge-warning';
+  } else {
+    statusElement.className = 'badge-status badge-secondary';
+  }
+}
 
-            const image = document.createElement("img");
-            image.src = photo.imageSource; // Adjust property name based on your actual data
-            image.alt = photo.description; // Use description for alt text
-            image.style.cssText =
-                "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+function updateTechStack() {
+  const techFields = document.getElementById('tech-fields').value;
+  const techStack = document.getElementById('tech-stack');
+  techStack.innerHTML = '<option value="">Select Tech Stack</option>';
 
-            anchor.appendChild(image);
-            photoItem.appendChild(anchor);
-            container.appendChild(photoItem);
-        });
+  if (techFields) {
+    techStack.disabled = false;
+    let options = [];
+    if (techFields === 'full-stack') {
+      options = ['React', 'Java Spring Boot', '.NET', 'Node.js', 'Python'];
+    } else if (techFields === 'data-science') {
+      options = ['Python', 'OpenCV', 'NumPy', 'Nextflow', 'Fastp', 'Pandas', 'Matplotlib', 'Statistical Analysis'];
+    } else if (techFields === 'bioinformatics') {
+      options = ['Image Processing', 'Morphological Operations', 'Analysis and Visualization', 'SPAdes', 'QUAST', 'Bioinformatics Workflow', 'Genome Assembly', 'Data Analysis of Medical Records', 'DICOM Processing', '3D Visualization', 'Segmentation Algorithms'];
+    } else if (techFields === 'machine-learning') {
+      options = ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Recommendation System', 'K-Means Clustering', 'Marching Cubes Algorithm'];
+    } else if (techFields === 'quantum-computing') {
+      options = ['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Error Correction'];
     }
+    options.forEach(option => {
+      const opt = document.createElement('option');
+      opt.value = option.toLowerCase().replace(/ /g, '-');
+      opt.innerText = option;
+      techStack.appendChild(opt);
+    });
+  } else {
+    techStack.disabled = true;
+  }
+
+  filterProjects();
+}
+
+function filterProjects() {
+  const techFields = document.getElementById('tech-fields').value;
+  const techStack = document.getElementById('tech-stack').value.trim().toLowerCase().replace(/ /g, '-');
+  const projectsGrid = document.querySelector('.projects-grid');
+
+  const filteredProjects = allProjects.filter(project => {
+    const projectTechField = project.techField.split(', ');
+    const projectTechStack = project.techStack.split(', ').map(stack => stack.trim().toLowerCase().replace(/ /g, '-'));
+
+
+    let matchesField = true;
+    let matchesStack = true;
+
+    if (techFields) {
+      matchesField = projectTechField.some(field => field.includes(techFields));
+    }
+
+    if (techStack) {
+      matchesStack = projectTechStack.some(stack => stack.includes(techStack));
+    }
+
+    return matchesField && matchesStack;
+  }).sort((a, b) => a.priority - b.priority);
+
+  displayProjects(filteredProjects);
+
+  const projectCount = document.getElementById('project-count');
+  projectCount.innerText = `${filteredProjects.length} projects found:`;
+
+  const noResultsMessage = document.getElementById('no-results-message');
+  noResultsMessage.style.display = filteredProjects.length > 0 ? 'none' : 'block';
+}
+
+function addEventListenersToProjects() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectParam = urlParams.get('project');
+
+  if (projectParam) {
+    // Ensure the section is shown first
+    showSection('my-work');
+
+    // Wait until the section is fully shown before opening the project
+    setTimeout(() => openProjectByParam(projectParam), 300); // Adding a delay to ensure everything is ready
+  }
+
+  window.onpopstate = function () {
+    const projectParam = new URLSearchParams(window.location.search).get('project');
+    if (projectParam) {
+      openProjectByParam(projectParam);
+    } else {
+      UIkit.modal('#project-modal').hide();
+    }
+  };
+
+  const closeModalButton = document.querySelector('#project-modal .uk-modal-close-default');
+  if (closeModalButton) {
+    closeModalButton.addEventListener('click', closeProjectDetails);
+  }
+
+  UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
+}
+
+
+function openProjectByParam(projectName) {
+  UIkit.modal('#project-modal').hide();
+  setTimeout(() => {
+    const project = allProjects.find(proj => proj.name === decodeURIComponent(projectName));
+    if (project) {
+      loadProjectDetails(
+        project.name,
+        project.description,
+        project.github,
+        project.demo,
+        project.status,
+        project.images.description,
+        project.technologies
+      );
+      UIkit.modal('#project-modal').show();
+    }
+  }, 300);
+}
+
+function closeProjectDetails() {
+  history.replaceState(null, '', originalURL);
+  UIkit.modal('#project-modal').hide();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  addEventListenersToProjects();
 });
 
 
 
 
-  
+
+UIkit.util.on('#project-modal', 'hide', closeProjectDetails);
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    let photos = []; // Store fetched data about photos
+  let photos = []; // Store fetched data about photos
 
-    fetch("photos-2.json")
-        .then((response) => response.json())
-        .then((data) => {
-            photos = data;
-            displayPhotos(photos); // Display all photos initially
-        })
-        .catch((error) => console.error("Error fetching photos:", error));
+  fetch("photos.json")
+    .then((response) => response.json())
+    .then((data) => {
+      photos = data;
+      displayPhotos(photos); // Display all photos initially
+    })
+    .catch((error) => console.error("Error fetching photos:", error));
 
-    const container = document.querySelector(".photo-carousel-2");
+  const container = document.querySelector(".photo-carousel");
 
-    // Function to display photos in the carousel
-    function displayPhotos(photos) {
-        if (!container) {
-            console.error("Container not found!");
-            return;
-        }
-
-        container.innerHTML = ""; // Clear the current items
-
-        photos.forEach((photo) => {
-            const photoItem = document.createElement("div");
-            photoItem.classList.add("photo-item");
-            photoItem.style.cssText =
-                "position: relative; min-width: 120px; flex-shrink: 0;";
-
-            const anchor = document.createElement("a");
-            anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
-            anchor.target = "_blank";
-
-            const image = document.createElement("img");
-            image.src = photo.imageSource; // Adjust property name based on your actual data
-            image.alt = photo.description; // Use description for alt text
-            image.style.cssText =
-                "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
-
-            anchor.appendChild(image);
-            photoItem.appendChild(anchor);
-            container.appendChild(photoItem);
-        });
+  // Function to display photos in the carousel
+  function displayPhotos(photos) {
+    if (!container) {
+      console.error("Container not found!");
+      return;
     }
+
+    container.innerHTML = ""; // Clear the current items
+
+    photos.forEach((photo) => {
+      const photoItem = document.createElement("div");
+      photoItem.classList.add("photo-item");
+      photoItem.style.cssText =
+        "position: relative; min-width: 120px; flex-shrink: 0;";
+
+      const anchor = document.createElement("a");
+      anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
+      anchor.target = "_blank";
+
+      const image = document.createElement("img");
+      image.src = photo.imageSource; // Adjust property name based on your actual data
+      image.alt = photo.description; // Use description for alt text
+      image.style.cssText =
+        "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+      anchor.appendChild(image);
+      photoItem.appendChild(anchor);
+      container.appendChild(photoItem);
+    });
+  }
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let photos = []; // Store fetched data about photos
+
+  fetch("photos-2.json")
+    .then((response) => response.json())
+    .then((data) => {
+      photos = data;
+      displayPhotos(photos); // Display all photos initially
+    })
+    .catch((error) => console.error("Error fetching photos:", error));
+
+  const container = document.querySelector(".photo-carousel-2");
+
+  // Function to display photos in the carousel
+  function displayPhotos(photos) {
+    if (!container) {
+      console.error("Container not found!");
+      return;
+    }
+
+    container.innerHTML = ""; // Clear the current items
+
+    photos.forEach((photo) => {
+      const photoItem = document.createElement("div");
+      photoItem.classList.add("photo-item");
+      photoItem.style.cssText =
+        "position: relative; min-width: 120px; flex-shrink: 0;";
+
+      const anchor = document.createElement("a");
+      anchor.href = photo.link; // Assume there's a link to view the photo in detail or download
+      anchor.target = "_blank";
+
+      const image = document.createElement("img");
+      image.src = photo.imageSource; // Adjust property name based on your actual data
+      image.alt = photo.description; // Use description for alt text
+      image.style.cssText =
+        "width: auto; height: 180px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+      anchor.appendChild(image);
+      photoItem.appendChild(anchor);
+      container.appendChild(photoItem);
+    });
+  }
 });
 
 
