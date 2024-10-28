@@ -1,5 +1,15 @@
 [   
     {
+        "name": "Java Multithreading",
+        "image": "images/certificates/Java-multithreading.jpg",
+        "link": "https://www.udemy.com/certificate/UC-f517140d-5126-4b26-b90f-c9aac8ad2851/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-27",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "Python (Basic)",
         "image": "images/certificates/python_basic certificate-1.jpg",
         "link": "https://www.hackerrank.com/certificates/6309151bd641?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",

@@ -1,5 +1,41 @@
 [
     {
+        "title": "Why Machines Learn",
+        "genre": "Technical",
+        "coverImage": "images/books/WML.jpg",
+        "link": "https://www.amazon.de/-/en/Why-Machines-Learn-Elegant-Behind/dp/0593185749/ref=sr_1_1?crid=3V92J40FSE5D9&dib=eyJ2IjoiMSJ9.i0J_ZWcu9UiqCNkPlxboDwXeZS1vjd1GxHpi5yGHw6x03AoTMWDVvtecBGOnqNzab4dyNhYQNSr-CfRDl3jmwXfklHJlEQImpjh_9Nn_Kc4.-8e3XNwinWRjtkMc-85HFl2HCvEtgwS5Jxj8ZZNM0sM&dib_tag=se&keywords=why+machines+learn+anil+ananthaswamy&qid=1730135637&sprefix=why+machines+learn+anil%2Caps%2C93&sr=8-1"
+    },
+    {
+        "title": "Designing Data-Intensive Applications",
+        "genre": "Technical",
+        "coverImage": "images/books/DDIA.jpg",
+        "link": "https://www.amazon.de/-/en/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=sr_1_1?crid=1513UKJGQENVL&dib=eyJ2IjoiMSJ9.bc-XQV1K4drkXVwgfJQViC6ClD42SGL62IuB50Ee1NHo8S_bHa0QISX9cP-TEjh3khEfmYaVy1YrA-k53XdREaFSM2j2Og060y9Wo6iTJGDM3uIqb8xcoAQtq_xuWoi8YAlSvo3EvD1GtkAWtwli6eS8i2pIGZ5ohYH3yO-8VydacS-6aWFca5JlO6L7Avk75Z9TmWY8JH67lsgOfrrp9-0CiiVR_Hmu_QJAHGRZj19wMlBpmWy90EFdY2GjFSgdjDxYx70FakLaB6mR1tfQhZlT0wuZ0DA-vFaUyeJWrMU.glWqGBXXhrcU1iLRedWFzNv_kDBSrT5OBja4_pUeMKY&dib_tag=se&keywords=designing+data-intensive+applications&qid=1730135715&sprefix=designing+%2Caps%2C108&sr=8-1"
+    },
+    {
+        "title": "The Pragmatic Programmer",
+        "genre": "Technical",
+        "coverImage": "images/books/TPP.jpg",
+        "link": "https://www.amazon.de/-/en/Pragmatic-Programmer-Journeyman-Master-Cunningham/dp/020161622X/ref=sr_1_2?crid=LLXKWT2WHDMR&dib=eyJ2IjoiMSJ9.84Xun4zePRzxcYJXHbNXByQln1I3kdqf72tV9lpO4SC91JmaSl9eu0yfj_GF1Cu8QW-uhXQCPIxGwY4JNAigE7cfaD5_4pSKFUcIcfCjzf0Xye94EWlJ1EeuOu-gqASPcPEh-LtOQc-eahpOvBYNsA.WgFOpisGhqk4a3DcGg7-Nq591SGFdR2Az_fDHA9ubp8&dib_tag=se&keywords=the+progmatic+programmer&qid=1730136432&sprefix=the+pragmatic+programmer+%2Caps%2C97&sr=8-2"
+    },
+    {
+        "title": "Modern Software Engineering",
+        "genre": "Technical",
+        "coverImage": "images/books/MSE.jpg",
+        "link": "https://www.amazon.de/-/en/Modern-Software-Engineering-Better-Faster/dp/0137314914/ref=sr_1_1?crid=RHP6UET6TR7W&dib=eyJ2IjoiMSJ9.sCgNzaXBOOiO-Lp5xVjgexjkw_J5JHy5KoCNGvrNLeFQ0Rx5nPE56Tm2gW3trZgU3yOBIsVSt35RsI-88DV--IIVoMdwTfUYIDfJ3uEaueZ7wJ18Kv2VuiUMQ_neqQ5Zl5X-0r33brYvzYFXuQTuUzvDtSfeGGnX3O-HStSeKgFkNEZ26EjOmC2nSwO4r8hodoEfvWfUH7FM3ETTqNksVeGuGLjeyYQgvnkKw8lafBQ.u2toQQhA0sfugVJuga4d-zKeRPdSdgeLV5H9CryCe-I&dib_tag=se&keywords=modern+software+engineering&qid=1730136064&sprefix=modern+so%2Caps%2C107&sr=8-1"
+    },
+    {
+        "title": "Clean Code",
+        "genre": "Technical",
+        "coverImage": "images/books/CC.jpg",
+        "link": "https://www.amazon.de/-/en/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?crid=SSHHE3FZYZX6&dib=eyJ2IjoiMSJ9.i4p3dW19fcAaAFBVyg6geg_yQuAQGIS8eSi9DiBnQzcJyTbWrjkK21br-DYNasmg5wUvt1QN_tDC4Pae-Yh8ihRtdAuC66TRDq-BRiGyHkv-reXTIRzdX07s-duMG6lVnBp7oL08VYZTEXuWBVXieY2KV7SQCty4PubhhhmrFX4HpmlAjdo29-c9z2vpEtzRQ-1qY-yPOGzD0xPad6b8Rx-69UF8xsqxkmgA6OvHLKo.k5sqZ4vJH1SeajiOLiGV6J7bbEZrSufizol1lvpy8YQ&dib_tag=se&keywords=clean+code&qid=1730135791&sprefix=clean+code%2Caps%2C116&sr=8-1"
+    },
+    {
+        "title": "Clean Architecture",
+        "genre": "Technical",
+        "coverImage": "images/books/CA.jpg",
+        "link": "https://www.amazon.de/-/en/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=pd_bxgy_thbs_d_sccl_1/260-4589065-2931058?pd_rd_w=97vWQ&content-id=amzn1.sym.fc6c0ea0-8e3a-4a60-9c59-1bc44b555c20&pf_rd_p=fc6c0ea0-8e3a-4a60-9c59-1bc44b555c20&pf_rd_r=VTETGA6Y4M1PTJFWSGP6&pd_rd_wg=ZtuvS&pd_rd_r=68ae472f-7534-40d9-829f-d29f122115aa&pd_rd_i=0134494164&psc=1"
+    },
+    {
         "title": "HPC in Science",
         "genre": "Technical",
         "coverImage": "images/books/HPC.jpg",
