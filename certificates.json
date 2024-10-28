@@ -1,5 +1,35 @@
 [   
     {
+        "name": "Problem Solving (Intermediate)",
+        "image": "images/certificates/problem_solving_intermediate certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/33c5c3f35de7?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "Software Engineer Intern",
+        "image": "images/certificates/software_engineer_intern certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/bae9a6c400c4?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "The Complete Python Pro Bootcamp",
+        "image": "images/certificates/python-100.jpg",
+        "link": "https://www.udemy.com/certificate/UC-3b20a8c2-3179-490d-b9e3-9b902c7d4064/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-27",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "REST API (Intermediate",
         "image": "images/certificates/rest_api_intermediate certificate-1.jpg",
         "link": "https://www.hackerrank.com/certificates/61ecbb1e9a22?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
