@@ -1,5 +1,25 @@
 [   
     {
+        "name": "REST API (Intermediate",
+        "image": "images/certificates/rest_api_intermediate certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/61ecbb1e9a22?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "Java 17",
+        "image": "images/certificates/Java-17.jpg",
+        "link": "https://www.udemy.com/certificate/UC-62e5237d-09d5-433a-989f-776e6c5e6eec/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-27",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "Java Multithreading",
         "image": "images/certificates/Java-multithreading.jpg",
         "link": "https://www.udemy.com/certificate/UC-f517140d-5126-4b26-b90f-c9aac8ad2851/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
