@@ -1,5 +1,45 @@
 [   
     {
+        "name": "Python (Basic)",
+        "image": "images/certificates/python_basic certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/6309151bd641?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "Java Functional Programming",
+        "image": "images/certificates/Java-Udemy.jpg",
+        "link": "https://www.udemy.com/certificate/UC-ff50f456-431d-46ec-a783-971d3a3e4c3b/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-27",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Java (Basic)",
+        "image": "images/certificates/java_basic certificate.jpg",
+        "link": "https://www.hackerrank.com/certificates/23c0876fabd5",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "Node.js",
+        "image": "images/certificates/node.png",
+        "link": "https://www.testdome.com/certificates/f8ca4922cb34477d9c8fd8905216613f",
+        "date": "2024-10-25",
+        "organization": "Testdome",
+        "width": 170,
+        "height": 170,
+        "category": "Testdome"
+    },
+    {
         "name": "ASP.NET Core 8 Web API:",
         "image": "images/certificates/NET 8.jpg",
         "link": "https://www.udemy.com/certificate/UC-e8e4ed4f-43a3-4ba7-b01d-f1bf0c0bfcf9/",
