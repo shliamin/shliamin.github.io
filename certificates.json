@@ -1,5 +1,85 @@
 [   
     {
+        "name": "Deep Learning",
+        "image": "images/certificates/Deep Learning.jpg",
+        "link": "https://www.udemy.com/certificate/UC-22cd2a44-687f-4280-993d-2cdaec661a9f/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Django",
+        "image": "images/certificates/Django.jpg",
+        "link": "https://www.udemy.com/certificate/UC-53d37e6b-615e-4c5d-9557-70976a5736a6/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "FastAPI",
+        "image": "images/certificates/FastAPI.jpg",
+        "link": "https://www.udemy.com/certificate/UC-3bd570b5-0e63-453c-800a-2ddac03c8596/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Data Science Bootcamp",
+        "image": "images/certificates/nlp.jpg",
+        "link": "https://www.udemy.com/certificate/UC-2e99c976-aa85-4900-a870-81a717f068fa/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "Chatbot",
+        "image": "images/certificates/chatbot.jpg",
+        "link": "https://www.udemy.com/certificate/UC-8e5eeafd-1c0d-4149-9dde-d8b4b41f586c/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "LangChain",
+        "image": "images/certificates/LLM.jpg",
+        "link": "https://www.udemy.com/certificate/UC-601c29a4-de4e-4cc7-accd-71157d1b2e46/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
+        "name": "SQL (Intermediate)",
+        "image": "images/certificates/sql_intermediate certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/71d04878a85b?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
+        "name": "SQL (Basic)",
+        "image": "images/certificates/sql_basic certificate-1.jpg",
+        "link": "https://www.hackerrank.com/certificates/3e653ea60045?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
+        "date": "2024-10-27",
+        "organization": "HackerRank",
+        "width": 220,
+        "height": 170,
+        "category": "HackerRank"
+    },
+    {
         "name": "Problem Solving (Intermediate)",
         "image": "images/certificates/problem_solving_intermediate certificate-1.jpg",
         "link": "https://www.hackerrank.com/certificates/33c5c3f35de7?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
