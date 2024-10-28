@@ -1,5 +1,15 @@
 [   
     {
+        "name": "GCP",
+        "image": "images/certificates/GCP.jpg",
+        "link": "https://www.udemy.com/certificate/UC-50771294-7acd-4c30-b180-c795df546f7b/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",
+        "date": "2024-10-28",
+        "organization": "Udemy",
+        "width": 220,
+        "height": 170,
+        "category": "Udemy"
+    },
+    {
         "name": "Deep Learning",
         "image": "images/certificates/Deep Learning.jpg",
         "link": "https://www.udemy.com/certificate/UC-22cd2a44-687f-4280-993d-2cdaec661a9f/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com",

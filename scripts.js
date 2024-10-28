@@ -746,7 +746,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (certificate) => certificate.category === "Education"
     ).length;
 
-    filterDropdown.options[0].textContent = `All (${allCount})`;
+    filterDropdown.options[0].textContent = `All Categories (${allCount})`;
     filterDropdown.options[1].textContent = `Udemy (${udemyCount})`;
     filterDropdown.options[2].textContent = `HackerRank (${hackerRankCount})`;
     filterDropdown.options[3].textContent = `Testdome (${testdomeCount})`;
@@ -760,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filter the certificates based on the selected category
     const filteredCertificates =
-      selectedCategory === "All"
+      selectedCategory === "All Categories"
         ? certificates
         : certificates.filter(
           (certificate) => certificate.category === selectedCategory
