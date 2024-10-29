@@ -1234,7 +1234,7 @@ async function displayExtendedResults(analysisData) {
 
   // Стилизация и отображение итогового результата
   totalScoreDiv.style.display = 'block';
-  totalScoreDiv.style.backgroundColor = '#FFB02E'; // Мягкий оранжевый фон
+  totalScoreDiv.style.backgroundColor = '#A0C1B9'; // Мягкий зеленый фон
   totalScoreDiv.style.color = 'white';           // Темно-синий цвет текста
   totalScoreDiv.style.padding = '5px';
   totalScoreDiv.style.borderRadius = '5px';
