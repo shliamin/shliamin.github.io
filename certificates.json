@@ -7,7 +7,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Google Cloud"]
     },
     {
         "name": "Deep Learning",
@@ -17,7 +18,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Deep Learning", "Python"]
     },
     {
         "name": "Django",
@@ -27,7 +29,9 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Django", "Python"]
+
     },
     {
         "name": "FastAPI",
@@ -37,7 +41,9 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["FastAPI", "Python"]
+
     },
     {
         "name": "Data Science Bootcamp",
@@ -47,7 +53,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Data Science", "Python", "NLP", "Deep Learning", "Machine Learning"]
     },
     {
         "name": "Chatbot",
@@ -57,7 +64,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Data Science", "Python", "Chatbot", "FastAPI", "Machine Learning"]
     },
     {
         "name": "LangChain",
@@ -67,7 +75,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Data Science", "Python", "LangChain"]
     },
     {
         "name": "SQL (Intermediate)",
@@ -77,7 +86,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["SQL"]
     },
     {
         "name": "SQL (Basic)",
@@ -87,7 +97,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["SQL"]
     },
     {
         "name": "Problem Solving (Intermediate)",
@@ -97,7 +108,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Problem Solving"]
     },
     {
         "name": "Software Engineer Intern",
@@ -107,7 +119,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Problem Solving"]
     },
     {
         "name": "The Complete Python Pro Bootcamp",
@@ -117,17 +130,19 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Python"]
     },
     {
-        "name": "REST API (Intermediate",
+        "name": "REST API (Intermediate)",
         "image": "images/certificates/rest_api_intermediate certificate-1.jpg",
         "link": "https://www.hackerrank.com/certificates/61ecbb1e9a22?utm_medium=email&utm_source=mail_template_1393&utm_campaign=hrc_skills_certificate",
         "date": "2024-10-27",
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["REST API"]
     },
     {
         "name": "Java 17",
@@ -137,7 +152,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Java"]
     },
     {
         "name": "Java Multithreading",
@@ -147,7 +163,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Java"]
     },
     {
         "name": "Python (Basic)",
@@ -157,7 +174,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Python"]
     },
     {
         "name": "Java Functional Programming",
@@ -167,7 +185,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Java"]
     },
     {
         "name": "Java (Basic)",
@@ -177,7 +196,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Java"]
     },
     {
         "name": "Node.js",
@@ -187,7 +207,8 @@
         "organization": "Testdome",
         "width": 170,
         "height": 170,
-        "category": "Testdome"
+        "category": "Testdome",
+        "technology": ["Node.js"]
     },
     {
         "name": "ASP.NET Core 8 Web API:",
@@ -197,7 +218,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["ASP.NET"]
     },
     {
         "name": "TYPESCRIPT",
@@ -207,7 +229,8 @@
         "organization": "Testdome",
         "width": 170,
         "height": 170,
-        "category": "Testdome"
+        "category": "Testdome",
+        "technology": ["Typescript"]
     },
     {
         "name": "React and Next.js - Udemy",
@@ -217,7 +240,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["React", "Next.js"]
     },
     {
         "name": "DevOps - Udemy",
@@ -227,7 +251,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["DevOps"]
     },
     {
         "name": "C# AND .NET - Testdome",
@@ -237,7 +262,8 @@
         "organization": "Testdome",
         "width": 170,
         "height": 170,
-        "category": "Testdome"
+        "category": "Testdome",
+        "technology": ["C#", "ASP.NET"]
     },
     {
         "name": "ASP.NET CORE - Testdome",
@@ -247,7 +273,8 @@
         "organization": "Testdome",
         "width": 170,
         "height": 170,
-        "category": "Testdome"
+        "category": "Testdome",
+        "technology": ["ASP.NET"]
     },
     {
         "name": "GKE - Udemy",
@@ -257,7 +284,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Google Cloud"]
     },
     {
         "name": "Kubernetes for the Absolute Beginners - Udemy",
@@ -267,7 +295,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Kubernetes"]
     },
     {
         "name": "Design Patterns in C sharp and -NET - Udemy",
@@ -277,7 +306,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["C#", "ASP.NET"]
     },
     {
         "name": "TypeScript Design Patterns And SOLID Principles - Udemy",
@@ -287,7 +317,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Typescript"]
     },
     {
         "name": "Mastering TypeScript 2024 - Udemy",
@@ -297,7 +328,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Typescript"]
     },
     {
         "name": "AI - Udemy",
@@ -307,7 +339,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Deep Learning", "Machine Learning", "Data Science"]
     },
     {
         "name": "PowerBI - Udemy",
@@ -317,17 +350,19 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["PowerBI"]
     },
     {
-        "name": "CSS (Basic) - HackerRank",
+        "name": "JS (Basic) - HackerRank",
         "image": "images/certificates/javascript_basic certificate.jpg",
         "link": "https://www.hackerrank.com/certificates/86dabe0f1483",
         "date": "2024-10-06",
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["JavaScript"]
     },
     {
         "name": "CSS (Basic) - HackerRank",
@@ -337,7 +372,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["CSS"]
     },
     {
         "name": "Software Engineer - HackerRank",
@@ -347,7 +383,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Problem Solving"]
     },
     {
         "name": "C# (Basic) - HackerRank",
@@ -357,7 +394,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["C#"]
     },
     {
         "name": "Spring Boot Testing",
@@ -367,7 +405,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Spring Boot", "Java"]
     },
     {
         "name": "Problem Solving (Basic) - HackerRank",
@@ -377,7 +416,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["Problem Solving"]
     },
     {
         "name": "Frontend Developer (React) - HackerRank",
@@ -387,7 +427,8 @@
         "organization": "HackerRank",
         "width": 220,
         "height": 170,
-        "category": "HackerRank"
+        "category": "HackerRank",
+        "technology": ["React"]
     },
     {
         "name": "The complete ASP.NET Core 9 course Certificate",
@@ -397,7 +438,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["ASP.NET"]
     },
     {
         "name": "ISO 27001 für Startups und KMU",
@@ -407,7 +449,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["ISO 27001"]
     },
     {
         "name": "The MERN Fullstack Certificate",
@@ -417,7 +460,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["React", "Node.js", "Express.js"]
     },
     {
         "name": "B.Sc. Degree - HTW Berlin",
@@ -447,7 +491,8 @@
         "organization": "Udemy",
         "width": 220,
         "height": 170,
-        "category": "Udemy"
+        "category": "Udemy",
+        "technology": ["Java", "Spring Boot", "Spring Cloud"]
     },
     {
         "name": "Praktikumszeugnis HTW Berlin",

@@ -771,6 +771,106 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  let certificates = []; // To store the fetched data
+
+  fetch("certificates.json")
+    .then((response) => response.json())
+    .then((data) => {
+      certificates = data;
+      updateTechnologyFilter(certificates); // Initialize technology filter with counts
+      displayCertificates(certificates); // Initially display all certificates
+    })
+    .catch((error) => console.error("Error fetching certificates:", error));
+
+  const container = document.querySelector(".achievement-carousel");
+  const technologyDropdown = document.getElementById("technology-filter-certificates");
+
+  // Function to display certificates in the carousel
+  function displayCertificates(certificates) {
+    if (!container) {
+      console.error("Container not found!");
+      return;
+    }
+
+    // Clear the current items
+    container.innerHTML = "";
+
+    // Sort certificates by date in descending order
+    certificates.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    certificates.forEach((certificate) => {
+      const achievementItem = document.createElement("div");
+      achievementItem.classList.add("achievement-item");
+      achievementItem.style.cssText =
+        "position: relative; min-width: 120px; flex-shrink: 0;";
+
+      const anchor = document.createElement("a");
+      anchor.href = certificate.link;
+      anchor.target = "_blank"; // Open in a new tab
+
+      const image = document.createElement("img");
+      image.src = certificate.image;
+      image.alt = certificate.name + " Thumbnail";
+
+      // Use width and height from the JSON data
+      image.style.width = certificate.width + "px";
+      image.style.height = certificate.height + "px";
+      image.style.cssText +=
+        "box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;";
+
+      anchor.appendChild(image);
+      achievementItem.appendChild(anchor);
+      container.appendChild(achievementItem);
+    });
+  }
+
+  // Separate function to update the technology filter dropdown with counts
+  function updateTechnologyFilter(certificates) {
+    const technologyCounts = {}; // Object to store technology counts
+
+    // Count occurrences of each technology
+    certificates.forEach((certificate) => {
+      if (certificate.technology && Array.isArray(certificate.technology)) { // Ensure `technology` is an array
+        certificate.technology.forEach((tech) => {
+          technologyCounts[tech] = (technologyCounts[tech] || 0) + 1;
+        });
+      }
+    });
+
+    // Populate the technology dropdown with counts
+    technologyDropdown.innerHTML = `<option value="All Technologies">All Technologies (${certificates.length})</option>`;
+    Object.keys(technologyCounts).forEach((tech) => {
+      const option = document.createElement("option");
+      option.value = tech;
+      option.textContent = `${tech} (${technologyCounts[tech]})`;
+      technologyDropdown.appendChild(option);
+    });
+  }
+
+  // Function to filter certificates by selected technology
+  function filterByTechnology() {
+    const selectedTechnology = technologyDropdown.value;
+
+    const filteredCertificates =
+      selectedTechnology === "All Technologies"
+        ? certificates
+        : certificates.filter(
+            (certificate) =>
+              certificate.technology && certificate.technology.includes(selectedTechnology)
+          );
+
+    // Redisplay the filtered certificates
+    displayCertificates(filteredCertificates);
+  }
+
+  // Event listener for the technology filter dropdown
+  technologyDropdown.addEventListener("change", filterByTechnology);
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let books = []; // Store fetched data about books
 

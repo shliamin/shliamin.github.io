@@ -463,11 +463,15 @@ textarea {
 }
 
 #category-filter-certificates {
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
   border-radius: 5px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 11px;
   padding: 5px 10px;
   transition: box-shadow 0.3s ease;
+  color:#555;
 }
 
 #category-filter-certificates:focus {
@@ -476,9 +480,13 @@ textarea {
 }
 
 #technology-filter-certificates {
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
   border-radius: 5px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 11px;
+  color:#555;
   padding: 5px 10px;
   transition: box-shadow 0.3s ease;
 }
@@ -537,9 +545,13 @@ textarea {
 }
 
 #category-filter-books {
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
   border-radius: 5px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 11px;
+  color:#555;
   padding: 5px 10px;
   transition: box-shadow 0.3s ease;
 }
@@ -2047,6 +2059,8 @@ iframe {
         right: 10px;
         left: auto;
       }
+
+
 }
 
 @media (max-width: 380px) {
