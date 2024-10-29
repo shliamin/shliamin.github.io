@@ -1416,7 +1416,7 @@ document.getElementById('resume-form').addEventListener('submit', async function
 // Dynamic character count display
 document.getElementById('job_description-en').addEventListener('input', function () {
   const countDisplay = document.getElementById('character-count');
-  updateCharacterCount(this, countDisplay, 2000);
+  updateCharacterCount(this, countDisplay, 4000);
 });
 
 
