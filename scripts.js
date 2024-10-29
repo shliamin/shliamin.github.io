@@ -1366,8 +1366,8 @@ document.getElementById('resume-form').addEventListener('submit', async function
 
   showSpinner();
 
-  if (jobDescription.length > 2000) {
-    alert('The job description exceeds 2000 characters.');
+  if (jobDescription.length > 4000) {
+    alert('The job description exceeds 4000 characters.');
     hideSpinner();
     return;
   }
