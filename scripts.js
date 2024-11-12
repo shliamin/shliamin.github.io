@@ -320,6 +320,14 @@ function switchLanguage(lang) {
     document.getElementById("eurasia-de").style.display = "none";
     document.getElementById("school-1-en").style.display = "block";
     document.getElementById("school-1-de").style.display = "none";
+    document.getElementById("cto-en").style.display = "block";
+    document.getElementById("cto-de").style.display = "none";
+    document.getElementById("tendex-en").style.display = "block";
+    document.getElementById("tendex-de").style.display = "none";
+    document.getElementById("today_months-en").style.display = "block";
+    document.getElementById("today_months-de").style.display = "none";
+    document.getElementById("prof-exp-auto-en").style.display = "block";
+    document.getElementById("prof-exp-auto-de").style.display = "none";
 
 
   } else if (lang === "de") {
@@ -440,6 +448,14 @@ function switchLanguage(lang) {
     document.getElementById("eurasia-de").style.display = "block";
     document.getElementById("school-1-en").style.display = "none";
     document.getElementById("school-1-de").style.display = "block";
+    document.getElementById("cto-en").style.display = "none";
+    document.getElementById("cto-de").style.display = "block";
+    document.getElementById("tendex-en").style.display = "none";
+    document.getElementById("tendex-de").style.display = "block";
+    document.getElementById("today_months-en").style.display = "none";
+    document.getElementById("today_months-de").style.display = "block";
+    document.getElementById("prof-exp-auto-en").style.display = "none";
+    document.getElementById("prof-exp-auto-de").style.display = "block";
   }
 }
 
@@ -857,9 +873,9 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedTechnology === "All Technologies"
         ? certificates
         : certificates.filter(
-            (certificate) =>
-              certificate.technology && certificate.technology.includes(selectedTechnology)
-          );
+          (certificate) =>
+            certificate.technology && certificate.technology.includes(selectedTechnology)
+        );
 
     // Redisplay the filtered certificates
     displayCertificates(filteredCertificates);
@@ -1942,6 +1958,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function calculateMonthsSinceJuly2024() {
+  const startDate = new Date('2024-07-01');
+  const currentDate = new Date();
+  const months = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
+  return months;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const monthsEn = calculateMonthsSinceJuly2024();
+  const monthsDe = monthsEn; // Количество месяцев одинаково для обоих языков
+
+  document.getElementById('today_months-en').querySelector('.time_summary').textContent = `${monthsEn} months`;
+  document.getElementById('today_months-de').querySelector('.time_summary').textContent = `${monthsDe} Monate`;
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const startDate = new Date(2018, 8, 1); // 1 сентября 2018 года
+  const currentDate = new Date();
+  
+  let totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
+  
+  totalMonths -= 26;
+
+  let years = Math.floor(totalMonths / 12);
+  let months = totalMonths % 12;
+
+  const yearText = years === 1 ? "year" : "years";
+  const monthText = months === 1 ? "month" : "months";
+  const yearTextDe = years === 1 ? "Jahr" : "Jahre";
+  const monthTextDe = months === 1 ? "Monat" : "Monate";
+
+  const experienceText = `${years} ${yearText}, ${months} ${monthText}`;
+  const experienceTextDe = `${years} ${yearTextDe}, ${months} ${monthTextDe}`;
+  const profExpElement = document.getElementById("prof-exp-auto-en");
+  const profExpElementDe = document.getElementById("prof-exp-auto-de");
+
+  profExpElement.textContent = experienceText;
+  profExpElement.style.display = "block"; 
+  profExpElementDe.textContent = experienceTextDe;
+  profExpElementDe.style.display = "none"; 
+});
+
+
+
+
+
+
+
+
+
 
 
 

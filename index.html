@@ -453,7 +453,7 @@
             >
               <strong>Zeugnisse:</strong>
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 5px">
               <select
                 id="category-filter-certificates"
                 style="padding: 5px 10px; font-size: 16px"
@@ -468,7 +468,7 @@
 
               <select
                 id="technology-filter-certificates"
-                style="padding: 5px 10px; font-size: 16px; margin-left: 0px;"
+                style="padding: 5px 10px; font-size: 16px; margin-left: 0px"
               >
                 <option value="All Technologies">All Technologies</option>
                 <option value="Python">Python</option>
@@ -512,8 +512,84 @@
             ><strong id="prof-exp-de" style="display: none"
               >Berufserfahrung:</strong
             >
+            <strong
+              id="prof-exp-auto-en"
+              style="display: none; font-size: 12px; color: #999"
+              >auto</strong
+            >
+            <strong
+              id="prof-exp-auto-de"
+              style="display: none; font-size: 12px; color: #999"
+              >auto</strong
+            >
           </p>
           <div class="timeline">
+            <div class="entry">
+              <span class="date" id="today_months-en">
+                Today —<br />Jul 2024<br /><span class="time_summary"
+                  >auto</span
+                >
+              </span>
+              <span class="date" id="today_months-de" style="display: none">
+                Heute —<br />Jul 2024<br /><span class="time_summary"
+                  >auto</span
+                >
+              </span>
+              <div class="entry-info">
+                <p style="padding-left: 40px !important" id="tendex-en">
+                  <span id="position">CTO</span>
+                  <span class="company">at TendeX</span>
+                </p>
+                <p
+                  style="padding-left: 40px !important; display: none"
+                  id="tendex-de"
+                >
+                  <span id="position">CTO</span>
+                  <span class="company">bei TendeX</span>
+                </p>
+                <p
+                  style="
+                    padding-left: 40px !important;
+                    font-weight: 300;
+                    color: #777;
+                  "
+                  id="cto-en"
+                >
+                  As CTO at TendeX, I am responsible for shaping the technical
+                  strategy and ensuring that our SaaS platform for tender,
+                  supply chain, and contract management aligns with our business
+                  objectives. I design and oversee a scalable, secure
+                  architecture, selecting technologies for front-end, back-end,
+                  and cloud infrastructure to support the platform's growth. In
+                  close collaboration with the CEO, I focus on data security,
+                  regulatory compliance, and cost optimization while driving
+                  continuous innovation to meet the evolving needs of our
+                  clients.
+                </p>
+                <p
+                  style="
+                    padding-left: 40px !important;
+                    font-weight: 300;
+                    color: #777;
+                    display: none;
+                  "
+                  id="cto-de"
+                >
+                  Als CTO bei TendeX bin ich verantwortlich für die technische
+                  Strategie und dafür, dass unsere SaaS-Plattform für
+                  Ausschreibungs-, Lieferketten- und Vertragsmanagement mit
+                  unseren Geschäftszielen harmoniert. Ich entwerfe und überwache
+                  eine skalierbare, sichere Architektur und wähle die
+                  Technologien für Frontend, Backend und Cloud-Infrastruktur, um
+                  das Wachstum der Plattform zu unterstützen. In enger
+                  Zusammenarbeit mit dem CEO sorge ich für Datensicherheit,
+                  Einhaltung von Vorschriften und Kostenoptimierung und treibe
+                  kontinuierliche Innovationen voran, um den sich ändernden
+                  Anforderungen unserer Kunden gerecht zu werden.
+                </p>
+              </div>
+            </div>
+
             <div class="entry">
               <span class="date" id="three_months-en"
                 >Jun 2024 —<br />Mar 2024<br /><span class="time_summary"
@@ -773,15 +849,15 @@
                 ></span
               >
               <div class="entry-info">
-                <p
-                  id="rhenus-en"
-                  style="padding-left: 40px !important;"
-                >
+                <p id="rhenus-en" style="padding-left: 40px !important">
                   <span id="position">IT-Specialist</span>
                   <span class="company"> at Rhenus Logistics in Duisburg</span>
                   <span id="type_of_activity">Internship</span>
                 </p>
-                <p id="rhenus-de" style="padding-left: 40px !important; display: none;">
+                <p
+                  id="rhenus-de"
+                  style="padding-left: 40px !important; display: none"
+                >
                   <span id="position">IT-Spezialist</span>
                   <span class="company">bei Rhenus Logistics in Duisburg</span>
                   <span id="type_of_activity">Praktikum</span>
