@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   showSection("about-me");
 
@@ -328,7 +326,14 @@ function switchLanguage(lang) {
     document.getElementById("today_months-de").style.display = "none";
     document.getElementById("prof-exp-auto-en").style.display = "block";
     document.getElementById("prof-exp-auto-de").style.display = "none";
-
+    
+    // Добавляем переключение для Finanz Informatik
+    document.getElementById("fi-en").style.display = "block";
+    document.getElementById("fi-de").style.display = "none";
+    document.getElementById("fi-desc-en").style.display = "block";
+    document.getElementById("fi-desc-de").style.display = "none";
+    document.getElementById("fi_months-en").style.display = "block";
+    document.getElementById("fi_months-de").style.display = "none";
 
   } else if (lang === "de") {
     document.getElementById("btn-de").classList.add("active");
@@ -456,6 +461,14 @@ function switchLanguage(lang) {
     document.getElementById("today_months-de").style.display = "block";
     document.getElementById("prof-exp-auto-en").style.display = "none";
     document.getElementById("prof-exp-auto-de").style.display = "block";
+    
+    // Добавляем переключение для Finanz Informatik
+    document.getElementById("fi-en").style.display = "none";
+    document.getElementById("fi-de").style.display = "block";
+    document.getElementById("fi-desc-en").style.display = "none";
+    document.getElementById("fi-desc-de").style.display = "block";
+    document.getElementById("fi_months-en").style.display = "none";
+    document.getElementById("fi_months-de").style.display = "block";
   }
 }
 
@@ -1974,6 +1987,29 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('today_months-de').querySelector('.time_summary').textContent = `${monthsDe} Monate`;
 });
 
+function calculateMonthsSinceJanuary2025() {
+  const startDate = new Date('2025-01-01');
+  const currentDate = new Date();
+  const months = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
+  return months;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Существующий код для TendeX
+  const monthsEn = calculateMonthsSinceJuly2024();
+  const monthsDe = monthsEn;
+  
+  document.getElementById('today_months-en').querySelector('.time_summary').textContent = `${monthsEn} months`;
+  document.getElementById('today_months-de').querySelector('.time_summary').textContent = `${monthsDe} Monate`;
+
+  // Новый код для Finanz Informatik
+  const monthsEn2 = calculateMonthsSinceJanuary2025();
+  const monthsDe2 = monthsEn2;
+  
+  document.getElementById('fi_months-en').querySelector('.time_summary_2').textContent = `${monthsEn2} months`;
+  document.getElementById('fi_months-de').querySelector('.time_summary_2').textContent = `${monthsDe2} Monate`;
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const startDate = new Date(2018, 8, 1); // 1 сентября 2018 года
@@ -1981,7 +2017,12 @@ document.addEventListener("DOMContentLoaded", function() {
   
   let totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
   
+  // Вычитаем 26 месяцев перерыва
   totalMonths -= 26;
+  
+  // Добавляем месяцы работы в Finanz Informatik
+  const fiMonths = Math.abs(calculateMonthsSinceJanuary2025()); // Используем Math.abs() так как число будет отрицательным до января 2025
+  totalMonths += fiMonths;
 
   let years = Math.floor(totalMonths / 12);
   let months = totalMonths % 12;

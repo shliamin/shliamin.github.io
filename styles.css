@@ -32,6 +32,14 @@
     border-radius: 5px;
 }
 
+.time_summary_2{
+    color: #1E2F50;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   background: white;
